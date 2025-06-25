@@ -3284,7 +3284,7 @@ input, select, textarea {
 /* Intro */
 
 #intro {
-  background-image: url("images/main-banner1.png");
+  background-image: url("../../images/main-banner1.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -4674,5 +4674,6 @@ input, select, textarea {
 			box-shadow: 0 0 1.5rem 0 rgba(0, 0, 0, 0.2);
 			visibility: visible;
 		}
+background-image: url("../../images/main-banner1.png") !important;
 
 }
