@@ -4690,31 +4690,17 @@ input, select, textarea {
 			box-shadow: 0 0 1.5rem 0 rgba(0, 0, 0, 0.2);
 			visibility: visible;
 		}
-/* 슬라이드 이미지 스타일 */
-.slideshow {
-  position: relative;
-  width: 100%;
-  height: 100vh; /* 화면 전체 높이 */
-  overflow: hidden;
-}
-
-.slide {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* 이미지 꽉 채우기 */
-  opacity: 0;
-  transition: opacity 1s ease-in-out;
-  z-index: 1;
-}
-
-.slide.active {
-  opacity: 1;
-  z-index: 2;
-}
-
 #intro {
-  background: none !important;
+  position: relative;
+  height: 100vh;
+  background-image: url("images/main-banner1.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white; /* 필요 시 텍스트 색상 조정 */
+  text-align: center;
 }
