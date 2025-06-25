@@ -3284,21 +3284,17 @@ input, select, textarea {
 /* Intro */
 
 #intro {
-  background-image: url("../../images/main-banner1.png");
+  background-image: url("../images/main-banner1.png"); /* CSS가 /css/폴더에 있을 때 */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   height: 100vh;
-  color: #ffffff;
-  padding: 8rem 4rem 6rem 4rem;
-  -moz-align-items: center;
-  -webkit-align-items: center;
-  -ms-align-items: center;
-  align-items: center;
-  text-align: center;
+  color: #fff;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
+
 }
 
 
