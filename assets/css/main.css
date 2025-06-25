@@ -3284,6 +3284,8 @@ input, select, textarea {
 /* Intro */
 
 	#intro {
+    background-image: url("../images/tosome-main.png");
+}
 		color: #ffffff;
 		padding: 8rem 4rem 6rem 4rem ;
 		-moz-align-items: center;
