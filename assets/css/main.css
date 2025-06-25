@@ -3284,7 +3284,7 @@ input, select, textarea {
 /* Intro */
 
 #intro {
-  background-image: url("../images/main-banner1.png"); /* CSS가 /css/폴더에 있을 때 */
+  background-image: url("/images/tosome-main.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
