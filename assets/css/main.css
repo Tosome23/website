@@ -3285,6 +3285,8 @@ input, select, textarea {
 
 	#intro {
     background-image: url("../images/tosome-main.png");
+    background-size: cover;
+    background-position: center;
 }
 		color: #ffffff;
 		padding: 8rem 4rem 6rem 4rem ;
