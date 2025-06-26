@@ -118,6 +118,35 @@
   </div>
 </div>
 
+<div id="blog-feed"></div>
+<script>
+const rss_url = 'https://rss.blog.naver.com/two3logis.xml';
+fetch(`https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(rss_url)}`)
+  .then(response => response.json())
+  .then(data => {
+    let html = '<div style="display:flex; gap:20px;">';
+    data.items.slice(0, 3).forEach(item => {
+      html += `
+        <div style="background:#fafbfc; padding:20px; border-radius:16px; flex:1; min-width:250px;">
+          <div style="font-weight:bold; margin-bottom:8px;">
+            <a href="${item.link}" target="_blank" style="color:#222; text-decoration:none;">${item.title}</a>
+          </div>
+          <div style="margin-bottom:10px;">
+            <img src="${item.thumbnail || (item.enclosure && item.enclosure.link) || 'images/no-image.png'}" style="width:100%; max-width:120px; border-radius:8px;">
+          </div>
+          <div style="font-size:0.95rem; color:#666; margin-bottom:8px;">
+            ${item.description.replace(/<[^>]+>/g, '').slice(0, 60)}...
+          </div>
+          <div style="font-size:0.85rem; color:#aaa;">
+            ${item.pubDate.split(' ')[0]}
+          </div>
+        </div>
+      `;
+    });
+    html += '</div>';
+    document.getElementById('blog-feed').innerHTML = html;
+  });
+</script>
 
 								
 								</ul>
