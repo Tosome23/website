@@ -4739,3 +4739,9 @@ background-image: url("../../images/main-banner1.png") !important;
 .section-row p {
   font-weight: 300; /* 또는 600, 원하는 만큼 조절 */
 }
+.compare-table {
+  width: 90%;
+  max-width: 1000px;
+  margin: 38px auto 0 auto;
+  /* 나머지 스타일 그대로 */
+}
