@@ -133,7 +133,7 @@ fetch(`https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(rss_url
     let html = '<div style="display:flex; gap:32px; justify-content:center; align-items:flex-end;">';
     data.items.slice(0, 5).forEach(item => {
       let postId = getBlogId(item.link);
-      let imgSrc = postId ? `images/${postId}.png` : 'images/no-image.png';
+      let imgSrc = postId ? `images${postId}.png` : 'images/no-image.png';
       html += `
         <div style="background:#0d2d6e; border-radius:12px 12px 0 0; width:220px; text-align:center; overflow:hidden;">
           <a href="${item.link}" target="_blank" style="display:block; color:#fff; text-decoration:none;">
