@@ -4673,36 +4673,55 @@ input, select, textarea {
 background-image: url("../../images/main-banner1.png") !important;
 
 }
-.section-block {
-    margin-bottom: 40px;
+.service-intro {
+    max-width: 800px;
+    margin: 60px auto 0 auto;
+    padding: 0 20px;
 }
 
-.section-block hr {
+.sub-title {
+    font-size: 0.95rem;
+    color: #888;
+    margin-bottom: 14px;
+    letter-spacing: 0.05em;
+}
+
+.main-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 32px;
+    line-height: 1.25;
+    color: #222;
+}
+
+.gray-line {
     border: none;
-    border-top: 2px solid #222;
+    border-top: 1px solid #ccc; /* 연한 회색 얇은 선 */
     margin: 24px 0 20px 0;
 }
 
 .section-row {
     display: flex;
     align-items: flex-start;
-    gap: 30px;
+    gap: 26px;
+    margin-bottom: 16px;
 }
 
 .we, .now {
-    color: #0076d6; /* 로고 파랑 */
+    color: #0076d6;
     font-weight: bold;
-    min-width: 60px;
+    min-width: 62px;
     text-align: left;
     font-size: 1.1rem;
     letter-spacing: 1px;
-    margin-right: 18px;
+    margin-top: 2px;
 }
 
 .section-row p {
     margin: 0;
     text-align: left;
     flex: 1;
+    line-height: 1.7;
 }
 
 }
