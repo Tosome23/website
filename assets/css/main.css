@@ -4673,31 +4673,62 @@ input, select, textarea {
 background-image: url("../../images/main-banner1.png") !important;
 
 }
+/* 컨테이너 중앙 정렬 & 최대 너비 */
+.service-intro {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* 1) 서비스소개: 가운데, 볼드, 적당한 크기 */
 .sub-title {
   text-align: center;
   font-weight: bold;
-  font-size: 1rem;
-  color: #555;
+  font-size: 0.95rem;  /* 이전에 드린 사이즈 */
+  color: #888;
   margin-bottom: 12px;
 }
-/* 전체 라인 컨테이너 */
-.section-row {
-  display: block;       /* flex 해제 */
+
+/* 2) 메인 타이틀: 가운데, 볼드, 이전 크기 */
+.main-title {
+  text-align: center;
+  font-size: 2rem;     /* 이전에 드린 사이즈 */
+  font-weight: bold;
+  line-height: 1.25;
+  color: #222;
+  margin-bottom: 24px;
+}
+
+/* 3) 회색 얇은 선 */
+.gray-line {
+  border: none;
+  border-top: 1px solid #ccc;
   margin: 16px 0;
 }
 
-/* WE / NOW 라벨 */
-.we,
-.now {
-  display: block;       /* 한 줄에 하나 */
-  color: #0076d6;       /* 로고파랑 */
-  font-weight: bold;
-  margin-bottom: 6px;   /* 라벨과 본문 사이 여유 */
+/* 4) WE/NOW 블록: 왼쪽 시작점 고정 */
+.section-row {
+  max-width: 800px;
+  margin: 16px auto;
 }
 
-/* 본문 텍스트 */
+/* 5) 레이블(WE, NOW): 왼쪽 정렬, 이전 크기 */
+.we,
+.now {
+  display: block;
+  color: #0076d6;
+  font-weight: bold;
+  font-size: 1.1rem;   /* 이전에 드린 사이즈 */
+  margin: 0;
+}
+
+/* 6) 본문 텍스트: 레이블 바로 아래, 왼쪽 정렬 */
 .section-row p {
-  margin: 0 0 0 0;      /* 왼쪽 여백 없이 컨테이너 시작점에 맞춤 */
+  margin: 8px 0 0 0;
+  font-size: 1rem;     /* 읽기 좋은 본문 크기 */
   line-height: 1.6;
+  text-align: left;
+}
+
 }
 
