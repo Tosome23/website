@@ -4701,15 +4701,19 @@ background-image: url("../../images/main-banner1.png") !important;
 
 /* 3) 회색 얇은 선 */
 .gray-line {
+.gray-line {
+  width: 100%;
+  max-width: 800px;      /* 기존 컨테이너와 동일 */
+  margin: 0 auto;        /* 가로 중앙 정렬 */
   border: none;
   border-top: 1px solid #ccc;
-  margin: 16px 0;
 }
 
 /* 4) WE/NOW 블록: 왼쪽 시작점 고정 */
 .section-row {
+  width: 100%;
   max-width: 800px;
-  margin: 16px auto;
+  margin: 0 auto;        /* 중앙 정렬 유지 */
   text-align: left !important;
 }
 
@@ -4719,16 +4723,19 @@ background-image: url("../../images/main-banner1.png") !important;
   display: block;
   color: #0076d6;
   font-weight: bold;
-  font-size: 1.1rem;   /* 이전에 드린 사이즈 */
-  margin: 0;
+  font-size: 1.1rem;
+  margin: 0 0 4px 0;     /* 아래쪽 여백 4px */
   text-align: left !important;
 }
 
 /* 6) 본문 텍스트: 레이블 바로 아래, 왼쪽 정렬 */
 .section-row p {
-  margin: 8px 0 0 0;
-  font-size: 1rem;     /* 읽기 좋은 본문 크기 */
+  margin: 0 0 16px 0;     /* 아래쪽 16px */
+  font-size: 1rem;
   line-height: 1.6;
+  white-space: nowrap;    /* 절대 줄바꿈 금지 */
+  overflow: hidden;       /* 넘치는 부분 숨김 */
+  text-overflow: ellipsis;
   text-align: left;
 }
 
