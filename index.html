@@ -116,23 +116,27 @@
       민감한 화물도 안전하게, 확실하게
     </div>
   </div>
-</div>
-
-<div id="blog-feed"></div>
-<script>
-const rss_url = 'https://rss.blog.naver.com/two3logis.xml';
-fetch(`https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(rss_url)}`)
+</div>fetch(`https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(rss_url)}`)
   .then(response => response.json())
   .then(data => {
     let html = '<div style="display:flex; gap:20px;">';
     data.items.slice(0, 3).forEach(item => {
+      // description에서 이미지 src 추출
+      let imgSrc = '';
+      const imgMatch = item.description.match(/<img.*?src=['"](.*?)['"]/);
+      if(imgMatch && imgMatch[1]) {
+        imgSrc = imgMatch[1];
+      } else {
+        imgSrc = 'images/no-image.png'; // 이미지가 없으면 대체이미지
+      }
+
       html += `
         <div style="background:#fafbfc; padding:20px; border-radius:16px; flex:1; min-width:250px;">
           <div style="font-weight:bold; margin-bottom:8px;">
             <a href="${item.link}" target="_blank" style="color:#222; text-decoration:none;">${item.title}</a>
           </div>
           <div style="margin-bottom:10px;">
-            <img src="${item.thumbnail || (item.enclosure && item.enclosure.link) || 'images/no-image.png'}" style="width:100%; max-width:120px; border-radius:8px;">
+            <img src="${imgSrc}" style="width:100%; max-width:120px; border-radius:8px;">
           </div>
           <div style="font-size:0.95rem; color:#666; margin-bottom:8px;">
             ${item.description.replace(/<[^>]+>/g, '').slice(0, 60)}...
@@ -146,7 +150,7 @@ fetch(`https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(rss_url
     html += '</div>';
     document.getElementById('blog-feed').innerHTML = html;
   });
-</script>
+
 
 								
 								</ul>
