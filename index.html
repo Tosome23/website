@@ -119,35 +119,36 @@
 </div>
 <div id="blog-feed"></div>
 <script>
-const rss_url = 'https://rss.blog.naver.com/two3logis.xml';
+const thumbnails = [
+  'images/blg01.png',
+  'images/blg02.png',
+  'images/blg03.png',
+  'images/blg04.png',
+  'images/blg05.png'
+];
 
-// 글번호 추출 함수
-const getBlogId = url => {
-  const match = url.match(/\/(\d+)$/);
-  return match ? match[1] : null;
-};
+const blogLinks = [
+  'https://blog.naver.com/two3logis/글번호1',
+  'https://blog.naver.com/two3logis/글번호2',
+  'https://blog.naver.com/two3logis/글번호3',
+  'https://blog.naver.com/two3logis/글번호4',
+  'https://blog.naver.com/two3logis/글번호5'
+];
 
-fetch(`https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(rss_url)}`)
-  .then(response => response.json())
-  .then(data => {
-    let html = '<div style="display:flex; gap:32px; justify-content:center; align-items:flex-end;">';
-    data.items.slice(0, 5).forEach(item => {
-      let postId = getBlogId(item.link);
-      let imgSrc = postId ? `images${postId}.png` : 'images/no-image.png';
-      html += `
-        <div style="background:#0d2d6e; border-radius:12px 12px 0 0; width:220px; text-align:center; overflow:hidden;">
-          <a href="${item.link}" target="_blank" style="display:block; color:#fff; text-decoration:none;">
-            <img src="${imgSrc}" alt="썸네일" style="width:100%; height:150px; object-fit:cover;">
-            <div style="font-weight:bold; font-size:1rem; margin:8px 0 4px;">${item.title}</div>
-            <div style="font-size:0.97rem; margin-bottom:10px;">${item.pubDate.split(' ')[0]}</div>
-          </a>
-        </div>
-      `;
-    });
-    html += '</div>';
-    document.getElementById('blog-feed').innerHTML = html;
-  });
+let html = '<div style="display:flex; gap:32px; justify-content:center; align-items:flex-end;">';
+thumbnails.forEach((imgSrc, idx) => {
+  html += `
+    <div style="background:#0d2d6e; border-radius:12px 12px 0 0; width:220px; text-align:center; overflow:hidden;">
+      <a href="${blogLinks[idx]}" target="_blank" style="display:block; text-decoration:none;">
+        <img src="${imgSrc}" alt="썸네일" style="width:100%; height:150px; object-fit:cover;">
+      </a>
+    </div>
+  `;
+});
+html += '</div>';
+document.getElementById('blog-feed').innerHTML = html;
 </script>
+
 
 
 
