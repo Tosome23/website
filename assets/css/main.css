@@ -4718,5 +4718,20 @@ background-image: url("../../images/main-banner1.png") !important;
   border-top: 1px solid #ccc;
   margin: 16px 0 16px 0;
 }
+.sub-title {
+  text-align: center;
+  font-weight: bold;
+  font-size: 0.95rem;
+  color: #888;
+  margin-bottom: 12px;
+}
+.main-title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  line-height: 1.25;
+  color: #222;
+  margin-bottom: 24px;
+}
 
 
