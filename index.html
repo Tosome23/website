@@ -116,44 +116,35 @@
       민감한 화물도 안전하게, 확실하게
     </div>
   </div>
-<div id="blog-feed"></div>
-<script>
-const rss_url = 'https://rss.blog.naver.com/two3logis.xml';
+</div>
+
+ const getBlogId = url => {
+  // 네이버 글번호만 추출
+  const match = url.match(/\/(\d+)$/);
+  return match ? match[1] : null;
+};
+
 fetch(`https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(rss_url)}`)
   .then(response => response.json())
   .then(data => {
-    let html = '<div style="display:flex; gap:20px;">';
-    data.items.slice(0, 3).forEach(item => {
-      // description에서 이미지 src 추출
-      let imgSrc = '';
-      const imgMatch = item.description.match(/<img.*?src=['"](.*?)['"]/);
-      if(imgMatch && imgMatch[1]) {
-        imgSrc = imgMatch[1];
-      } else {
-        imgSrc = 'images/no-image.png'; // 이미지 없을 때 대체이미지
-      }
-
+    let html = '<div style="display:flex; gap:32px; justify-content:center; align-items:flex-end;">';
+    data.items.slice(0, 5).forEach(item => {
+      let postId = getBlogId(item.link);
+      let imgSrc = postId ? `images/${postId}.jpg` : 'images/no-image.png';
       html += `
-        <div style="background:#fafbfc; padding:20px; border-radius:16px; flex:1; min-width:250px;">
-          <div style="font-weight:bold; margin-bottom:8px;">
-            <a href="${item.link}" target="_blank" style="color:#222; text-decoration:none;">${item.title}</a>
-          </div>
-          <div style="margin-bottom:10px;">
-            <img src="${imgSrc}" style="width:100%; max-width:120px; border-radius:8px;">
-          </div>
-          <div style="font-size:0.95rem; color:#666; margin-bottom:8px;">
-            ${item.description.replace(/<[^>]+>/g, '').slice(0, 60)}...
-          </div>
-          <div style="font-size:0.85rem; color:#aaa;">
-            ${item.pubDate.split(' ')[0]}
-          </div>
+        <div style="background:#0d2d6e; border-radius:12px 12px 0 0; width:220px; text-align:center; overflow:hidden;">
+          <a href="${item.link}" target="_blank" style="display:block; color:#fff; text-decoration:none;">
+            <img src="${imgSrc}" alt="썸네일" style="width:100%; height:150px; object-fit:cover;">
+            <div style="font-weight:bold; font-size:1rem; margin:8px 0 4px;">${item.title}</div>
+            <div style="font-size:0.97rem; margin-bottom:10px;">${item.pubDate.split(' ')[0]}</div>
+          </a>
         </div>
       `;
     });
     html += '</div>';
     document.getElementById('blog-feed').innerHTML = html;
   });
-</script>
+
 
 								</ul>
 							</article>
