@@ -80,110 +80,7 @@
      style="display:block; width:90%; max-width:1000px; margin:0 auto 36px auto; border-radius:18px;">
 </header>
 <style>
-/* 가로 2단 레이아웃 */
-.compare-box-row {
-  display: flex;
-  gap: 28px;
-  max-width: 950px;
-  margin: 38px auto;
-  align-items: flex-start;
-  background: #fff;
-  border-radius: 20px;
-  box-shadow: 0 2px 14px rgba(0,0,0,0.05);
-  padding: 34px 32px;
-}
-.compare-texts-col {
-  flex: 0 0 310px;
-  min-width: 240px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  margin-right: 18px;
-}
-.compare-title {
-  font-size: 1.45rem;
-  font-weight: 700;
-  color: #0d2d6e;
-  margin-bottom: 12px;
-  letter-spacing: -1px;
-}
-.compare-desc {
-  font-size: 1.05rem;
-  color: #333;
-  line-height: 1.6;
-}
-
-.compare-table {
-  flex: 1 1 0;
-  min-width: 220px;
-}
-.compare-row {
-  display: flex;
-  align-items: center;
-  margin-bottom: 26px;
-  gap: 0 16px;
-  justify-content: space-between;
-}
-.compare-label,
-.compare-percent {
-  font-size: 1.09rem;
-  font-weight: 600;
-}
-.compare-label {
-  color: #0076d6;
-  min-width: 95px;
-  max-width: 120px;
-  text-align: left;
-}
-.compare-percent {
-  color: #222;
-  margin-left: 10px;
-  font-size: 0.97rem;
-}
-.compare-bar-bg {
-  flex: 1;
-  background: #f0f6fa;
-  height: 26px;
-  border-radius: 13px;
-  overflow: hidden;
-  position: relative;
-  cursor: pointer;
-  transition: box-shadow 0.2s;
-  margin-left: 10px;
-}
-.compare-bar {
-  height: 100%;
-  background: linear-gradient(90deg, #0076d6 80%, #36b8e3 100%);
-  border-radius: 13px;
-  position: relative;
-  transition: width 0.7s, transform 0.18s cubic-bezier(.4,1.4,.7,1.01);
-}
-.compare-bar-bg:hover .compare-bar {
-  transform: scaleY(1.23);
-  filter: brightness(1.08) drop-shadow(0 1px 5px #0076d62a);
-}
-.compare-bar-bg:hover {
-  box-shadow: 0 2px 10px #0076d615;
-}
-
-@media (max-width: 900px) {
-  .compare-box-row {
-    flex-direction: column;
-    padding: 20px 7vw;
-  }
-  .compare-texts-col { margin-bottom: 16px; }
-}
-
-@media (max-width: 640px) {
-  .compare-box-row { padding: 12px 2vw; }
-  .compare-title { font-size: 1.09rem; }
-  .compare-row { flex-direction: column; align-items: stretch; margin-bottom: 20px;}
-  .compare-label { min-width: 70px; font-size: 1rem; }
-  .compare-bar-bg { margin-left: 0; }
-}
-</style>
-
+<!-- [그래프/텍스트 2단 박스 시작] -->
 <div class="compare-box-row">
   <!-- 좌측 텍스트 컬럼 -->
   <div class="compare-texts-col">
@@ -194,7 +91,6 @@
       아래는 타사 서비스와의 비교 예시입니다.
     </div>
   </div>
-
   <!-- 우측 그래프 컬럼 -->
   <div class="compare-table">
     <div class="compare-row">
@@ -227,6 +123,8 @@
     </div>
   </div>
 </div>
+<!-- [그래프/텍스트 2단 박스 끝] -->
+
 
 								
 
