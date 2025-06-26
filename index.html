@@ -80,6 +80,120 @@
 </header>
 
 
+<style>
+/* 전체 비교 테이블 스타일 */
+.compare-table {
+  width: 100%;
+  max-width: 650px;
+  margin: 30px auto 0 auto;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 2px 14px rgba(0,0,0,0.04);
+  padding: 24px 20px;
+}
+
+/* 제목 */
+.compare-title {
+  font-size: 1.45rem;
+  font-weight: 700;
+  color: #0d2d6e;
+  margin-bottom: 10px;
+}
+.compare-desc {
+  font-size: 1.05rem;
+  color: #333;
+  margin-bottom: 24px;
+}
+
+/* 그래프 */
+.compare-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 26px;
+}
+.compare-label {
+  flex: 0 0 120px;
+  font-weight: bold;
+  font-size: 1.09rem;
+  color: #0076d6;
+}
+.compare-bar-bg {
+  flex: 1;
+  background: #f0f6fa;
+  height: 26px;
+  border-radius: 13px;
+  overflow: hidden;
+  margin-right: 14px;
+  position: relative;
+}
+.compare-bar {
+  height: 100%;
+  background: linear-gradient(90deg, #0076d6 80%, #36b8e3 100%);
+  border-radius: 13px;
+  position: relative;
+  transition: width 0.7s;
+}
+
+/* 퍼센트/툴팁 */
+.compare-percent {
+  width: 38px;
+  font-size: 0.98rem;
+  font-weight: 600;
+  color: #333;
+  text-align: right;
+}
+
+@media (max-width: 640px) {
+  .compare-table { padding: 12px 3px; }
+  .compare-title { font-size: 1.08rem;}
+  .compare-row { flex-direction: column; align-items: stretch; margin-bottom: 20px;}
+  .compare-label { margin-bottom: 4px; }
+  .compare-bar-bg { margin-right: 0; }
+  .compare-percent { margin-top: 2px; }
+}
+</style>
+
+<div class="compare-table">
+  <div class="compare-title">투삼로지스 국제특송 요금 비교</div>
+  <div class="compare-desc">
+    투삼로지스는 기업 및 개인 고객 모두에게<br>
+    <b style="color:#0076d6;">합리적인 국제특송 요금</b>과 빠른 배송을 제공합니다.<br>
+    아래는 타사 서비스와의 비교 예시입니다.
+  </div>
+
+  <div class="compare-row">
+    <div class="compare-label">투삼로지스</div>
+    <div class="compare-bar-bg" title="업계 최저가 기준(예시)">
+      <div class="compare-bar" style="width: 38%;"></div>
+    </div>
+    <div class="compare-percent">38%</div>
+  </div>
+  <div class="compare-row">
+    <div class="compare-label">우체국EMS</div>
+    <div class="compare-bar-bg" title="우체국 EMS 요금 평균(예시)">
+      <div class="compare-bar" style="width: 48%;"></div>
+    </div>
+    <div class="compare-percent">48%</div>
+  </div>
+  <div class="compare-row">
+    <div class="compare-label">F사</div>
+    <div class="compare-bar-bg" title="F사 요금(예시)">
+      <div class="compare-bar" style="width: 100%;"></div>
+    </div>
+    <div class="compare-percent">100%</div>
+  </div>
+  <div class="compare-row">
+    <div class="compare-label">U사</div>
+    <div class="compare-bar-bg" title="U사 요금(예시)">
+      <div class="compare-bar" style="width: 76%;"></div>
+    </div>
+    <div class="compare-percent">76%</div>
+  </div>
+</div>
+
+
+								
+
 <div class="tosome-service-section" style="display: flex; gap: 32px; justify-content: center; align-items: flex-start; margin: 60px 0;">
   <!-- 1. 국제특송 서비스 -->
   <div class="tosome-service-card" style="flex:1; max-width:350px; background: #fafbfc; border-radius: 28px; text-align: center; padding: 32px 22px;">
