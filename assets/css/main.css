@@ -4738,6 +4738,12 @@ background-image: url("../../images/main-banner1.png") !important;
   text-overflow: ellipsis;
   text-align: left;
 }
+/* WE·NOW 파랑색 강제 고정 */
+.section-row span.we,
+.section-row span.now {
+  color: #0076d6 !important;
+}
 
+	
 }
 
