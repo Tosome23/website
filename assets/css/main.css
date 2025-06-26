@@ -4673,3 +4673,9 @@ input, select, textarea {
 background-image: url("../../images/main-banner1.png") !important;
 
 }
+.we,
+.now {
+    color: #0076d6 !important;  /* ToSome 로고 파랑 */
+    font-weight: bold;
+}
+
