@@ -4673,54 +4673,31 @@ input, select, textarea {
 background-image: url("../../images/main-banner1.png") !important;
 
 }
-/* ① 서비스소개 텍스트를 오른쪽으로 */
-.service-intro .sub-title {
-  text-align: right;
-  font-size: 0.95rem;
-  color: #888;
-  margin-bottom: 8px;
-}
-
-/* ② 메인 타이틀은 가운데 */
-.service-intro .main-title {
+.sub-title {
   text-align: center;
-  font-size: 2rem;
   font-weight: bold;
-  line-height: 1.25;
-  color: #222;
-  margin-bottom: 24px;
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 12px;
 }
-
-/* ③ 회색 얇은 선 */
-.gray-line {
-  border: none;
-  border-top: 1px solid #ccc;
-  margin: 16px 0;
-}
-
-/* ④ WE/NOW 블록 */
+/* 전체 라인 컨테이너 */
 .section-row {
-  display: flex;
-  align-items: flex-start;
-  gap: 20px;
+  display: block;       /* flex 해제 */
   margin: 16px 0;
 }
 
-.we, .now {
-  color: #0076d6;
+/* WE / NOW 라벨 */
+.we,
+.now {
+  display: block;       /* 한 줄에 하나 */
+  color: #0076d6;       /* 로고파랑 */
   font-weight: bold;
-  min-width: 60px;
-  text-align: left;
-  font-size: 1.1rem;
-  margin-top: 2px;
+  margin-bottom: 6px;   /* 라벨과 본문 사이 여유 */
 }
 
-/* 설명 텍스트 */
+/* 본문 텍스트 */
 .section-row p {
-  margin: 0;
+  margin: 0 0 0 0;      /* 왼쪽 여백 없이 컨테이너 시작점에 맞춤 */
   line-height: 1.6;
-}
-
-
 }
 
