@@ -117,9 +117,12 @@
     </div>
   </div>
 </div>
+<div id="blog-feed"></div>
+<script>
+const rss_url = 'https://rss.blog.naver.com/two3logis.xml';
 
- const getBlogId = url => {
-  // 네이버 글번호만 추출
+// 글번호 추출 함수
+const getBlogId = url => {
   const match = url.match(/\/(\d+)$/);
   return match ? match[1] : null;
 };
@@ -144,6 +147,8 @@ fetch(`https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(rss_url
     html += '</div>';
     document.getElementById('blog-feed').innerHTML = html;
   });
+</script>
+
 
 
 								</ul>
