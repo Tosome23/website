@@ -4673,77 +4673,50 @@ input, select, textarea {
 background-image: url("../../images/main-banner1.png") !important;
 
 }
-/* 컨테이너 중앙 정렬 & 최대 너비 */
-.service-intro {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 0 20px;
+/* 1. WE/NOW 포함 전체 컨테이너 폭, 정렬 통일 */
+.service-intro, .section-row, .gray-line {
+  max-width: 1200px;        /* 이미지와 딱 맞추려면 파란 이미지 width와 동일하게! */
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  box-sizing: border-box;
+  padding-left: 0;
+  padding-right: 0;
 }
 
-/* 1) 서비스소개: 가운데, 볼드, 적당한 크기 */
-.sub-title {
-  text-align: center;
-  font-weight: bold;
-  font-size: 0.95rem;  /* 이전에 드린 사이즈 */
-  color: #888;
+/* 2. WE, NOW 완전 왼쪽 정렬 & 파란색 고정 */
+.section-row {
+  display: block;
+  text-align: left !important;
   margin-bottom: 12px;
 }
 
-/* 2) 메인 타이틀: 가운데, 볼드, 이전 크기 */
-.main-title {
-  text-align: center;
-  font-size: 2rem;     /* 이전에 드린 사이즈 */
-  font-weight: bold;
-  line-height: 1.25;
-  color: #222;
-  margin-bottom: 24px;
-}
-
-/* 3) 회색 얇은 선 */
-.gray-line {
-.gray-line {
-  width: 100%;
-  max-width: 800px;      /* 기존 컨테이너와 동일 */
-  margin: 0 auto;        /* 가로 중앙 정렬 */
-  border: none;
-  border-top: 1px solid #ccc;
-}
-
-/* 4) WE/NOW 블록: 왼쪽 시작점 고정 */
-.section-row {
-  width: 100%;
-  max-width: 800px;
-  margin: 0 auto;        /* 중앙 정렬 유지 */
-  text-align: left !important;
-}
-
-/* 5) 레이블(WE, NOW): 왼쪽 정렬, 이전 크기 */
-.we,
-.now {
-  display: block;
-  color: #0076d6;
-  font-weight: bold;
-  font-size: 1.1rem;
-  margin: 0 0 4px 0;     /* 아래쪽 여백 4px */
-  text-align: left !important;
-}
-
-/* 6) 본문 텍스트: 레이블 바로 아래, 왼쪽 정렬 */
-.section-row p {
-  margin: 0 0 16px 0;     /* 아래쪽 16px */
-  font-size: 1rem;
-  line-height: 1.6;
-  white-space: nowrap;    /* 절대 줄바꿈 금지 */
-  overflow: hidden;       /* 넘치는 부분 숨김 */
-  text-overflow: ellipsis;
-  text-align: left;
-}
-/* WE·NOW 파랑색 강제 고정 */
 .section-row span.we,
 .section-row span.now {
   color: #0076d6 !important;
+  font-weight: bold;
+  font-size: 1.1rem;
+  display: block;
+  margin-bottom: 2px;        /* 바로 아래 문장과 간격을 최소화 */
+  text-align: left !important;
+  padding-left: 0;
 }
 
-	
+/* 3. 본문도 왼쪽 정렬, 간격 좁힘, 한 줄 처리 제거 (가독성 위해) */
+.section-row p {
+  margin: 0 0 10px 0;        /* 아래쪽 간격 10px로 좁힘 */
+  font-size: 1rem;
+  line-height: 1.5;
+  text-align: left;
+  padding-left: 0;
+  white-space: normal;       /* 자동 줄바꿈 허용 (가독성 유지) */
 }
+
+/* 4. 얇은 선(길이 통일) */
+.gray-line {
+  border: none;
+  border-top: 1px solid #ccc;
+  margin: 16px 0 16px 0;
+}
+
 
