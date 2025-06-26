@@ -4673,9 +4673,37 @@ input, select, textarea {
 background-image: url("../../images/main-banner1.png") !important;
 
 }
-.we,
-.now {
-    color: #0076d6 !important;  /* ToSome 로고 파랑 */
+.section-block {
+    margin-bottom: 40px;
+}
+
+.section-block hr {
+    border: none;
+    border-top: 2px solid #222;
+    margin: 24px 0 20px 0;
+}
+
+.section-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+}
+
+.we, .now {
+    color: #0076d6; /* 로고 파랑 */
     font-weight: bold;
+    min-width: 60px;
+    text-align: left;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    margin-right: 18px;
+}
+
+.section-row p {
+    margin: 0;
+    text-align: left;
+    flex: 1;
+}
+
 }
 
