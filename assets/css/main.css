@@ -4739,12 +4739,20 @@ background-image: url("../../images/main-banner1.png") !important;
 .section-row p {
   font-weight: 300; /* 또는 600, 원하는 만큼 조절 */
 }
+.full-width-section {
+  width: 100%;
+  max-width: 100vw;
+  padding: 0;
+  margin: 0;
+}
+
 .compare-table {
-  width: 90%;
-  max-width: 1000px;    /* 상단 이미지와 동일하게 */
-  margin: 38px auto 0 auto;
-  background: #fff;
+  width: 100%;
+  max-width: none;
+  margin: 0;
   border-radius: 16px;
   box-shadow: 0 2px 14px rgba(0,0,0,0.04);
-  padding: 24px 20px;
+  padding: 32px 40px;  /* 내부 여백만 조절 */
+  background: #fff;
 }
+
