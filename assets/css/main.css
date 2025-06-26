@@ -4736,4 +4736,6 @@ background-image: url("../../images/main-banner1.png") !important;
 .margin-top-lg {
   margin-top: 32px;  /* 필요시 px 조절 */
 }
-
+.section-row p {
+  font-weight: 500; /* 또는 600, 원하는 만큼 조절 */
+}
