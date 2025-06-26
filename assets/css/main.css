@@ -4710,6 +4710,7 @@ background-image: url("../../images/main-banner1.png") !important;
 .section-row {
   max-width: 800px;
   margin: 16px auto;
+  text-align: left !important;
 }
 
 /* 5) 레이블(WE, NOW): 왼쪽 정렬, 이전 크기 */
@@ -4720,6 +4721,7 @@ background-image: url("../../images/main-banner1.png") !important;
   font-weight: bold;
   font-size: 1.1rem;   /* 이전에 드린 사이즈 */
   margin: 0;
+  text-align: left !important;
 }
 
 /* 6) 본문 텍스트: 레이블 바로 아래, 왼쪽 정렬 */
