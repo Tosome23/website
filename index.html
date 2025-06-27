@@ -266,7 +266,6 @@
       민감한 화물도 안전하게, 확실하게
     </div>
   </div>
-
 <div id="blog-feed"></div>
 <script>
 const thumbnails = [
@@ -285,10 +284,7 @@ const blogLinks = [
   'https://blog.naver.com/two3logis/글번호5'
 ];
 
-// 1. HTML 변수 선언
 let html = '<div style="display:flex; gap:32px; justify-content:center; align-items:flex-end;">';
-
-// 2. 썸네일 카드 forEach만 반복
 thumbnails.forEach((imgSrc, idx) => {
   html += `
     <div style="background:#0d2d6e; border-radius:12px 12px 0 0; width:220px; height:220px; text-align:center; overflow:hidden;">
@@ -298,18 +294,17 @@ thumbnails.forEach((imgSrc, idx) => {
     </div>
   `;
 });
-
-// 3. forEach 바깥에서 div 닫기
 html += '</div>';
-
-// 4. 블로그 카드만 blog-feed에 넣기
 document.getElementById('blog-feed').innerHTML = html;
 </script>
 
-	<!-- 블로그 JS 끝 -->
-</script>
+<!-- 이제 여기서부터는 blog-feed와 상관없이 
+     하단 폼 및 푸터, 카피라이트 코드만 한 번만 적어주세요 -->
 
-<!-- 하단 입력란(footer, form 등) -->
 <footer id="footer">
-  <!-- ... 이하 생략 ... -->
+  <!-- ... 폼과 연락처 ... -->
 </footer>
+
+<div id="copyright">
+  <!-- ... -->
+</div>
