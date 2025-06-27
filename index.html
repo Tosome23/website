@@ -266,7 +266,7 @@
       민감한 화물도 안전하게, 확실하게
     </div>
   </div>
-</div>
+
 <div id="blog-feed"></div>
 <script>
 const thumbnails = [
@@ -285,7 +285,10 @@ const blogLinks = [
   'https://blog.naver.com/two3logis/글번호5'
 ];
 
+// 1. HTML 변수 선언
 let html = '<div style="display:flex; gap:32px; justify-content:center; align-items:flex-end;">';
+
+// 2. 썸네일 카드 forEach만 반복
 thumbnails.forEach((imgSrc, idx) => {
   html += `
     <div style="background:#0d2d6e; border-radius:12px 12px 0 0; width:220px; height:220px; text-align:center; overflow:hidden;">
@@ -293,84 +296,20 @@ thumbnails.forEach((imgSrc, idx) => {
         <img src="${imgSrc}" alt="썸네일" style="width:220px; height:220px; object-fit:cover;">
       </a>
     </div>
-
-					</div>
-
-				<!-- Footer -->
-					<footer id="footer">
-						<section>
-							<form method="post" action="#">
-								<div class="fields">
-									<div class="field">
-										<label for="name">Name</label>
-										<input type="text" name="name" id="name" />
-									</div>
-									<div class="field">
-										<label for="email">Email</label>
-										<input type="text" name="email" id="email" />
-									</div>
-									<div class="field">
-										<label for="message">Message</label>
-										<textarea name="message" id="message" rows="3"></textarea>
-									</div>
-								</div>
-								<ul class="actions">
-									<li><input type="submit" value="Send Message" /></li>
-								</ul>
-							</form>
-						</section>
-						<section class="split contact">
-							<section class="alt">
-								<h3>Address</h3>
-								<p>1234 Somewhere Road #87257<br />
-								Nashville, TN 00000-0000</p>
-							</section>
-							<section>
-								<h3>Phone</h3>
-								<p><a href="#">(000) 000-0000</a></p>
-							</section>
-							<section>
-								<h3>Email</h3>
-								<p><a href="#">info@untitled.tld</a></p>
-							</section>
-							<section>
-								<h3>Social</h3>
-								<ul class="icons alt">
-									<li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
-									<li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
-									<li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
-									<li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-								</ul>
-							</section>
-						</section>
-					</footer>
-
-				<!-- Copyright -->
-					<div id="copyright">
-						<ul><li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
-					</div>
-
-			</div>
   `;
 });
+
+// 3. forEach 바깥에서 div 닫기
 html += '</div>';
+
+// 4. 블로그 카드만 blog-feed에 넣기
 document.getElementById('blog-feed').innerHTML = html;
 </script>
 
+	<!-- 블로그 JS 끝 -->
+</script>
 
-								</ul>
-							</article>
-
-							</footer>
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-
-	</body>
-</html>
+<!-- 하단 입력란(footer, form 등) -->
+<footer id="footer">
+  <!-- ... 이하 생략 ... -->
+</footer>
