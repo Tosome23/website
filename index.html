@@ -274,6 +274,25 @@
 <!-- 블로그 썸네일 영역 (항상 footer, copyright 위!) -->
 <div id="blog-feed" style="max-width:1100px; margin: 0 auto 40px auto;"></div>
 
+<!-- Footer와 copyright: 페이지 최하단! -->
+<footer id="footer" style="margin-top:48px;">
+  <section class="split contact">
+    <section class="alt">
+      <h3>Address</h3>
+      <p>인천광역시 중구 XXX로 123<br />대한민국</p>
+    </section>
+    <section>
+      <h3>Phone</h3>
+      <p><a href="#">02-1234-5678</a></p>
+    </section>
+    <section>
+      <h3>Email</h3>
+      <p><a href="#">info@tosomelogis.kr</a></p>
+    </section>
+  </section>
+</footer>
+<div id="copyright" style="margin-bottom:12px;">
+  <ul><li>&copy; 투삼로지스</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
 </div>
 
 <!-- 블로그 썸네일 스크립트 -->
@@ -299,72 +318,22 @@ thumbnails.forEach((imgSrc, idx) => {
       <a href="${blogLinks[idx]}" target="_blank" style="display:block; text-decoration:none;">
         <img src="${imgSrc}" alt="썸네일" style="width:220px; height:220px; object-fit:cover;">
       </a>
-		</div>
+    </div>`;
+});
+html += '</div>';
+document.getElementById('blog-feed').innerHTML = html;
+</script>
 
-				<!-- Footer -->
-					<footer id="footer">
-						<section>
-							<form method="post" action="#">
-								<div class="fields">
-									<div class="field">
-										<label for="name">Name</label>
-										<input type="text" name="name" id="name" />
-									</div>
-									<div class="field">
-										<label for="email">Email</label>
-										<input type="text" name="email" id="email" />
-									</div>
-									<div class="field">
-										<label for="message">Message</label>
-										<textarea name="message" id="message" rows="3"></textarea>
-									</div>
-								</div>
-								<ul class="actions">
-									<li><input type="submit" value="Send Message" /></li>
-								</ul>
-							</form>
-						</section>
-						<section class="split contact">
-							<section class="alt">
-								<h3>Address</h3>
-								<p>1234 Somewhere Road #87257<br />
-								Nashville, TN 00000-0000</p>
-							</section>
-							<section>
-								<h3>Phone</h3>
-								<p><a href="#">(000) 000-0000</a></p>
-							</section>
-							<section>
-								<h3>Email</h3>
-								<p><a href="#">info@untitled.tld</a></p>
-							</section>
-							<section>
-								<h3>Social</h3>
-								<ul class="icons alt">
-									<li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
-									<li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
-									<li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
-									<li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-								</ul>
-							</section>
-						</section>
-					</footer>
 
-				<!-- Copyright -->
-					<div id="copyright">
-						<ul><li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
-					</div>
 
-			</div>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-
-	</body>
+	  
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/jquery.scrollex.min.js"></script>
+<script src="assets/js/jquery.scrolly.min.js"></script>
+<script src="assets/js/browser.min.js"></script>
+<script src="assets/js/breakpoints.min.js"></script>
+<script src="assets/js/util.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
 </html>
