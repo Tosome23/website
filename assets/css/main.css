@@ -4756,3 +4756,8 @@ background-image: url("../../images/main-banner1.png") !important;
   background: #fff;
 }
 
+#header .logo {
+    border: none !important;
+    box-shadow: none !important;
+    background: none !important;
+}
