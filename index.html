@@ -267,9 +267,14 @@
     <div class="tosome-service-desc" style="font-size:0.98rem; color: #666;">
       민감한 화물도 안전하게, 확실하게
 
-<div id="blog-feed"></div>
+   </div>
+  </div>
+</div>
 
-<!-- Footer는 wrapper div 안, 블로그 피드 다음에 위치 -->
+<!-- 블로그 썸네일 영역 (항상 footer, copyright 위!) -->
+<div id="blog-feed" style="max-width:1100px; margin: 0 auto 40px auto;"></div>
+
+<!-- Footer와 copyright: 페이지 최하단! -->
 <footer id="footer" style="margin-top:48px;">
   <section class="split contact">
     <section class="alt">
@@ -286,12 +291,9 @@
     </section>
   </section>
 </footer>
-
-<!-- Copyright도 반드시 footer 다음에 위치 -->
 <div id="copyright" style="margin-bottom:12px;">
   <ul><li>&copy; 투삼로지스</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
 </div>
-</div> <!-- #wrapper 닫는 위치 정확! -->
 
 <!-- 블로그 썸네일 스크립트 -->
 <script>
@@ -309,7 +311,7 @@ const blogLinks = [
   'https://blog.naver.com/two3logis/글번호4',
   'https://blog.naver.com/two3logis/글번호5'
 ];
-let html = '<div style="display:flex; gap:32px; justify-content:center; align-items:flex-end; flex-wrap:wrap;">';
+let html = '<div style="display:flex; gap:32px; justify-content:center; align-items:flex-end; flex-wrap:wrap; max-width:1100px; margin:0 auto;">';
 thumbnails.forEach((imgSrc, idx) => {
   html += `
     <div style="background:#0d2d6e; border-radius:12px 12px 0 0; width:220px; height:220px; text-align:center; overflow:hidden; margin-bottom:18px;">
@@ -322,6 +324,10 @@ html += '</div>';
 document.getElementById('blog-feed').innerHTML = html;
 </script>
 
+
+
+
+	  
 <script src="assets/js/jquery.min.js"></script>
 <script src="assets/js/jquery.scrollex.min.js"></script>
 <script src="assets/js/jquery.scrolly.min.js"></script>
