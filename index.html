@@ -266,33 +266,32 @@
     </div>
     <div class="tosome-service-desc" style="font-size:0.98rem; color: #666;">
       민감한 화물도 안전하게, 확실하게
-  
-    <!-- 블로그 썸네일 영역 -->
-    <div id="blog-feed"></div>
-  </div>
 
-  <!-- Footer -->
-  <footer id="footer">
-    <section class="split contact">
-      <section class="alt">
-        <h3>Address</h3>
-        <p>인천광역시 중구 XXX로 123<br />대한민국</p>
-      </section>
-      <section>
-        <h3>Phone</h3>
-        <p><a href="#">02-1234-5678</a></p>
-      </section>
-      <section>
-        <h3>Email</h3>
-        <p><a href="#">info@tosomelogis.kr</a></p>
-      </section>
+<div id="blog-feed"></div>
+
+<!-- Footer는 wrapper div 안, 블로그 피드 다음에 위치 -->
+<footer id="footer" style="margin-top:48px;">
+  <section class="split contact">
+    <section class="alt">
+      <h3>Address</h3>
+      <p>인천광역시 중구 XXX로 123<br />대한민국</p>
     </section>
-  </footer>
+    <section>
+      <h3>Phone</h3>
+      <p><a href="#">02-1234-5678</a></p>
+    </section>
+    <section>
+      <h3>Email</h3>
+      <p><a href="#">info@tosomelogis.kr</a></p>
+    </section>
+  </section>
+</footer>
 
-  <div id="copyright">
-    <ul><li>&copy; 투삼로지스</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
-  </div>
+<!-- Copyright도 반드시 footer 다음에 위치 -->
+<div id="copyright" style="margin-bottom:12px;">
+  <ul><li>&copy; 투삼로지스</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
 </div>
+</div> <!-- #wrapper 닫는 위치 정확! -->
 
 <!-- 블로그 썸네일 스크립트 -->
 <script>
@@ -310,10 +309,10 @@ const blogLinks = [
   'https://blog.naver.com/two3logis/글번호4',
   'https://blog.naver.com/two3logis/글번호5'
 ];
-let html = '<div style="display:flex; gap:32px; justify-content:center; align-items:flex-end;">';
+let html = '<div style="display:flex; gap:32px; justify-content:center; align-items:flex-end; flex-wrap:wrap;">';
 thumbnails.forEach((imgSrc, idx) => {
   html += `
-    <div style="background:#0d2d6e; border-radius:12px 12px 0 0; width:220px; height:220px; text-align:center; overflow:hidden;">
+    <div style="background:#0d2d6e; border-radius:12px 12px 0 0; width:220px; height:220px; text-align:center; overflow:hidden; margin-bottom:18px;">
       <a href="${blogLinks[idx]}" target="_blank" style="display:block; text-decoration:none;">
         <img src="${imgSrc}" alt="썸네일" style="width:220px; height:220px; object-fit:cover;">
       </a>
@@ -330,6 +329,5 @@ document.getElementById('blog-feed').innerHTML = html;
 <script src="assets/js/breakpoints.min.js"></script>
 <script src="assets/js/util.js"></script>
 <script src="assets/js/main.js"></script>
-
 </body>
 </html>
