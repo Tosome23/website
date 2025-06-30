@@ -4793,14 +4793,14 @@ background-image: url("../../images/main-banner1.png") !important;
   white-space: nowrap;  /* 추가: 한 줄로 고정 */
 }
 .reveal-up {
-  opacity: 0;
-  transform: translateY(60px);
+  opacity: 0 !important;
+  transform: translateY(60px) !important;
   transition: opacity 0.7s cubic-bezier(.33,1.02,.5,1), transform 0.65s cubic-bezier(.33,1.02,.5,1);
   will-change: opacity, transform;
 }
 .reveal-up.visible {
-  opacity: 1;
-  transform: translateY(0);
+  opacity: 1 !important;
+  transform: translateY(0) !important;
 }
 </style>
 
