@@ -4804,32 +4804,6 @@ background-image: url("../../images/main-banner1.png") !important;
   transform: translateY(-4px) scale(1.04);
 }
 
-<style>
-#intro {
-  min-height: 100vh; /* 화면 전체 높이 */
-  width: 100vw;      /* 화면 전체 너비 */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background: url('images/배너이미지.png') center center / cover no-repeat;
-  position: relative;
-}
-#intro h1, #intro p {
-  z-index: 2;
-  color: #fff;
-  text-shadow: 2px 2px 16px rgba(0,0,0,0.25);
-}
-/* 어두운 오버레이 효과 */
-#intro::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(25,40,70, 0.24);
-  z-index: 1;
-}
-</style>
-
 
 
 
