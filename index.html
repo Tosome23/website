@@ -238,45 +238,89 @@
     <div class="main-title">작아도, 멀어도,<br>투삼로지스가 책임집니다.</div>
     <hr class="gray-line">
 							
+<style>
+.tosome-service-section {
+  display: flex;
+  gap: 32px;
+  justify-content: center;
+  align-items: stretch;
+  margin: 60px 0;
+  flex-wrap: wrap;
+}
+.tosome-service-card {
+  flex: 1;
+  max-width: 350px;
+  background: #fff;
+  border-radius: 28px;
+  box-shadow: 0 6px 32px 0 rgba(25, 118, 210, 0.08), 0 1.5px 8px 0 rgba(60,60,60,.05);
+  text-align: left;
+  padding: 36px 28px 32px 28px;
+  margin: 0 0 12px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  transition: box-shadow 0.25s;
+}
+.tosome-service-card img {
+  width: 100%;
+  border-radius: 18px;
+  margin-bottom: 26px;
+  box-shadow: 0 2px 14px 0 rgba(0,0,0,.06);
+}
+.tosome-service-characteristic {
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: #1976d2; /* 투삼로지스 파란색 */
+  margin-bottom: 7px;
+  letter-spacing: 0.01em;
+}
+.tosome-service-lead {
+  font-size: 1.17rem;
+  margin-bottom: 9px;
+  font-weight: 600;
+  color: #20262d;
+}
+.tosome-service-desc {
+  font-size: 1rem;
+  color: #5d5d5d;
+  line-height: 1.65;
+}
+@media (max-width: 1080px) {
+  .tosome-service-section { flex-direction: column; gap: 24px; align-items: stretch; }
+  .tosome-service-card { max-width: 100%; }
+}
+</style>
 
-<div class="tosome-service-section" style="display: flex; gap: 32px; justify-content: center; align-items: flex-start; margin: 60px 0;">
-  <!-- 1. 비-->
-  <div class="tosome-service-card" style="flex:1; max-width:350px; background: #fafbfc; border-radius: 28px; text-align: center; padding: 32px 22px;">
-    <img src="images/img01.png" alt="비용" style="width: 100%; border-radius: 16px; margin-bottom: 18px;">
-    <div class="tosome-service-title" style="font-weight:bold; font-size:1.2rem; margin-bottom:10px; color: #0076d6;">Point01</div>
-    <div class="tosome-service-lead" style="font-size: 1.05rem; margin-bottom: 7px;">
-      단순 운임X, 화물 맞춤 견적
-    </div>
-    <div class="tosome-service-desc" style="font-size:0.98rem; color: #666;">
-      통관·관세·할인 혜택까지 함께 고려해 불필요한 지출 없는 합리적 비용을 제안합니다.
+<div class="tosome-service-section">
+  <!-- 1 -->
+  <div class="tosome-service-card">
+    <img src="images/img01.png" alt="비용">
+    <div class="tosome-service-characteristic">characteristic 01</div>
+    <div class="tosome-service-lead">우리 회사 인재 정보를 한 곳에,</div>
+    <div class="tosome-service-desc">
+      인재 정보, 성과 정보, 리뷰 등 구성원의 성장 데이터를 클릭 한 번으로 바로 확인하세요
     </div>
   </div>
-  
-  <!-- 2. 배터리·위험물 운송 -->
-  <div class="tosome-service-card" style="flex:1; max-width:350px; background: #fafbfc; border-radius: 28px; text-align: center; padding: 32px 22px;">
-    <img src="images/img02.png" alt="서비스" style="width: 100%; border-radius: 16px; margin-bottom: 18px;">
-    <div class="tosome-service-title" style="font-weight:bold; font-size:1.2rem; margin-bottom:10px; color: #0076d6;">Point02</div>
-    <div class="tosome-service-lead" style="font-size: 1.05rem; margin-bottom: 7px;">
-      리튬이온 배터리, UN인증 위험물
-    </div>
-    <div class="tosome-service-desc" style="font-size:0.98rem; color: #666;">
-      서류·포장·특송까지 한 번에 해결!
+  <!-- 2 -->
+  <div class="tosome-service-card">
+    <img src="images/img02.png" alt="서비스">
+    <div class="tosome-service-characteristic">characteristic 02</div>
+    <div class="tosome-service-lead">유기적인 목표 운영</div>
+    <div class="tosome-service-desc">
+      자발적인 목표 수립, 실시간 성과 확인, 수상시 피드백으로 목표를 유연하게 운영하세요
     </div>
   </div>
-  
-  <!-- 3. 특수화물·전시화물 -->
-  <div class="tosome-service-card" style="flex:1; max-width:350px; background: #fafbfc; border-radius: 28px; text-align: center; padding: 32px 22px;">
-    <img src="images/img03.png" alt="디자인인" style="width: 100%; border-radius: 16px; margin-bottom: 18px;">
-    <div class="tosome-service-title" style="font-weight:bold; font-size:1.2rem; margin-bottom:10px; color: #0076d6;">Point03</div>
-    <div class="tosome-service-lead" style="font-size: 1.05rem; margin-bottom: 7px;">
-      전시회, 샘플, 시제품 등
+  <!-- 3 -->
+  <div class="tosome-service-card">
+    <img src="images/img03.png" alt="디자인">
+    <div class="tosome-service-characteristic">characteristic 03</div>
+    <div class="tosome-service-lead">어떠한 관리도 유연하게</div>
+    <div class="tosome-service-desc">
+      우리 조직과 꼭 맞는 제도를 간편히 설계할 수 있어요.
     </div>
-    <div class="tosome-service-desc" style="font-size:0.98rem; color: #666;">
-      민감한 화물도 안전하게, 확실하게
-
-   </div>
   </div>
 </div>
+
 <!-- 블로그 썸네일 영역 (항상 footer, copyright 위!) -->
 <div id="blog-feed" style="max-width:1100px; margin: 0 auto 40px auto;"></div>
 
