@@ -271,8 +271,6 @@
   font-weight: 600;
   color: #20262d;
 }
-.tosome-service-card:nth-child(3) .tosome-service-lead {
-  font-weight: 400;  /* 3번째만 볼드 해제 */
 }
 .tosome-service-desc {
   font-size: 1rem;
@@ -498,35 +496,6 @@
   </div>
 </div>
 
-		
-<!-- script는 맨 마지막! -->
-<script>
-const thumbnails = [
-  'images/blg01.png',
-  'images/blg02.png',
-  'images/blg03.png',
-  'images/blg04.png',
-  'images/blg05.png'
-];
-const blogLinks = [
-  'https://blog.naver.com/two3logis/글번호1',
-  'https://blog.naver.com/two3logis/글번호2',
-  'https://blog.naver.com/two3logis/글번호3',
-  'https://blog.naver.com/two3logis/글번호4',
-  'https://blog.naver.com/two3logis/글번호5'
-];
-let html = '<div style="display:flex; gap:32px; justify-content:center; align-items:flex-end; flex-wrap:wrap; max-width:1100px; margin:0 auto;">';
-thumbnails.forEach((imgSrc, idx) => {
-  html += `
-    <div style="background:#0d2d6e; border-radius:12px 12px 0 0; width:220px; height:220px; text-align:center; overflow:hidden; margin-bottom:18px;">
-      <a href="${blogLinks[idx]}" target="_blank" style="display:block; text-decoration:none;">
-        <img src="${imgSrc}" alt="썸네일" style="width:220px; height:220px; object-fit:cover;">
-      </a>
-    </div>`;
-});
-html += '</div>';
-document.getElementById('blog-feed').innerHTML = html;
-</script>
 <script src="assets/js/jquery.min.js"></script>
 <script src="assets/js/jquery.scrollex.min.js"></script>
 <script src="assets/js/jquery.scrolly.min.js"></script>
