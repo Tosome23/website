@@ -4769,9 +4769,8 @@ background-image: url("../../images/main-banner1.png") !important;
 .tosome-service-desc {
   font-size: 1rem;
   color: #5d5d5d;
-  line-height: 1.65;
-  letter-spacing: 0.10em;  /* ← 자간 추가 (0.02em~0.06em 추천) */
+  line-height: 2.0;   /* 기본 1.65에서 1.8~2.0 사이로 조정 */
+  letter-spacing: 0.02em; /* 자간도 약간 주면 더 깔끔함(선택) */
 }
-
 	
 }
