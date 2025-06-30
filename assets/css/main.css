@@ -4761,3 +4761,6 @@ background-image: url("../../images/main-banner1.png") !important;
     box-shadow: none !important;
     background: none !important;
 }
+.arrow-btn-custom {
+  margin-top: 1.5cm !important;
+  display: inline-block !important;
