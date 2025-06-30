@@ -4765,13 +4765,3 @@ background-image: url("../../images/main-banner1.png") !important;
   margin-top: 8cm !important;
   display: inline-block !important;
 }
-.main-container {
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 0 16px;
-  box-sizing: border-box;
-}
-@media (max-width: 600px) {
-  .main-container {
-    padding: 0 8px;
-  }
