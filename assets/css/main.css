@@ -4785,7 +4785,7 @@ background-image: url("../../images/main-banner1.png") !important;
   margin-bottom: 6px !important;  /* 필요시 더 줄임 */
 }
 .compare-title {
-  font-size: 1.0rem;   /* 기존 1.45rem → 1.15rem 등으로 조절 */
+  font-size: 1.0rem; !important  /* 기존 1.45rem → 1.15rem 등으로 조절 */
   font-weight: 700;
   color: #0d2d6e;
   margin-bottom: 12px;
