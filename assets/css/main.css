@@ -4792,18 +4792,18 @@ background-image: url("../../images/main-banner1.png") !important;
   letter-spacing: -1px;
   white-space: nowrap;  /* 추가: 한 줄로 고정 */
 }
-/* 애니메이션 기본 상태 (숨김) */
+<style>
 .reveal-up {
   opacity: 0;
   transform: translateY(60px);
-  transition: opacity 0.7s cubic-bezier(.5,1.5,.7,1.01), transform 0.8s cubic-bezier(.5,1.5,.7,1.01);
+  transition: opacity 0.7s cubic-bezier(.4,1.4,.7,1.01), transform 0.7s cubic-bezier(.4,1.4,.7,1.01);
+  will-change: opacity, transform;
 }
-
-/* 화면에 보일 때 (등장) */
 .reveal-up.active {
   opacity: 1;
   transform: translateY(0);
 }
+</style>
 
 
 
