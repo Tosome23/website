@@ -4770,7 +4770,7 @@ background-image: url("../../images/main-banner1.png") !important;
   font-size: 1rem;
   color: #5d5d5d;
   line-height: 1.65;
-  letter-spacing: 0.05em;  /* ← 자간 추가 (0.02em~0.06em 추천) */
+  letter-spacing: 0.08em;  /* ← 자간 추가 (0.02em~0.06em 추천) */
 }
 
 	
