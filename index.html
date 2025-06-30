@@ -422,9 +422,10 @@
 	
   </section>
 <!-- === CTA 배너 === -->
-<div class="main-container" style="width:100%; max-width:1148px; aspect-ratio:2.4/1; object-fit:cover; border-radius:28px; display:block; margin:0 auto;">
-  <div class="cta-banner" style="position:relative; width:100%; max-width:900px; margin:48px auto 40px auto; border-radius:28px; overflow:hidden;">
-    <img src="images/cta-banner.png" alt="CTA 배경" class="cta-bg-img" style="width:100%; display:block; object-fit:cover; filter:brightness(0.6); min-height:220px;">
+<div class="main-container" style="width:100%; max-width:1148px; aspect-ratio:2.4/1; border-radius:28px; display:block; margin:0 auto;">
+  <div class="cta-banner" style="position:relative; width:100%; height:100%; border-radius:28px; overflow:hidden;">
+    <img src="images/cta-banner.png" alt="CTA 배경" class="cta-bg-img"
+      style="width:100%; height:100%; display:block; object-fit:cover; filter:brightness(0.6); min-height:220px;">
     <div class="cta-overlay" style="position:absolute; inset:0; background:rgba(20,30,50,0.45);"></div>
     <div class="cta-content"
       style="
@@ -433,18 +434,18 @@
         display:flex; flex-direction:column;
         justify-content: flex-start;   /* 상단 정렬 */
         align-items: flex-start;       /* 좌측 정렬 */
-        padding:38px 46px 0 46px;      /* 위쪽 여백만 조절 */
+        padding:38px 46px 0 46px;
         box-sizing:border-box;">
       <div style="font-size:2.0rem; font-weight:600; color:#fff; margin:0 0 10px 0; line-height:1.32;">
         수출에 어려움을 겪고 계신가요?
       </div>
-     <div style="font-size:1.13rem; color:#fff; margin-bottom:28px; letter-spacing:0.10em;">
-  투삼로지스에서 고민을 해결하세요
-</div>
+      <div style="font-size:1.13rem; color:#fff; margin-bottom:28px; letter-spacing:0.08em;">
+        투삼로지스에서 고민을 해결하세요
       </div>
-    <a href="https://pf.kakao.com/_wUvBn/chat" target="_blank"
-   style="background:#1976d2; color:#fff; font-size:1.16rem; font-weight:700; border-radius:26px; padding:13px 38px; text-decoration:none; box-shadow:0 4px 16px #13b18744; transition:filter .15s;">
-  실시간 상담
+      <!-- 버튼을 내용 안(아래)으로! -->
+      <a href="https://pf.kakao.com/_wUvBn/chat" target="_blank"
+        style="background:#1976d2; color:#fff; font-size:1.16rem; font-weight:700; border-radius:26px; padding:13px 38px; text-decoration:none; box-shadow:0 4px 16px #13b18744; transition:filter .15s;">
+        실시간 상담
       </a>
     </div>
   </div>
