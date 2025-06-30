@@ -377,6 +377,112 @@ document.querySelector('.work-btn[data-cat="all"]').click();
    </div>
   </div>
 </div>
+				<style>
+.marquee-wrap {
+  overflow: hidden;
+  width: 100%;
+  background: #fff;
+  white-space: nowrap;
+  position: relative;
+  height: 60px;
+}
+.marquee-content {
+  display: inline-block;
+  padding-right: 40px;
+  animation: marquee 18s linear infinite;
+}
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.marquee-hash {
+  display: inline-block;
+  margin: 8px 16px 8px 0;
+  padding: 8px 22px;
+  font-size: 1.1rem;
+  border-radius: 24px;
+  font-weight: 600;
+  border: 2px solid #ddd;
+  background: #fff;
+}
+.green { color: #259d1e; border-color: #a6e9b1; }
+.orange { color: #ff9e00; border-color: #ffe6ac; }
+.red { color: #e22434; border-color: #ffd7dd; }
+.yellow { color: #ffd600; border-color: #fff8ce; }
+.pink { color: #ff6699; border-color: #ffe7ee; }
+.blue { color: #3b4cfa; border-color: #e0e5ff; }
+</style>
+
+<div class="marquee-wrap" id="marquee">
+  <div class="marquee-content" id="marquee-content">
+    <span class="marquee-hash green">#아이스박스</span>
+    <span class="marquee-hash orange">#플라스틱 스프레이 공병</span>
+    <span class="marquee-hash orange">#디스펜서</span>
+    <span class="marquee-hash red">#IP카메라</span>
+    <span class="marquee-hash red">#공기측정기</span>
+    <span class="marquee-hash pink">#캔들홀더</span>
+    <span class="marquee-hash yellow">#아쿠아슈즈</span>
+    <span class="marquee-hash green">#플라스틱 캐쳐</span>
+    <span class="marquee-hash blue">#네일아트 스탬프</span>
+    <span class="marquee-hash blue">#건축 자재</span>
+    <!-- 반복을 위해 아래 라인 복사 -->
+    <span class="marquee-hash green">#아이스박스</span>
+    <span class="marquee-hash orange">#플라스틱 스프레이 공병</span>
+    <span class="marquee-hash orange">#디스펜서</span>
+    <span class="marquee-hash red">#IP카메라</span>
+    <span class="marquee-hash red">#공기측정기</span>
+    <span class="marquee-hash pink">#캔들홀더</span>
+    <span class="marquee-hash yellow">#아쿠아슈즈</span>
+    <span class="marquee-hash green">#플라스틱 캐쳐</span>
+    <span class="marquee-hash blue">#네일아트 스탬프</span>
+    <span class="marquee-hash blue">#건축 자재</span>
+  </div>
+</div>
+
+<script>
+// 마우스 드래그/터치 스크롤
+const marquee = document.getElementById('marquee');
+let isDown = false, startX, scrollLeft;
+marquee.addEventListener('mousedown', (e) => {
+  isDown = true;
+  startX = e.pageX - marquee.offsetLeft;
+  scrollLeft = marquee.scrollLeft;
+  marquee.style.cursor = "grabbing";
+});
+marquee.addEventListener('mouseleave', () => {
+  isDown = false;
+  marquee.style.cursor = "grab";
+});
+marquee.addEventListener('mouseup', () => {
+  isDown = false;
+  marquee.style.cursor = "grab";
+});
+marquee.addEventListener('mousemove', (e) => {
+  if (!isDown) return;
+  e.preventDefault();
+  const x = e.pageX - marquee.offsetLeft;
+  const walk = (x - startX) * 1.2;
+  marquee.scrollLeft = scrollLeft - walk;
+});
+// 모바일 터치 스크롤
+marquee.addEventListener('touchstart', (e) => {
+  isDown = true;
+  startX = e.touches[0].pageX - marquee.offsetLeft;
+  scrollLeft = marquee.scrollLeft;
+});
+marquee.addEventListener('touchend', () => {
+  isDown = false;
+});
+marquee.addEventListener('touchmove', (e) => {
+  if (!isDown) return;
+  const x = e.touches[0].pageX - marquee.offsetLeft;
+  const walk = (x - startX) * 1.1;
+  marquee.scrollLeft = scrollLeft - walk;
+});
+</script>
+  </div>
+</div>
+		
   </section>
 <!-- === CTA 배너 === -->
 <div class="cta-banner" style="position:relative; max-width:900px; margin:48px auto 40px auto; border-radius:28px; overflow:hidden;">
