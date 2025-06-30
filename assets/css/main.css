@@ -4765,12 +4765,11 @@ background-image: url("../../images/main-banner1.png") !important;
   margin-top: 8cm !important;
   display: inline-block !important;
 }
-
 .tosome-service-desc {
   font-size: 1rem;
   color: #5d5d5d;
-  line-height: 3;   /* 기본 1.65에서 1.8~2.0 사이로 조정 */
+  line-height: 3.0 !important;   /* 기본 1.65에서 1.8~2.0 사이로 조정 */
   letter-spacing: 0.02em; /* 자간도 약간 주면 더 깔끔함(선택) */
 }
 	
-}
+
