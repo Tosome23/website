@@ -4792,7 +4792,6 @@ background-image: url("../../images/main-banner1.png") !important;
   letter-spacing: -1px;
   white-space: nowrap;  /* 추가: 한 줄로 고정 */
 }
-<style>
 .reveal-up {
   opacity: 0;
   transform: translateY(60px);
