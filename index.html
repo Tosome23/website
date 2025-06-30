@@ -452,7 +452,7 @@
 <!-- Footer와 copyright 반드시 최하단! -->
 <footer id="footer" style="margin-top:48px;">
   <section>
-    <form method="POST" action="https://formspree.io/f/xrbkrgzw">
+  <form id="contact-form" method="post" action="https://formspree.io/f/xrbkrgzw">
   <div class="fields">
     <div class="field">
       <label for="name">Name</label>
@@ -519,5 +519,38 @@
 <script src="assets/js/breakpoints.min.js"></script>
 <script src="assets/js/util.js"></script>
 <script src="assets/js/main.js"></script>
+
+		<div id="form-result" style="display:none; color:#1976d2; margin-top:12px;"></div>
+<script>
+document.getElementById('contact-form').addEventListener('submit', async function(e) {
+    e.preventDefault();
+    const form = e.target;
+    const data = new FormData(form);
+    const resultDiv = document.getElementById('form-result');
+
+    fetch('https://formspree.io/f/xrbkrgzw', {
+        method: 'POST',
+        body: data,
+        headers: {
+            'Accept': 'application/json'
+        }
+    })
+    .then(response => {
+        if (response.ok) {
+            resultDiv.style.display = "block";
+            resultDiv.textContent = "정상적으로 전송되었습니다. 빠른 시일 내에 안내드리겠습니다.";
+            form.reset();
+        } else {
+            resultDiv.style.display = "block";
+            resultDiv.textContent = "전송 중 오류가 발생했습니다. 다시 시도해주세요.";
+        }
+    })
+    .catch(error => {
+        resultDiv.style.display = "block";
+        resultDiv.textContent = "일시적 오류가 발생했습니다.";
+    });
+});
+</script>
+
 </body>
 </html>
