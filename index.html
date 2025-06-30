@@ -309,8 +309,7 @@
   .tosome-service-section { flex-direction: column; gap: 18px; align-items: stretch; }
   .tosome-service-card { max-width: 100%; }
 }
-</style>
-<div class="tosome-service-section">
+</style><div class="tosome-service-section">
   <!-- Point 01 -->
   <div class="tosome-service-card reveal-up">
     <img src="images/img01.png" alt="비용">
@@ -320,7 +319,7 @@
       통관·관세 혜택까지 함께 고려한 불필요한 지출 없는 합리적 비용을 제공합니다.
     </div>
   </div>
-<!-- Point 02 -->
+  <!-- Point 02 -->
   <div class="tosome-service-card reveal-up">
     <img src="images/img02.png" alt="서비스">
     <div class="tosome-service-characteristic">Point.02</div>
@@ -329,7 +328,7 @@
       시작부터 끝까지 1:1 특수화물 전문 매니저의 한결 같은 서비스와 실시간 상담을 통해 빠른 대처가 가능합니다.
     </div>
   </div>
- <!-- Point 03 -->
+  <!-- Point 03 -->
   <div class="tosome-service-card reveal-up">
     <img src="images/img03.png" alt="디자인">
     <div class="tosome-service-characteristic">Point.03</div>
@@ -584,16 +583,16 @@ document.getElementById('contact-form').addEventListener('submit', async functio
 });
 
 // reveal-up 애니메이션
-function revealOnScroll() {
-  document.querySelectorAll('.reveal-up').forEach(el => {
-    const rect = el.getBoundingClientRect();
-    if (rect.top < window.innerHeight * 0.92) {
-      el.classList.add('active');
+function revealUpOnScroll() {
+  document.querySelectorAll('.reveal-up').forEach(card => {
+    const rect = card.getBoundingClientRect();
+    if (rect.top < window.innerHeight - 60) {
+      card.classList.add('visible');
     }
   });
 }
-window.addEventListener('scroll', revealOnScroll);
-window.addEventListener('DOMContentLoaded', revealOnScroll);
+window.addEventListener('scroll', revealUpOnScroll);
+window.addEventListener('load', revealUpOnScroll);
 </script>
 
 
