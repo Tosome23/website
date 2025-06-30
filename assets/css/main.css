@@ -4764,7 +4764,7 @@ background-image: url("../../images/main-banner1.png") !important;
 .arrow-btn-custom {
   margin-top: 8cm !important;
   display: inline-block !important;
-
+}
 .main-container {
   max-width: 1000px;
   margin: 0 auto;
@@ -4775,4 +4775,3 @@ background-image: url("../../images/main-banner1.png") !important;
   .main-container {
     padding: 0 8px;
   }
-}
