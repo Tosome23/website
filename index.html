@@ -532,7 +532,7 @@ document.getElementById('contact-form').addEventListener('submit', async functio
     .then(response => {
         if (response.ok) {
             resultDiv.style.display = "block";
-            resultDiv.textContent = "메일 문의가 완료되었습니다. 빠른 시일 내에 답변드리겠습니다.";
+            resultDiv.textContent = "메일 문의가 완료되었습니다. <br>빠른 시일 내에 답변드리겠습니다.";
             form.reset();
             form.style.display = "none"; // 폼 숨김
         } else {
