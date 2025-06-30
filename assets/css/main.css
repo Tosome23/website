@@ -4765,7 +4765,13 @@ background-image: url("../../images/main-banner1.png") !important;
   margin-top: 8cm !important;
   display: inline-block !important;
 }
+
 .tosome-service-desc {
-  /* 기존 내용 위에 아래 한 줄만 추가 */
-  letter-spacing: 0.02em;
+  font-size: 1rem;
+  color: #5d5d5d;
+  line-height: 1.65;
+  letter-spacing: 0.05em;  /* ← 자간 추가 (0.02em~0.06em 추천) */
+}
+
+	
 }
