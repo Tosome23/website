@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html lang="ko">
+<html>
 <head>
   <title>투삼로지스 | 국제특송, 배터리·위험물 운송 전문</title>
   <meta charset="utf-8" />
@@ -39,400 +39,562 @@
     }
   }
   </script>
-  <!-- Style 전부 head에 배치 -->
-  <style>
-    /* --- 서비스 소개 섹션 --- */
-    .service-intro, .service-intro2 {
-      max-width: 1000px;
-      margin: 40px auto 0 auto;
-      text-align: left;
-      padding: 0 10px;
-    }
-    .service-intro .main-title, .service-intro2 .main-title {
-      font-size: 2rem;
-      font-weight: bold;
-      margin: 18px 0 10px 0;
-      line-height: 1.35;
-    }
-    .gray-line { border: 0; border-top: 1px solid #e0e0e0; margin: 18px 0; }
+</head>
+<body class="is-preload">
 
-    .section-row { margin: 18px 0 10px 0; }
-    .section-row .we, .section-row .now { font-weight: bold; color: #0076d6; margin-right: 12px; }
-    /* --- 2단 비교박스 --- */
-    .compare-box-row {
-      display: flex;
-      gap: 28px;
-      max-width: 950px;
-      margin: 38px auto;
-      align-items: flex-start;
-      background: #fff;
-      border-radius: 20px;
-      box-shadow: 0 2px 14px rgba(0,0,0,0.05);
-      padding: 34px 32px;
-    }
-    .compare-texts-col { flex: 0 0 310px; min-width: 240px; display: flex; flex-direction: column; justify-content: flex-start; align-items: flex-start; margin-right: 18px; }
-    .compare-title { font-size: 1.45rem; font-weight: 700; color: #0d2d6e; margin-bottom: 12px; letter-spacing: -1px; }
-    .compare-desc { font-size: 1.05rem; color: #333; line-height: 1.6; }
-    .compare-table { flex: 1 1 0; min-width: 220px; }
-    .compare-row { display: flex; align-items: center; margin-bottom: 26px; gap: 0 16px; justify-content: space-between; }
-    .compare-label, .compare-percent { font-size: 1.09rem; font-weight: 600; }
-    .compare-label { color: #0076d6; min-width: 95px; max-width: 120px; text-align: left; }
-    .compare-percent { color: #222; margin-left: 10px; font-size: 0.97rem; }
-    .compare-bar-bg { flex: 1; background: #f0f6fa; height: 26px; border-radius: 13px; overflow: hidden; position: relative; cursor: pointer; transition: box-shadow 0.2s; margin-left: 10px; }
-    .compare-bar { height: 100%; background: linear-gradient(90deg, #0076d6 80%, #36b8e3 100%); border-radius: 13px; position: relative; transition: width 0.7s, transform 0.18s cubic-bezier(.4,1.4,.7,1.01);}
-    .compare-bar-bg:hover .compare-bar { transform: scaleY(1.23); filter: brightness(1.08) drop-shadow(0 1px 5px #0076d62a);}
-    .compare-bar-bg:hover { box-shadow: 0 2px 10px #0076d615; }
-    /* --- 서비스 카드 섹션 --- */
-    .tosome-service-section { display: flex; gap: 36px; justify-content: center; align-items: stretch; margin: 54px 0 30px 0; flex-wrap: wrap; }
-    .tosome-service-card { flex: 1; max-width: 330px; background: #fff; border-radius: 22px; box-shadow: 0 3px 14px 0 rgba(25, 118, 210, 0.06), 0 1px 5px 0 rgba(60,60,60,.04); text-align: left; padding: 30px 28px 28px 28px; margin: 0 0 18px 0; display: flex; flex-direction: column; align-items: flex-start; transition: box-shadow 0.2s;}
-    .tosome-service-card img { width: 100%; border-radius: 12px; margin-bottom: 18px; box-shadow: 0 1px 7px 0 rgba(0,0,0,.04);}
-    .tosome-service-characteristic { font-weight: 700; font-size: 0.7rem; color: #1976d2; margin-bottom: 2px; letter-spacing: 0.01em;}
-    .tosome-service-lead { font-size: 1.16rem; margin-bottom: 6px; font-weight: 700; color: #222; line-height: 1.38;}
-    .tosome-service-desc { font-size: 0.9rem; color: #757575; line-height: 1.0; font-weight: 300; margin-bottom: 0;}
-    /* --- 마퀴(태그슬라이드) --- */
-    .marquee-outer { width: 100%; background: #fff; overflow: hidden; padding: 0 0 8px 0; }
-    .marquee-row { display: flex; white-space: nowrap; animation: marquee-row 17s linear infinite; gap: 16px;}
-    .marquee-row.reverse { animation-direction: reverse; animation-duration: 22s;}
-    @keyframes marquee-row { 0% { transform: translateX(0);} 100% { transform: translateX(-50%);}}
-    .blue1 { color: #1976d2; border-color: #bbdefb; background: #e3f2fd; }
-    .blue2 { color: #0d47a1; border-color: #b3e5fc; background: #e1f5fe; }
-    .blue3 { color: #0097a7; border-color: #b2ebf2; background: #e0f7fa; }
-    .blue4 { color: #1565c0; border-color: #90caf9; background: #e3f0fd; }
-    .marquee-tag { display: inline-block; margin: 10px 18px 10px 0; padding: 9px 26px; font-size: 1.14rem; border-radius: 24px; font-weight: 600; border: 2px solid; box-shadow: 0 2px 12px rgba(30,55,90,0.07); transition: background 0.2s, color 0.2s; cursor: pointer; user-select: none;}
-    .marquee-tag:hover { opacity: 0.82; box-shadow: 0 3px 20px rgba(25,118,210,0.11);}
-    @media (max-width:900px) {
-      .compare-box-row { flex-direction: column; padding: 20px 7vw;}
-      .compare-texts-col { margin-bottom: 16px; }
-      .tosome-service-section { flex-direction: column; gap: 18px; align-items: stretch;}
-      .tosome-service-card { max-width: 100%;}
-    }
-    @media (max-width:640px) {
-      .compare-box-row { padding: 12px 2vw;}
-      .compare-title { font-size: 1.09rem;}
-      .compare-row { flex-direction: column; align-items: stretch; margin-bottom: 20px;}
-      .compare-label { min-width: 70px; font-size: 1rem;}
-      .compare-bar-bg { margin-left: 0;}
-    }
-    @media (max-width:800px) {
-      .marquee-tag { font-size: 0.96rem; padding: 7px 16px;}
-    }
+		<!-- Wrapper -->
+			<div id="wrapper" class="fade-in">
+				<!-- Intro -->
+					<div id="intro">
+						<h1><br />
+						</h1>
+						<p>
+ <a href="#header" class="button icon solid solo fa-arrow-down scrolly arrow-btn-custom">Continue</a>
+</p>
+
+					</div>
+
+				<!-- Header -->
+					<header id="header">
+    <a href="index.html" class="logo">
+        <img src="images/logo2.png" alt="투삼로지스 로고" style="height:60px;">
+    </a>
+</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul class="links">
+							<li class="active"><a href="index.html">서비스 소개</a></li>
+					
+						</ul>
+						<ul class="icons">
+							<ul class="icons">
+    <li>
+      <a href="http://pf.kakao.com/_wUvBn/chat" target="_blank">
+            <img src="images/kakao.png" alt="실시간 카톡상담" style="height:64px; vertical-align:middle;">
+        </a>
+    </li>
+</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+    
   </style>
 </head>
 <body class="is-preload">
 
-  <div id="wrapper" class="fade-in">
+<div id="wrapper" class="fade-in">
+<div class="service-intro">
+    <div class="sub-title">서비스소개</div>
+    <div class="main-title">우리는 <b style="color:#0076d6;">물류의 불편함</b>에 집중합니다.</div>
+    <hr class="gray-line">
 
-    <!-- Intro -->
-    <div id="intro">
-      <h1><br /></h1>
-      <p>
-        <a href="#header" class="button icon solid solo fa-arrow-down scrolly arrow-btn-custom">Continue</a>
-      </p>
+    <div class="section-row">
+        <span class="we">WE</span>
+        <p><strong>필요한 건 화려한 약속이 아니라, 진짜 문제를 해결하는  
+         신속하고 정확한 물류 파트너입니다. 
+<br>투삼로지스는 그 본질에 집중합니다.</p>
     </div>
 
-    <!-- Header -->
-    <header id="header">
-      <a href="index.html" class="logo">
-        <img src="images/logo2.png" alt="투삼로지스 로고" style="height:60px;">
-      </a>
-    </header>
+    <hr class="gray-line">
 
-    <!-- Nav -->
-    <nav id="nav">
-      <ul class="links">
-        <li class="active"><a href="index.html">서비스 소개</a></li>
-      </ul>
-      <ul class="icons">
-        <li>
-          <a href="http://pf.kakao.com/_wUvBn/chat" target="_blank">
-            <img src="images/kakao.png" alt="실시간 카톡상담" style="height:64px; vertical-align:middle;">
-          </a>
-        </li>
-      </ul>
-    </nav>
-
-    <!-- Main -->
-    <main id="main">
-
-      <!-- 서비스 소개 -->
-      <section class="service-intro">
-        <div class="sub-title">서비스소개</div>
-        <div class="main-title">우리는 <b style="color:#0076d6;">물류의 불편함</b>에 집중합니다.</div>
-        <hr class="gray-line">
-        <div class="section-row">
-          <span class="we">WE</span>
-          <p><strong>필요한 건 화려한 약속이 아니라, 진짜 문제를 해결하는  
-            신속하고 정확한 물류 파트너입니다.<br>투삼로지스는 그 본질에 집중합니다.</strong></p>
-        </div>
-        <hr class="gray-line">
-        <div class="section-row">
-          <span class="now">NOW</span>
-          <p><strong>DHL, FedEx, UPS 특송부터  
-            배터리·위험물 운송까지,  
-            복잡한 절차 없이 원스톱으로 빠르고 안전하게 진행하세요.</strong></p>
-          <br>
-        </div>
-        <img src="images/main-banner2.png"
-        style="display:block; width:100%; max-width:1000px; margin:0 auto 36px auto; border-radius:18px;">
-      </section>
-
-      <!-- 비교 박스 -->
-      <section class="compare-box-row">
-        <div class="compare-texts-col">
-          <div class="compare-title">크던, 작던 한결 같은 서비스</div>
-          <div class="compare-desc">
-            투삼로지스는 기업 및 개인 고객 모두에게<br>
-            <b style="color:#0076d6;">합리적인 국제특송 요금</b>과 전세계 220개국 안정적인 문앞 배송을 제공합니다.<br>
-          </div>
-        </div>
-        <div class="compare-table">
-          <div class="compare-row">
-            <div class="compare-label">투삼로지스</div>
-            <div class="compare-bar-bg" title="업계 최저가 기준(예시)">
-              <div class="compare-bar" style="width: 38%;"></div>
-            </div>
-            <div class="compare-percent">38%</div>
-          </div>
-          <div class="compare-row">
-            <div class="compare-label">글로벌 특송</div>
-            <div class="compare-bar-bg" title="우체국 EMS 요금 평균(예시)">
-              <div class="compare-bar" style="width: 48%;"></div>
-            </div>
-            <div class="compare-percent">48%</div>
-          </div>
-          <div class="compare-row">
-            <div class="compare-label">포워딩</div>
-            <div class="compare-bar-bg" title="F사 요금(예시)">
-              <div class="compare-bar" style="width: 100%;"></div>
-            </div>
-            <div class="compare-percent">100%</div>
-          </div>
-        </div>
-      </section>
-
-      <!-- 서비스 장점 -->
-      <section class="service-intro2 reveal-up">
-        <div class="sub-title">서비스 장점</div>
-        <div class="main-title"><b style="color:#0076d6;">간편하다</b>라고 느낄 수 있게</div>
-        <hr class="gray-line">
-      </section>
-
-      <!-- 카드형 서비스 포인트 -->
-      <section class="tosome-service-section">
-        <!-- Point 01 -->
-       <div class="tosome-service-card">
-          <img src="images/img01.png" alt="비용">
-          <div class="tosome-service-characteristic">Point.01</div>
-          <div class="tosome-service-lead">단순 운임X, 전용 견적O</div>
-          <div class="tosome-service-desc">
-            통관·관세 혜택까지 함께 고려한 불필요한 지출 없는 합리적 비용을 제공합니다.
-          </div>
-        </div>
-        <!-- Point 02 -->
-     <div class="tosome-service-card">
-          <img src="images/img02.png" alt="서비스">
-          <div class="tosome-service-characteristic">Point.02</div>
-          <div class="tosome-service-lead">1:1 전담 매니저</div>
-          <div class="tosome-service-desc">
-            시작부터 끝까지 1:1 특수화물 전문 매니저의 한결 같은 서비스와 실시간 상담을 통해 빠른 대처가 가능합니다.
-          </div>
-        </div>
-        <!-- Point 03 -->
-        <div class="tosome-service-card">
-          <img src="images/img03.png" alt="디자인">
-          <div class="tosome-service-characteristic">Point.03</div>
-          <div class="tosome-service-lead">다르게 디자인</div>
-          <div class="tosome-service-desc">
-            항공 샘플 특송, 위험물, 특수화물 외에도 LCL, FCL까지 경로와 비용을 한 곳에서 관리하실 수 있습니다.
-          </div>
-        </div>
-      </section>
-<section class="service-intro">
-  <div class="sub-title"></div>
-  <div class="main-title" style="text-align:center;">
-    작아도, 멀어도,<br>투삼로지스가 책임집니다.
-  </div>
-</section>
-<div class="tosome-service-desc" style="text-align:center; margin-bottom:30px;">
-  위험물은 물론 7,000 여개 다양한 상품을 원활히 운송하고 있습니다.
+    <div class="section-row">
+        <span class="now">NOW</span>
+        <p><strong>DHL, FedEx, UPS 특송부터  
+배터리·위험물 운송까지,  
+복잡한 절차 없이 원스톱으로 빠르고 안전하게 진행하세요.</p>
+	    <br>
+    </div>
 </div>
+	<img src="images/main-banner2.png"
+     style="display:block; width:100%; max-width:1000px; margin:0 auto 36px auto; border-radius:18px;">
+</header>
+<style>
+/* 가로 2단 레이아웃 */
+.compare-box-row {
+  display: flex;
+  gap: 28px;
+  max-width: 950px;
+  margin: 38px auto;
+  align-items: flex-start;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 2px 14px rgba(0,0,0,0.05);
+  padding: 34px 32px;
+}
+.compare-texts-col {
+  flex: 0 0 310px;
+  min-width: 240px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-right: 18px;
+}
+.compare-title {
+  font-size: 1.45rem;
+  font-weight: 700;
+  color: #0d2d6e;
+  margin-bottom: 12px;
+  letter-spacing: -1px;
+}
+.compare-desc {
+  font-size: 1.05rem;
+  color: #333;
+  line-height: 1.6;
+}
+
+.compare-table {
+  flex: 1 1 0;
+  min-width: 220px;
+}
+.compare-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 26px;
+  gap: 0 16px;
+  justify-content: space-between;
+}
+.compare-label,
+.compare-percent {
+  font-size: 1.09rem;
+  font-weight: 600;
+}
+.compare-label {
+  color: #0076d6;
+  min-width: 95px;
+  max-width: 120px;
+  text-align: left;
+}
+.compare-percent {
+  color: #222;
+  margin-left: 10px;
+  font-size: 0.97rem;
+}
+.compare-bar-bg {
+  flex: 1;
+  background: #f0f6fa;
+  height: 26px;
+  border-radius: 13px;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  transition: box-shadow 0.2s;
+  margin-left: 10px;
+}
+.compare-bar {
+  height: 100%;
+  background: linear-gradient(90deg, #0076d6 80%, #36b8e3 100%);
+  border-radius: 13px;
+  position: relative;
+  transition: width 0.7s, transform 0.18s cubic-bezier(.4,1.4,.7,1.01);
+}
+.compare-bar-bg:hover .compare-bar {
+  transform: scaleY(1.23);
+  filter: brightness(1.08) drop-shadow(0 1px 5px #0076d62a);
+}
+.compare-bar-bg:hover {
+  box-shadow: 0 2px 10px #0076d615;
+}
+
+@media (max-width: 900px) {
+  .compare-box-row {
+    flex-direction: column;
+    padding: 20px 7vw;
+  }
+  .compare-texts-col { margin-bottom: 16px; }
+}
+
+@media (max-width: 640px) {
+  .compare-box-row { padding: 12px 2vw; }
+  .compare-title { font-size: 1.09rem; }
+  .compare-row { flex-direction: column; align-items: stretch; margin-bottom: 20px;}
+  .compare-label { min-width: 70px; font-size: 1rem; }
+  .compare-bar-bg { margin-left: 0; }
+}
+</style>
+
+<div class="compare-box-row">
+  <!-- 좌측 텍스트 컬럼 -->
+  <div class="compare-texts-col">
+    <div class="compare-title"> 크던, 작던 한결 같은 서비스 </div>
+    <div class="compare-desc">
+      투삼로지스는 기업 및 개인 고객 모두에게<br>
+      <b style="color:#0076d6;">합리적인 국제특송 요금</b>과 전세계 220개국 안정적인 문앞 배송을 제공합니다.<br>
+    </div>
+  </div>
+
+  <!-- 우측 그래프 컬럼 -->
+  <div class="compare-table">
+    <div class="compare-row">
+      <div class="compare-label">투삼로지스</div>
+      <div class="compare-bar-bg" title="업계 최저가 기준(예시)">
+        <div class="compare-bar" style="width: 38%;"></div>
       </div>
+      <div class="compare-percent">38%</div>
+    </div>
+    <div class="compare-row">
+      <div class="compare-label">글로벌 특송</div>
+      <div class="compare-bar-bg" title="우체국 EMS 요금 평균(예시)">
+        <div class="compare-bar" style="width: 48%;"></div>
+      </div>
+      <div class="compare-percent">48%</div>
+    </div>
+    <div class="compare-row">
+      <div class="compare-label">포워딩</div>
+      <div class="compare-bar-bg" title="F사 요금(예시)">
+        <div class="compare-bar" style="width: 100%;"></div>
+      </div>
+      <div class="compare-percent">100%</div>
+    </div>
+  </div>
+</div>
+	<div class="service-intro2 reveal-up">
+  <div class="sub-title">서비스 장점</div>
+  <div class="main-title"><b style="color:#0076d6;">간편하다</b>라고 느낄 수 있게</div>
+  <hr class="gray-line">
+</div>
+<style>
+.tosome-service-section {
+  display: flex;
+  gap: 36px;
+  justify-content: center;
+  align-items: stretch;
+  margin: 54px 0 30px 0;
+  flex-wrap: wrap;
+}
+.tosome-service-card {
+  flex: 1;
+  max-width: 330px;
+  background: #fff;
+  border-radius: 22px;
+  box-shadow: 0 3px 14px 0 rgba(25, 118, 210, 0.06), 0 1px 5px 0 rgba(60,60,60,.04);
+  text-align: left;
+  padding: 30px 28px 28px 28px;
+  margin: 0 0 18px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  transition: box-shadow 0.2s;
+}
+.tosome-service-card img {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 18px;
+  box-shadow: 0 1px 7px 0 rgba(0,0,0,.04);
+}
+.tosome-service-characteristic {
+  font-weight: 700;
+  font-size: 0.7rem;
+  color: #1976d2;
+  margin-bottom: 2px;
+  letter-spacing: 0.01em;
+}
+.tosome-service-lead {
+  font-size: 1.16rem;
+  margin-bottom: 6px;
+  font-weight: 700;
+  color: #222;
+  line-height: 1.38;
+}
+.tosome-service-desc {
+  font-size: 0.9rem;
+  color: #757575;
+  line-height: 1.0;
+  font-weight: 300;
+  margin-bottom: 0;
+}
+@media (max-width: 900px) {
+  .tosome-service-section { flex-direction: column; gap: 18px; align-items: stretch; }
+  .tosome-service-card { max-width: 100%; }
+}
+</style><div class="tosome-service-section">
+  <!-- Point 01 -->
+  <div class="tosome-service-card reveal-up">
+    <img src="images/img01.png" alt="비용">
+    <div class="tosome-service-characteristic">Point.01</div>
+    <div class="tosome-service-lead">단순 운임X, 전용 견적O</div>
+    <div class="tosome-service-desc">
+      통관·관세 혜택까지 함께 고려한 불필요한 지출 없는 합리적 비용을 제공합니다.
+    </div>
+  </div>
+  <!-- Point 02 -->
+  <div class="tosome-service-card reveal-up">
+    <img src="images/img02.png" alt="서비스">
+    <div class="tosome-service-characteristic">Point.02</div>
+    <div class="tosome-service-lead">1:1 전담 매니저</div>
+    <div class="tosome-service-desc">
+      시작부터 끝까지 1:1 특수화물 전문 매니저의 한결 같은 서비스와 실시간 상담을 통해 빠른 대처가 가능합니다.
+    </div>
+  </div>
+  <!-- Point 03 -->
+  <div class="tosome-service-card reveal-up">
+    <img src="images/img03.png" alt="디자인">
+    <div class="tosome-service-characteristic">Point.03</div>
+    <div class="tosome-service-lead">다르게 디자인</div>
+    <div class="tosome-service-desc">
+      항공 샘플 특송, 위험물, 특수화물 외에도 LCL, FCL까지 경로와 비용을 한 곳에서 관리하실 수 있습니다.
+    </div>
+  </div>
+</div>
 
-      <!-- 마퀴(상품 해시태그 슬라이드) -->
-      <section class="marquee-outer">
-        <div class="marquee-row">
-          <span class="marquee-tag blue1">#태블릿</span>
-          <span class="marquee-tag blue2">#리튬배터리</span>
-          <span class="marquee-tag blue3">#시약 샘플플</span>
-          <span class="marquee-tag blue4">#페인트</span>
-          <span class="marquee-tag blue1">#가구</span>
-          <span class="marquee-tag blue2">#산업기계</span>
-          <span class="marquee-tag blue3">#아쿠아슈즈</span>
-          <span class="marquee-tag blue4">#플라스틱 캐쳐</span>
-          <span class="marquee-tag blue1">#네일아트 스탬프</span>
-          <span class="marquee-tag blue2">#건축 자재</span>
-          <span class="marquee-tag blue3">#아이스박스</span>
-          <span class="marquee-tag blue4">#플라스틱 스프레이 공병</span>
-          <span class="marquee-tag blue1">#디스펜서</span>
-          <span class="marquee-tag blue2">#IP카메라</span>
-          <span class="marquee-tag blue3">#공기측정기</span>
-          <span class="marquee-tag blue4">#캔들홀더</span>
-        </div>
-        <div class="marquee-row reverse">
-          <span class="marquee-tag blue2">#자동차 부품</span>
-          <span class="marquee-tag blue3">#생활잡화</span>
-          <span class="marquee-tag blue4">#문구류</span>
-          <span class="marquee-tag blue1">#공구세트</span>
-          <span class="marquee-tag blue2">#스포츠용품</span>
-          <span class="marquee-tag blue3">#키친툴</span>
-          <span class="marquee-tag blue4">#포장재</span>
-          <span class="marquee-tag blue1">#화장품 용기</span>
-          <span class="marquee-tag blue2">#원예용품</span>
-          <span class="marquee-tag blue3">#펫용품</span>
-        </div>
-      </section>
+				<div class="service-intro">
+    <div class="sub-title"> </div>
+    <div class="main-title">작아도, 멀어도,<br>투삼로지스가 책임집니다.</div></div>
+					  <div class="tosome-service-desc">
+      위험물은 물론 7,000 여개 다양한 상품을 원활히 운송하고 있습니다.
+    <hr class="gray-line">
+</script>
+<style>
+.marquee-outer {
+  width: 100%;
+  background: #fff;
+  overflow: hidden;
+  padding: 0 0 8px 0;
+}
+.marquee-row {
+  display: flex;
+  white-space: nowrap;
+  animation: marquee-row 17s linear infinite;
+  gap: 16px;
+}
+.marquee-row.reverse {
+  animation-direction: reverse;
+  animation-duration: 22s;
+}
+@keyframes marquee-row {
+  0% { transform: translateX(0);}
+  100% { transform: translateX(-50%);}
+}
+/* 파란색 계열 */
+.blue1 { color: #1976d2; border-color: #bbdefb; background: #e3f2fd; } /* 기본 파랑 */
+.blue2 { color: #0d47a1; border-color: #b3e5fc; background: #e1f5fe; } /* 진한 파랑 */
+.blue3 { color: #0097a7; border-color: #b2ebf2; background: #e0f7fa; } /* 청록 파랑 */
+.blue4 { color: #1565c0; border-color: #90caf9; background: #e3f0fd; } /* 중간 파랑 */
 
-      <!-- CTA 배너 -->
-      <section>
-        <div class="main-container" style="width:100%; max-width:1148px; aspect-ratio:2.4/1; border-radius:28px; display:block; margin:0 auto;">
-          <div class="cta-banner" style="position:relative; width:100%; height:100%; border-radius:28px; overflow:hidden;">
-            <img src="images/cta-banner.png" alt="CTA 배경" class="cta-bg-img"
-              style="width:100%; height:100%; display:block; object-fit:cover; filter:brightness(0.6); min-height:220px;">
-            <div class="cta-overlay" style="position:absolute; inset:0; background:rgba(20,30,50,0.45);"></div>
-            <div class="cta-content"
-              style="position:absolute; top:0; left:0; width:100%; height:100%; display:flex; flex-direction:column; justify-content:flex-start; align-items:flex-start; padding:38px 46px 0 46px; box-sizing:border-box;">
-              <div style="font-size:2.0rem; font-weight:600; color:#fff; margin:0 0 10px 0; line-height:1.32;">
-                수출에 어려움을 겪고 계신가요?
-              </div>
-              <div style="font-size:1.13rem; color:#fff; margin-bottom:28px; letter-spacing:0.08em;">
-                투삼로지스에서 고민을 해결하세요
-              </div>
-              <a href="https://pf.kakao.com/_wUvBn/chat" target="_blank"
-                style="background:#1976d2; color:#fff; font-size:1.16rem; font-weight:700; border-radius:26px; padding:13px 38px; text-decoration:none; box-shadow:0 4px 16px #13b18744; transition:filter .15s;">
-                실시간 상담
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
+.marquee-tag {
+  display: inline-block;
+  margin: 10px 18px 10px 0;
+  padding: 9px 26px;
+  font-size: 1.14rem;
+  border-radius: 24px;
+  font-weight: 600;
+  border: 2px solid;
+  box-shadow: 0 2px 12px rgba(30,55,90,0.07);
+  transition: background 0.2s, color 0.2s;
+  cursor: pointer;
+  user-select: none;
+}
+.marquee-tag:hover {
+  opacity: 0.82;
+  box-shadow: 0 3px 20px rgba(25,118,210,0.11);
+}
+@media (max-width: 800px) {
+  .marquee-tag { font-size: 0.96rem; padding: 7px 16px; }
+}
+</style>
 
-      <!-- 문의/푸터 -->
-      <footer id="footer" style="margin-top:48px;">
-        <section>
-          <form id="contact-form" method="post" action="https://formspree.io/f/xrbkrgzw">
-            <div class="fields">
-              <div class="field">
-                <label for="name">Name</label>
-                <input type="text" name="name" id="name" required />
-              </div>
-              <div class="field">
-                <label for="email">Email</label>
-                <input type="email" name="email" id="email" required />
-              </div>
-              <div class="field">
-                <label for="message">Message</label>
-                <textarea name="message" id="message" rows="6" required>빠르고 정확한 안내를 위해 아래 정보 간단히 부탁드립니다 😊
+<div class="marquee-outer">
+  <div class="marquee-row">
+    <span class="marquee-tag blue1">#태블릿</span>
+    <span class="marquee-tag blue2">#리튬배터리</span>
+    <span class="marquee-tag blue3">#시약 샘플플</span>
+    <span class="marquee-tag blue4">#페인트</span>
+    <span class="marquee-tag blue1">#가구</span>
+    <span class="marquee-tag blue2">#산업기계</span>
+    <span class="marquee-tag blue3">#아쿠아슈즈</span>
+    <span class="marquee-tag blue4">#플라스틱 캐쳐</span>
+    <span class="marquee-tag blue1">#네일아트 스탬프</span>
+    <span class="marquee-tag blue2">#건축 자재</span>
+    <!-- 반복 -->
+    <span class="marquee-tag blue3">#아이스박스</span>
+    <span class="marquee-tag blue4">#플라스틱 스프레이 공병</span>
+    <span class="marquee-tag blue1">#디스펜서</span>
+    <span class="marquee-tag blue2">#IP카메라</span>
+    <span class="marquee-tag blue3">#공기측정기</span>
+    <span class="marquee-tag blue4">#캔들홀더</span>
+    <span class="marquee-tag blue1">#아쿠아슈즈</span>
+    <span class="marquee-tag blue2">#플라스틱 캐쳐</span>
+    <span class="marquee-tag blue3">#네일아트 스탬프</span>
+    <span class="marquee-tag blue4">#건축 자재</span>
+  </div>
+  <div class="marquee-row reverse">
+    <span class="marquee-tag blue2">#자동차 부품</span>
+    <span class="marquee-tag blue3">#생활잡화</span>
+    <span class="marquee-tag blue4">#문구류</span>
+    <span class="marquee-tag blue1">#공구세트</span>
+    <span class="marquee-tag blue2">#스포츠용품</span>
+    <span class="marquee-tag blue3">#키친툴</span>
+    <span class="marquee-tag blue4">#포장재</span>
+    <span class="marquee-tag blue1">#화장품 용기</span>
+    <span class="marquee-tag blue2">#원예용품</span>
+    <span class="marquee-tag blue3">#펫용품</span>
+    <!-- 반복 -->
+    <span class="marquee-tag blue4">#자동차 부품</span>
+    <span class="marquee-tag blue1">#생활잡화</span>
+    <span class="marquee-tag blue2">#문구류</span>
+    <span class="marquee-tag blue3">#공구세트</span>
+    <span class="marquee-tag blue4">#스포츠용품</span>
+    <span class="marquee-tag blue1">#키친툴</span>
+    <span class="marquee-tag blue2">#포장재</span>
+    <span class="marquee-tag blue3">#화장품 용기</span>
+    <span class="marquee-tag blue4">#원예용품</span>
+    <span class="marquee-tag blue1">#펫용품</span>
+	      <hr class="gray-line">
+  </div>
+</div>
+	
+  </section>
+<!-- === CTA 배너 === -->
+<div class="main-container" style="width:100%; max-width:1148px; aspect-ratio:2.4/1; border-radius:28px; display:block; margin:0 auto;">
+  <div class="cta-banner" style="position:relative; width:100%; height:100%; border-radius:28px; overflow:hidden;">
+    <img src="images/cta-banner.png" alt="CTA 배경" class="cta-bg-img"
+      style="width:100%; height:100%; display:block; object-fit:cover; filter:brightness(0.6); min-height:220px;">
+    <div class="cta-overlay" style="position:absolute; inset:0; background:rgba(20,30,50,0.45);"></div>
+    <div class="cta-content"
+      style="
+        position:absolute;
+        top:0; left:0; width:100%; height:100%;
+        display:flex; flex-direction:column;
+        justify-content: flex-start;   /* 상단 정렬 */
+        align-items: flex-start;       /* 좌측 정렬 */
+        padding:38px 46px 0 46px;
+        box-sizing:border-box;">
+      <div style="font-size:2.0rem; font-weight:600; color:#fff; margin:0 0 10px 0; line-height:1.32;">
+        수출에 어려움을 겪고 계신가요?
+      </div>
+      <div style="font-size:1.13rem; color:#fff; margin-bottom:28px; letter-spacing:0.08em;">
+        투삼로지스에서 고민을 해결하세요
+      </div>
+      <!-- 버튼을 내용 안(아래)으로! -->
+      <a href="https://pf.kakao.com/_wUvBn/chat" target="_blank"
+        style="background:#1976d2; color:#fff; font-size:1.16rem; font-weight:700; border-radius:26px; padding:13px 38px; text-decoration:none; box-shadow:0 4px 16px #13b18744; transition:filter .15s;">
+        실시간 상담
+      </a>
+    </div>
+  </div>
+</div>
+
+
+<!-- Footer와 copyright 반드시 최하단! -->
+<footer id="footer" style="margin-top:48px;">
+  <section>
+    <form id="contact-form" method="post" action="https://formspree.io/f/xrbkrgzw">
+      <div class="fields">
+        <div class="field">
+          <label for="name">Name</label>
+          <input type="text" name="name" id="name" required />
+        </div>
+        <div class="field">
+          <label for="email">Email</label>
+          <input type="email" name="email" id="email" required />
+        </div>
+        <div class="field">
+          <label for="message">Message</label>
+          <textarea name="message" id="message" rows="6" required>빠르고 정확한 안내를 위해 아래 정보 간단히 부탁드립니다 😊
 
 - 보내는 국가:
 - 박스 사이즈:
 - 무게 (예상도 가능):
 - 품목 (예: 전자기기, 의류 등):
-                </textarea>
-              </div>
-            </div>
-            <ul class="actions">
-              <li><input type="submit" value="Send Message" /></li>
-            </ul>
-          </form>
-          <div id="form-result" style="display:none; color:#1976d2; margin-top:12px; font-size:1.12rem;"></div>
-        </section>
-        <section class="split contact">
-          <section class="alt">
-            <h3>Address</h3>
-            <p>인천 계양구 당미 3길 31, 401<br /></p>
-          </section>
-          <section>
-            <h3>Phone</h3>
-            <p><a href="#">0507-1399-4075</a></p>
-          </section>
-          <section>
-            <h3>Email</h3>
-            <p><a href="#">23logis@naver.com</a></p>
-          </section>
-          <section>
-            <h3>Social</h3>
-            <ul class="icons">
-              <li>
-                <a href="http://pf.kakao.com/_wUvBn/chat" target="_blank">
-                  <img src="images/kakao.png" alt="실시간 카톡상담" style="height:64px; vertical-align:middle;">
-                </a>
-              </li>
-              <li>
-                <a href="https://blog.naver.com/two3logis" target="_blank">
-                  <img src="images/blog.png" alt="네이버 블로그" style="height:64px; vertical-align:middle;">
-                </a>
-              </li>
-            </ul>
-          </section>
-        </section>
-        <div style="width:100%; padding:24px 30px 24px 0; box-sizing:border-box; display:flex; justify-content:flex-end;">
-          <span style="color:#757575; font-size:1.08rem;">
-            Copyright © Tosome logis. All rights reserved
-          </span>
+          </textarea>
         </div>
-      </footer>
-    </main>
-  </div>
+      </div>
+      <ul class="actions">
+        <li><input type="submit" value="Send Message" /></li>
+      </ul>
+    </form>
+    <!-- 결과 메시지 표시 -->
+    <div id="form-result" style="display:none; color:#1976d2; margin-top:12px; font-size:1.12rem;"></div>
+  </section>
+  <section class="split contact">
+    <section class="alt">
+      <h3>Address</h3>
+      <p>인천 계양구 당미 3길 31, 401<br /></p>
+    </section>
+    <section>
+      <h3>Phone</h3>
+      <p><a href="#">0507-1399-4075</a></p>
+    </section>
+    <section>
+      <h3>Email</h3>
+      <p><a href="#">23logis@naver.com</a></p>
+    </section>
+    <section>
+      <h3>Social</h3>
+      <ul class="icons">
+     <li>
+  <a href="http://pf.kakao.com/_wUvBn/chat" target="_blank">
+    <img src="images/kakao.png" alt="실시간 카톡상담" style="height:64px; vertical-align:middle;">
+  </a>
+</li>
+<li>
+  <a href="https://blog.naver.com/two3logis" target="_blank">
+    <img src="images/blog.png" alt="네이버 블로그" style="height:64px; vertical-align:middle;">
+  </a>
+</li>
+      </ul>
+</section>
+<div style="width:100%; padding:24px 30px 24px 0; box-sizing:border-box; display:flex; justify-content:flex-end;">
+  <span style="color:#757575; font-size:1.08rem;">
+    Copyright © Tosome logis. All rights reserved
+  </span>
+</div>
+</div>
+</footer>
+</div>
 
-  <!-- 스크립트 전부 body 맨 마지막 -->
-  <script src="assets/js/jquery.min.js"></script>
-  <script src="assets/js/jquery.scrollex.min.js"></script>
-  <script src="assets/js/jquery.scrolly.min.js"></script>
-  <script src="assets/js/browser.min.js"></script>
-  <script src="assets/js/breakpoints.min.js"></script>
-  <script src="assets/js/util.js"></script>
-  <script src="assets/js/main.js"></script>
-  <script>
-    // 폼 전송 후 결과 메시지 표시, 폼 숨김 처리
-    document.getElementById('contact-form').addEventListener('submit', async function(e) {
-        e.preventDefault();
-        const form = e.target;
-        const data = new FormData(form);
-        const resultDiv = document.getElementById('form-result');
-        fetch('https://formspree.io/f/xrbkrgzw', {
-            method: 'POST',
-            body: data,
-            headers: { 'Accept': 'application/json' }
-        })
-        .then(response => {
-            if (response.ok) {
-                resultDiv.style.display = "block";
-                resultDiv.innerHTML = "메일 문의가 완료되었습니다.<br>빠른 시일 내에 답변드리겠습니다.";
-                form.reset();
-                form.style.display = "none";
-            } else {
-                resultDiv.style.display = "block";
-                resultDiv.textContent = "전송 중 오류가 발생했습니다. 다시 시도해주세요.";
-            }
-        })
-        .catch(error => {
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/jquery.scrollex.min.js"></script>
+<script src="assets/js/jquery.scrolly.min.js"></script>
+<script src="assets/js/browser.min.js"></script>
+<script src="assets/js/breakpoints.min.js"></script>
+<script src="assets/js/util.js"></script>
+<script src="assets/js/main.js"></script>
+
+<script>
+// 폼 전송 후 결과 메시지 표시, 폼 숨김 처리
+document.getElementById('contact-form').addEventListener('submit', async function(e) {
+    e.preventDefault();
+    const form = e.target;
+    const data = new FormData(form);
+    const resultDiv = document.getElementById('form-result');
+    fetch('https://formspree.io/f/xrbkrgzw', {
+        method: 'POST',
+        body: data,
+        headers: { 'Accept': 'application/json' }
+    })
+    .then(response => {
+        if (response.ok) {
             resultDiv.style.display = "block";
-            resultDiv.textContent = "일시적 오류가 발생했습니다.";
-        });
-    });
-
-    // reveal-up 애니메이션
-    function revealUpOnScroll() {
-      document.querySelectorAll('.reveal-up').forEach(card => {
-        const rect = card.getBoundingClientRect();
-        if (rect.top < window.innerHeight - 60) {
-          card.classList.add('visible');
+            resultDiv.textContent = "메일 문의가 완료되었습니다. <br>빠른 시일 내에 답변드리겠습니다.";
+            form.reset();
+            form.style.display = "none"; // 폼 숨김
+        } else {
+            resultDiv.style.display = "block";
+            resultDiv.textContent = "전송 중 오류가 발생했습니다. 다시 시도해주세요.";
         }
-      });
+    })
+    .catch(error => {
+        resultDiv.style.display = "block";
+        resultDiv.textContent = "일시적 오류가 발생했습니다.";
+    });
+});
+
+// reveal-up 애니메이션
+function revealUpOnScroll() {
+  document.querySelectorAll('.reveal-up').forEach(card => {
+    const rect = card.getBoundingClientRect();
+    if (rect.top < window.innerHeight - 60) {
+      card.classList.add('visible');
     }
-    window.addEventListener('scroll', revealUpOnScroll);
-    window.addEventListener('load', revealUpOnScroll);
-  </script>
+  });
+}
+window.addEventListener('scroll', revealUpOnScroll);
+window.addEventListener('load', revealUpOnScroll);
+</script>
+
 
 </body>
 </html>
