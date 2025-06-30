@@ -250,10 +250,11 @@
     </div>
   </div>
 </div>
-	<div class="service-intro2">
-    <div class="sub-title">서비스장점</div>
-    <div class="main-title"> <b style="color:#0076d6;">간편하다</b>라고 느낄수 있게
-    <hr class="gray-line">
+	<div class="service-intro2 reveal-up">
+  <div class="sub-title">서비스 장점</div>
+  <div class="main-title"><b style="color:#0076d6;">간편하다</b>라고 느낄 수 있게</div>
+  <hr class="gray-line">
+</div>
 <style>
 .tosome-service-section {
   display: flex;
@@ -309,11 +310,9 @@
   .tosome-service-card { max-width: 100%; }
 }
 </style>
-	<!-- Wrapper -->
-			<div id="wrapper" class="fade-in">
 <div class="tosome-service-section">
-  <!-- 1 -->
-  <div class="tosome-service-card">
+  <!-- Point 01 -->
+  <div class="tosome-service-card reveal-up">
     <img src="images/img01.png" alt="비용">
     <div class="tosome-service-characteristic">Point.01</div>
     <div class="tosome-service-lead">단순 운임X, 전용 견적O</div>
@@ -321,8 +320,8 @@
       통관·관세 혜택까지 함께 고려한 불필요한 지출 없는 합리적 비용을 제공합니다.
     </div>
   </div>
-  <!-- 2 -->
-  <div class="tosome-service-card">
+<!-- Point 02 -->
+  <div class="tosome-service-card reveal-up">
     <img src="images/img02.png" alt="서비스">
     <div class="tosome-service-characteristic">Point.02</div>
     <div class="tosome-service-lead">1:1 전담 매니저</div>
@@ -330,8 +329,8 @@
       시작부터 끝까지 1:1 특수화물 전문 매니저의 한결 같은 서비스와 실시간 상담을 통해 빠른 대처가 가능합니다.
     </div>
   </div>
-  <!-- 3 -->
-  <div class="tosome-service-card">
+ <!-- Point 03 -->
+  <div class="tosome-service-card reveal-up">
     <img src="images/img03.png" alt="디자인">
     <div class="tosome-service-characteristic">Point.03</div>
     <div class="tosome-service-lead">다르게 디자인</div>
@@ -340,7 +339,6 @@
     </div>
   </div>
 </div>
-
 
 				<div class="service-intro">
     <div class="sub-title"> </div>
@@ -584,7 +582,19 @@ document.getElementById('contact-form').addEventListener('submit', async functio
         resultDiv.textContent = "일시적 오류가 발생했습니다.";
     });
 });
+<script>
+function revealOnScroll() {
+  document.querySelectorAll('.reveal-up').forEach(el => {
+    const rect = el.getBoundingClientRect();
+    if (rect.top < window.innerHeight * 0.92) {
+      el.classList.add('active');
+    }
+  });
+}
+window.addEventListener('scroll', revealOnScroll);
+window.addEventListener('DOMContentLoaded', revealOnScroll);
 </script>
+
 
 </body>
 </html>
