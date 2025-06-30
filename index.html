@@ -80,6 +80,11 @@
 				<!-- Main -->
 					<div id="main">
     
+  </style>
+</head>
+<body class="is-preload">
+
+<div id="wrapper" class="fade-in">
 <div class="service-intro">
     <div class="sub-title">서비스소개</div>
     <div class="main-title">우리는 <b style="color:#0076d6;">물류의 불편함</b>에 집중합니다.</div>
@@ -577,18 +582,18 @@ document.getElementById('contact-form').addEventListener('submit', async functio
     });
 });
 
-  <!-- reveal-up JS -->
-  <script>
-    function revealUpOnScroll() {
-      document.querySelectorAll('.reveal-up').forEach(card => {
-        const rect = card.getBoundingClientRect();
-        if (rect.top < window.innerHeight - 60) {
-          card.classList.add('visible');
-        }
-      });
+// reveal-up 애니메이션
+function revealUpOnScroll() {
+  document.querySelectorAll('.reveal-up').forEach(card => {
+    const rect = card.getBoundingClientRect();
+    if (rect.top < window.innerHeight - 60) {
+      card.classList.add('visible');
     }
-    window.addEventListener('scroll', revealUpOnScroll);
-    window.addEventListener('load', revealUpOnScroll);
+  });
+}
+window.addEventListener('scroll', revealUpOnScroll);
+window.addEventListener('load', revealUpOnScroll);
+</script>
 
 
 </body>
