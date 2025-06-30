@@ -449,29 +449,35 @@
 </div>
 
 
-	  
 <!-- Footer와 copyright 반드시 최하단! -->
 <footer id="footer" style="margin-top:48px;">
   <section>
-    <form method="post" action="#">
-      <div class="fields">
-        <div class="field">
-          <label for="name">Name</label>
-          <input type="text" name="name" id="name" />
-        </div>
-        <div class="field">
-          <label for="email">Email</label>
-          <input type="text" name="email" id="email" />
-        </div>
-        <div class="field">
-          <label for="message">Message</label>
-          <textarea name="message" id="message" rows="3"></textarea>
-        </div>
-      </div>
-      <ul class="actions">
-        <li><input type="submit" value="Send Message" /></li>
-      </ul>
-    </form>
+    <form method="POST" action="https://formspree.io/f/xrbkrgzw">
+  <div class="fields">
+    <div class="field">
+      <label for="name">Name</label>
+      <input type="text" name="name" id="name" required />
+    </div>
+    <div class="field">
+      <label for="email">Email</label>
+      <input type="email" name="email" id="email" required />
+    </div>
+    <div class="field">
+      <label for="message">Message</label>
+      <textarea name="message" id="message" rows="6" required>
+빠르고 정확한 안내를 위해 아래 정보 간단히 부탁드립니다 😊
+
+- 보내는 국가:
+- 박스 사이즈:
+- 무게 (예상도 가능):
+- 품목 (예: 전자기기, 의류 등):
+      </textarea>
+    </div>
+  </div>
+  <ul class="actions">
+    <li><input type="submit" value="Send Message" /></li>
+  </ul>
+</form>
   </section>
   <section class="split contact">
     <section class="alt">
