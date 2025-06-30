@@ -4769,7 +4769,7 @@ background-image: url("../../images/main-banner1.png") !important;
 .tosome-service-desc {
   font-size: 1rem;
   color: #5d5d5d;
-  line-height: 2.0;   /* 기본 1.65에서 1.8~2.0 사이로 조정 */
+  line-height: 2.5;   /* 기본 1.65에서 1.8~2.0 사이로 조정 */
   letter-spacing: 0.02em; /* 자간도 약간 주면 더 깔끔함(선택) */
 }
 	
