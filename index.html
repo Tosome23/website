@@ -502,20 +502,38 @@
 - 품목 (예: 전자기기, 의류 등):
       </textarea>
 </div>
-
-<!-- ✅ 동의 체크박스 삽입 위치 -->
-<div style="margin-top: 1em;">
-  <label style="display: flex; align-items: center; font-size: 0.95em;">
-    <!-- 체크박스가 명확히 보이도록 스타일 지정 -->
-    <input type="checkbox" required style="width: 16px; height: 16px; margin-right: 8px; display: inline-block;" />
+<!-- ✅ 체크박스 및 안내 -->
+<div style="margin-top: 1.5em;">
+  <label style="font-size: 0.95em; display: flex; align-items: center;">
+    <input
+      type="checkbox"
+      id="privacy-check"
+      style="width: 16px; height: 16px; margin-right: 8px; display: inline-block !important; appearance: auto !important;"
+    />
     개인정보 수집 및 이용에 동의합니다.
   </label>
-  <a href="elements.html#privacy-policy" target="_blank" style="font-size: 0.85em; margin-left: 24px;">[개인정보 수집 및 이용 동의]</a>
+  <a
+    href="elements.html#privacy-policy"
+    target="_blank"
+    style="font-size: 0.85em; margin-left: 24px; display: inline-block;"
+  >[개인정보 수집 및 이용 동의]</a>
 </div>
 
+<!-- ✅ 전송 버튼 -->
 <ul class="actions" style="margin-top: 1em;">
   <li><input type="submit" value="Send Message" /></li>
 </ul>
+
+<!-- ✅ 체크 여부 검사 JS -->
+<script>
+  document.querySelector("form").addEventListener("submit", function (e) {
+    const agree = document.getElementById("privacy-check");
+    if (!agree.checked) {
+      alert("개인정보 수집 및 이용에 동의해 주세요.");
+      e.preventDefault();
+    }
+  });
+</script>
 </form>
     <!-- 결과 메시지 표시 -->
     <div id="form-result" style="display:none; color:#1976d2; margin-top:12px; font-size:1.12rem;"></div>
