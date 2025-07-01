@@ -500,21 +500,23 @@
 - 박스 사이즈:
 - 무게 (예상도 가능):
 - 품목 (예: 전자기기, 의류 등):
-         </textarea>
+      </textarea>
 </div>
 
 <!-- ✅ 동의 체크박스 삽입 위치 -->
-<p>
-  <label><input type="checkbox" required>
+<div style="margin-top: 1em;">
+  <label style="display: flex; align-items: center; font-size: 0.95em;">
+    <!-- 체크박스가 명확히 보이도록 스타일 지정 -->
+    <input type="checkbox" required style="width: 16px; height: 16px; margin-right: 8px; display: inline-block;" />
     개인정보 수집 및 이용에 동의합니다.
   </label>
-  <a href="elements.html#privacy-policy" target="_blank">[개인정보 수집 및 이용 동의]</a>
-</p>
+  <a href="elements.html#privacy-policy" target="_blank" style="font-size: 0.85em; margin-left: 24px;">[개인정보 수집 및 이용 동의]</a>
+</div>
 
-<ul class="actions">
+<ul class="actions" style="margin-top: 1em;">
   <li><input type="submit" value="Send Message" /></li>
 </ul>
-    </form>
+</form>
     <!-- 결과 메시지 표시 -->
     <div id="form-result" style="display:none; color:#1976d2; margin-top:12px; font-size:1.12rem;"></div>
   </section>
