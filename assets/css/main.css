@@ -4804,6 +4804,7 @@ background-image: url("../../images/main-banner1.png") !important;
   transform: translateY(-4px) scale(1.04);
 }
 
+.logo img { box-shadow: none !important; border-radius: 0 !important; }
 
 
 
