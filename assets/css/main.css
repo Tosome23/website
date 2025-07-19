@@ -4807,20 +4807,21 @@ background-image: url("../../images/main-banner1.png") !important;
 .logo img { box-shadow: none !important; border-radius: 0 !important; }
 
 <!-- 카카오톡 고정 아이콘 -->
-<a href="http://pf.kakao.com/_wUvBn/chat" target="_blank" 
-   style="
-     position: fixed;
-     bottom: 40px;
-     right: 40px;
-     z-index: 9999;
-     box-shadow: 0 2px 12px rgba(0,0,0,0.13);
-     border-radius: 26px;
-     background: #fff;
-     padding: 2px 2px 2px 2px;
-     display: flex;
-     align-items: center;
-   ">
-  <img src="images/kakao-float.png" alt="카카오톡상담" style="height:54px; width:auto;"/>
-</a>
+.kakao-float-btn {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  z-index: 9999;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.13);
+  border-radius: 26px;
+  background: #fff;
+  padding: 2px 2px 2px 2px;
+  display: flex;
+  align-items: center;
+  transition: background 0.18s;
+}
+.kakao-float-btn:hover {
+  background: #1976d2;
+}
 
 
