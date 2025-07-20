@@ -86,9 +86,40 @@
 <div id="wrapper" class="fade-in">
    <!-- 플로팅 아이콘  -->
 <!-- 카카오톡 고정 아이콘 (배경 없이 아이콘만) -->
-<a href="http://pf.kakao.com/_wUvBn/chat" target="_blank" class="kakao-float-btn" aria-label="카카오톡 상담 바로가기">
-  <img src="images/kakao.png" alt="카카오톡상담" />
+<!-- 카카오톡 상담 고정 아이콘 (배경 없이, 파란색 호버 효과 포함) -->
+<style>
+.kakao-float-btn {
+  position: fixed;
+  bottom: 60px;
+  right: 50px;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  border-radius: 50%;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.11);
+  padding: 0;
+  background: transparent;
+  border: none;
+}
+
+.kakao-img {
+  display: block;
+  height: 54px;
+  width: auto;
+  border-radius: 50%;
+  transition: filter 0.18s;
+}
+
+.kakao-float-btn:hover .kakao-img {
+  /* 투삼로지스 파란색으로 변환 효과 (아이콘이 png/jpg 등일 때) */
+  filter: brightness(0) saturate(100%) invert(36%) sepia(95%) saturate(619%) hue-rotate(182deg) brightness(94%) contrast(89%);
+}
+</style>
+
+<a href="http://pf.kakao.com/_wUvBn/chat" target="_blank" class="kakao-float-btn">
+  <img src="images/kakao.png" alt="카카오톡상담" class="kakao-img">
 </a>
+
 	
 <!-- 🔸 기존 서비스 소개 본문 시작 -->
 <div class="service-intro">
