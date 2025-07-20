@@ -4871,14 +4871,14 @@ background-image: url("../../images/main-banner1.png") !important;
 /* 데스크탑 전용 위치/크기 조정 */
 @media (min-width: 1200px) {
   .main-banner-text {
-    top: 43% !important;   /* 기존 42% → 55%로 살짝 아래로 */
+    top: 41% !important;   /* 기존 42% → 55%로 살짝 아래로 */
   }
 }
 /* 모바일 전용 위치/크기 조정 */
 @media (max-width: 700px) {
   .main-banner-text {
     top: 15% !important;
-    right: 2vw !important;
+    right: 9vw !important;
     font-size: 1.5rem;
     line-height: 1.11;
   }
