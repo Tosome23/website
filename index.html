@@ -585,6 +585,15 @@
     <div style="color:#757575; font-size:0.95rem; margin-top:12px;">Copyright © Tosome logis. All rights reserved</div>
   </section>
 </footer>
+</div>
+
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/jquery.scrollex.min.js"></script>
+<script src="assets/js/jquery.scrolly.min.js"></script>
+<script src="assets/js/browser.min.js"></script>
+<script src="assets/js/breakpoints.min.js"></script>
+<script src="assets/js/util.js"></script>
+<script src="assets/js/main.js"></script>
 
 <script>
 document.getElementById('contact-form').addEventListener('submit', function(e) {
@@ -617,7 +626,20 @@ document.getElementById('contact-form').addEventListener('submit', function(e) {
     resultDiv.style.display = 'block';
   });
 });
+
+// reveal-up 애니메이션
+function revealUpOnScroll() {
+  document.querySelectorAll('.reveal-up').forEach(card => {
+    const rect = card.getBoundingClientRect();
+    if (rect.top < window.innerHeight - 60) {
+      card.classList.add('visible');
+    }
+  });
+}
+window.addEventListener('scroll', revealUpOnScroll);
+window.addEventListener('load', revealUpOnScroll);
 </script>
+
 
 </body>
 </html>
