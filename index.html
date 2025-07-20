@@ -534,99 +534,56 @@
 </div>
 
 
-<!-- Footer와 copyright 반드시 최하단! -->
+<!-- 문의하기 및 기본정보! -->
 <footer id="footer" style="margin-top:48px;">
   <section>
-    <form id="contact-form" method="post" action="https://formspree.io/f/xrbkrgzw">
-      <div class="fields">
-        <div class="field">
-          <label for="name">Name</label>
-          <input type="text" name="name" id="name" required />
-        </div>
-        <div class="field">
-          <label for="email">Email</label>
-          <input type="email" name="email" id="email" required />
-        </div>
-        <div class="field">
-          <label for="message">Message</label>
-          <textarea name="message" id="message" rows="6" required>빠르고 정확한 안내를 위해 아래 정보 간단히 부탁드립니다 😊
+    <form id="contact-form" method="post" action="https://formspree.io/f/xrbkrgzw" style="max-width:600px; margin:auto;">
+
+      <div style="margin-bottom:14px;">
+        <label for="name" style="display:block; font-weight:bold; margin-bottom:6px;">이름</label>
+        <input type="text" id="name" name="name" required style="width:100%; padding:10px; border-radius:6px; border:1px solid #ddd;">
+      </div>
+
+      <div style="margin-bottom:14px;">
+        <label for="email" style="display:block; font-weight:bold; margin-bottom:6px;">이메일</label>
+        <input type="email" id="email" name="email" required style="width:100%; padding:10px; border-radius:6px; border:1px solid #ddd;">
+      </div>
+
+      <div style="margin-bottom:14px;">
+        <label for="message" style="display:block; font-weight:bold; margin-bottom:6px;">문의내용</label>
+        <textarea id="message" name="message" rows="8" required style="width:100%; padding:10px; border-radius:6px; border:1px solid #ddd;">빠르고 정확한 안내를 위해 아래 정보를 간단히 작성해주세요 😊
 
 - 보내는 국가:
 - 박스 사이즈:
-- 무게 (예상도 가능):
+- 무게 (예상):
 - 품목 (예: 전자기기, 의류 등):
-      </textarea>
-</div>
-<!-- ✅ 체크박스 및 안내 -->
-<div style="margin-top: 1.5em;">
-  <label style="font-size: 0.95em; display: flex; align-items: center;">
-    <input
-      type="checkbox"
-      id="privacy-check"
-      style="width: 16px; height: 16px; margin-right: 8px; display: inline-block !important; appearance: auto !important;"
-    />
-    개인정보 수집 및 이용에 동의합니다.
-  </label>
-  <a
-    href="elements.html#privacy-policy"
-    target="_blank"
-    style="font-size: 0.85em; margin-left: 24px; display: inline-block;"
-  >[개인정보 수집 및 이용 동의]</a>
-</div>
+        </textarea>
+      </div>
 
-<!-- ✅ 전송 버튼 -->
-<ul class="actions" style="margin-top: 1em;">
-  <li><input type="submit" value="Send Message" /></li>
-</ul>
+      <!-- 개인정보 동의 체크박스 필수 체크 -->
+      <div style="display:flex; align-items:center; margin-bottom:16px;">
+        <input type="checkbox" id="privacy-check" required style="margin-right:8px; width:16px; height:16px;">
+        <label for="privacy-check" style="cursor:pointer;">개인정보 수집 및 이용에 동의합니다.</label>
+        <a href="elements.html#privacy-policy" target="_blank" style="font-size:0.9em; margin-left:12px;">[내용보기]</a>
+      </div>
 
-<!-- ✅ 체크 여부 검사 JS -->
-<script>
-  document.querySelector("form").addEventListener("submit", function (e) {
-    const agree = document.getElementById("privacy-check");
-    if (!agree.checked) {
-      alert("개인정보 수집 및 이용에 동의해 주세요.");
-      e.preventDefault();
-    }
-  });
-</script>
-</form>
-    <!-- 결과 메시지 표시 -->
-    <div id="form-result" style="display:none; color:#1976d2; margin-top:12px; font-size:1.12rem;"></div>
+      <!-- 전송 버튼 -->
+      <button type="submit" style="padding:12px 24px; background-color:#1976d2; color:#fff; border:none; border-radius:6px; cursor:pointer;">문의 전송하기</button>
+
+      <div id="form-result" style="display:none; margin-top:12px; font-size:1rem; color:#1976d2;"></div>
+
+    </form>
   </section>
-  <section class="split contact">
-    <section class="alt">
-      <h3>Address</h3>
-      <p>인천 계양구 당미 3길 31, 401<br /></p>
-    </section>
-    <section>
-      <h3>Phone</h3>
-      <p><a href="#">0507-1399-4075</a></p>
-    </section>
-    <section>
-      <h3>Email</h3>
-      <p><a href="#">23logis@naver.com</a></p>
-    </section>
-    <section>
-      <h3>Social</h3>
-      <ul class="icons">
-     <li>
-  <a href="http://pf.kakao.com/_wUvBn/chat" target="_blank">
-    <img src="images/kakao.png" alt="실시간 카톡상담" style="height:64px; vertical-align:middle;">
-  </a>
-</li>
-<li>
-  <a href="https://blog.naver.com/two3logis" target="_blank">
-    <img src="images/blog.png" alt="네이버 블로그" style="height:64px; vertical-align:middle;">
-  </a>
-</li>
-      </ul>
-</section>
-<div style="width:100%; padding:24px 30px 24px 0; box-sizing:border-box; display:flex; justify-content:flex-end;">
-  <span style="color:#757575; font-size:1.08rem;">
-    Copyright © Tosome logis. All rights reserved
-  </span>
-</div>
-</div>
+
+  <section class="split contact" style="margin-top:40px; text-align:center;">
+    <p style="margin-bottom:8px;">인천 계양구 당미 3길 31, 401</p>
+    <p style="margin-bottom:8px;">전화: <a href="tel:0507-1399-4075">0507-1399-4075</a></p>
+    <p>이메일: <a href="mailto:23logis@naver.com">23logis@naver.com</a></p>
+    <div style="margin-top:12px;">
+      <a href="http://pf.kakao.com/_wUvBn/chat" target="_blank"><img src="images/kakao.png" style="height:44px;"></a>
+      <a href="https://blog.naver.com/two3logis" target="_blank"><img src="images/blog.png" style="height:44px;"></a>
+    </div>
+    <div style="col
 </footer>
 </div>
 
@@ -639,32 +596,35 @@
 <script src="assets/js/main.js"></script>
 
 <script>
-// 폼 전송 후 결과 메시지 표시, 폼 숨김 처리
-document.getElementById('contact-form').addEventListener('submit', async function(e) {
-    e.preventDefault();
-    const form = e.target;
-    const data = new FormData(form);
-    const resultDiv = document.getElementById('form-result');
-    fetch('https://formspree.io/f/xrbkrgzw', {
-        method: 'POST',
-        body: data,
-        headers: { 'Accept': 'application/json' }
-    })
-    .then(response => {
-        if (response.ok) {
-            resultDiv.style.display = "block";
-            resultDiv.textContent = "메일 문의가 완료되었습니다. <br>빠른 시일 내에 답변드리겠습니다.";
-            form.reset();
-            form.style.display = "none"; // 폼 숨김
-        } else {
-            resultDiv.style.display = "block";
-            resultDiv.textContent = "전송 중 오류가 발생했습니다. 다시 시도해주세요.";
-        }
-    })
-    .catch(error => {
-        resultDiv.style.display = "block";
-        resultDiv.textContent = "일시적 오류가 발생했습니다.";
-    });
+document.getElementById('contact-form').addEventListener('submit', function(e) {
+  e.preventDefault();
+
+  const form = e.target;
+  const resultDiv = document.getElementById('form-result');
+
+  if (!document.getElementById('privacy-check').checked) {
+    alert('개인정보 수집 및 이용에 동의해 주세요.');
+    return;
+  }
+
+  fetch(form.action, {
+    method: 'POST',
+    body: new FormData(form),
+    headers: { 'Accept': 'application/json' }
+  }).then(response => {
+    if (response.ok) {
+      resultDiv.textContent = '메일 문의가 완료되었습니다. 빠른 시일 내에 답변드리겠습니다.';
+      resultDiv.style.display = 'block';
+      form.reset();
+      form.style.display = 'none';
+    } else {
+      resultDiv.textContent = '전송 중 오류가 발생했습니다. 다시 시도해 주세요.';
+      resultDiv.style.display = 'block';
+    }
+  }).catch(() => {
+    resultDiv.textContent = '일시적 오류가 발생했습니다.';
+    resultDiv.style.display = 'block';
+  });
 });
 
 // reveal-up 애니메이션
