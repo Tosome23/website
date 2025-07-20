@@ -85,11 +85,12 @@
 
 <div id="wrapper" class="fade-in">
    <!-- 플로팅 아이콘  -->
-<!-- 카카오톡 고정 아이콘 (배경 없이 아이콘만) -->
-<!-- 카카오톡 상담 고정 아이콘 (배경 없이, 파란색 호버 효과 포함) -->
-<!-- 카카오톡 고정 아이콘 (파란 외곽선, 반응형 포함) -->
-<!-- 카카오톡 고정 아이콘 (외곽 파란 Glow 효과) -->
-<!-- 카카오톡 고정 아이콘 (파란 glow + 확대 효과) -->
+<!-- HTML: 플로팅 카카오톡 버튼 -->
+<a href="http://pf.kakao.com/_wUvBn/chat" target="_blank" class="kakao-float-btn" aria-label="카카오톡상담">
+  <img src="images/kakao1.png" alt="카카오톡상담" class="kakao-img">
+</a>
+
+<!-- CSS: 스타일(HTML 상단 <head> or 하단 <style>에 넣기) -->
 <style>
 .kakao-float-btn {
   position: fixed;
@@ -102,20 +103,18 @@
   padding: 0;
   border: none;
 }
-
 .kakao-img {
   display: block;
-  height: 54px;   /* ← 아이콘 크기 조절 */
+  height: 54px;
   width: auto;
-  border-radius: 20px; /* 아이콘 외곽 둥글게, 필요시 50%로 완전 원형 */
+  border-radius: 20px;
   box-shadow: 0 2px 12px rgba(0,0,0,0.11);
   transition:
     box-shadow 0.28s cubic-bezier(.44,1.74,.73,.86),
     transform 0.19s cubic-bezier(.44,1.74,.73,.86);
 }
-
-.kakao-float-btn:hover .kakao-img {
-  /* 자연스러운 파란 glow (겹치는 box-shadow) + 확대 */
+.kakao-float-btn:hover .kakao-img,
+.kakao-img:active {
   box-shadow:
     0 0 0 8px #1976d2a6,
     0 0 0 18px #1976d266,
@@ -130,10 +129,6 @@
 }
 </style>
 
-<a href="http://pf.kakao.com/_wUvBn/chat" target="_blank" class="kakao-float-btn" aria-label="카카오톡상담">
-  <img src="images/kakao1.png" alt="카카오톡상담" class="kakao-img">
-</a>
-	
 <!-- 🔸 기존 서비스 소개 본문 시작 -->
 <div class="service-intro">
     <div class="sub-title">서비스소개</div>
