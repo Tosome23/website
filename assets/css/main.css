@@ -4868,3 +4868,8 @@ background-image: url("../../images/main-banner1.png") !important;
   border-radius: 0 !important; /* 라운딩 제거 */
   box-shadow: none !important; /* 그림자 제거 */
 }
+@media (min-width: 1200px) {
+  .main-banner-text {
+    top: 55% !important;   /* 기존 42% → 55%로 살짝 아래로 */
+  }
+}
