@@ -105,7 +105,7 @@
 }
 .kakao-img {
   display: block;
-  height: 54px;
+  height: 68px;    /* ← 기존 54px에서 68px로 키움 */
   width: auto;
   border-radius: 20px;
   box-shadow: 0 2px 12px rgba(0,0,0,0.11);
@@ -116,10 +116,9 @@
 .kakao-float-btn:hover .kakao-img,
 .kakao-img:active {
   box-shadow:
-    0 0 0 8px #1976d2a6,
-    0 0 0 18px #1976d266,
-    0 0 0 30px #1976d211,
-    0 4px 32px rgba(20,60,160,0.12);
+    0 0 18px 6px #1976d2cc,
+    0 0 48px 18px #1976d233,
+    0 4px 18px rgba(20,60,160,0.09);
   transform: scale(1.085);
 }
 
@@ -127,6 +126,7 @@
   .kakao-float-btn { right: 12px; bottom: 16px; }
   .kakao-img { height: 44px; }
 }
+
 </style>
 
 <!-- 🔸 기존 서비스 소개 본문 시작 -->
