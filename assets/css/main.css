@@ -4818,26 +4818,32 @@ background-image: url("../../images/main-banner1.png") !important;
   z-index: 9999;
   display: flex;
   align-items: center;
-  border-radius: 50%;
   background: transparent;
   padding: 0;
   border: none;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.11);
-  transition: box-shadow 0.18s;
 }
-.kakao-float-btn:hover {
-  box-shadow:
-    0 0 0 8px #1976d2aa,  /* 파란 외곽 glow 효과 (투명도 조절 가능) */
-    0 2px 16px rgba(0,0,0,0.13);
-}
+
 .kakao-img {
   display: block;
-  height: 54px;
+  height: 54px;   /* ← 원하는 크기 */
   width: auto;
-  border-radius: 50%;
-  transition: filter 0.18s;
+  border-radius: 20px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.11);
+  transition:
+    box-shadow 0.28s cubic-bezier(.44,1.74,.73,.86),
+    transform 0.19s cubic-bezier(.44,1.74,.73,.86);
 }
-/* 모바일 반응형 */
+
+.kakao-float-btn:hover .kakao-img {
+  /* 자연스러운 파란 glow (겹치는 box-shadow) */
+  box-shadow:
+    0 0 0 8px #1976d2a6,
+    0 0 0 18px #1976d266,
+    0 0 0 30px #1976d211,
+    0 4px 32px rgba(20,60,160,0.12);
+  transform: scale(1.085);
+}
+
 @media (max-width:640px) {
   .kakao-float-btn { right: 12px; bottom: 16px; }
   .kakao-img { height: 44px; }
@@ -4847,4 +4853,5 @@ background-image: url("../../images/main-banner1.png") !important;
 <a href="http://pf.kakao.com/_wUvBn/chat" target="_blank" class="kakao-float-btn" aria-label="카카오톡상담">
   <img src="images/kakao.png" alt="카카오톡상담" class="kakao-img">
 </a>
+
 
