@@ -4868,20 +4868,3 @@ background-image: url("../../images/main-banner1.png") !important;
   border-radius: 0 !important; /* 라운딩 제거 */
   box-shadow: none !important; /* 그림자 제거 */
 }
-#main {
-  max-width: 950px;
-  margin: 0 auto;
-  padding: 34px 32px;
-  box-sizing: border-box;
-}
-@media (max-width: 900px) {
-  #main {
-    padding: 24px 7vw;
-    max-width: 100%;
-  }
-}
-@media (max-width: 640px) {
-  #main {
-    padding: 16px 7px;
-  }
-}
