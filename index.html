@@ -47,13 +47,29 @@
 			<div id="wrapper" class="fade-in">
 				<!-- Intro -->
 					<div id="intro">
-						<h1><br />
-						</h1>
-						<p>
- <a href="#header" class="button icon solid solo fa-arrow-down scrolly arrow-btn-custom">Continue</a>
-</p>
-
-					</div>
+					<div id="intro" style="position:relative;">
+  <!-- 메인 문구: HTML+CSS 한 번에 삽입 -->
+  <div style="
+    position: absolute;
+    right: 10vw;
+    top: 42%;
+    color: #fff;
+    font-size: 2.6rem;
+    font-weight: 800;
+    line-height: 1.18;
+    text-shadow: 0 0 8px rgba(20,20,20,0.47), 0 4px 16px rgba(0,0,0,0.30);
+    text-align: right;
+    letter-spacing: -0.04em;
+    z-index: 3;
+    ">
+    전세계 어디나<br>
+    쉽고 간편하게
+  </div>
+  <h1><br /></h1>
+  <p>
+    <a href="#header" class="button icon solid solo fa-arrow-down scrolly arrow-btn-custom">Continue</a>
+  </p>
+</div>
 
 				<!-- Header -->
 					<header id="header">
@@ -68,13 +84,7 @@
     <li class="active"><a href="index.html">서비스 소개</a></li>
     <li><a href="dangerous.html">위험물 운송</a></li>
   </ul>
-  <ul class="icons">
-    <li>
-      <a href="http://pf.kakao.com/_wUvBn/chat" target="_blank">
-            <img src="images/kakao.png" alt="실시간 카톡상담" style="height:75px; vertical-align:middle;">
-        </a>
-    </li>
-</ul>
+ 
 					</nav>
 
 				<!-- Main -->
@@ -92,6 +102,14 @@
 
 <!-- CSS: 스타일(HTML 상단 <head> or 하단 <style>에 넣기) -->
 <style>
+@media (max-width: 700px) {
+  #intro .main-banner-text, #intro > div[style*="position: absolute"] {
+    font-size: 1.4rem !important;
+    right: 4vw !important;
+    top: 30% !important;
+    line-height: 1.13 !important;
+  }
+}
 .kakao-float-btn {
   position: fixed;
   bottom: 60px;
