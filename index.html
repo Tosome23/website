@@ -89,6 +89,7 @@
 <!-- 카카오톡 상담 고정 아이콘 (배경 없이, 파란색 호버 효과 포함) -->
 <!-- 카카오톡 고정 아이콘 (파란 외곽선, 반응형 포함) -->
 <!-- 카카오톡 고정 아이콘 (외곽 파란 Glow 효과) -->
+<!-- 카카오톡 고정 아이콘 (파란 glow + 확대 효과) -->
 <style>
 .kakao-float-btn {
   position: fixed;
@@ -104,9 +105,9 @@
 
 .kakao-img {
   display: block;
-  height: 54px;   /* ← 원하는 크기 */
+  height: 54px;   /* ← 아이콘 크기 조절 */
   width: auto;
-  border-radius: 20px;
+  border-radius: 20px; /* 아이콘 외곽 둥글게, 필요시 50%로 완전 원형 */
   box-shadow: 0 2px 12px rgba(0,0,0,0.11);
   transition:
     box-shadow 0.28s cubic-bezier(.44,1.74,.73,.86),
@@ -114,7 +115,7 @@
 }
 
 .kakao-float-btn:hover .kakao-img {
-  /* 자연스러운 파란 glow (겹치는 box-shadow) */
+  /* 자연스러운 파란 glow (겹치는 box-shadow) + 확대 */
   box-shadow:
     0 0 0 8px #1976d2a6,
     0 0 0 18px #1976d266,
@@ -130,9 +131,8 @@
 </style>
 
 <a href="http://pf.kakao.com/_wUvBn/chat" target="_blank" class="kakao-float-btn" aria-label="카카오톡상담">
-  <img src="images/kakao.png" alt="카카오톡상담" class="kakao-img">
+  <img src="images/kakao1.png" alt="카카오톡상담" class="kakao-img">
 </a>
-
 	
 <!-- 🔸 기존 서비스 소개 본문 시작 -->
 <div class="service-intro">
