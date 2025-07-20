@@ -4870,6 +4870,6 @@ background-image: url("../../images/main-banner1.png") !important;
 }
 @media (min-width: 1200px) {
   .main-banner-text {
-    top: 55% !important;   /* 기존 42% → 55%로 살짝 아래로 */
+    top: 60% !important;   /* 기존 42% → 55%로 살짝 아래로 */
   }
 }
