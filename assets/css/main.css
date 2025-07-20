@@ -4850,3 +4850,8 @@ background-image: url("../../images/main-banner1.png") !important;
   .kakao-img { height: 44px; }
 }
 </style>
+.kakao-chat-icon {
+  background: transparent !important;  /* 기존 background 속성을 투명하게 */
+  box-shadow: none !important;        /* 혹시 그림자도 없애고 싶으면 추가 */
+  border: none !important;            /* 혹시 테두리 있으면 없앰 */
+}
