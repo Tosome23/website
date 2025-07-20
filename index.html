@@ -534,7 +534,7 @@
 </div>
 
 
-<!-- 문의하기 및 기본정보! -->
+<!-- Footer와 copyright 반드시 최하단! -->
 <footer id="footer" style="margin-top:48px;">
   <section>
     <form id="contact-form" method="post" action="https://formspree.io/f/xrbkrgzw" style="max-width:600px; margin:auto;">
@@ -571,7 +571,6 @@
       <button type="submit" style="padding:12px 24px; background-color:#1976d2; color:#fff; border:none; border-radius:6px; cursor:pointer;">문의 전송하기</button>
 
       <div id="form-result" style="display:none; margin-top:12px; font-size:1rem; color:#1976d2;"></div>
-
     </form>
   </section>
 
@@ -583,17 +582,9 @@
       <a href="http://pf.kakao.com/_wUvBn/chat" target="_blank"><img src="images/kakao.png" style="height:44px;"></a>
       <a href="https://blog.naver.com/two3logis" target="_blank"><img src="images/blog.png" style="height:44px;"></a>
     </div>
-    <div style="col
+    <div style="color:#757575; font-size:0.95rem; margin-top:12px;">Copyright © Tosome logis. All rights reserved</div>
+  </section>
 </footer>
-</div>
-
-<script src="assets/js/jquery.min.js"></script>
-<script src="assets/js/jquery.scrollex.min.js"></script>
-<script src="assets/js/jquery.scrolly.min.js"></script>
-<script src="assets/js/browser.min.js"></script>
-<script src="assets/js/breakpoints.min.js"></script>
-<script src="assets/js/util.js"></script>
-<script src="assets/js/main.js"></script>
 
 <script>
 document.getElementById('contact-form').addEventListener('submit', function(e) {
@@ -626,20 +617,7 @@ document.getElementById('contact-form').addEventListener('submit', function(e) {
     resultDiv.style.display = 'block';
   });
 });
-
-// reveal-up 애니메이션
-function revealUpOnScroll() {
-  document.querySelectorAll('.reveal-up').forEach(card => {
-    const rect = card.getBoundingClientRect();
-    if (rect.top < window.innerHeight - 60) {
-      card.classList.add('visible');
-    }
-  });
-}
-window.addEventListener('scroll', revealUpOnScroll);
-window.addEventListener('load', revealUpOnScroll);
 </script>
-
 
 </body>
 </html>
