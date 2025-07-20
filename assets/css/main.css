@@ -4878,7 +4878,7 @@ background-image: url("../../images/main-banner1.png") !important;
 @media (max-width: 700px) {
   .main-banner-text {
     top: 15% !important;
-    right: 15vw !important;
+    right: 20vw !important;
     font-size: 1.5rem;
     line-height: 1.11;
   }
