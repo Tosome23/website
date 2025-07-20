@@ -4814,6 +4814,12 @@ background-image: url("../../images/main-banner1.png") !important;
 
 <!-- CSS: 스타일(HTML 상단 <head> or 하단 <style>에 넣기) -->
 <style>
+<a href="http://pf.kakao.com/_wUvBn/chat" target="_blank" class="kakao-float-btn" aria-label="카카오톡상담">
+  <img src="images/kakao1.png" alt="카카오톡상담" class="kakao-img">
+</a>
+
+<!-- CSS: 스타일(HTML 상단 <head> or 하단 <style>에 넣기) -->
+<style>
 .kakao-float-btn {
   position: fixed;
   bottom: 60px;
@@ -4827,7 +4833,7 @@ background-image: url("../../images/main-banner1.png") !important;
 }
 .kakao-img {
   display: block;
-  height: 54px;
+  height: 68px;    /* ← 기존 54px에서 68px로 키움 */
   width: auto;
   border-radius: 20px;
   box-shadow: 0 2px 12px rgba(0,0,0,0.11);
@@ -4838,10 +4844,9 @@ background-image: url("../../images/main-banner1.png") !important;
 .kakao-float-btn:hover .kakao-img,
 .kakao-img:active {
   box-shadow:
-    0 0 0 8px #1976d2a6,
-    0 0 0 18px #1976d266,
-    0 0 0 30px #1976d211,
-    0 4px 32px rgba(20,60,160,0.12);
+    0 0 18px 6px #1976d2cc,
+    0 0 48px 18px #1976d233,
+    0 4px 18px rgba(20,60,160,0.09);
   transform: scale(1.085);
 }
 
