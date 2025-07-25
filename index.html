@@ -583,35 +583,74 @@
 - 무게 (예상):
 - 품목 (예: 전자기기, 의류 등):</textarea>
     </div>
+<!-- 개인정보 동의 체크박스 필수 체크 -->
+<div style="
+  display: flex;
+  align-items: center;
+  margin-bottom: 26px;
+  font-size: 1.07rem;
+  line-height: 1;
+  font-family: 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif;
+  width: 100%;
+  gap: 8px;
+">
+  <input type="checkbox" id="privacy-check" required
+    style="
+      width: 22px;
+      height: 22px;
+      accent-color: #1976d2;
+      margin-right: 8px;
+      vertical-align: middle;
+      flex-shrink: 0;
+    ">
+  <label for="privacy-check" style="
+      cursor: pointer;
+      margin: 0;
+      vertical-align: middle;
+      color: #414d57;
+      font-size: 1.07rem;
+      font-weight: 400;
+      white-space: nowrap;
+      flex: none;
+    ">
+    개인정보 수집 및 이용에 동의합니다.
+  </label>
+  <a href="elements.html#privacy-policy" target="_blank"
+    style="
+      text-decoration: none;
+      color: #1976d2;
+      font-weight: 500;
+      white-space: nowrap;
+      margin-left: 10px;
+      font-size: 1.07rem;
+      flex: none;
+    ">
+    [내용보기]
+  </a>
+</div>
 
-    <!-- 개인정보 동의 체크박스 -->
-    <div style="display:flex; align-items:center; margin-bottom:26px; font-size:1rem;">
-      <input type="checkbox" id="privacy-check" required style="width:20px; height:20px; accent-color:#1976d2; margin-right:10px;">
-      <label for="privacy-check" style="cursor:pointer; color:#414d57;">개인정보 수집 및 이용에 동의합니다.</label>
-      <a href="elements.html#privacy-policy" target="_blank" style="margin-left:10px; color:#1976d2; font-weight:500;">[내용보기]</a>
-    </div>
-
-    <!-- 전송 버튼 -->
-    <button type="submit"
-      style="
-        width: 180px;
-        height: 48px;
-        background: linear-gradient(90deg, #1976d2 88%, #1cb5e0 100%);
-        color: #fff;
-        border: none;
-        border-radius: 8px;
-        font-weight: 700;
-        font-size: 1.14rem;
-        letter-spacing: 1px;
-        box-shadow: 0 3px 12px rgba(44,128,255,0.09);
-        display: block;
-        margin: 0 auto;
-        transition: background 0.16s, box-shadow 0.14s;
-        cursor: pointer;
-      "
-      onmouseover="this.style.background='#155ca3';this.style.boxShadow='0 2px 10px #1976d277';"
-      onmouseout="this.style.background='linear-gradient(90deg, #1976d2 88%, #1cb5e0 100%)';this.style.boxShadow='0 3px 12px rgba(44,128,255,0.09)';"
-    >메일문의</button>
+<!-- 전송 버튼 -->
+<button type="submit"
+  style="
+    width: 180px;
+    height: 48px;
+    background: linear-gradient(90deg, #1976d2 88%, #1cb5e0 100%);
+    color: #fff !important;
+    border: none;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 1.14rem;
+    letter-spacing: 1px;
+    box-shadow: 0 3px 12px rgba(44,128,255,0.09);
+    display: block;
+    margin: 0 auto;
+    transition: background 0.16s, box-shadow 0.14s;
+    cursor: pointer;
+    text-align: center;
+    text-shadow: 0 1px 2px #1976d222;
+  ">
+  메일문의
+</button>
 
   </form>
 </div>
