@@ -579,42 +579,53 @@
       </div>
 
 <!-- 개인정보 동의 체크박스 필수 체크 -->
-<div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px; font-size: 0.9rem; line-height: 1.4;">
-  <div style="display: flex; align-items: center;">
-    <input type="checkbox" id="privacy-check" required 
-           style="
-             width: 18px !important; 
-             height: 18px !important; 
-             accent-color: #1976d2; 
-             margin-right: 10px; 
-             vertical-align: middle; 
-             margin-top: 0px; 
-             margin-bottom: 0px;
-           ">
-    <label for="privacy-check" style="cursor: pointer; margin: 0; font-family: inherit; font-size: inherit;">
-      개인정보 수집 및 이용에 동의합니다.
-    </label>
-  </div>
+<div style="
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 18px;
+  font-family: 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif;
+  font-size: 0.97rem;
+  line-height: 1.2;
+  width: 100%;
+">
+
+  <input type="checkbox" id="privacy-check"
+    required
+    style="
+      width: 28px; 
+      height: 28px; 
+      accent-color: #26a6e0;
+      margin: 0 8px 0 0;
+      flex-shrink: 0;
+      vertical-align: middle;
+      display: inline-block;
+    ">
+
+  <label for="privacy-check" style="
+    margin: 0; 
+    padding: 0; 
+    flex-shrink: 0;
+    display: inline-block;
+    vertical-align: middle;
+    white-space: nowrap;
+  ">
+    개인정보 수집 및 이용에 동의합니다.
+  </label>
+
   <a href="elements.html#privacy-policy" target="_blank" 
-     style="text-decoration: none; color: #1976d2; font-weight: 500; white-space: nowrap;">
+    style="
+      margin-left: 10px; 
+      text-decoration: none; 
+      color: #1976d2; 
+      font-weight: 700; 
+      white-space: nowrap;
+      display: inline-block;
+    ">
     [내용보기]
   </a>
 </div>
-<style>
-  #privacy-check {
-    width: 18px !important;
-    height: 18px !important;
-    accent-color: #1976d2;
-    margin-right: 10px !important;
-    vertical-align: middle !important;
-    margin-top: 0px !important;
-    margin-bottom: 0px !important;
-  }
-  #privacy-check + label {
-    font-family: 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif !important;
-    font-size: 0.9rem !important;
-  }
-</style>
+
       <!-- 전송 버튼 -->
      <button type="submit" 
     style="
