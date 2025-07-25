@@ -562,14 +562,19 @@
 
 
  <!-- 개인정보 동의 체크박스 필수 체크 -->
-<div style="display: flex; align-items: center; gap: 6px; margin-bottom: 16px; font-size: 0.9rem; line-height: 1;">
-  <input type="checkbox" id="privacy-check" required 
-         style="width: 0.95em; height: 0.95em; vertical-align: middle; accent-color: #1976d2;">
-  <label for="privacy-check" style="cursor: pointer; margin: 0;">
-    개인정보 수집 및 이용에 동의합니다.
-  </label>
+<div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px; font-size: 0.9rem; line-height: 1;">
+  <!-- 왼쪽: 체크박스 + 텍스트 -->
+  <div style="display: flex; align-items: center;">
+    <input type="checkbox" id="privacy-check" required 
+           style="width: 0.85em; height: 0.85em; vertical-align: middle; accent-color: #1976d2; margin-right: 6px;">
+    <label for="privacy-check" style="cursor: pointer; margin: 0; display: inline-block;">
+      개인정보 수집 및 이용에 동의합니다.
+    </label>
+  </div>
+
+  <!-- 오른쪽: 내용보기 -->
   <a href="elements.html#privacy-policy" target="_blank" 
-     style="text-decoration: none; color: #1976d2; font-weight: 500;">
+     style="text-decoration: none; color: #1976d2; font-weight: 500; white-space: nowrap;">
     [내용보기]
   </a>
 </div>
