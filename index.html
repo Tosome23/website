@@ -553,132 +553,133 @@
 
 
 <!-- Footer와 copyright 반드시 최하단! -->
-<!-- 컨테이너 추가 (이게 핵심) -->
-<div style="max-width:440px; margin: 48px auto 0 auto; padding: 32px 24px; background: #fff; border-radius: 16px; box-shadow: 0 6px 28px rgba(30,42,78,0.12);">
-
-  <form id="contact-form" method="post" action="https://formspree.io/f/xrbkrgzw">
-
-    <!-- 이름 -->
-    <div style="margin-bottom:18px;">
-      <label for="name" style="display:block; font-weight:700; color:#1a2538; margin-bottom:7px;">이름</label>
-      <input type="text" id="name" name="name" required
-        style="width:100%; padding:13px 12px; border-radius:8px; border:1.5px solid #e4e8ee; font-size:1rem; transition:box-shadow 0.2s; box-shadow:0 2px 7px rgba(30,42,78,0.06); outline:none;">
-    </div>
-
-    <!-- 이메일 -->
-    <div style="margin-bottom:18px;">
-      <label for="email" style="display:block; font-weight:700; color:#1a2538; margin-bottom:7px;">이메일</label>
-      <input type="email" id="email" name="email" required
-        style="width:100%; padding:13px 12px; border-radius:8px; border:1.5px solid #e4e8ee; font-size:1rem; transition:box-shadow 0.2s; box-shadow:0 2px 7px rgba(30,42,78,0.06); outline:none;">
-    </div>
-
-    <!-- 문의내용 -->
-    <div style="margin-bottom:24px;">
-      <label for="message" style="display:block; font-weight:700; color:#1a2538; margin-bottom:7px;">문의내용</label>
-      <textarea id="message" name="message" rows="7" required
-        style="width:100%; padding:13px 12px; border-radius:8px; border:1.5px solid #e4e8ee; font-size:1rem; resize:vertical; transition:box-shadow 0.2s; box-shadow:0 2px 7px rgba(30,42,78,0.05); outline:none;">빠르고 정확한 안내를 위해 아래 정보를 간단히 작성해주세요 😊
+<!-- 전체 문의/회사정보 2단 컨테이너 -->
+<div style="
+  max-width: 900px;
+  margin: 60px auto 0 auto;
+  padding: 0;
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  align-items: flex-start;
+  background: transparent;
+  flex-wrap: wrap;
+">
+  <!-- 문의폼 -->
+  <div style="
+    flex: 1 1 380px;
+    min-width: 320px;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 6px 28px rgba(30,42,78,0.12);
+    padding: 32px 24px;
+    box-sizing: border-box;
+  ">
+    <form id="contact-form" method="post" action="https://formspree.io/f/xrbkrgzw">
+      <!-- 이름 -->
+      <div style="margin-bottom:18px;">
+        <label for="name" style="display:block; font-weight:700; color:#1a2538; margin-bottom:7px;">이름</label>
+        <input type="text" id="name" name="name" required
+          style="width:100%; padding:13px 12px; border-radius:8px; border:1.5px solid #e4e8ee; font-size:1rem; box-shadow:0 2px 7px rgba(30,42,78,0.06); outline:none;">
+      </div>
+      <!-- 이메일 -->
+      <div style="margin-bottom:18px;">
+        <label for="email" style="display:block; font-weight:700; color:#1a2538; margin-bottom:7px;">이메일</label>
+        <input type="email" id="email" name="email" required
+          style="width:100%; padding:13px 12px; border-radius:8px; border:1.5px solid #e4e8ee; font-size:1rem; box-shadow:0 2px 7px rgba(30,42,78,0.06); outline:none;">
+      </div>
+      <!-- 문의내용 -->
+      <div style="margin-bottom:22px;">
+        <label for="message" style="display:block; font-weight:700; color:#1a2538; margin-bottom:7px;">문의내용</label>
+        <textarea id="message" name="message" rows="6" required
+          style="width:100%; padding:13px 12px; border-radius:8px; border:1.5px solid #e4e8ee; font-size:1rem; resize:vertical; box-shadow:0 2px 7px rgba(30,42,78,0.05); outline:none;">빠르고 정확한 안내를 위해 아래 정보를 간단히 작성해주세요 😊
 
 - 보내는 국가:
 - 박스 사이즈:
 - 무게 (예상):
 - 품목 (예: 전자기기, 의류 등):</textarea>
-    </div>
-<!-- 개인정보 동의 체크박스 필수 체크 -->
-<div style="
-  display: flex;
-  align-items: center;
-  margin-bottom: 26px;
-  font-size: 1.07rem;
-  line-height: 1;
-  font-family: 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif;
-  width: 100%;
-  gap: 8px;
-">
-  <input type="checkbox" id="privacy-check" required
-    style="
-      width: 22px;
-      height: 22px;
-      accent-color: #1976d2;
-      margin-right: 8px;
-      vertical-align: middle;
-      flex-shrink: 0;
-    ">
-  <label for="privacy-check" style="
-      cursor: pointer;
-      margin: 0;
-      vertical-align: middle;
-      color: #414d57;
-      font-size: 1.07rem;
-      font-weight: 400;
-      white-space: nowrap;
-      flex: none;
-    ">
-    개인정보 수집 및 이용에 동의합니다.
-  </label>
-  <a href="elements.html#privacy-policy" target="_blank"
-    style="
-      text-decoration: none;
-      color: #1976d2;
-      font-weight: 500;
-      white-space: nowrap;
-      margin-left: 10px;
-      font-size: 1.07rem;
-      flex: none;
-    ">
-    [내용보기]
-  </a>
-</div>
-
-<!-- 전송 버튼 -->
-<button type="submit"
-  style="
-    width: 180px;
-    height: 48px;
-    background: linear-gradient(90deg, #1976d2 88%, #1cb5e0 100%);
-    color: #fff !important;
-    border: none;
-    border-radius: 8px;
-    font-weight: 700;
-    font-size: 1.14rem;
-    letter-spacing: 1px;
-    box-shadow: 0 3px 12px rgba(44,128,255,0.09);
-    display: block;
-    margin: 0 auto;
-    transition: background 0.16s, box-shadow 0.14s;
-    cursor: pointer;
-    text-align: center;
-    text-shadow: 0 1px 2px #1976d222;
-  ">
-  메일문의
-</button>
-
-  </form>
-</div>
-<!-- 전체 flex 컨테이너 시작 -->
-<div style="max-width:920px; margin:48px auto 0 auto; padding:0; display:flex; gap:44px; justify-content:center; align-items:flex-start; background:transparent;">
-  <!-- 문의 폼 (왼쪽) -->
-  <div style="flex:1 1 440px; min-width:320px; background:#fff; border-radius:16px; box-shadow:0 6px 28px rgba(30,42,78,0.12); padding:32px 24px;">
-    <form id="contact-form" method="post" action="https://formspree.io/f/xrbkrgzw">
-      <!-- (여기에 form 내용 전체 복붙) -->
-      ...
+      </div>
+      <!-- 개인정보동의 -->
+      <div style="
+        display:flex; align-items:center; gap:7px; margin-bottom:26px; font-size:0.96rem;
+      ">
+        <input type="checkbox" id="privacy-check" required
+          style="width:22px;height:22px;accent-color:#1976d2;vertical-align:middle;flex-shrink:0;">
+        <label for="privacy-check" style="margin:0;vertical-align:middle;color:#414d57;font-size:0.96rem;">
+          개인정보 수집 및 이용에 동의합니다.
+        </label>
+        <a href="elements.html#privacy-policy" target="_blank"
+          style="text-decoration:none;color:#1976d2;font-weight:500;margin-left:8px;white-space:nowrap;font-size:0.96rem;">
+          [내용보기]
+        </a>
+      </div>
+      <!-- 버튼 -->
+      <button type="submit"
+        style="
+          width:100%;
+          height:48px;
+          background:linear-gradient(90deg, #1976d2 88%, #1cb5e0 100%);
+          color:#fff;
+          border:none;
+          border-radius:8px;
+          font-weight:700;
+          font-size:1.16rem;
+          letter-spacing:1px;
+          box-shadow:0 3px 12px rgba(44,128,255,0.09);
+          cursor:pointer;
+          text-align:center;
+          transition: background 0.18s;
+        ">
+        메일문의
+      </button>
     </form>
   </div>
-  <!-- 회사 정보 (오른쪽) -->
-  <div style="flex:0 1 270px; min-width:220px; margin-top:24px;">
-    <div style="font-size:1.04rem; color:#212931; line-height:1.7; margin-bottom:26px;">
-      <div style="margin-bottom:10px;"><b>인천 계양구 당미 3길 31, 401</b></div>
-      <div style="margin-bottom:10px;">전화: <a href="tel:0507-1399-4075" style="color:#1976d2;">0507-1399-4075</a></div>
+  <!-- 회사정보 -->
+  <div style="
+    flex:0 1 240px;
+    min-width:200px;
+    background:#fff;
+    border-radius:16px;
+    box-shadow:0 6px 28px rgba(30,42,78,0.12);
+    padding:32px 20px 22px 20px;
+    box-sizing:border-box;
+    margin-top:0;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:flex-start;
+  ">
+    <div style="font-size:1.08rem; color:#212931; line-height:1.6; margin-bottom:24px; text-align:center;">
+      <div style="margin-bottom:8px;"><b>인천 계양구 당미 3길 31, 401</b></div>
+      <div style="margin-bottom:8px;">전화: <a href="tel:0507-1399-4075" style="color:#1976d2;">0507-1399-4075</a></div>
       <div>이메일: <a href="mailto:23logis@naver.com" style="color:#1976d2;">23logis@naver.com</a></div>
     </div>
-    <div style="margin-bottom:20px;">
-      <a href="http://pf.kakao.com/_wUvBn/chat" target="_blank"><img src="images/kakao.png" style="height:44px;margin-right:7px;"></a>
-      <a href="https://blog.naver.com/two3logis" target="_blank"><img src="images/blog.png" style="height:44px;"></a>
+    <div style="margin-bottom:18px;">
+      <a href="http://pf.kakao.com/_wUvBn/chat" target="_blank"><img src="images/kakao.png" style="height:40px;margin-right:5px;"></a>
+      <a href="https://blog.naver.com/two3logis" target="_blank"><img src="images/blog.png" style="height:40px;"></a>
     </div>
-    <div style="color:#757575; font-size:0.96rem; margin-top:14px;">
+    <div style="color:#757575; font-size:0.96rem; margin-top:12px; text-align:center;">
       Copyright © Tosome logis. All rights reserved
     </div>
   </div>
 </div>
+
+<!-- 반응형 (화면 작아지면 세로정렬) -->
+<style>
+@media (max-width: 760px) {
+  div[style*="display: flex"][style*="gap: 40px"] {
+    flex-direction: column !important;
+    gap: 20px !important;
+    align-items: stretch !important;
+    max-width: 98vw !important;
+    padding: 0 3vw !important;
+  }
+  div[style*="box-shadow"][style*="padding:32px 24px"] {
+    margin-bottom: 0 !important;
+  }
+}
+</style>
+
 
 
 	
