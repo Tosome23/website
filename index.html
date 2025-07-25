@@ -654,30 +654,17 @@
 
   </form>
 </div>
-
 <!-- 전체 flex 컨테이너 시작 -->
-<div style="
-  max-width:920px; 
-  margin:48px auto 0 auto; 
-  padding:0; 
-  display:flex; 
-  gap:44px; 
-  justify-content:center;
-  align-items:flex-start;
-  background:transparent;
-">
-  <!-- 문의폼 (왼쪽) -->
-  <div style="
-    flex:1 1 440px; 
-    min-width:320px;
-    background:#fff;
-    border-radius:16px;
-    box-shadow:0 6px 28px rgba(30,42,78,0.12);
-    padding:32px 24px;
-    ">
-    <!-- ...여기에 문의 폼 코드... -->
+<div style="max-width:920px; margin:48px auto 0 auto; padding:0; display:flex; gap:44px; justify-content:center; align-items:flex-start; background:transparent;">
+
+  <!-- 문의 폼 (왼쪽) -->
+  <div style="flex:1 1 440px; min-width:320px; background:#fff; border-radius:16px; box-shadow:0 6px 28px rgba(30,42,78,0.12); padding:32px 24px;">
+    <!-- 폼 내용 전체를 여기 안에 넣는다! -->
+    <form id="contact-form" method="post" action="https://formspree.io/f/xrbkrgzw">
+      <!-- ...폼 내용 그대로... -->
+    </form>
   </div>
-  
+
   <!-- 회사 정보 (오른쪽) -->
   <div style="flex:0 1 270px; min-width:220px; margin-top:24px;">
     <div style="font-size:1.04rem; color:#212931; line-height:1.7; margin-bottom:26px;">
@@ -694,6 +681,7 @@
     </div>
   </div>
 </div>
+
 
 	
 <script src="assets/js/jquery.min.js"></script>
