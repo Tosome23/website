@@ -137,6 +137,24 @@
   .kakao-img { height: 44px; }
 }
 
+
+
+<style>
+  #privacy-check {
+    width: 18px !important;
+    height: 18px !important;
+    accent-color: #1976d2;
+    margin-right: 10px !important;
+    vertical-align: middle !important;
+    margin-top: 0px !important;
+    margin-bottom: 0px !important;
+  }
+  #privacy-check + label {
+    font-family: 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif !important;
+    font-size: 0.9rem !important;
+  }
+</style>
+	
 </style>
 
 <!-- 🔸 기존 서비스 소개 본문 시작 -->
@@ -561,46 +579,42 @@
       </div>
 
 <!-- 개인정보 동의 체크박스 필수 체크 -->
-<div style="
-  display: flex; 
-  align-items: center; 
-  justify-content: space-between; 
-  margin-bottom: 16px; 
-  font-size: 0.9rem; 
-  line-height: 1.4;
-  font-family: 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif;
-">
-
-  <!-- 왼쪽: 체크박스 + 텍스트 -->
+<div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px; font-size: 0.9rem; line-height: 1.4;">
   <div style="display: flex; align-items: center;">
     <input type="checkbox" id="privacy-check" required 
            style="
-             width: 16px; 
-             height: 16px; 
+             width: 18px !important; 
+             height: 18px !important; 
              accent-color: #1976d2; 
-             margin-right: 6px;
-             align-self: flex-start;
-             margin-top: 1px;
+             margin-right: 10px; 
+             vertical-align: middle; 
+             margin-top: 0px; 
+             margin-bottom: 0px;
            ">
-    <label for="privacy-check" style="cursor: pointer; margin: 0;">
+    <label for="privacy-check" style="cursor: pointer; margin: 0; font-family: inherit; font-size: inherit;">
       개인정보 수집 및 이용에 동의합니다.
     </label>
   </div>
-
-  <!-- 오른쪽: 내용보기 -->
   <a href="elements.html#privacy-policy" target="_blank" 
-     style="
-       text-decoration: none; 
-       color: #1976d2; 
-       font-weight: 500; 
-       white-space: nowrap;
-       font-family: 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif;
-     ">
+     style="text-decoration: none; color: #1976d2; font-weight: 500; white-space: nowrap;">
     [내용보기]
   </a>
 </div>
-
-
+<style>
+  #privacy-check {
+    width: 18px !important;
+    height: 18px !important;
+    accent-color: #1976d2;
+    margin-right: 10px !important;
+    vertical-align: middle !important;
+    margin-top: 0px !important;
+    margin-bottom: 0px !important;
+  }
+  #privacy-check + label {
+    font-family: 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif !important;
+    font-size: 0.9rem !important;
+  }
+</style>
       <!-- 전송 버튼 -->
      <button type="submit" 
     style="
@@ -633,7 +647,22 @@
   </section>
 </footer>
 </div>
-
+<style>
+  #privacy-check {
+    width: 18px !important;
+    height: 18px !important;
+    accent-color: #1976d2;
+    margin-right: 10px !important;
+    vertical-align: middle !important;
+    margin-top: 0px !important;
+    margin-bottom: 0px !important;
+  }
+  #privacy-check + label {
+    font-family: 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif !important;
+    font-size: 0.9rem !important;
+  }
+</style>
+	
 <script src="assets/js/jquery.min.js"></script>
 <script src="assets/js/jquery.scrollex.min.js"></script>
 <script src="assets/js/jquery.scrolly.min.js"></script>
