@@ -560,21 +560,42 @@
         </textarea>
       </div>
 
-
 <!-- 개인정보 동의 체크박스 필수 체크 -->
-<div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px; font-size: 0.9rem; line-height: 1;">
+<div style="
+  display: flex; 
+  align-items: center; 
+  justify-content: space-between; 
+  margin-bottom: 16px; 
+  font-size: 0.9rem; 
+  line-height: 1.4;
+  font-family: 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif;
+">
+
   <!-- 왼쪽: 체크박스 + 텍스트 -->
   <div style="display: flex; align-items: center;">
     <input type="checkbox" id="privacy-check" required 
-           style="width: 16px; height: 16px; transform: translateY(-1px); accent-color: #1976d2; margin-right: 6px;">
-    <label for="privacy-check" style="cursor: pointer; margin: 0; display: inline-block;">
+           style="
+             width: 16px; 
+             height: 16px; 
+             accent-color: #1976d2; 
+             margin-right: 6px;
+             align-self: flex-start;
+             margin-top: 1px;
+           ">
+    <label for="privacy-check" style="cursor: pointer; margin: 0;">
       개인정보 수집 및 이용에 동의합니다.
     </label>
   </div>
 
   <!-- 오른쪽: 내용보기 -->
   <a href="elements.html#privacy-policy" target="_blank" 
-     style="text-decoration: none; color: #1976d2; font-weight: 500; white-space: nowrap;">
+     style="
+       text-decoration: none; 
+       color: #1976d2; 
+       font-weight: 500; 
+       white-space: nowrap;
+       font-family: 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif;
+     ">
     [내용보기]
   </a>
 </div>
