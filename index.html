@@ -651,23 +651,27 @@
 
   <!-- 아이콘 버튼 정렬도 동일한 패딩 -->
 <!-- 아이콘 버튼: 가운데 정렬 + 크기 증가 + hover 효과 -->
+<!-- 아이콘 버튼: 가운데 정렬 + 크기 증가 + hover + 점선 제거 -->
 <div style="margin-bottom:18px; text-align: center;">
-  <a href="http://pf.kakao.com/_wUvBn/chat" target="_blank" style="display:inline-block; margin-right:12px;">
+  <a href="http://pf.kakao.com/_wUvBn/chat" target="_blank" style="display:inline-block; margin-right:12px; outline: none; text-decoration: none; -webkit-tap-highlight-color: transparent;">
     <img src="images/kakao.png" style="height:60px; transition: transform 0.25s ease;">
   </a>
-  <a href="https://blog.naver.com/two3logis" target="_blank" style="display:inline-block;">
+  <a href="https://blog.naver.com/two3logis" target="_blank" style="display:inline-block; outline: none; text-decoration: none; -webkit-tap-highlight-color: transparent;">
     <img src="images/blog.png" style="height:60px; transition: transform 0.25s ease;">
   </a>
 </div>
 
-<!-- hover 효과를 위한 CSS -->
 <style>
   a:hover img {
-    transform: scale(1.1); /* 1.1배 확대 */
+    transform: scale(1.1);
   }
 
   a:active img {
-    transform: scale(0.95); /* 클릭 시 살짝 축소 */
+    transform: scale(0.95);
+  }
+
+  a:focus {
+    outline: none;
   }
 </style>
 
