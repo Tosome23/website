@@ -731,24 +731,26 @@ document.getElementById('contact-form').addEventListener('submit', function(e) {
     return;
   }
 
-  fetch(form.action, {
-    method: 'POST',
-    body: new FormData(form),
-    headers: { 'Accept': 'application/json' }
-  }).then(response => {
-    if (response.ok) {
-      resultDiv.textContent = '메일 문의가 완료되었습니다. 빠른 시일 내에 답변드리겠습니다.';
-      resultDiv.style.display = 'block';
-      form.reset();
-      form.style.display = 'none';
-    } else {
-      resultDiv.textContent = '전송 중 오류가 발생했습니다. 다시 시도해 주세요.';
-      resultDiv.style.display = 'block';
-    }
-  }).catch(() => {
-    resultDiv.textContent = '일시적 오류가 발생했습니다.';
+ fetch(form.action, {
+  method: 'POST',
+  body: new FormData(form),
+  headers: { 'Accept': 'application/json' }
+}).then(response => {
+  if (response.ok) {
+    resultDiv.innerHTML = `
+      <div style="font-weight:600; font-size:1.1rem; color:#1976d2;">메일 문의가 완료되었습니다.</div>
+      <div style="margin-top:6px; font-size:1.05rem; color:#1976d2;">빠른 시일 내에 답변드리겠습니다 😊</div>
+    `;
     resultDiv.style.display = 'block';
-  });
+    form.reset();
+    form.style.display = 'none';
+  } else {
+    resultDiv.textContent = '전송 중 오류가 발생했습니다. 다시 시도해 주세요.';
+    resultDiv.style.display = 'block';
+  }
+}).catch(() => {
+  resultDiv.textContent = '일시적 오류가 발생했습니다.';
+  resultDiv.style.display = 'block';
 });
 
 // reveal-up 애니메이션
