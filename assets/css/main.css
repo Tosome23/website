@@ -4893,3 +4893,36 @@ a {
   outline: none;
   text-decoration: none;
 }
+<style>
+.service-cards {
+  display: flex;
+  justify-content: center;
+  gap: 36px;
+  flex-wrap: wrap;
+}
+
+.service-card {
+  width: 280px;
+  text-align: center;
+  padding: 20px;
+}
+
+.service-img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 16px;
+}
+
+.service-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.service-text {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.6;
+}
+</style>
