@@ -534,73 +534,75 @@
   <style>
     body {
       font-family: 'Noto Sans KR', sans-serif;
-      background-color: #f8f9fa;
+      background-color: #fff;
       margin: 0;
       padding: 0;
     }
 
     .tosome-service-area {
       text-align: center;
-      margin-top: 60px;
-      padding: 0 20px;
+      margin-top: 80px;
+      margin-bottom: 60px;
     }
 
-    .main-title {
-      font-size: 24px;
-      font-weight: bold;
-      margin-bottom: 8px;
+    .tosome-service-area .main-title {
+      font-size: 22px;
+      font-weight: 600;
+      margin-bottom: 6px;
     }
 
-    .tosome-service-area > div:nth-child(2) {
+    .tosome-service-area .sub-title {
       font-size: 18px;
+      font-weight: normal;
+      color: #555;
       margin-bottom: 40px;
-      color: #333;
     }
 
     .service-cards {
       display: flex;
       justify-content: center;
-      gap: 36px;
+      gap: 24px;
       flex-wrap: wrap;
+      padding: 0 20px;
     }
 
     .service-card {
-      width: 260px;
-      text-align: center;
-      padding: 20px;
-      border-radius: 16px;
-      background-color: #ffffff;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.06);
-      transition: transform 0.2s;
+      width: 300px;
+      background: #fff;
+      border-radius: 18px;
+      padding: 24px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      transition: all 0.2s ease-in-out;
     }
 
     .service-card:hover {
-      transform: translateY(-4px);
+      transform: translateY(-6px);
     }
 
     .img-wrapper {
       display: flex;
       justify-content: center;
       align-items: center;
-      margin-bottom: 16px;
+      margin-bottom: 20px;
     }
 
     .service-img-round {
-      width: 150px;
-      height: 150px;
+      width: 120px;
+      height: 120px;
       object-fit: cover;
       border-radius: 50%;
     }
 
     .service-title {
-      font-size: 18px;
-      font-weight: bold;
-      margin-bottom: 8px;
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 10px;
+      color: #222;
     }
 
     .service-text {
       font-size: 14px;
-      color: #555;
+      color: #666;
       line-height: 1.6;
     }
   </style>
@@ -609,7 +611,7 @@
 
   <div class="tosome-service-area">
     <div class="main-title">서비스 영역</div>
-    <div>0.1CBM도 어디든 최상의 경로로</div>
+    <div class="sub-title">0.1CBM도 어디든 최상의 경로로</div>
 
     <div class="service-cards">
       <!-- 항공 특송 -->
@@ -620,7 +622,7 @@
         <div class="service-title">항공 특송</div>
         <div class="service-text">
           위험물 샘플, 소량 고가 제품 운송 시 적합<br>
-          빠른 운송, 통관, 배송 가능
+          빠른 운송, 통관, 배송까지 지원
         </div>
       </div>
 
@@ -631,7 +633,7 @@
         </div>
         <div class="service-title">해상 LCL</div>
         <div class="service-text">
-          소량 화물 운송시 적합 (팔레트 4장 이하)<br>
+          소량 화물 운송에 적합 (팔레트 4장 이하)<br>
           소량도 경제적인 운송 가능
         </div>
       </div>
@@ -643,8 +645,8 @@
         </div>
         <div class="service-title">해상 FCL</div>
         <div class="service-text">
-          대량 화물 운송시 적합 (팔레트 8장이상)<br>
-          운송시 파손 위험이 적음
+          대량 화물 운송에 적합 (팔레트 8장이상)<br>
+          파손 위험이 낮고 정시 도착률 높음
         </div>
       </div>
     </div>
@@ -652,6 +654,7 @@
 
 </body>
 </html>
+
 
   </section>
 <!-- === CTA 배너 === -->
