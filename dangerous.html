@@ -6,7 +6,192 @@
   <title>투삼로지스 | 위험물 특송 전문</title>
   <link rel="stylesheet" href="assets/css/main.css">
   <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+  <style><!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>투삼로지스 | 위험물 특송 전문</title>
+  <link rel="stylesheet" href="assets/css/main.css">
+  <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
   <style>
+    body {
+      font-family: 'Pretendard', sans-serif;
+      background: #fff;
+      color: #222;
+      line-height: 1.6;
+    }
+    .tab-nav {
+      display: flex;
+      gap: 8px;
+      margin: 32px auto 16px auto;
+      max-width: 960px;
+    }
+    .tab-button {
+      padding: 10px 18px;
+      border-radius: 6px;
+      background: #f5f5f5;
+      font-weight: 600;
+      text-decoration: none;
+      color: #333;
+      border: 2px solid transparent;
+      transition: all 0.2s;
+    }
+    .tab-button:hover {
+      background: #e8f1fd;
+      color: #0076d6;
+    }
+    .active-tab {
+      background: #1976d2;
+      color: white;
+      border-color: #1976d2;
+    }
+    .section {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 24px;
+    }
+    .section h2 {
+      font-size: 1.6rem;
+      color: #0d2d6e;
+      margin: 1.8rem 0 1rem;
+    }
+    .section p, .section li {
+      font-size: 1rem;
+      color: #333;
+    }
+    .compare-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 1.5rem;
+    }
+    .compare-table th, .compare-table td {
+      border: 1px solid #ddd;
+      padding: 12px;
+      text-align: center;
+    }
+    .compare-table th {
+      background: #f0f6fa;
+      color: #0076d6;
+    }
+    .compare-table td strong {
+      color: #1976d2;
+    }
+    ul {
+      margin: 0 0 1.5rem 1.2rem;
+      padding-left: 1.2rem;
+    }
+    li::marker {
+      color: #1976d2;
+    }
+    a {
+      color: #1976d2;
+      text-decoration: underline;
+    }
+    img {
+      border-radius: 12px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    }
+    #intro {
+      background-image: url('images/main-banner2.png');
+      background-size: cover;
+      background-position: center;
+      padding: 160px 20px;
+      text-align: center;
+      color: #fff;
+    }
+    #intro h1 {
+      font-size: 2.6rem;
+      line-height: 1.4;
+      font-weight: 600;
+      text-shadow: 0 0 6px rgba(0,0,0,0.4);
+    }
+    #intro p {
+      font-size: 1.2rem;
+      text-shadow: 0 0 4px rgba(0,0,0,0.3);
+      margin-top: 12px;
+    }
+    #intro .actions {
+      margin-top: 36px;
+    }
+  </style>
+</head>
+<body class="is-preload">
+
+  <div id="wrapper" class="fade-in">
+    <div id="intro">
+      <h1><br /></h1>
+      <p><a href="#header" class="button icon solid solo fa-arrow-down scrolly arrow-btn-custom">Continue</a></p>
+    </div>
+
+    <header id="header">
+      <a href="index.html" class="logo">
+        <img src="images/logo2.png" alt="투삼로지스 로고" style="height:60px;">
+      </a>
+    </header>
+
+    <nav id="nav">
+      <ul class="links">
+        <li><a href="index.html">서비스 소개</a></li>
+        <li class="active"><a href="dangerous.html">위험물 운송</a></li>
+      </ul>
+      <ul class="icons">
+        <li><a href="http://pf.kakao.com/_wUvBn/chat" target="_blank"><img src="images/kakao.png" style="height:64px;"></a></li>
+      </ul>
+    </nav>
+
+    <a href="http://pf.kakao.com/_wUvBn/chat" target="_blank" class="kakao-float-btn" aria-label="카카오톡상담">
+      <img src="images/kakao1.png" alt="카카오톡상담" class="kakao-img">
+    </a>
+
+    <style>
+      .kakao-float-btn {
+        position: fixed;
+        bottom: 60px;
+        right: 50px;
+        z-index: 9999;
+        display: flex;
+        align-items: center;
+        background: transparent;
+        padding: 0;
+        border: none;
+      }
+      .kakao-img {
+        display: block;
+        height: 68px;
+        width: auto;
+        border-radius: 20px;
+        box-shadow: 0 2px 12px rgba(0,0,0,0.11);
+        transition: box-shadow 0.28s cubic-bezier(.44,1.74,.73,.86), transform 0.19s cubic-bezier(.44,1.74,.73,.86);
+      }
+      .kakao-float-btn:hover .kakao-img,
+      .kakao-img:active {
+        box-shadow: 0 0 18px 6px #1976d2cc, 0 0 48px 18px #1976d233, 0 4px 18px rgba(20,60,160,0.09);
+        transform: scale(1.085);
+      }
+      @media (max-width:640px) {
+        .kakao-float-btn { right: 12px; bottom: 16px; }
+        .kakao-img { height: 44px; }
+      }
+    </style>
+
+    <div id="main">
+      <!-- 여기에 사용자 요청한 본문 콘텐츠 HTML 삽입 -->
+    </div>
+
+    <!-- 기존 CTA 및 Footer 코드는 유지 -->
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+  </div>
+</body>
+</html>
+
     body {
       font-family: 'Pretendard', sans-serif;
       background: #fff;
