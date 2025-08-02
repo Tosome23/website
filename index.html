@@ -102,10 +102,38 @@
 
 <div id="wrapper" class="fade-in">
 
-	<div id="chat-popup" class="chat-popup">
-  <span>궁금한 건 채팅으로 문의하세요</span>
-  <button onclick="closePopup()">✕</button>
+<div id="chat-popup" style="
+  position: fixed;
+  bottom: 140px;
+  right: 50px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  padding: 12px 16px;
+  z-index: 9998;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  color: #333;
+  font-family: 'Pretendard', 'Malgun Gothic', sans-serif;
+">
+  <span style="margin-right: 10px;">궁금한 건 채팅으로 문의하세요</span>
+  <button onclick="document.getElementById('chat-popup').style.display='none'" style="
+    background: none;
+    border: none;
+    font-size: 14px;
+    cursor: pointer;
+    color: #888;
+  ">✕</button>
 </div>
+
+<script>
+  // 10초 뒤 자동으로 숨기기
+  setTimeout(() => {
+    const popup = document.getElementById("chat-popup");
+    if (popup) popup.style.display = "none";
+  }, 10000);
+</script>
    <!-- 플로팅 아이콘  -->
 <!-- HTML: 플로팅 카카오톡 버튼 -->
 <a href="http://pf.kakao.com/_wUvBn/chat" target="_blank" class="kakao-float-btn" aria-label="카카오톡상담">
@@ -904,21 +932,11 @@ function revealUpOnScroll() {
 window.addEventListener('scroll', revealUpOnScroll);
 window.addEventListener('load', revealUpOnScroll);
 
-	  // 일정 시간 후 자동 숨김 (예: 10초 후)
-  setTimeout(() => {
-    const popup = document.getElementById("chat-popup");
-    if (popup) popup.style.display = "none";
-  }, 10000);
 
-  // 닫기 버튼 클릭 시 숨김
-  function closePopup() {
-    const popup = document.getElementById("chat-popup");
-    if (popup) popup.style.display = "none";
-  }
-	
 </script>
 
 
 </body>
 </html>
+
 
