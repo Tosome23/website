@@ -293,10 +293,16 @@
 
   .compare-right {
     flex: 1 1 380px;
-    background: #fafafa;
+    background: #ffffff;
     border-radius: 18px;
     padding: 28px 24px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.03);
+    transition: all 0.3s ease;
+  }
+
+  .compare-right:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 26px rgba(0, 118, 214, 0.15);
   }
 
   .compare-row {
@@ -392,7 +398,6 @@
     </div>
   </div>
 </div>
-
 
 	<div class="service-intro2 reveal-up">
   <div class="sub-title">서비스 장점</div>
@@ -1041,6 +1046,7 @@ window.addEventListener('load', revealUpOnScroll);
 
 </body>
 </html>
+
 
 
 
