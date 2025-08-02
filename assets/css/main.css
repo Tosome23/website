@@ -4950,11 +4950,6 @@ a {
     margin-bottom: 4px !important;
   }
 
-  .compare-bar-bg {
-    width: 100% !important;
-    margin-left: 0 !important;
-  }
-
   .compare-percent {
     align-self: flex-end !important;
     font-size: 0.95rem !important;
@@ -4963,3 +4958,4 @@ a {
 }
 
 </style>
+
