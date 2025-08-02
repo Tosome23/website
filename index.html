@@ -812,11 +812,10 @@
         </a>
       </div>
       <!-- 버튼 -->
-<div style="text-align: center; margin-top: 8px;">
+<div style="margin-top: 8px;">
   <button type="submit"
     style="
-      display: inline-block;
-      padding: 0 32px;
+      width: 100%;
       height: 48px;
       background: linear-gradient(90deg, #1976d2 88%, #1cb5e0 100%);
       color: #fff !important;
@@ -828,11 +827,15 @@
       box-shadow: 0 3px 12px rgba(44,128,255,0.09);
       cursor: pointer;
       text-align: center;
-      transition: background 0.18s;
-    ">
+      transition: all 0.2s ease;
+    "
+    onmouseover="this.style.filter='brightness(1.08)'; this.style.transform='scale(1.02)'"
+    onmouseout="this.style.filter='none'; this.style.transform='scale(1)'"
+  >
     메일문의
   </button>
 </div>
+
 
 	  <!-- 전송 결과 메시지 영역 -->
 <div id="form-result" style="display:none; margin-top:20px; color:#1976d2; font-weight:600; font-size:1.05rem; text-align:center;"></div>
@@ -971,6 +974,7 @@ window.addEventListener('load', revealUpOnScroll);
 
 </body>
 </html>
+
 
 
 
