@@ -4761,6 +4761,12 @@ background-image: url("../../images/main-banner1.png") !important;
   border-radius: 13px;
   transition: width 0.7s;
 }
+.compare-bar-bg {
+  height: 26px;
+  background: #f0f6fa;
+  border-radius: 13px;
+  overflow: hidden;
+}
 
 #header .logo {
     border: none !important;
@@ -4964,5 +4970,6 @@ a {
 }
 
 </style>
+
 
 
