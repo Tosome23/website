@@ -353,8 +353,112 @@
   .compare-label { min-width: 70px; font-size: 1rem; }
   .compare-bar-bg { margin-left: 0; }
 }
-</style>
+	<style>
+  .comparex-box-row {
+    display: flex;
+    gap: 28px;
+    max-width: 960px;
+    margin: 40px auto;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 2px 14px rgba(0,0,0,0.05);
+    padding: 34px 32px;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
 
+  .comparex-texts-col {
+    flex: 0 0 280px;
+  }
+
+  .comparex-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #0d2d6e;
+    margin-bottom: 12px;
+  }
+
+  .comparex-desc {
+    font-size: 1rem;
+    color: #333;
+    line-height: 1.6;
+  }
+
+  .comparex-table {
+    flex: 1;
+    min-width: 250px;
+  }
+
+  .comparex-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 24px;
+  }
+
+  .comparex-label {
+    width: 120px;
+    font-weight: 600;
+    color: #0076d6;
+  }
+
+  .comparex-bar-bg {
+    flex: 1;
+    height: 26px;
+    background: #f0f6fa;
+    border-radius: 13px;
+    margin-left: 10px;
+    margin-right: 10px;
+    overflow: hidden;
+  }
+
+  .comparex-bar {
+    height: 100%;
+    border-radius: 13px;
+    background: linear-gradient(90deg, #0076d6 80%, #36b8e3 100%);
+    transition: width 0.6s ease;
+  }
+
+  .comparex-percent {
+    font-weight: 600;
+    color: #333;
+    width: 50px;
+  }
+</style>
+<div class="comparex-box-row">
+  <!-- 텍스트 설명 -->
+  <div class="comparex-texts-col">
+    <div class="comparex-title">크던, 작던 한결 같은 서비스</div>
+    <div class="comparex-desc">
+      투삼로지스는 기업 및 개인 고객 모두에게<br>
+      <b style="color:#0076d6;">합리적인 국제특송 요금</b>과 전세계 220개국 안정적인 문앞 배송을 제공합니다.
+    </div>
+  </div>
+
+  <!-- 그래프 -->
+  <div class="comparex-table">
+    <div class="comparex-row">
+      <div class="comparex-label">투삼로지스</div>
+      <div class="comparex-bar-bg">
+        <div class="comparex-bar" style="width: 38%;"></div>
+      </div>
+      <div class="comparex-percent">38%</div>
+    </div>
+    <div class="comparex-row">
+      <div class="comparex-label">글로벌 특송</div>
+      <div class="comparex-bar-bg">
+        <div class="comparex-bar" style="width: 58%;"></div>
+      </div>
+      <div class="comparex-percent">58%</div>
+    </div>
+    <div class="comparex-row">
+      <div class="comparex-label">대기업 특송</div>
+      <div class="comparex-bar-bg">
+        <div class="comparex-bar" style="width: 100%;"></div>
+      </div>
+      <div class="comparex-percent">100%</div>
+    </div>
+  </div>
+</div>
 <div class="compare-box-row">
   <!-- 텍스트 설명 -->
   <div class="compare-texts-col">
@@ -1063,6 +1167,7 @@ window.addEventListener('load', revealUpOnScroll);
 
 </body>
 </html>
+
 
 
 
