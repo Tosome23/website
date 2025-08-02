@@ -4934,16 +4934,17 @@ a {
   }
 
   .compare-table {
-    width: 100%;
-    display: flex;
+    width: 100% !important;
+    display: block !important;
     flex-direction: column;
-    gap: 12px;
   }
 
   .compare-row {
+    display: flex;
     flex-direction: column;
     align-items: stretch;
     gap: 6px;
+    margin-bottom: 16px;
   }
 
   .compare-label {
@@ -4962,4 +4963,6 @@ a {
     margin-top: 2px;
   }
 }
+
 </style>
+
