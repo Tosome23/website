@@ -937,12 +937,15 @@ document.getElementById('contact-form').addEventListener('submit', function(e) {
     return;
   }
 
-  fetch(form.action, {
-    method: 'POST',
-    body: new FormData(form),
-    headers: { 'Accept': 'application/json' }
-  }).then(response => {
-    if (response.ok) {
+ fetch(form.action, {
+  method: 'POST',
+  body: new FormData(form),
+  headers: { 
+    'Accept': 'application/json'
+  }
+}).then(response => response.json()) // ★ JSON 응답 파싱 필수 ★
+  .then(data => {
+    if (data.ok || data.success) {
       resultDiv.innerHTML = '메일 문의가 완료되었습니다.<br>빠른 시일 내에 답변드리겠습니다 😊';
       resultDiv.style.display = 'block';
       form.reset();
@@ -955,7 +958,6 @@ document.getElementById('contact-form').addEventListener('submit', function(e) {
     resultDiv.textContent = '일시적 오류가 발생했습니다.';
     resultDiv.style.display = 'block';
   });
-});
 
 // reveal-up 애니메이션
 function revealUpOnScroll() {
@@ -975,6 +977,7 @@ window.addEventListener('load', revealUpOnScroll);
 
 </body>
 </html>
+
 
 
 
