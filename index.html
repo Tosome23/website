@@ -354,21 +354,22 @@
   .compare-bar-bg { margin-left: 0; }
 }
 	<style>
-  .comparex-box-row {
+  .comparex-box {
     display: flex;
+    flex-wrap: wrap;
     gap: 28px;
     max-width: 960px;
-    margin: 40px auto;
+    margin: 0 auto;
     background: #fff;
     border-radius: 20px;
-    box-shadow: 0 2px 14px rgba(0,0,0,0.05);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
     padding: 34px 32px;
     align-items: flex-start;
-    flex-wrap: wrap;
   }
 
-  .comparex-texts-col {
-    flex: 0 0 280px;
+  .comparex-text {
+    flex: 1 1 260px;
+    min-width: 250px;
   }
 
   .comparex-title {
@@ -380,62 +381,97 @@
 
   .comparex-desc {
     font-size: 1rem;
-    color: #333;
+    color: #222;
     line-height: 1.6;
   }
 
-  .comparex-table {
-    flex: 1;
-    min-width: 250px;
+  .comparex-desc b {
+    color: #0076d6;
+  }
+
+  .comparex-graph {
+    flex: 1 1 300px;
+    background: #f9f9f9;
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.04);
   }
 
   .comparex-row {
     display: flex;
     align-items: center;
-    margin-bottom: 24px;
+    margin-bottom: 20px;
   }
 
   .comparex-label {
-    width: 120px;
+    font-size: 0.95rem;
     font-weight: 600;
+    min-width: 90px;
     color: #0076d6;
   }
 
   .comparex-bar-bg {
     flex: 1;
-    height: 26px;
-    background: #f0f6fa;
+    background: #e9f1f8;
     border-radius: 13px;
-    margin-left: 10px;
-    margin-right: 10px;
+    height: 16px;
     overflow: hidden;
+    margin: 0 10px;
   }
 
   .comparex-bar {
     height: 100%;
     border-radius: 13px;
-    background: linear-gradient(90deg, #0076d6 80%, #36b8e3 100%);
+    background: linear-gradient(to right, #0076d6, #36b8e3);
     transition: width 0.6s ease;
   }
 
   .comparex-percent {
+    font-size: 0.9rem;
     font-weight: 600;
     color: #333;
-    width: 50px;
+    min-width: 40px;
+    text-align: right;
+  }
+
+  @media (max-width: 680px) {
+    .comparex-box {
+      flex-direction: column;
+      padding: 24px 18px;
+    }
+
+    .comparex-text, .comparex-graph {
+      width: 100%;
+    }
+
+    .comparex-title {
+      font-size: 1.2rem;
+    }
+
+    .comparex-label {
+      font-size: 0.9rem;
+    }
+
+    .comparex-percent {
+      font-size: 0.85rem;
+    }
+
+    .comparex-bar-bg {
+      margin: 0 6px;
+    }
   }
 </style>
-<div class="comparex-box-row">
-  <!-- 텍스트 설명 -->
-  <div class="comparex-texts-col">
+
+<div class="comparex-box">
+  <div class="comparex-text">
     <div class="comparex-title">크던, 작던 한결 같은 서비스</div>
     <div class="comparex-desc">
       투삼로지스는 기업 및 개인 고객 모두에게<br>
-      <b style="color:#0076d6;">합리적인 국제특송 요금</b>과 전세계 220개국 안정적인 문앞 배송을 제공합니다.
+      <b>합리적인 국제특송 요금</b>과 전세계 220개국 안정적인 문앞 배송을 제공합니다.
     </div>
   </div>
 
-  <!-- 그래프 -->
-  <div class="comparex-table">
+  <div class="comparex-graph">
     <div class="comparex-row">
       <div class="comparex-label">투삼로지스</div>
       <div class="comparex-bar-bg">
@@ -459,67 +495,7 @@
     </div>
   </div>
 </div>
-<div class="compare-box-row">
-  <!-- 텍스트 설명 -->
-  <div class="compare-texts-col">
-    <div class="compare-title">크던, 작던 한결 같은 서비스</div>
-    <div class="compare-desc">
-      투삼로지스는 기업 및 개인 고객 모두에게<br>
-      <b style="color:#0076d6;">합리적인 국제특송 요금</b>과 전세계 220개국 안정적인 문앞 배송을 제공합니다.
-    </div>
-  </div>
-<!-- 그래프 -->
-  <div class="compare-table">
-    <div class="compare-row">
-      <div class="compare-label">투삼로지스</div>
-      <div class="compare-bar-bg">
-        <div class="compare-bar" style="width: 38%;"></div>
-      </div>
-      <div class="compare-percent">38%</div>
-    </div>
-    <div class="compare-row">
-      <div class="compare-label">글로벌 특송</div>
-      <div class="compare-bar-bg">
-        <div class="compare-bar" style="width: 58%;"></div>
-      </div>
-      <div class="compare-percent">58%</div>
-    </div>
-    <div class="compare-row">
-      <div class="compare-label">대기업 특송</div>
-      <div class="compare-bar-bg">
-        <div class="compare-bar" style="width: 100%;"></div>
-      </div>
-      <div class="compare-percent">100%</div>
-    </div>
-  </div>
-</div>
-  <!-- 그래프 -->
-  <div class="compare-table">
-    <div class="compare-row">
-  <div class="compare-label">투삼로지스</div>
-  <div class="compare-bar-bg">
-    <div class="compare-bar" style="width: 38%;"></div>
-  </div>
-  <div class="compare-percent">38%</div>
-</div>
-    <div class="compare-row">
-      <div class="compare-label">글로벌 특송</div>
-      <div class="compare-bar-bg">
-        <div class="compare-bar" style="width: 58%;"></div>
-      </div>
-      <div class="compare-percent">58%</div>
-    </div>
-    <div class="compare-row">
-      <div class="compare-label">포워딩</div>
-      <div class="compare-bar-bg">
-        <div class="compare-bar" style="width: 100%;"></div>
-      </div>
-      <div class="compare-percent">100%</div>
-    </div>
-  </div>
-</div>
 
-	
 	<div class="service-intro2 reveal-up">
   <div class="sub-title">서비스 장점</div>
   <div class="main-title"><b style="color:#0076d6;">간편하다</b>고 느낄 수 있게</div>
@@ -1167,6 +1143,7 @@ window.addEventListener('load', revealUpOnScroll);
 
 </body>
 </html>
+
 
 
 
