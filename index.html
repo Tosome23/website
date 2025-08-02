@@ -102,38 +102,47 @@
 
 <div id="wrapper" class="fade-in">
 
+<!-- 채팅 안내 말풍선 -->
 <div id="chat-popup" style="
   position: fixed;
   bottom: 140px;
   right: 50px;
   background: white;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  padding: 12px 16px;
+  border-radius: 20px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  padding: 12px 18px 10px 18px;
   z-index: 9998;
+  font-family: 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif;
   display: flex;
-  align-items: center;
-  font-size: 14px;
-  color: #333;
-  font-family: 'Pretendard', 'Malgun Gothic', sans-serif;
+  flex-direction: column;
+  align-items: flex-start;
+  width: max-content;
+  max-width: 280px;
 ">
-  <span style="margin-right: 10px;">궁금한 건 채팅으로 문의하세요</span>
-  <button onclick="document.getElementById('chat-popup').style.display='none'" style="
-    background: none;
-    border: none;
-    font-size: 14px;
-    cursor: pointer;
-    color: #888;
-  ">✕</button>
+  <div style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+    <div style="font-size: 14.5px; color: #111;">궁금한 건 채팅으로 문의하세요</div>
+    <button onclick="document.getElementById('chat-popup').style.display='none'" style="
+      background: none;
+      border: none;
+      font-size: 14px;
+      cursor: pointer;
+      color: #888;
+      margin-left: 10px;
+    ">✕</button>
+  </div>
+  <div style="margin-top: 4px; font-size: 12px; color: #999;">
+    💬 대화 시작하기
+  </div>
 </div>
 
+<!-- 자동으로 10초 후 사라짐 -->
 <script>
-  // 10초 뒤 자동으로 숨기기
   setTimeout(() => {
     const popup = document.getElementById("chat-popup");
     if (popup) popup.style.display = "none";
   }, 10000);
 </script>
+
    <!-- 플로팅 아이콘  -->
 <!-- HTML: 플로팅 카카오톡 버튼 -->
 <a href="http://pf.kakao.com/_wUvBn/chat" target="_blank" class="kakao-float-btn" aria-label="카카오톡상담">
@@ -938,5 +947,6 @@ window.addEventListener('load', revealUpOnScroll);
 
 </body>
 </html>
+
 
 
