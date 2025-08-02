@@ -4755,6 +4755,12 @@ background-image: url("../../images/main-banner1.png") !important;
   padding: 32px 40px;  /* 내부 여백만 조절 */
   background: #fff;
 }
+.compare-bar {
+  height: 100%;
+  background: linear-gradient(90deg, #0076d6 80%, #36b8e3 100%);
+  border-radius: 13px;
+  transition: width 0.7s;
+}
 
 #header .logo {
     border: none !important;
@@ -4958,4 +4964,5 @@ a {
 }
 
 </style>
+
 
