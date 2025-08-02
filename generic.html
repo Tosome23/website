@@ -3,82 +3,136 @@
 <head>
   <meta charset="UTF-8">
   <title>투삼로지스 비교 그래프</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     body {
       font-family: 'Noto Sans KR', sans-serif;
-      background-color: #f9f9f9;
+      background-color: #fff;
       margin: 0;
-      padding: 40px 20px;
+      padding: 40px 0;
     }
 
     .compare-box-row {
       display: flex;
       gap: 28px;
-      max-width: 960px;
+      max-width: 950px;
       margin: 0 auto;
+      align-items: flex-start;
       background: #fff;
       border-radius: 20px;
       box-shadow: 0 2px 14px rgba(0,0,0,0.05);
       padding: 34px 32px;
-      align-items: flex-start;
-      flex-wrap: wrap;
     }
 
     .compare-texts-col {
-      flex: 0 0 280px;
+      flex: 0 0 310px;
+      min-width: 240px;
     }
 
     .compare-title {
-      font-size: 1.5rem;
+      font-size: 1.45rem;
       font-weight: 700;
       color: #0d2d6e;
       margin-bottom: 12px;
     }
 
     .compare-desc {
-      font-size: 1rem;
+      font-size: 1.05rem;
       color: #333;
       line-height: 1.6;
     }
 
     .compare-table {
       flex: 1;
-      min-width: 250px;
     }
 
     .compare-row {
       display: flex;
       align-items: center;
-      margin-bottom: 24px;
+      justify-content: space-between;
+      margin-bottom: 26px;
+      gap: 16px;
+    }
+
+    .compare-label,
+    .compare-percent {
+      font-size: 1.09rem;
+      font-weight: 600;
     }
 
     .compare-label {
-      width: 120px;
-      font-weight: 600;
       color: #0076d6;
+      min-width: 95px;
+      max-width: 120px;
+      text-align: left;
     }
 
     .compare-bar-bg {
       flex: 1;
-      height: 26px;
       background: #f0f6fa;
+      height: 26px;
       border-radius: 13px;
-      margin-left: 10px;
-      margin-right: 10px;
       overflow: hidden;
+      position: relative;
+      cursor: pointer;
+      transition: box-shadow 0.2s;
+      margin-left: 10px;
     }
 
     .compare-bar {
       height: 100%;
-      border-radius: 13px;
       background: linear-gradient(90deg, #0076d6 80%, #36b8e3 100%);
-      transition: width 0.6s ease;
+      border-radius: 13px;
+      transition: width 0.7s;
+    }
+
+    .compare-bar-bg:hover .compare-bar {
+      transform: scaleY(1.23);
+      filter: brightness(1.08) drop-shadow(0 1px 5px #0076d62a);
+    }
+
+    .compare-bar-bg:hover {
+      box-shadow: 0 2px 10px #0076d615;
     }
 
     .compare-percent {
-      font-weight: 600;
-      color: #333;
-      width: 50px;
+      color: #222;
+      margin-left: 10px;
+      font-size: 0.97rem;
+    }
+
+    /* 모바일 반응형 */
+    @media (max-width: 640px) {
+      .compare-box-row {
+        flex-direction: column;
+        padding: 20px 5vw;
+      }
+
+      .compare-texts-col {
+        margin-bottom: 24px;
+      }
+
+      .compare-row {
+        flex-direction: column;
+        align-items: stretch;
+        margin-bottom: 20px;
+      }
+
+      .compare-label {
+        margin-bottom: 6px;
+        font-size: 1rem;
+      }
+
+      .compare-bar-bg {
+        margin-left: 0;
+        width: 100%;
+      }
+
+      .compare-percent {
+        align-self: flex-end;
+        margin-top: 6px;
+        font-size: 0.95rem;
+      }
     }
   </style>
 </head>
@@ -94,7 +148,7 @@
       </div>
     </div>
 
-    <!-- 그래프 -->
+    <!-- 그래프 영역 -->
     <div class="compare-table">
       <div class="compare-row">
         <div class="compare-label">투삼로지스</div>
@@ -111,7 +165,7 @@
         <div class="compare-percent">58%</div>
       </div>
       <div class="compare-row">
-        <div class="compare-label">대기업 특송</div>
+        <div class="compare-label">시장 평균</div>
         <div class="compare-bar-bg">
           <div class="compare-bar" style="width: 100%;"></div>
         </div>
