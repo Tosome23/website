@@ -763,7 +763,7 @@
   align-items: flex-start;
   flex-wrap: wrap;
 ">
-  <!-- 문의 폼 -->
+  <!-- 문의 폼/안내 박스 -->
   <div style="
     flex: 1 1 0;
     min-width: 320px;
@@ -773,7 +773,9 @@
     box-shadow: 0 6px 28px rgba(30,42,78,0.12);
     padding: 32px 24px;
     box-sizing: border-box;
+    position: relative;
   ">
+    <!-- 폼: id는 contact-form -->
     <form id="contact-form" method="post" action="https://formspree.io/f/xrbkrgzw">
       <!-- 이름 -->
       <div style="margin-bottom:18px;">
@@ -799,41 +801,39 @@
 - 품목 (예: 전자기기, 의류 등):</textarea>
       </div>
       <!-- 개인정보동의 -->
- <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 26px;">
-  <input type="checkbox" id="privacy-check" required
-    style="width: 20px; height: 20px; accent-color: #1976d2; flex-shrink: 0;">
-
-  <label for="privacy-check" style="margin: 0; color: #414d57; font-size: 0.96rem; white-space: nowrap;">
-    개인정보 수집 및 이용 동의
-  </label>
-
-  <a href="elements.html#privacy-policy" target="_blank"
-    style="text-decoration: none; color: #1976d2; font-weight: 500; font-size: 0.96rem; white-space: nowrap;">
-    [내용보기]
+      <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 26px;">
+        <input type="checkbox" id="privacy-check" required
+          style="width: 20px; height: 20px; accent-color: #1976d2; flex-shrink: 0;">
+        <label for="privacy-check" style="margin: 0; color: #414d57; font-size: 0.96rem; white-space: nowrap;">
+          개인정보 수집 및 이용 동의
+        </label>
+        <a href="elements.html#privacy-policy" target="_blank"
+          style="text-decoration: none; color: #1976d2; font-weight: 500; font-size: 0.96rem; white-space: nowrap;">
+          [내용보기]
         </a>
       </div>
       <!-- 버튼 -->
-<div style="margin-top: 8px;">
-  <button type="submit"
-    style="
-      width: 100%;
-      height: 48px;
-      background: linear-gradient(90deg, #1976d2 88%, #1cb5e0 100%);
-      color: #fff !important;
-      border: none;
-      border-radius: 8px;
-      font-weight: 700;
-      font-size: 1.16rem;
-      letter-spacing: 1px;
-      box-shadow: 0 3px 12px rgba(44,128,255,0.09);
-      cursor: pointer;
-      text-align: center;
-      transition: all 0.2s ease;
-    "
-    onmouseover="this.style.filter='brightness(1.08)'; this.style.transform='scale(1.02)'"
-    onmouseout="this.style.filter='none'; this.style.transform='scale(1)'"
-  >
-    메일문의
+      <div style="margin-top: 8px;">
+        <button type="submit"
+          style="
+            width: 100%;
+            height: 48px;
+            background: linear-gradient(90deg, #1976d2 88%, #1cb5e0 100%);
+            color: #fff !important;
+            border: none;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 1.16rem;
+            letter-spacing: 1px;
+            box-shadow: 0 3px 12px rgba(44,128,255,0.09);
+            cursor: pointer;
+            text-align: center;
+            transition: all 0.2s ease;
+          "
+          onmouseover="this.style.filter='brightness(1.08)'; this.style.transform='scale(1.02)'"
+          onmouseout="this.style.filter='none'; this.style.transform='scale(1)'"
+        >
+          메일문의
   </button>
 </div>
 
@@ -933,7 +933,7 @@ document.getElementById('contact-form').addEventListener('submit', function(e) {
   const resultDiv = document.getElementById('form-result');
 
   if (!document.getElementById('privacy-check').checked) {
-    alert('개인정보 수집 및 이용에 동의.');
+    alert('개인정보 수집 및 이용에 동의해 주세요.');
     return;
   }
 
@@ -942,11 +942,11 @@ document.getElementById('contact-form').addEventListener('submit', function(e) {
     body: new FormData(form),
     headers: { 'Accept': 'application/json' }
   }).then(response => {
-if (response.ok) {
-  resultDiv.innerHTML = '메일 문의가 완료되었습니다.<br>빠른 시일 내에 답변드리겠습니다 😊';
-  resultDiv.style.display = 'block';
-  form.reset();
-  form.style.display = 'none';
+    if (response.ok) {
+      resultDiv.innerHTML = '메일 문의가 완료되었습니다.<br>빠른 시일 내에 답변드리겠습니다 😊';
+      resultDiv.style.display = 'block';
+      form.reset();
+      form.style.display = 'none';
     } else {
       resultDiv.textContent = '전송 중 오류가 발생했습니다. 다시 시도해 주세요.';
       resultDiv.style.display = 'block';
@@ -975,6 +975,7 @@ window.addEventListener('load', revealUpOnScroll);
 
 </body>
 </html>
+
 
 
 
