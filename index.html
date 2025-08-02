@@ -101,7 +101,7 @@
 <body class="is-preload">
 
 <div id="wrapper" class="fade-in">
-<!-- 채팅 안내 말풍선 -->
+<!-- 채팅 말풍선 팝업 -->
 <div id="chat-popup" style="
   position: fixed;
   bottom: 140px;
@@ -117,28 +117,45 @@
   align-items: flex-start;
   max-width: 100%;
   white-space: nowrap;
+  opacity: 0;
+  transform: translateY(10px);
+  animation: fadeInUp 0.6s ease-out forwards;
 ">
+
   <div style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
     <div style="font-size: 14.5px; color: #111; margin-right: 12px;">
       궁금한 건 채팅으로 문의하세요
     </div>
-    <button onclick="document.getElementById('chat-popup').style.display='none'" style="
-      background: none;
-      border: none;
+    <span onclick="document.getElementById('chat-popup').style.display='none'" style="
       font-size: 14px;
-      cursor: pointer;
       color: #888;
-      padding: 0;
+      cursor: pointer;
       line-height: 1;
-      outline: none;
-    ">✕</button>
+      display: inline-block;
+      padding: 2px;
+    ">✕</span>
   </div>
+
   <div style="margin-top: 4px; font-size: 12px; color: #999;">
     💬 대화 시작하기
   </div>
 </div>
 
-<!-- 자동으로 10초 후 사라짐 -->
+<!-- 애니메이션 정의 -->
+<style>
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+</style>
+
+<!-- 10초 후 자동 숨김 -->
 <script>
   setTimeout(() => {
     const popup = document.getElementById("chat-popup");
@@ -951,6 +968,7 @@ window.addEventListener('load', revealUpOnScroll);
 
 </body>
 </html>
+
 
 
 
