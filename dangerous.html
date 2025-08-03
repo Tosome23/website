@@ -237,9 +237,9 @@
 
     <div class="section-row">
         <span class="we">Why</span>
-        <p><strong>동일한 절차, 동일한 서류, 동일한 통관.  ㅊ
+        <p><strong>동일한 절차, 동일한 서류, 동일한 통관.  
      똑같은데도 <b style="color:#1976d2;">비용은  1/2 반값</b>
-속도는 <b style="color:#1976d2;">2배 이상 빠릅니다.</b>
+속도는 <b style="color:#e07c23;">2배 이상 빠릅니다.</b>
 
     </div>
 
@@ -512,7 +512,325 @@
     transition: width 0.5s ease;
   }
 
-  .compare로 확인</span> 가능합니다.<br>
+  .compare-percent {
+    font-size: 0.92rem;
+    font-weight: 700;
+    color: #222;
+    width: 50px;
+    text-align: right;
+  }
+
+  @media (max-width: 720px) {
+    .compare-wrap {
+      flex-direction: column;
+      padding: 28px 20px;
+    }
+
+    .compare-left,
+    .compare-right {
+      width: 100%;
+    }
+
+    .compare-title {
+      font-size: 1.3rem;
+    }
+
+    .compare-percent {
+      font-size: 0.85rem;
+    }
+  }
+</style>
+
+	<div class="service-intro2 reveal-up">
+  <div class="sub-title">핵심 강점</div>
+  <div class="main-title"><b style="color:#0076d6;">간편하다</b>고 느낄 수 있게</div>
+  <hr class="gray-line">
+</div>
+<style>
+.tosome-service-section {
+  display: flex;
+  gap: 36px;
+  justify-content: center;
+  align-items: stretch;
+  margin: 54px 0 30px 0;
+  flex-wrap: wrap;
+}
+.tosome-service-card {
+  flex: 1;
+  max-width: 330px;
+  background: #fff;
+  border-radius: 22px;
+  box-shadow: 0 3px 14px 0 rgba(25, 118, 210, 0.06), 0 1px 5px 0 rgba(60,60,60,.04);
+  text-align: left;
+  padding: 30px 28px 28px 28px;
+  margin: 0 0 18px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  transition: box-shadow 0.2s;
+}
+.tosome-service-card img {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 18px;
+  box-shadow: 0 1px 7px 0 rgba(0,0,0,.04);
+}
+.tosome-service-characteristic {
+  font-weight: 700;
+  font-size: 0.7rem;
+  color: #1976d2;
+  margin-bottom: 2px;
+  letter-spacing: 0.01em;
+}
+.tosome-service-lead {
+  font-size: 1.16rem;
+  margin-bottom: 6px;
+  font-weight: 700;
+  color: #222;
+  line-height: 1.38;
+}
+.tosome-service-desc {
+  font-size: 0.9rem;
+  color: #757575;
+  line-height: 1.0;
+  font-weight: 300;
+  margin-bottom: 0;
+}
+@media (max-width: 900px) {
+  .tosome-service-section { flex-direction: column; gap: 18px; align-items: stretch; }
+  .tosome-service-card { max-width: 100%; }
+}
+</style><div class="tosome-service-section">
+  <!-- Point 01 -->
+  <div class="tosome-service-card reveal-up">
+    <img src="images/img01.png" alt="비용">
+    <div class="tosome-service-characteristic">Point.01</div>
+    <div class="tosome-service-lead">로켓출고</div>
+    <div class="tosome-service-desc">
+    당일 포장 · 당일 선적</b><br>이것이 투삼로지스의 속도입니다.
+
+    </div>
+  </div>
+  <!-- Point 02 -->
+  <div class="tosome-service-card reveal-up">
+    <img src="images/img02.png" alt="서비스">
+    <div class="tosome-service-characteristic">Point.02</div>
+    <div class="tosome-service-lead">소량 전용 출고시스템</div>
+    <div class="tosome-service-desc">
+      화학물, 리튬배터리, 페인트등<br>10ml만 있어도 정식 위험물 포장 및 통관 대응 가능
+</div>
+  </div>
+  <!-- Point 03 -->
+  <div class="tosome-service-card reveal-up">
+    <img src="images/img03.png" alt="디자인">
+    <div class="tosome-service-characteristic">Point.03</div>
+    <div class="tosome-service-lead"> 전문가의 손길</div>
+    <div class="tosome-service-desc">
+       위험물 자격증 보유 상담사 상담<br>
+	 상담 + 서류 + 포장 + 운송 원스톱 진행
+        </div>
+  </div>
+</div>
+<style>
+  .section-box, .case-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 24px;
+    background: #fff;
+    border-radius: 20px;
+    padding: 40px 32px;
+    max-width: 1100px;
+    margin: 0 auto 48px;
+    box-shadow: 0 2px 18px rgba(0, 0, 0, 0.06);
+  }
+
+  .section-title {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #0d2d6e;
+    margin-bottom: 16px;
+  }
+
+  .section-desc {
+    font-size: 1.05rem;
+    color: #333;
+    line-height: 1.6;
+  }
+
+  .highlight { color: #1976d2; font-weight: 600; }
+
+  .compare-card {
+    flex: 1;
+    background: #fff;
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.04);
+    transition: all 0.3s;
+  }
+
+  .compare-card:hover {
+    box-shadow: 0 4px 20px rgba(0,0,0,0.07);
+    transform: translateY(-2px);
+  }
+
+  .compare-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 18px;
+  }
+
+  .compare-label {
+    width: 120px;
+    font-weight: 600;
+    color: #1976d2;
+  }
+
+  .compare-bar-bg {
+    flex: 1;
+    height: 22px;
+    background: #f0f6fa;
+    border-radius: 13px;
+    margin: 0 10px;
+    overflow: hidden;
+  }
+
+  .compare-bar {
+    height: 100%;
+    border-radius: 13px;
+    background: linear-gradient(90deg, #0076d6 0%, #36b8e3 100%);
+    transition: width 0.6s ease;
+  }
+
+  .compare-percent {
+    font-weight: 600;
+    color: #333;
+    width: 50px;
+  }
+
+  .case-text { flex: 1; min-width: 280px; }
+  .case-image { flex: 1; min-width: 280px; }
+  .case-image img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 16px;
+    transition: transform 0.3s ease;
+  }
+  .case-image img:hover { transform: scale(1.05); }
+
+  @media (max-width: 768px) {
+    .section-box, .case-box { flex-direction: column; }
+  }
+</style>
+<style>
+.title-same-width {
+  display: inline-block;
+  min-width: 172px; /* 길이 맞게 조절 */
+  text-align: center;
+}
+</style>	 
+<div class="case-box">
+  <div class="case-text">
+    <div class="section-title" style="text-align:center;">
+      <span class="title-same-width">실제 고객 사례</span><br>
+      <span class="title-same-width" style="color:#555;">[위험물 독일 당일발송]</span>
+    </div>
+    <div class="section-desc">
+      <ul style="margin-top:10px; padding-left:18px;">
+        <li>물품: 테스트용 화학품 샘플 2병</li>
+        <li>포장: UN 인증박스 · 라벨 · 완충재</li>
+        <li>서류: MSDS 기반 화학 신고서(DGD) 작성</li>
+        <li>절차: 오후 2시 접수 → <span class="highlight">당일 선적 완료</span></li>
+        <li>배송: <span class="highlight">3일 만에 독일 파트너사 도착 (통관 이상 無)</span></li>
+      </ul>
+    </div>
+  </div>
+  <div class="case-image">
+    <img src="images/processed_image.jpg" alt="위험물 포장 이미지">
+  </div>
+</div>
+
+<!-- ❓ 자주 묻는 질문 (FAQ) -->
+	
+<style>
+  .faq-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    justify-content: space-between;
+    max-width: 1100px;
+    margin: 0 auto 48px;
+  }
+
+  .faq-card {
+    flex: 1 1 calc(50% - 12px);
+    background: #fff;
+    border-radius: 20px;
+    padding: 28px 24px;
+    box-shadow: 0 2px 14px rgba(0, 0, 0, 0.05);
+    border: 2px solid transparent;
+    transition: 0.3s ease;
+    min-width: 280px;
+  }
+
+  .faq-card:hover {
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.08);
+    transform: translateY(-4px);
+    border-color: #1976d2;
+  }
+
+  .faq-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #0d2d6e;
+    margin-bottom: 10px;
+  }
+
+  .faq-answer {
+    font-size: 1.02rem;
+    color: #444;
+    line-height: 1.6;
+  }
+
+  .faq-answer .highlight {
+    color: #1976d2;
+    font-weight: 600;
+  }
+
+  @media (max-width: 768px) {
+    .faq-grid {
+      flex-direction: column;
+    }
+    .faq-card {
+      flex: 1 1 100%;
+    }
+  }
+</style>
+	<!-- ❓ 자주 묻는 질문 4박스 -->
+    <div class="sub-title"> </div>
+    <div class="main-title">자주 묻는 질문</div></div>
+
+<div class="faq-grid">
+
+  <div class="faq-card">
+    <div class="faq-title">Q. 비용은 왜 이렇게 차이가 나죠?</div>
+    <div class="faq-answer">
+      → <span class="highlight">위험물에 특화된 빠른 구조</span>를 갖추고 있습니다.<br>
+      중개 수수료, 창고비, 선사 일정 리스크가 없습니다.
+    </div>
+  </div>
+
+  <div class="faq-card">
+    <div class="faq-title">Q. 소량인데도 가능한가요?</div>
+    <div class="faq-answer">
+      → <span class="highlight">1g도 가능합니다.<br></span> 오늘도 샘플 수출 중심 고객의 화물을 보내고 있습니다.
+    </div>
+  </div>
+
+  <div class="faq-card">
+    <div class="faq-title">Q. 위험물 수출 처음인데 괜찮나요?</div>
+    <div class="faq-answer">
+      → <span class="highlight">품명+사진만 줘도 확인</span> 가능합니다.<br>
        서류 대행, 포장, 접수까지 전과정 상세히 안내드립니다.
     </div>
   </div>
@@ -599,11 +917,11 @@
     <span class="marquee-tag blue2">#리튬배터리</span>
     <span class="marquee-tag blue3">#시약 샘플</span>
     <span class="marquee-tag blue4">#페인트</span>
-    <span class="marquee-tag blue1">#전동 킥보드</span>
+    <span class="marquee-tag blue1">#가구</span>
     <span class="marquee-tag blue2">#산업기계</span>
     <span class="marquee-tag blue3">#보조 배터리</span>
-    <span class="marquee-tag blue4">#전동 자전거거</span>
-    <span class="marquee-tag blue1">#보존재</span>
+    <span class="marquee-tag blue4">#그림</span>
+    <span class="marquee-tag blue1">#미술품</span>
     <span class="marquee-tag blue2">#악기기</span>
     <!-- 반복 -->
     <span class="marquee-tag blue3">#가구</span>
