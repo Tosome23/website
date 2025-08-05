@@ -2,172 +2,64 @@
 <html lang="ko">
 <head>
   <meta charset="UTF-8">
-  <title>서비스 흐름 - 투삼로지스</title>
-  <style>
-    body {
-      font-family: 'Noto Sans KR', sans-serif;
-      background-color: #f9f9f9;
-      padding: 40px 0;
-    }
+ <div style="width:100%; text-align:right; color:#b0b0b0; font-size:1.01rem; margin: 18px 0 8px 0;">
+  *위험물 1kg 발송기준 (국가별 운임 상이)
+</div>
 
-    .tosome-service-area {
-      text-align: center;
-      margin-bottom: 36px;
-    }
+<div class="tosome-service-area">
+  <div class="sub-title">서비스 과정</div>
+  <div class="main-title"><b style="color:#0076d6;">1g</b>도 어디든 최상의 경로로</div>
+  <hr class="gray-line">
+</div>
 
-    .sub-title {
-      font-size: 20px;
-      color: #777;
-      margin-bottom: 8px;
-    }
+<div class="service-cards" style="display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 20px;">
 
-    .main-title {
-      font-size: 28px;
-      font-weight: 700;
-      color: #222;
-    }
-
-    .main-title b {
-      color: #0076d6;
-    }
-
-    .service-flow-wrapper {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-wrap: wrap;
-      padding: 0 20px;
-    }
-
-    .service-card {
-      width: 280px;
-      background: #fff;
-      border-radius: 18px;
-      padding: 24px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-      transition: all 0.2s ease-in-out;
-      text-align: center;
-      margin: 0 12px; /* 카드 간 간격 유지 (총 24px gap) */
-    }
-
-    .service-card:hover {
-      transform: translateY(-4px);
-    }
-
-    .img-wrapper {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin-bottom: 18px;
-    }
-
-    .service-img-round {
-      width: 160px;
-      height: 160px;
-      object-fit: cover;
-      border-radius: 50%;
-    }
-
-    .service-title {
-      font-size: 18px;
-      font-weight: bold;
-      margin-bottom: 10px;
-      color: #0076d6;
-    }
-
-    .service-text {
-      font-size: 15px;
-      color: #555;
-      line-height: 1.6;
-    }
-
-    .triangle-arrow {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 100%;
-    }
-
-    .triangle-arrow img {
-      width: 36px;
-      height: 36px;
-    }
-
-    @media (max-width: 768px) {
-      .service-flow-wrapper {
-        flex-direction: column;
-      }
-
-      .service-card {
-        margin: 0 auto 24px;
-      }
-
-      .triangle-arrow {
-        transform: rotate(90deg);
-        margin: 12px 0;
-      }
-    }
-  </style>
-</head>
-<body>
-
-  <div class="tosome-service-area">
-    <div class="sub-title">서비스 과정</div>
-    <div class="main-title"><b>1g</b>도 어디든 최상의 경로로</div>
+  <!-- Step 1 -->
+  <div class="service-card">
+    <div class="img-wrapper">
+      <img src="images/dg1.png" alt="1.서류대행" class="service-img-round">
+    </div>
+    <div class="service-title" style="color:#0076d6;">1.서류대행</div>
+    <div class="service-text">
+      위험물 수출에 필요한<br>화주신고서 DGD는기본<br>
+      패킹리스트, 인보이스 서류 대행까지
+    </div>
   </div>
 
-  <div class="service-flow-wrapper">
-
-    <!-- Step 1 -->
-    <div class="service-card">
-      <div class="img-wrapper">
-        <img src="images/dg1.png" alt="1.서류대행" class="service-img-round">
-      </div>
-      <div class="service-title">1.서류대행</div>
-      <div class="service-text">
-        위험물 수출에 필요한<br>
-        화주신고서 DGD는 기본<br>
-        패킹리스트, 인보이스 서류 대행까지
-      </div>
-    </div>
-
-    <!-- 화살표 -->
-    <div class="triangle-arrow">
-      <img src="images/arrow-triangle.png" alt="다음 단계 화살표">
-    </div>
-
-    <!-- Step 2 -->
-    <div class="service-card">
-      <div class="img-wrapper">
-        <img src="images/dg2.png" alt="2.위험물 포장" class="service-img-round">
-      </div>
-      <div class="service-title">2.위험물 포장</div>
-      <div class="service-text">
-        항공 수출 규정에 따른<br>
-        UN용기, 라벨링 작업<br>
-        포장이 미흡하면 포장보강도 OK
-      </div>
-    </div>
-
-    <!-- 화살표 -->
-    <div class="triangle-arrow">
-      <img src="images/arrow-triangle.png" alt="다음 단계 화살표">
-    </div>
-
-    <!-- Step 3 -->
-    <div class="service-card">
-      <div class="img-wrapper">
-        <img src="images/dg3.png" alt="3.로켓출고" class="service-img-round">
-      </div>
-      <div class="service-title">3.로켓출고</div>
-      <div class="service-text">
-        당일 입고<br>
-        당일 출고<br>
-        당일 선적
-      </div>
-    </div>
-
+  <!-- 화살표 -->
+  <div style="width: 36px; height: 36px; display: flex; align-items: center; justify-content: center;">
+    <img src="images/arrow-triangle.png" alt="화살표" style="width: 36px; height: 36px;">
   </div>
+
+  <!-- Step 2 -->
+  <div class="service-card">
+    <div class="img-wrapper">
+      <img src="images/dg2.png" alt="2.위험물 포장" class="service-img-round">
+    </div>
+    <div class="service-title" style="color:#0076d6;">2.위험물 포장</div>
+    <div class="service-text">
+      위험물 항공 수출 규정에 따른 <br> UN용기,라벨링 작업<br>
+      포장이 미흡하면 포장보강도 OK
+    </div>
+  </div>
+
+  <!-- 화살표 -->
+  <div style="width: 36px; height: 36px; display: flex; align-items: center; justify-content: center;">
+    <img src="images/arrow-triangle.png" alt="화살표" style="width: 36px; height: 36px;">
+  </div>
+
+  <!-- Step 3 -->
+  <div class="service-card">
+    <div class="img-wrapper">
+      <img src="images/dg3.png" alt="3.당일 로켓출고" class="service-img-round">
+    </div>
+    <div class="service-title" style="color:#0076d6;">3.로켓출고</div>
+    <div class="service-text">
+      당일 입고 <br> 당일 출고<br> 당일 선적<br>
+    </div>
+  </div>
+</div>
 
 </body>
 </html>
+
