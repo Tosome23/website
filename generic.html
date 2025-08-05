@@ -2,127 +2,167 @@
 <html lang="ko">
 <head>
   <meta charset="UTF-8">
-  <title>투삼로지스 타임라인</title>
+  <title>서비스 흐름 - 투삼로지스</title>
   <style>
     body {
       font-family: 'Noto Sans KR', sans-serif;
       background-color: #f9f9f9;
-      padding: 40px 20px;
+      padding: 40px 0;
     }
 
-    .timeline-container {
-      display: flex;
-      justify-content: center;
-      align-items: flex-start;
-      gap: 40px;
-      position: relative;
-      max-width: 1080px;
-      margin: 0 auto;
-      padding-top: 60px;
-    }
-
-    .timeline-line {
-      position: absolute;
-      top: 88px;
-      left: 80px;
-      right: 80px;
-      height: 4px;
-      background: linear-gradient(to right, #1976d2, #1cb5e0);
-      z-index: 0;
-    }
-
-    .timeline-step {
-      background: #fff;
-      padding: 20px;
-      border-radius: 18px;
-      box-shadow: 0 4px 16px rgba(0,0,0,0.05);
+    .tosome-service-area {
       text-align: center;
-      width: 260px;
-      position: relative;
-      z-index: 1;
+      margin-bottom: 36px;
     }
 
-    .circle-number {
-      width: 48px;
-      height: 48px;
-      background-color: #1976d2;
-      color: white;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 18px;
-      font-weight: bold;
-      margin: 0 auto 12px auto;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    }
-
-    .step-title {
-      font-size: 1.1rem;
-      font-weight: 700;
-      color: #222;
+    .sub-title {
+      font-size: 20px;
+      color: #777;
       margin-bottom: 8px;
     }
 
-    .step-desc {
-      font-size: 0.95rem;
-      color: #555;
-      line-height: 1.5;
+    .main-title {
+      font-size: 28px;
+      font-weight: 700;
+      color: #222;
     }
 
-    @media (max-width: 800px) {
-      .timeline-container {
-        flex-direction: column;
-        align-items: center;
-      }
+    .main-title b {
+      color: #0076d6;
+    }
 
-      .timeline-line {
-        display: none;
+    .service-flow-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 24px;
+      flex-wrap: wrap;
+      padding: 0 20px;
+    }
+
+    .service-card {
+      width: 280px;
+      background: #fff;
+      border-radius: 18px;
+      padding: 24px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      transition: all 0.2s ease-in-out;
+      text-align: center;
+    }
+
+    .service-card:hover {
+      transform: translateY(-4px);
+    }
+
+    .img-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 18px;
+    }
+
+    .service-img-round {
+      width: 160px;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+
+    .service-title {
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 10px;
+      color: #0076d6;
+    }
+
+    .service-text {
+      font-size: 15px;
+      color: #555;
+      line-height: 1.6;
+    }
+
+    .triangle-arrow {
+      width: 28px;
+      height: 28px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .triangle-arrow img {
+      width: 100%;
+      height: auto;
+    }
+
+    @media (max-width: 768px) {
+      .service-flow-wrapper {
+        flex-direction: column;
+        gap: 28px;
+      }
+      .triangle-arrow {
+        transform: rotate(90deg); /* 모바일에서는 아래로 향하게 */
       }
     }
   </style>
 </head>
 <body>
 
-  <h2 style="text-align:center; color:#1976d2; font-size:1.8rem; margin-bottom:40px;">
-    1g도 문제없는 위험물 운송 타임라인
-  </h2>
+  <div class="tosome-service-area">
+    <div class="sub-title">서비스 과정</div>
+    <div class="main-title"><b>1g</b>도 어디든 최상의 경로로</div>
+  </div>
 
-  <div class="timeline-container">
-    <div class="timeline-line"></div>
+  <div class="service-flow-wrapper">
 
     <!-- Step 1 -->
-    <div class="timeline-step">
-      <div class="circle-number">1</div>
-      <div class="step-title">서류대행</div>
-      <div class="step-desc">
-        화주신고서(DGD),<br>
-        패킹리스트, 인보이스<br>
-        전서류 대행 가능
+    <div class="service-card">
+      <div class="img-wrapper">
+        <img src="images/dg1.png" alt="1.서류대행" class="service-img-round">
       </div>
+      <div class="service-title">1.서류대행</div>
+      <div class="service-text">
+        위험물 수출에 필요한<br>
+        화주신고서 DGD는 기본<br>
+        패킹리스트, 인보이스 서류 대행까지
+      </div>
+    </div>
+
+    <!-- 화살표 -->
+    <div class="triangle-arrow">
+      <img src="images/arrow-triangle.png" alt="다음 단계 화살표">
     </div>
 
     <!-- Step 2 -->
-    <div class="timeline-step">
-      <div class="circle-number">2</div>
-      <div class="step-title">위험물 포장</div>
-      <div class="step-desc">
-        UN 인증 용기 사용<br>
-        라벨링 & 완충 포장<br>
-        보강 포장까지 지원
+    <div class="service-card">
+      <div class="img-wrapper">
+        <img src="images/dg2.png" alt="2.위험물 포장" class="service-img-round">
+      </div>
+      <div class="service-title">2.위험물 포장</div>
+      <div class="service-text">
+        항공 수출 규정에 따른<br>
+        UN용기, 라벨링 작업<br>
+        포장이 미흡하면 포장보강도 OK
       </div>
     </div>
 
+    <!-- 화살표 -->
+    <div class="triangle-arrow">
+      <img src="images/arrow-triangle.png" alt="다음 단계 화살표">
+    </div>
+
     <!-- Step 3 -->
-    <div class="timeline-step">
-      <div class="circle-number">3</div>
-      <div class="step-title">로켓출고</div>
-      <div class="step-desc">
-        당일 입고 · 당일 출고<br>
-        DHL/FedEx로 선적<br>
-        빠르면 2~4일 도착
+    <div class="service-card">
+      <div class="img-wrapper">
+        <img src="images/dg3.png" alt="3.로켓출고" class="service-img-round">
+      </div>
+      <div class="service-title">3.로켓출고</div>
+      <div class="service-text">
+        당일 입고<br>
+        당일 출고<br>
+        당일 선적
       </div>
     </div>
+
   </div>
 
 </body>
