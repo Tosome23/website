@@ -34,7 +34,7 @@
 
     .service-cards {
       display: flex;
-      align-items: flex-start;
+      align-items: center;
       justify-content: center;
       gap: 20px;
       margin-top: 30px;
@@ -86,8 +86,7 @@
       right: -53px;
       transform: translateY(-50%);
       width: 90px;
-      z-index: 1;
-      pointer-events: none;
+      z-index: 10;
     }
 
     .arrow-wrapper img {
@@ -104,16 +103,12 @@
 
       .arrow-wrapper {
         top: auto;
-        bottom: -42px; /* 3px 더 내려오도록 조정 */
+        bottom: -45px;
         left: 50%;
         right: auto;
-        transform: translateX(-50%) rotate(90deg);
+        transform: translateX(-50%) rotate(90deg); /* 아래 방향 */
       }
-        .arrow-wrapper img {
-    width: 60%; /* 모바일에서 세모 사이즈 축소 */
-  }
-}
-  
+    }
   </style>
 </head>
 <body>
@@ -178,3 +173,4 @@
 
 </body>
 </html>
+
