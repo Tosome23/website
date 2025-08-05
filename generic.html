@@ -2,120 +2,125 @@
 <html lang="ko">
 <head>
   <meta charset="UTF-8">
-  <title>투삼로지스 비교 그래프</title>
+  <title>투삼로지스 타임라인</title>
   <style>
     body {
       font-family: 'Noto Sans KR', sans-serif;
       background-color: #f9f9f9;
-      margin: 0;
       padding: 40px 20px;
     }
 
-    .compare-box-row {
+    .timeline-container {
       display: flex;
-      gap: 28px;
-      max-width: 960px;
-      margin: 0 auto;
-      background: #fff;
-      border-radius: 20px;
-      box-shadow: 0 2px 14px rgba(0,0,0,0.05);
-      padding: 34px 32px;
+      justify-content: center;
       align-items: flex-start;
-      flex-wrap: wrap;
+      gap: 40px;
+      position: relative;
+      max-width: 1080px;
+      margin: 0 auto;
+      padding-top: 60px;
     }
 
-    .compare-texts-col {
-      flex: 0 0 280px;
+    .timeline-line {
+      position: absolute;
+      top: 88px;
+      left: 80px;
+      right: 80px;
+      height: 4px;
+      background: linear-gradient(to right, #1976d2, #1cb5e0);
+      z-index: 0;
     }
 
-    .compare-title {
-      font-size: 1.5rem;
-      font-weight: 700;
-      color: #0d2d6e;
-      margin-bottom: 12px;
+    .timeline-step {
+      background: #fff;
+      padding: 20px;
+      border-radius: 18px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.05);
+      text-align: center;
+      width: 260px;
+      position: relative;
+      z-index: 1;
     }
 
-    .compare-desc {
-      font-size: 1rem;
-      color: #333;
-      line-height: 1.6;
-    }
-
-    .compare-table {
-      flex: 1;
-      min-width: 250px;
-    }
-
-    .compare-row {
+    .circle-number {
+      width: 48px;
+      height: 48px;
+      background-color: #1976d2;
+      color: white;
+      border-radius: 50%;
       display: flex;
       align-items: center;
-      margin-bottom: 24px;
+      justify-content: center;
+      font-size: 18px;
+      font-weight: bold;
+      margin: 0 auto 12px auto;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     }
 
-    .compare-label {
-      width: 120px;
-      font-weight: 600;
-      color: #0076d6;
+    .step-title {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #222;
+      margin-bottom: 8px;
     }
 
-    .compare-bar-bg {
-      flex: 1;
-      height: 26px;
-      background: #f0f6fa;
-      border-radius: 13px;
-      margin-left: 10px;
-      margin-right: 10px;
-      overflow: hidden;
+    .step-desc {
+      font-size: 0.95rem;
+      color: #555;
+      line-height: 1.5;
     }
 
-    .compare-bar {
-      height: 100%;
-      border-radius: 13px;
-      background: linear-gradient(90deg, #0076d6 80%, #36b8e3 100%);
-      transition: width 0.6s ease;
-    }
+    @media (max-width: 800px) {
+      .timeline-container {
+        flex-direction: column;
+        align-items: center;
+      }
 
-    .compare-percent {
-      font-weight: 600;
-      color: #333;
-      width: 50px;
+      .timeline-line {
+        display: none;
+      }
     }
   </style>
 </head>
 <body>
 
-  <div class="compare-box-row">
-    <!-- 텍스트 설명 -->
-    <div class="compare-texts-col">
-      <div class="compare-title">크던, 작던 한결 같은 서비스</div>
-      <div class="compare-desc">
-        투삼로지스는 기업 및 개인 고객 모두에게<br>
-        <b style="color:#0076d6;">합리적인 국제특송 요금</b>과 전세계 220개국 안정적인 문앞 배송을 제공합니다.
+  <h2 style="text-align:center; color:#1976d2; font-size:1.8rem; margin-bottom:40px;">
+    1g도 문제없는 위험물 운송 타임라인
+  </h2>
+
+  <div class="timeline-container">
+    <div class="timeline-line"></div>
+
+    <!-- Step 1 -->
+    <div class="timeline-step">
+      <div class="circle-number">1</div>
+      <div class="step-title">서류대행</div>
+      <div class="step-desc">
+        화주신고서(DGD),<br>
+        패킹리스트, 인보이스<br>
+        전서류 대행 가능
       </div>
     </div>
 
-    <!-- 그래프 -->
-    <div class="compare-table">
-      <div class="compare-row">
-        <div class="compare-label">투삼로지스</div>
-        <div class="compare-bar-bg">
-          <div class="compare-bar" style="width: 38%;"></div>
-        </div>
-        <div class="compare-percent">38%</div>
+    <!-- Step 2 -->
+    <div class="timeline-step">
+      <div class="circle-number">2</div>
+      <div class="step-title">위험물 포장</div>
+      <div class="step-desc">
+        UN 인증 용기 사용<br>
+        라벨링 & 완충 포장<br>
+        보강 포장까지 지원
       </div>
-      <div class="compare-row">
-        <div class="compare-label">글로벌 특송</div>
-        <div class="compare-bar-bg">
-          <div class="compare-bar" style="width: 58%;"></div>
-        </div>
-        <div class="compare-percent">58%</div>
-      </div>
-      <div class="compare-row">
-        <div class="compare-label">대기업 특송</div>
-        <div class="compare-bar-bg">
-          <div class="compare-bar" style="width: 100%;"></div>
-        </div>
-        <div class="compare-percent">100%</div>
+    </div>
+
+    <!-- Step 3 -->
+    <div class="timeline-step">
+      <div class="circle-number">3</div>
+      <div class="step-title">로켓출고</div>
+      <div class="step-desc">
+        당일 입고 · 당일 출고<br>
+        DHL/FedEx로 선적<br>
+        빠르면 2~4일 도착
       </div>
     </div>
   </div>
