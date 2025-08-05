@@ -83,7 +83,7 @@
     .arrow-wrapper {
       position: absolute;
       top: 50%;
-      right: -48px;
+      right: -45px;
       transform: translateY(-50%);
       width: 90px;
       z-index: 10;
@@ -95,13 +95,18 @@
       display: block;
     }
 
+    /* ✅ 모바일 전용 아래 방향 세모 처리 */
     @media (max-width: 768px) {
       .service-cards {
         flex-direction: column;
       }
 
       .arrow-wrapper {
-        display: none;
+        top: auto;
+        bottom: -45px;
+        left: 50%;
+        right: auto;
+        transform: translateX(-50%) rotate(90deg); /* 아래 방향 */
       }
     }
   </style>
@@ -130,8 +135,6 @@
         화주신고서 DGD는 기본<br>
         패킹리스트, 인보이스 서류 대행까지
       </div>
-
-      <!-- 화살표: Step1 → Step2 -->
       <div class="arrow-wrapper">
         <img src="images/arrow-triangle.png" alt="다음 단계">
       </div>
@@ -148,8 +151,6 @@
         UN용기, 라벨링 작업<br>
         포장이 미흡하면 포장보강도 OK
       </div>
-
-      <!-- 화살표: Step2 → Step3 -->
       <div class="arrow-wrapper">
         <img src="images/arrow-triangle.png" alt="다음 단계">
       </div>
@@ -172,4 +173,3 @@
 
 </body>
 </html>
-
