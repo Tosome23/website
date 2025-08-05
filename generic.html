@@ -39,7 +39,6 @@
       gap: 20px;
       margin-top: 30px;
       flex-wrap: wrap;
-      overflow: visible; /* ✅ 세모 안 짤리게 */
     }
 
     .service-card {
@@ -87,8 +86,7 @@
       right: -53px;
       transform: translateY(-50%);
       width: 90px;
-      z-index: 1000; /* ✅ 항상 위로 */
-      pointer-events: none; /* ✅ 마우스 영향 제거 */
+      z-index: 10;
     }
 
     .arrow-wrapper img {
@@ -97,7 +95,7 @@
       display: block;
     }
 
-    /* ✅ 모바일 전용: 아래 방향 세모 */
+    /* ✅ 모바일 전용 아래 방향 세모 처리 */
     @media (max-width: 768px) {
       .service-cards {
         flex-direction: column;
@@ -105,11 +103,10 @@
 
       .arrow-wrapper {
         top: auto;
-        bottom: -35px; /* ✅ 살짝 더 아래 */
+        bottom: -35px;
         left: 50%;
         right: auto;
-        transform: translateX(-50%) rotate(90deg);
-        width: 60px; /* ✅ 모바일에서 작게 */
+        transform: translateX(-50%) rotate(90deg); /* 아래 방향 */
       }
     }
   </style>
@@ -176,3 +173,6 @@
 
 </body>
 </html>
+
+
+
