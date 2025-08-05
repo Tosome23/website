@@ -38,7 +38,7 @@
       justify-content: center;
       gap: 20px;
       margin-top: 30px;
-      position: relative;
+      flex-wrap: wrap;
     }
 
     .service-card {
@@ -49,7 +49,6 @@
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
       text-align: center;
       transition: 0.2s ease;
-      z-index: 1;
       position: relative;
     }
 
@@ -81,24 +80,19 @@
       line-height: 1.6;
     }
 
-    .arrow-overlay {
+    .arrow-wrapper {
       position: absolute;
       top: 50%;
+      right: -30px; /* 카드 오른쪽 벽 밖으로 조금 나가게 */
       transform: translateY(-50%);
-      z-index: 2;
-    }
-
-    .arrow-1 {
-      left: calc(260px + 10px); /* 첫 카드 오른쪽 + 여백 */
-    }
-
-    .arrow-2 {
-      left: calc((260px * 2) + 30px); /* 두 번째 카드 오른쪽 + 여백 */
-    }
-
-    .arrow-overlay img {
       width: 60px;
+      z-index: 10;
+    }
+
+    .arrow-wrapper img {
+      width: 100%;
       height: auto;
+      display: block;
     }
 
     @media (max-width: 768px) {
@@ -106,7 +100,7 @@
         flex-direction: column;
       }
 
-      .arrow-overlay {
+      .arrow-wrapper {
         display: none;
       }
     }
@@ -125,11 +119,6 @@
 
   <div class="service-cards">
 
-    <!-- Arrow 중첩 1 -->
-    <div class="arrow-overlay arrow-1">
-      <img src="images/arrow-triangle.png" alt="다음 단계">
-    </div>
-
     <!-- Step 1 -->
     <div class="service-card">
       <div class="img-wrapper">
@@ -140,6 +129,11 @@
         위험물 수출에 필요한<br>
         화주신고서 DGD는 기본<br>
         패킹리스트, 인보이스 서류 대행까지
+      </div>
+
+      <!-- 화살표: Step1 → Step2 -->
+      <div class="arrow-wrapper">
+        <img src="images/arrow-triangle.png" alt="다음 단계">
       </div>
     </div>
 
@@ -154,11 +148,11 @@
         UN용기, 라벨링 작업<br>
         포장이 미흡하면 포장보강도 OK
       </div>
-    </div>
 
-    <!-- Arrow 중첩 2 -->
-    <div class="arrow-overlay arrow-2">
-      <img src="images/arrow-triangle.png" alt="다음 단계">
+      <!-- 화살표: Step2 → Step3 -->
+      <div class="arrow-wrapper">
+        <img src="images/arrow-triangle.png" alt="다음 단계">
+      </div>
     </div>
 
     <!-- Step 3 -->
