@@ -48,7 +48,7 @@
       padding: 24px 20px;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
       text-align: center;
-      transition: 0.2s ease;
+      transition: transform 0.2s ease;
       position: relative;
     }
 
@@ -83,16 +83,21 @@
     .arrow-wrapper {
       position: absolute;
       top: 50%;
-      right: -45px; /* 카드 오른쪽 벽 밖으로 조금 나가게 */
+      right: -40px;
       transform: translateY(-50%);
       width: 90px;
       z-index: 10;
+      transition: transform 0.2s ease;
     }
 
     .arrow-wrapper img {
       width: 100%;
       height: auto;
       display: block;
+    }
+
+    .service-card:hover .arrow-wrapper {
+      transform: translateY(calc(-4px - 50%));
     }
 
     @media (max-width: 768px) {
@@ -172,11 +177,3 @@
 
 </body>
 </html>
-
-
-
-
-
-
-
-
