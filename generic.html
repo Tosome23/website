@@ -32,11 +32,6 @@
       color: #0076d6;
     }
 
-    .service-wrapper {
-      position: relative;
-      overflow: visible;
-    }
-
     .service-cards {
       display: flex;
       align-items: center;
@@ -85,15 +80,13 @@
       line-height: 1.6;
     }
 
-    /* ✅ 독립적인 세모 위치 */
     .arrow-wrapper {
       position: absolute;
       top: 50%;
-      left: calc(50% + 130px); /* 오른쪽 카드 끝 기준 조절 */
+      right: -53px;
       transform: translateY(-50%);
       width: 90px;
-      z-index: 1000;
-      pointer-events: none;
+      z-index: 10;
     }
 
     .arrow-wrapper img {
@@ -102,7 +95,7 @@
       display: block;
     }
 
-    /* ✅ 모바일용 */
+    /* ✅ 모바일 전용 아래 방향 세모 처리 */
     @media (max-width: 768px) {
       .service-cards {
         flex-direction: column;
@@ -110,10 +103,10 @@
 
       .arrow-wrapper {
         top: auto;
+        bottom: -35px;
         left: 50%;
-        bottom: -48px;
-        transform: translateX(-50%) rotate(90deg);
-        width: 60px;
+        right: auto;
+        transform: translateX(-50%) rotate(90deg); /* 아래 방향 */
       }
     }
   </style>
@@ -129,56 +122,56 @@
     <div class="main-title"><b>1g</b>도 어디든 최상의 경로로</div>
   </div>
 
-  <div class="service-wrapper">
-    
-    <!-- ✅ 세모는 카드 외부에 위치 -->
-    <div class="arrow-wrapper">
-      <img src="images/arrow-triangle.png" alt="다음 단계">
+  <div class="service-cards">
+
+    <!-- Step 1 -->
+    <div class="service-card">
+      <div class="img-wrapper">
+        <img src="images/dg1.png" alt="1.서류대행" class="service-img-round">
+      </div>
+      <div class="service-title">1.서류대행</div>
+      <div class="service-text">
+        위험물 수출에 필요한<br>
+        화주신고서 DGD는 기본<br>
+        패킹리스트, 인보이스 서류 대행까지
+      </div>
+      <div class="arrow-wrapper">
+        <img src="images/arrow-triangle.png" alt="다음 단계">
+      </div>
     </div>
 
-    <div class="service-cards">
-
-      <!-- Step 1 -->
-      <div class="service-card">
-        <div class="img-wrapper">
-          <img src="images/dg1.png" alt="1.서류대행" class="service-img-round">
-        </div>
-        <div class="service-title">1.서류대행</div>
-        <div class="service-text">
-          위험물 수출에 필요한<br>
-          화주신고서 DGD는 기본<br>
-          패킹리스트, 인보이스 서류 대행까지
-        </div>
+    <!-- Step 2 -->
+    <div class="service-card">
+      <div class="img-wrapper">
+        <img src="images/dg2.png" alt="2.위험물 포장" class="service-img-round">
       </div>
-
-      <!-- Step 2 -->
-      <div class="service-card">
-        <div class="img-wrapper">
-          <img src="images/dg2.png" alt="2.위험물 포장" class="service-img-round">
-        </div>
-        <div class="service-title">2.위험물 포장</div>
-        <div class="service-text">
-          항공 수출 규정에 따른<br>
-          UN용기, 라벨링 작업<br>
-          포장이 미흡하면 포장보강도 OK
-        </div>
+      <div class="service-title">2.위험물 포장</div>
+      <div class="service-text">
+        항공 수출 규정에 따른<br>
+        UN용기, 라벨링 작업<br>
+        포장이 미흡하면 포장보강도 OK
       </div>
-
-      <!-- Step 3 -->
-      <div class="service-card">
-        <div class="img-wrapper">
-          <img src="images/dg3.png" alt="3.로켓출고" class="service-img-round">
-        </div>
-        <div class="service-title">3.로켓출고</div>
-        <div class="service-text">
-          당일 입고<br>
-          당일 출고<br>
-          당일 선적
-        </div>
+      <div class="arrow-wrapper">
+        <img src="images/arrow-triangle.png" alt="다음 단계">
       </div>
-
     </div>
+
+    <!-- Step 3 -->
+    <div class="service-card">
+      <div class="img-wrapper">
+        <img src="images/dg3.png" alt="3.로켓출고" class="service-img-round">
+      </div>
+      <div class="service-title">3.로켓출고</div>
+      <div class="service-text">
+        당일 입고<br>
+        당일 출고<br>
+        당일 선적
+      </div>
+    </div>
+
   </div>
 
 </body>
 </html>
+
+
