@@ -35,7 +35,6 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      gap: 24px;
       flex-wrap: wrap;
       padding: 0 20px;
     }
@@ -48,6 +47,7 @@
       box-shadow: 0 4px 12px rgba(0,0,0,0.05);
       transition: all 0.2s ease-in-out;
       text-align: center;
+      margin: 0 12px; /* 카드 간 간격 유지 (총 24px gap) */
     }
 
     .service-card:hover {
@@ -82,25 +82,29 @@
     }
 
     .triangle-arrow {
-      width: 28px;
-      height: 28px;
       display: flex;
       align-items: center;
       justify-content: center;
+      height: 100%;
     }
 
     .triangle-arrow img {
-      width: 100%;
-      height: auto;
+      width: 36px;
+      height: 36px;
     }
 
     @media (max-width: 768px) {
       .service-flow-wrapper {
         flex-direction: column;
-        gap: 28px;
       }
+
+      .service-card {
+        margin: 0 auto 24px;
+      }
+
       .triangle-arrow {
-        transform: rotate(90deg); /* 모바일에서는 아래로 향하게 */
+        transform: rotate(90deg);
+        margin: 12px 0;
       }
     }
   </style>
