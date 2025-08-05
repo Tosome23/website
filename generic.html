@@ -80,16 +80,15 @@
     }
 
     .arrow-wrapper {
-      width: 36px;
-      height: 36px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      width: 48px;
+      height: 48px;
+      align-self: center;
     }
 
     .arrow-wrapper img {
-      width: 36px;
-      height: 36px;
+      width: 100%;
+      height: auto;
+      display: block;
     }
 
     @media (max-width: 768px) {
@@ -98,7 +97,7 @@
       }
 
       .arrow-wrapper {
-        transform: rotate(90deg); /* 모바일에선 아래 방향 */
+        transform: rotate(90deg);
       }
     }
   </style>
