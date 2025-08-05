@@ -36,9 +36,9 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      flex-wrap: wrap;
-      gap: 20px; /* 간격 좁게 조정 */
+      gap: 20px;
       margin-top: 30px;
+      position: relative;
     }
 
     .service-card {
@@ -49,6 +49,8 @@
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
       text-align: center;
       transition: 0.2s ease;
+      z-index: 1;
+      position: relative;
     }
 
     .service-card:hover {
@@ -79,16 +81,24 @@
       line-height: 1.6;
     }
 
-    .arrow-wrapper {
-      width: 80px;   /* 화살표 더 크게 */
-      height: 80px;
-      align-self: center;
+    .arrow-overlay {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 2;
     }
 
-    .arrow-wrapper img {
-      width: 100%;
+    .arrow-1 {
+      left: calc(260px + 10px); /* 첫 카드 오른쪽 + 여백 */
+    }
+
+    .arrow-2 {
+      left: calc((260px * 2) + 30px); /* 두 번째 카드 오른쪽 + 여백 */
+    }
+
+    .arrow-overlay img {
+      width: 60px;
       height: auto;
-      display: block;
     }
 
     @media (max-width: 768px) {
@@ -96,8 +106,8 @@
         flex-direction: column;
       }
 
-      .arrow-wrapper {
-        transform: rotate(90deg);
+      .arrow-overlay {
+        display: none;
       }
     }
   </style>
@@ -115,6 +125,11 @@
 
   <div class="service-cards">
 
+    <!-- Arrow 중첩 1 -->
+    <div class="arrow-overlay arrow-1">
+      <img src="images/arrow-triangle.png" alt="다음 단계">
+    </div>
+
     <!-- Step 1 -->
     <div class="service-card">
       <div class="img-wrapper">
@@ -126,11 +141,6 @@
         화주신고서 DGD는 기본<br>
         패킹리스트, 인보이스 서류 대행까지
       </div>
-    </div>
-
-    <!-- Arrow -->
-    <div class="arrow-wrapper">
-      <img src="images/arrow-triangle.png" alt="다음 단계">
     </div>
 
     <!-- Step 2 -->
@@ -146,8 +156,8 @@
       </div>
     </div>
 
-    <!-- Arrow -->
-    <div class="arrow-wrapper">
+    <!-- Arrow 중첩 2 -->
+    <div class="arrow-overlay arrow-2">
       <img src="images/arrow-triangle.png" alt="다음 단계">
     </div>
 
