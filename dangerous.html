@@ -39,33 +39,29 @@
   }
   </script>
 	<style>
-  /* section-row 배경 제거 */
-  .section-row { background:none !important; }
-
-  /* 테마가 각 섹션에 넣는 상단 경계/가짜 구분선 제거 */
-  #main > * { border-top:none !important; }
-  #main > *::before,
-  #main > *::after { display:none !important; }
-
-  /* 서비스소개(hr) 다음에 무엇이 끼어들어도 전부 투명 처리 */
-  .service-intro + hr.gray-line + * {
-    background: transparent !important;
+  /* 섹션/장식 가짜 선/배경 전부 차단 */
+  #main, #main * { background-image: none !important; }
+  #main::before, #main::after,
+  #main *::before, #main *::after {
+    background: none !important;
+    background-image: none !important;
     border: 0 !important;
     box-shadow: none !important;
-    padding: 0 !important;
-    margin: 0 !important;
-    min-height: 0 !important;
+    content: none !important;
   }
 
-  /* hr 한 줄만 보이게 (테마보다 우선) */
-  hr.gray-line{
+  /* 템플릿이 섹션에 주는 상단/하단 경계선까지 OFF */
+  #main { border: 0 !important; }
+  #main > * { border: 0 !important; }
+
+  /* hr는 내 스타일만 적용 */
+  hr.gray-line {
     display:block !important;
     height:1px !important;
     border:0 !important;
     background:#eaeaea !important;
     margin:26px 0 !important;
   }
-
     /* 페이지 전용 최소 스타일만 유지 (기존 인라인은 가능하면 여기로) */
     @keyframes fadeInUp { from{opacity:0; transform:translateY(10px)} to{opacity:1; transform:translateY(0)} }
     .kakao-float-btn { position:fixed; bottom:60px; right:50px; z-index:9999; display:flex; align-items:center; }
