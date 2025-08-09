@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ title or "투삼로지스 블로그" }}</title>
+  {% if description %}<meta name="description" content="{{ description }}">{% endif %}
+  <link rel="stylesheet" href="/blog/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="wrap nav">
+      <a class="brand" href="/">투삼로지스</a>
+      <div class="menu">
+        <a href="/blog/">블로그</a>
+        <a href="/services/">서비스</a>
+        <a class="cta" href="/contact/">문의하기</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="wrap">
+    {{ content | safe }}
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap"><p>© 투삼로지스</p></div>
+  </footer>
+</body>
+</html>
