@@ -8,9 +8,6 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ "robots.txt": "robots.txt" });
   eleventyConfig.addPassthroughCopy({ "sitemap.xml": "sitemap.xml" });
   eleventyConfig.addPassthroughCopy({ "dangerous": "dangerous" });
-eleventyConfig.addPassthroughCopy({ "assets/css/main.css": "assets/main.css" });
-eleventyConfig.addPassthroughCopy({ "assets/css/noscript.css": "assets/noscript.css" });
-eleventyConfig.addPassthroughCopy({ "assets/js": "assets/js" }); // js도 확실히
 
   // 블로그 정적 (blog/* 기준)
   eleventyConfig.addPassthroughCopy({ "blog/static/style.css": "blog/style.css" });
