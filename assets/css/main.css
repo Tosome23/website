@@ -4969,7 +4969,37 @@ a {
   }
 }
 
+/* 템플릿이 주는 위/아래 패딩을 얇게: hr/간단 섹션만 예외 처리 */
+#main > hr.gray-line,
+#main > .service-intro,
+#main > .section-row,
+#main > .service-intro2,
+#main > .tosome-service-area,
+#main > .compare-card-wrap {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  border-top: 0 !important;     /* 혹시 남는 상단선도 차단 */
+}
+
+/* 우리가 쓰는 라인/텍스트에 원하는 간격만 주기 */
+hr.gray-line{
+  border: 0 !important;
+  border-top: 1px solid #eaeaea !important;
+  height: 0 !important;
+  margin: 14px 0 !important;     /* 원하는 값으로 조절 */
+}
+
+.section-row{
+  margin: 6px 0 0 !important;    /* 제목 밑 간격 얇게 */
+}
+
+.service-intro .main-title{ 
+  margin-bottom: 8px !important; /* 메인 타이틀 아래 간격 조절 */
+}
+
+
 </style>
+
 
 
 
