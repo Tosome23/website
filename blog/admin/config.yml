@@ -1,0 +1,21 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "blog/images"     # 업로드 저장 경로
+public_folder: "/blog/images"   # 공개 경로
+
+publish_mode: editorial_workflow
+
+collections:
+  - name: "posts"
+    label: "Blog Posts"
+    folder: "blog/content/blog"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: 제목, name: title, widget: string }
+      - { label: 날짜, name: date, widget: datetime }
+      - { label: 요약, name: excerpt, widget: text, required: false }
+      - { label: 썸네일, name: thumbnail, widget: image, required: false }
+      - { label: 본문, name: body, widget: markdown }
