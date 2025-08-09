@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "build:home": "mkdir -p _site && cp -R site/. _site/",
+    "build:home": "mkdir -p _site && cp -R ./* _site/ || true",
     "build:blog": "npx @11ty/eleventy --input=blog --output=_site/blog --config=blog/.eleventy.js",
     "build": "npm run build:home && npm run build:blog"
   },
