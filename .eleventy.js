@@ -7,6 +7,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ "favicon.ico": "favicon.ico" });
   eleventyConfig.addPassthroughCopy({ "robots.txt": "robots.txt" });
   eleventyConfig.addPassthroughCopy({ "sitemap.xml": "sitemap.xml" });
+  eleventyConfig.addPassthroughCopy({ "dangerous": "dangerous" });
 
   // 블로그 정적 (blog/* 기준)
   eleventyConfig.addPassthroughCopy({ "blog/static/style.css": "blog/style.css" });
