@@ -16,10 +16,12 @@ module.exports = function (eleventyConfig) {
   );
 
   return {
-    // 입력은 루트, 레이아웃 폴더는 blog/layouts 로 인식, 출력은 _site
-    dir: { input: ".", includes: "blog/layouts", output: "_site" },
-    markdownTemplateEngine: "njk",
-    htmlTemplateEngine: "njk",
-    templateFormats: ["md", "njk", "html"]
+ module.exports = function(eleventyConfig) {
+  return {
+    dir: {
+      input: ".",
+      includes: "blog/layouts",
+      output: "_site"
+    }
   };
 };
