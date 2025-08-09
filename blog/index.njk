@@ -1,0 +1,25 @@
+---
+layout: layouts/base.njk
+title: 투삼로지스 블로그
+permalink: /blog/
+---
+
+<h1 class="page-title">{{ title }}</h1>
+
+<ul class="post-grid">
+  {% for post in collections.posts | reverse %}
+  <li>
+    <a class="post-card" href="{{ post.url }}">
+      {% if post.data.thumbnail %}
+      <img class="thumb" src="{{ post.data.thumbnail }}" alt="{{ post.data.title }}">
+      {% endif %}
+      <div class="card-body">
+        <h2 class="card-title">{{ post.data.title }}</h2>
+        <div class="card-meta">{{ post.date | date }}</div>
+        {% if post.data.excerpt %}<p class="card-excerpt">{{ post.data.excerpt }}</p>{% endif %}
+        <span class="readmore">자세히 보기 →</span>
+      </div>
+    </a>
+  </li>
+  {% endfor %}
+</ul>
