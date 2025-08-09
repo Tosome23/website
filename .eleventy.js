@@ -1,26 +1,33 @@
-// .eleventy.js  (루트)
+// .eleventy.js (repo 루트에 위치)
 const { DateTime } = require("luxon");
 
-module.exports = function (eleventyConfig) {
-  // /blog 정적자산 복사
-  eleventyConfig.addPassthroughCopy({ "blog/static/style.css": "blog/style.css" });
-  eleventyConfig.addPassthroughCopy({ "blog/images": "blog/images" });
+module.exports = function(eleventyConfig) {
+  // 정적 자산을 최종 /blog 경로로 복사
+  eleventyConfig.addPassthroughCopy({
+    "website/blog/static/style.css": "blog/style.css"
+  });
+  eleventyConfig.addPassthroughCopy({
+    "website/blog/images": "blog/images"
+  });
 
-  // 날짜 필터 (YYYY-MM-DD)
+  // 날짜 필터
   eleventyConfig.addFilter("date", d =>
     DateTime.fromJSDate(d).toFormat("yyyy-MM-dd")
   );
 
-  // 블로그 포스트 컬렉션
-  eleventyConfig.addCollection("posts", col =>
-    col.getFilteredByGlob("blog/content/blog/*.md")
+  // 포스트 수집 (website 기준 경로)
+  eleventyConfig.addCollection("posts", (col) =>
+    col.getFilteredByGlob("website/blog/content/blog/*.md")
   );
 
-  // 입력=루트(.), 레이아웃 폴더=blog/layouts, 출력=_site
   return {
-  dir: { input: ".", includes: "blog/layouts", output: "_site" },
-  markdownTemplateEngine: "njk",
-  htmlTemplateEngine: "njk",
-  templateFormats: ["md","njk","html"]
+    dir: {
+      input: "website",          // ★ 입력 루트가 website
+      includes: "blog/layouts",  // ★ 레이아웃 폴더
+      output: "_site"            // 빌드 출력
+    },
+    markdownTemplateEngine: "njk",
+    htmlTemplateEngine: "njk",
+    templateFormats: ["md","njk","html"]
   };
 };
