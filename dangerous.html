@@ -39,25 +39,7 @@
   }
   </script>
 	<style>
-		/* 1) 이 섹션들에 붙는 템플릿 구분선(::before/::after) 완전 OFF */
-.service-intro::before, .service-intro::after,
-.section-row::before, .section-row::after,
-.tosome-service-area::before, .tosome-service-area::after,
-.service-intro2::before, .service-intro2::after {
-  content: none !important;
-  display: none !important;
-}
-
-/* 2) 섹션 자체에 걸린 경계선/그림자/배경/패딩도 최소화 */
-.service-intro, .section-row, .tosome-service-area, .service-intro2 {
-  border: 0 !important;
-  box-shadow: none !important;
-  background: transparent !important;
-  padding-top: 0 !important;
-  padding-bottom: 0 !important;
-}
-
-/* 3) hr는 '면 채움'이 아닌 진짜 1px 라인으로 고정 (박스화 방지) */
+/* 1) 우리가 쓰는 hr만 1px 라인으로 고정 */
 hr.gray-line{
   border: 0 !important;
   border-top: 1px solid #eaeaea !important;
@@ -68,13 +50,33 @@ hr.gray-line{
   box-shadow: none !important;
 }
 
-/* 4) 혹시 연달아 들어간 hr가 있으면 두 번째부터 숨김 */
-hr.gray-line + hr.gray-line { display: none !important; }
-
-/* 5) 템플릿이 섹션 첫 요소에 주는 상단 경계선/여백도 제거(안전빵) */
-#main > section, #main > .major {
-  border-top: 0 !important;
-  padding-top: 0 !important;
+/* 2) 비교표 안 잔선/밑줄 제거 */
+.compare-card-wrap,
+.compare-card,
+.compare-item,
+.compare-row {
+  border: 0 !important;
+  box-shadow: none !important;
+}
+.compare-card-title {
+  border: 0 !important;      /* 제목 밑줄 제거 */
+  padding-bottom: 0 !important;
+}
+/* 템플릿이 넣는 가짜 라인까지 차단 */
+.compare-card-wrap::before, .compare-card-wrap::after,
+.compare-card::before, .compare-card::after,
+.compare-item::before, .compare-item::after,
+.compare-row::before, .compare-row::after {
+  content: none !important;
+  display: none !important;
+  background: none !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+/* 비교 카드 안에서 hr가 있다면 숨김(우리는 gray-line만 씀) */
+.compare-card hr,
+.compare-card-wrap hr {
+  display: none !important;
 }
      /* 페이지 전용 최소 스타일만 유지 (기존 인라인은 가능하면 여기로) */
     @keyframes fadeInUp { from{opacity:0; transform:translateY(10px)} to{opacity:1; transform:translateY(0)} }
@@ -273,7 +275,7 @@ hr.gray-line + hr.gray-line { display: none !important; }
 <!-- 🔸 How 줄 -->
 <div class="section-row">
   <span class="now">How</span>
-  지금 비용에 대해 고민중이시라면, <strong>투삼로지스에 해답이 있습니다.</strong>
+  지금 비용이 고민중이시라면, <strong><b style="color:#0076d6;">투삼로지스</b>에 해답이 있습니다.</strong>
 </div>
 
 <hr class="gray-line">
@@ -390,7 +392,7 @@ hr.gray-line + hr.gray-line { display: none !important; }
 
     <div class="compare-item">
       <div class="compare-label">예상 비용</div>
-      <div class="compare-value"><strong>약 50만 원</div>
+      <div class="compare-value"><strong> 50만 원</div>
     </div>
   <div class="compare-item">
       <div class="compare-label">서비스 지원</div>
