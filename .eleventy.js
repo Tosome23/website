@@ -9,7 +9,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy({
     "website/blog/images": "blog/images"
   });
-
+eleventyConfig.addPassthroughCopy({ "blog/admin": "blog/admin" });
   // 날짜 필터
   eleventyConfig.addFilter("date", d =>
     DateTime.fromJSDate(d).toFormat("yyyy-MM-dd")
