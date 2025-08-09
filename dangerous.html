@@ -39,44 +39,39 @@
   }
   </script>
 	<style>
-/* 1) 우리가 쓰는 hr만 1px 라인으로 고정 */
-hr.gray-line{
-  border: 0 !important;
-  border-top: 1px solid #eaeaea !important;
-  height: 0 !important;
-  padding: 0 !important;
-  margin: 26px 0 !important;
-  background: transparent !important;
-  box-shadow: none !important;
+/* --- 비교표 카드 테두리/그림자 복구 --- */
+.compare-card{
+  background:#fff;
+  border:1px solid #e6eff5 !important;     /* 카드 외곽선 */
+  border-radius:20px !important;
+  box-shadow:0 8px 18px rgba(0,0,0,.03) !important; /* 은은한 그림자 */
+  padding:32px 28px; /* 필요시 조절 */
 }
 
-/* 2) 비교표 안 잔선/밑줄 제거 */
-.compare-card-wrap,
-.compare-card,
-.compare-item,
-.compare-row {
-  border: 0 !important;
-  box-shadow: none !important;
+/* 카드 hover 효과도 원하면 */
+.compare-card:hover{
+  transform:translateY(-4px);
+  box-shadow:0 14px 32px rgba(0,118,214,.12) !important;
 }
-.compare-card-title {
-  border: 0 !important;      /* 제목 밑줄 제거 */
-  padding-bottom: 0 !important;
+
+/* 내부 잔선은 계속 제거 */
+.compare-item, .compare-row{
+  border:0 !important;
+  box-shadow:none !important;
 }
-/* 템플릿이 넣는 가짜 라인까지 차단 */
-.compare-card-wrap::before, .compare-card-wrap::after,
+
+/* 제목 밑줄 제거 유지 */
+.compare-card-title{
+  border:0 !important;
+  padding-bottom:0 !important;
+}
+
+/* 템플릿이 가짜 라인 뿌리는 것 차단(유지) */
 .compare-card::before, .compare-card::after,
 .compare-item::before, .compare-item::after,
-.compare-row::before, .compare-row::after {
-  content: none !important;
-  display: none !important;
-  background: none !important;
-  border: 0 !important;
-  box-shadow: none !important;
-}
-/* 비교 카드 안에서 hr가 있다면 숨김(우리는 gray-line만 씀) */
-.compare-card hr,
-.compare-card-wrap hr {
-  display: none !important;
+.compare-row::before, .compare-row::after{
+  content:none !important;
+  display:none !important;
 }
      /* 페이지 전용 최소 스타일만 유지 (기존 인라인은 가능하면 여기로) */
     @keyframes fadeInUp { from{opacity:0; transform:translateY(10px)} to{opacity:1; transform:translateY(0)} }
