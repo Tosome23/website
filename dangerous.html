@@ -38,36 +38,41 @@
     "address":{"@type":"PostalAddress","streetAddress":"인천 계양구 당미 3길 31, 401"}
   }
   </script>
-
 	<style>
-  /* section-row 회색 배경 제거 */
-  .section-row { background: none !important; }
+  /* section-row 배경 제거 */
+  .section-row { background:none !important; }
 
-  /* 테마에서 자동으로 넣는 상단 구분선 제거 */
-  #main > * { border-top: none !important; }
+  /* 테마가 각 섹션에 넣는 상단 경계/가짜 구분선 제거 */
+  #main > * { border-top:none !important; }
   #main > *::before,
-  #main > *::after { display: none !important; }
+  #main > *::after { display:none !important; }
 
-  /* hr.gray-line 한 줄 스타일 */
-  hr.gray-line {
-    display: block !important;
-    height: 1px;
-    border: 0;
-    background: #eaeaea;
-    margin: 26px 0;
+  /* 서비스소개(hr) 다음에 무엇이 끼어들어도 전부 투명 처리 */
+  .service-intro + hr.gray-line + * {
+    background: transparent !important;
+    border: 0 !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    min-height: 0 !important;
   }
-</style>
 
+  /* hr 한 줄만 보이게 (테마보다 우선) */
+  hr.gray-line{
+    display:block !important;
+    height:1px !important;
+    border:0 !important;
+    background:#eaeaea !important;
+    margin:26px 0 !important;
+  }
 
-  <style>
     /* 페이지 전용 최소 스타일만 유지 (기존 인라인은 가능하면 여기로) */
     @keyframes fadeInUp { from{opacity:0; transform:translateY(10px)} to{opacity:1; transform:translateY(0)} }
     .kakao-float-btn { position:fixed; bottom:60px; right:50px; z-index:9999; display:flex; align-items:center; }
     .kakao-img { height:68px; width:auto; border-radius:20px; box-shadow:0 2px 12px rgba(0,0,0,.11); transition:box-shadow .28s, transform .19s }
     .kakao-float-btn:hover .kakao-img { box-shadow:0 0 18px 6px #1976d2cc,0 0 48px 18px #1976d233,0 4px 18px rgba(20,60,160,.09); transform:scale(1.085) }
     @media (max-width:640px){ .kakao-float-btn{ right:12px; bottom:16px } .kakao-img{ height:44px } }
-  </style>
-<style>
+
   /* 메인 컨텐츠 중앙 정렬 */
   #main {
     max-width: 1100px;
@@ -84,6 +89,7 @@
     text-align: center;
   }
 </style>
+
 	
 </head>
 
