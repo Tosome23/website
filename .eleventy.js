@@ -18,9 +18,9 @@ module.exports = function (eleventyConfig) {
 
   // 입력=루트(.), 레이아웃 폴더=blog/layouts, 출력=_site
   return {
-    dir: { input: ".", includes: "blog/layouts", output: "_site" },
-    markdownTemplateEngine: "njk",
-    htmlTemplateEngine: "njk",
-    templateFormats: ["md","njk","html"]
+  dir: { input: ".", includes: "blog/layouts", output: "_site" },
+  markdownTemplateEngine: "njk",
+  htmlTemplateEngine: "njk",
+  templateFormats: ["md","njk","html"]
   };
 };
