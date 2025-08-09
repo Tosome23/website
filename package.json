@@ -1,12 +1,8 @@
 {
-  "name": "tosome-root",
+  "name": "tosome-site",
   "version": "1.0.0",
   "private": true,
-  "scripts": {
-    "build:home": "mkdir -p _site && cp -R ./* _site/ || true",
-    "build:blog": "npx @11ty/eleventy --input=blog --output=_site/blog --config=blog/.eleventy.js",
-    "build": "npm run build:home && npm run build:blog"
-  },
+  "scripts": { "build": "npx @11ty/eleventy" },
   "dependencies": {
     "@11ty/eleventy": "^2.0.0",
     "luxon": "^3.4.4"
