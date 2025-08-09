@@ -1,4 +1,1 @@
-{
-  "layout": "post.njk",
-  "permalink": "/blog/{{ page.fileSlug }}/"
-}
+{ "layout": "post.njk", "permalink": "/blog/{{ page.fileSlug }}/" }
