@@ -20,14 +20,10 @@ module.exports = function(eleventyConfig) {
     col.getFilteredByGlob("website/blog/content/blog/*.md")
   );
 
-  return {
-    dir: {
-      input: "website",          // ★ 입력 루트가 website
-      includes: "blog/layouts",  // ★ 레이아웃 폴더
-      output: "_site"            // 빌드 출력
-    },
-    markdownTemplateEngine: "njk",
-    htmlTemplateEngine: "njk",
-    templateFormats: ["md","njk","html"]
-  };
+return {
+  dir: { input: ".", includes: "blog/layouts", output: "_site" },
+  markdownTemplateEngine: "njk",
+  htmlTemplateEngine: "njk",
+  templateFormats: ["md","njk","html"]
+};
 };
