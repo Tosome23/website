@@ -4996,9 +4996,26 @@ hr.gray-line{
 .service-intro .main-title{ 
   margin-bottom: 8px !important; /* 메인 타이틀 아래 간격 조절 */
 }
+/* HR 강제 표시 (How 위/아래) */
+#main hr.gray-line{
+  display:block !important;
+  border:0 !important;
+  border-top:1px solid #e6e6e6 !important;  /* 1px 라인 */
+  height:0 !important;
+  background:transparent !important;
+  box-shadow:none !important;
+
+  /* 폭/정렬: 본문과 동일하게 */
+  max-width:1100px;
+  margin:24px auto !important;
+}
+
+/* 혹시 테마가 <hr>에도 상단 테두리를 또 주면 차단 */
+#main > hr.gray-line{ border-bottom:0 !important; }
 
 
 </style>
+
 
 
 
