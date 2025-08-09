@@ -1,0 +1,20 @@
+body{font-family:ui-sans-serif,system-ui,-apple-system,"Noto Sans KR",Arial,sans-serif;background:#f8f9fa;margin:0;color:#111}
+.wrap{max-width:960px;margin:0 auto;padding:24px}
+.nav{display:flex;align-items:center;justify-content:space-between}
+.brand{text-decoration:none;color:#111;font-weight:800}
+.menu a{margin-left:16px;text-decoration:none;color:#111}
+.menu .cta{padding:6px 10px;border:1px solid #0ea5e9;border-radius:10px;color:#0ea5e9}
+.menu .cta:hover{background:#0ea5e9;color:#fff}
+
+.page-title{font-size:28px;margin:8px 0 18px}
+
+.post-grid{display:flex;flex-direction:column;gap:16px;list-style:none;padding:0;margin:0}
+.post-card{display:flex;background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 3px 8px rgba(0,0,0,.05);text-decoration:none;color:inherit;transition:transform .2s, box-shadow .2s}
+.post-card:hover{transform:translateY(-3px);box-shadow:0 6px 15px rgba(0,0,0,.1)}
+.thumb{width:250px;height:180px;object-fit:cover;flex-shrink:0}
+.card-body{padding:16px;display:flex;flex-direction:column;justify-content:center}
+.card-title{font-size:20px;font-weight:700;margin:0 0 6px}
+.card-meta{font-size:13px;color:#6b7280;margin-bottom:8px}
+.card-excerpt{font-size:15px;line-height:1.5;margin:0 0 6px}
+.readmore{color:#0ea5e9;font-weight:600}
+.site-footer{border-top:1px solid #e5e7eb;margin-top:28px}
