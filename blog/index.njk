@@ -1,8 +1,9 @@
 ---
-layout: base.njk         # 절대 'layouts/base.njk' 아님
-title: 투삼로지스 블로그
+layout: base.njk
 permalink: /blog/
+title: 투삼로지스 블로그
 ---
+
 <h1 class="page-title">{{ title }}</h1>
 <ul class="post-grid">
 {% for post in collections.posts | reverse %}
