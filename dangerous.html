@@ -39,30 +39,7 @@
   }
   </script>
 	<style>
-  /* 섹션/장식 가짜 선/배경 전부 차단 */
-  #main, #main * { background-image: none !important; }
-  #main::before, #main::after,
-  #main *::before, #main *::after {
-    background: none !important;
-    background-image: none !important;
-    border: 0 !important;
-    box-shadow: none !important;
-    content: none !important;
-  }
-
-  /* 템플릿이 섹션에 주는 상단/하단 경계선까지 OFF */
-  #main { border: 0 !important; }
-  #main > * { border: 0 !important; }
-
-  /* hr는 내 스타일만 적용 */
-  hr.gray-line {
-    display:block !important;
-    height:1px !important;
-    border:0 !important;
-    background:#eaeaea !important;
-    margin:26px 0 !important;
-  }
-    /* 페이지 전용 최소 스타일만 유지 (기존 인라인은 가능하면 여기로) */
+     /* 페이지 전용 최소 스타일만 유지 (기존 인라인은 가능하면 여기로) */
     @keyframes fadeInUp { from{opacity:0; transform:translateY(10px)} to{opacity:1; transform:translateY(0)} }
     .kakao-float-btn { position:fixed; bottom:60px; right:50px; z-index:9999; display:flex; align-items:center; }
     .kakao-img { height:68px; width:auto; border-radius:20px; box-shadow:0 2px 12px rgba(0,0,0,.11); transition:box-shadow .28s, transform .19s }
