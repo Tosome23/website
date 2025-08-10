@@ -304,7 +304,25 @@
     font-size: 0.9rem !important;
   }
 </style>
+</style>
+/* 900px 이하에서도 메뉴를 항상 펼쳐서 보여준다 */
+@media (max-width:900px){
+  #nav .nav-contacts{ display:none !important; } /* 연락처는 숨겨도 OK면 유지 */
+  #nav .nav-toggle{ display:none !important; }   /* 햄버거 감추기 */
+  #nav .links{
+    position: static !important;
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    gap: 16px !important;
+    max-height: none !important;
+    overflow: visible !important;
+    box-shadow: none !important;
+    border: 0 !important;
+  }
+}
 
+	</style>
 <!-- 🔸 기존 서비스 소개 본문 시작 -->
 <div class="service-intro">
     <div class="sub-title">서비스소개</div>
@@ -1177,6 +1195,7 @@ document.addEventListener('DOMContentLoaded', function(){
 
 </body>
 </html>
+
 
 
 
