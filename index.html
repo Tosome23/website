@@ -304,24 +304,41 @@
     font-size: 0.9rem !important;
   }
 </style>
-<style id="force-desktop-menu">
-/* 900px 이하에서도 메뉴를 항상 펼쳐서 보여준다 */
+<style id="show-both-menu-and-burger">
+/* 작은 화면에서도 텍스트 메뉴 유지 + 햄버거도 보이게 */
 @media (max-width:900px){
-  #nav .nav-contacts{ display:none !important; } /* 연락처는 숨김 유지 */
-  #nav .nav-toggle{ display:none !important; }   /* 햄버거 감추기 */
+  /* 햄버거는 보이게 */
+  #nav .nav-toggle{
+    display:block !important;
+  }
+  /* 링크 메뉴는 계속 펼쳐진 상태(드롭다운 안 타고 가로로 유지) */
   #nav .links{
     position: static !important;
     display: flex !important;
     flex-direction: row !important;
     align-items: center !important;
     gap: 16px !important;
+    flex-wrap: wrap !important;
+
     max-height: none !important;
     overflow: visible !important;
+    opacity: 1 !important;
+    visibility: visible !important;
     box-shadow: none !important;
     border: 0 !important;
   }
+  /* 글자 크기 줄어드는 것 방지 */
+  #nav .links li a{
+    font-size: 0.98rem !important;
+    white-space: nowrap !important; /* 필요 없으면 제거 가능 */
+  }
+  /* 연락처 영역은 공간 절약 위해 숨김(원하면 빼도 됨) */
+  #nav .nav-contacts{
+    display: none !important;
+  }
 }
 </style>
+
 <!-- 🔸 기존 서비스 소개 본문 시작 -->
 <div class="service-intro">
     <div class="sub-title">서비스소개</div>
@@ -1194,6 +1211,7 @@ document.addEventListener('DOMContentLoaded', function(){
 
 </body>
 </html>
+
 
 
 
