@@ -97,10 +97,6 @@
     <li><a href="dangerous.html">위험물 운송</a></li>
     <li><a href="/blog/">블로그</a></li>
   </ul>
-			<button class="nav-toggle" aria-label="메뉴 열기" aria-expanded="false" aria-controls="primary-links">
-  <span></span><span></span><span></span>
-</button>
-
 <div class="nav-contacts">
   <a href="tel:050713994075" class="nc-item" aria-label="전화">
     <span class="nc-icon" aria-hidden="true">
@@ -1081,14 +1077,27 @@ function revealUpOnScroll() {
 window.addEventListener('scroll', revealUpOnScroll);
 window.addEventListener('load', revealUpOnScroll);
 
+  (function(){
+    const btn = document.querySelector('.nav-toggle');
+    const root = document.documentElement; // <html> 요소
 
+    if(!btn) return;
+    btn.addEventListener('click', function(){
+      const opened = root.classList.toggle('nav-open');
+      btn.setAttribute('aria-expanded', opened ? 'true' : 'false');
+    });
+
+    // 링크 클릭 시 자동 닫힘(모바일)
+    document.querySelectorAll('#primary-links a').forEach(a=>{
+      a.addEventListener('click', ()=>{ root.classList.remove('nav-open'); btn.setAttribute('aria-expanded','false'); });
+    });
+  })();
+	
 </script>
 
 
 </body>
 </html>
-
-
 
 
 
