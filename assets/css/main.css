@@ -5116,8 +5116,77 @@ hr.gray-line{
   #nav .nav-contacts .nc-item{ font-size:0.92rem; }
 }
 
+/* ===== 상단 고정 네비 강제 표시 + 반응형 레이아웃 (override) ===== */
+
+/* 고정바 높이 */
+:root { --nav-h: 62px; }
+
+/* 네비게이션 바 */
+#nav{
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  height: var(--nav-h);
+  z-index: 1000;
+  display: flex !important;          /* 템플릿의 display:none 무력화 */
+  align-items: center;
+  gap: 22px;
+  padding: 0 16px;
+  background: #fff;
+  box-shadow: 0 1px 0 rgba(0,0,0,.08);
+}
+
+/* 컨텐츠가 바 뒤로 숨지지 않게 여백 확보 */
+#wrapper{ padding-top: var(--nav-h); }
+
+/* 브랜드 로고 크기 */
+#nav .brand img{ height: 40px; }
+
+/* 상단 메뉴 링크 */
+#nav .links{
+  display: flex !important;          /* 템플릿 모바일 숨김 무력화 */
+  align-items: center;
+  gap: 18px;
+  margin-left: 18px;
+  overflow-x: auto;                   /* 칸이 모자라면 가로 스크롤 */
+  -webkit-overflow-scrolling: touch;
+}
+#nav .links li{ white-space: nowrap; }
+
+/* 연락처 영역(위=전화 / 아래=이메일) */
+#nav .nav-contacts{
+  margin-left: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  line-height: 1;
+}
+#nav .nav-contacts .nc-item{
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: .92rem;
+  font-weight: 400;
+  color: #123c7a;
+  text-decoration: none;
+  white-space: nowrap;
+}
+#nav .nav-contacts .nc-item:hover{ color:#0c56b3; }
+#nav .nav-contacts .nc-icon{ width:18px; height:18px; color:#1976d2; }
+#nav .nav-contacts .nc-icon svg{ width:18px; height:18px; display:block; }
+
+/* 템플릿의 모바일 전용 패널/버튼 숨김(우린 상단 고정바만 사용) */
+#navButton, #navPanel{ display:none !important; }
+
+/* 더 작은 화면 튜닝 */
+@media (max-width: 640px){
+  :root{ --nav-h: 58px; }
+  #nav{ padding: 8px 12px; }
+  #nav .brand img{ height: 34px; }
+  #nav .links{ gap: 14px; margin-left: 10px; }
+}
 
 </style>
+
 
 
 
