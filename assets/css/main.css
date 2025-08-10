@@ -5090,8 +5090,31 @@ hr.gray-line{
   #nav .brand img{ height: 34px; }
   #nav .links{ gap: 14px; margin-left: 10px; }
 }
+/* 헤더가 겹치면 네비를 가리니 숨김(로고는 nav .brand로 대체) */
+#header { display: none !important; }
+
+/* 우리 네비를 강제로 최상단 + 제자리 고정 */
+#nav{
+  position: fixed !important;
+  top: 0 !important; left: 0; right: 0;
+  transform: none !important;
+  opacity: 1 !important;
+  z-index: 99999 !important;
+}
+
+/* 템플릿이 preload/메뉴 상태에서 nav를 위로 밀거나 투명하게 만드는 것 차단 */
+body.is-preload #nav,
+body.is-menu-visible #nav{
+  transform: none !important;
+  opacity: 1 !important;
+  display: flex !important;
+}
+
+/* 콘텐츠가 바 뒤로 숨지지 않게 여백 확보 */
+#wrapper{ padding-top: var(--nav-h) !important; }
 
 </style>
+
 
 
 
