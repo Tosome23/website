@@ -10,8 +10,6 @@
 <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
   <title>투삼로지스 | 국제특송, 배터리·위험물 운송 전문</title>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
   <meta name="description" content="투삼로지스는 DHL, FedEx, UPS 등 국제특송부터 배터리·위험물 운송까지 신속, 정확, 합리적으로 지원하는 물류 파트너입니다.">
   <meta name="keywords" content="국제특송, 배터리 운송, 위험물 운송, DHL, FedEx, UPS, 포워딩, 투삼로지스">
   <meta property="og:title" content="투삼로지스">
@@ -99,7 +97,7 @@
 #nav .nc-item span:last-child{ font-size:0.92rem; }
 
 /* 햄버거 버튼 */
-.nav-toggle{ display:none; margin-left:auto; width:38px; height:34px; border:0; background:transparent; cursor:pointer; }
+
 .nav-toggle span{ display:block; height:2px; margin:7px 0; background:#222; transition:transform .25s, opacity .2s; }
 #nav[data-open="1"] .nav-toggle span:nth-child(1){ transform: translateY(9px) rotate(45deg); }
 #nav[data-open="1"] .nav-toggle span:nth-child(2){ opacity:0; }
@@ -113,9 +111,7 @@
 }
 
 /* 900px ↓ 드롭다운 */
-@media (max-width:900px){
-  .nav-toggle{ display:block !important; }
-  #nav .nav-contacts{ display:none !important; }
+
   #nav .links{
     position:absolute; left:0; top:100%; width:100%;
     flex-direction:column !important; align-items:flex-start !important;
@@ -128,15 +124,38 @@
   #nav[data-open="1"] .links{ max-height:60vh; }
 }
 </style>
+.nav-toggle{ display:block; margin-left:auto; height:36px; border:0; background:transparent; cursor:pointer; padding:6px 10px; border-radius:10px; }
+.nav-toggle .bars{ display:inline-flex; flex-direction:column; justify-content:center; gap:7px; margin-right:6px; vertical-align:middle; }
+.nav-toggle .bars > span{ display:block; width:22px; height:2px; background:#222; transition:transform .25s, opacity .2s; }
+#nav[data-open="1"] .nav-toggle .bars > span:nth-child(1){ transform: translateY(9px) rotate(45deg); }
+#nav[data-open="1"] .nav-toggle .bars > span:nth-child(2){ opacity:0; }
+#nav[data-open="1"] .nav-toggle .bars > span:nth-child(3){ transform: translateY(-9px) rotate(-45deg); }
+.nav-toggle .label{ display:none; font-weight:800; font-size:0.95rem; }
+#nav .links{
+  position:absolute; left:0; top:100%; width:100%;
+  display:flex !important; flex-direction:column !important; align-items:flex-start !important;
+  gap:14px !important; padding:14px 18px 18px; margin-left:0 !important;
+  background:#fff; border-bottom:1px solid #eee;
+  box-shadow:0 10px 22px rgba(0,0,0,.06);
+  max-height:0; overflow:hidden; transition:max-height .28s ease;
+  z-index:3000;
+}
+#nav[data-open="1"] .links{ max-height:70vh; }
+
+/* Mobile: show '메뉴' text instead of bars */
+@media (max-width: 900px){
+  #nav .nav-contacts{ display:none !important; }
+  .nav-toggle .bars{ display:none; }
+  .nav-toggle .label{ display:inline-block; }
+}
+
 
 <nav id="nav">
   <a class="brand" href="index.html" aria-label="투삼로지스">
     <img src="images/logo2.png" alt="투삼로지스 로고">
   </a>
   <!-- 추가 -->
-   <button class="nav-toggle" aria-label="메뉴 열기" aria-expanded="false" aria-controls="primary-links">
-    <span></span><span></span><span></span>
-  </button>
+   <button class="nav-toggle" aria-label="메뉴 열기" aria-expanded="false" aria-controls="primary-links"><span class="bars"><span></span><span></span><span></span></span><span class="label" aria-hidden="true">메뉴</span></button>
    <ul id="primary-links" class="links">
     <li class="active"><a href="index.html">서비스 소개</a></li>
     <li><a href="dangerous.html">위험물 운송</a></li>
@@ -176,6 +195,28 @@
   </a>
 </div>
 </nav>
+
+<script>
+(function() {
+  const nav = document.getElementById('nav');
+  const btn = nav ? nav.querySelector('.nav-toggle') : null;
+  const links = document.getElementById('primary-links');
+  if (!nav || !btn || !links) return;
+  function setOpen(open) {
+    nav.setAttribute('data-open', open ? '1' : '0');
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+  }
+  btn.addEventListener('click', function() {
+    const isOpen = nav.getAttribute('data-open') === '1';
+    setOpen(!isOpen);
+  });
+  // close on Esc
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') setOpen(false);
+  });
+})();
+</script>
+
 
 				<!-- Main -->
 					<div id="main">
@@ -303,40 +344,6 @@
     font-family: 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif !important;
     font-size: 0.9rem !important;
   }
-</style>
-<style id="show-both-menu-and-burger">
-/* 작은 화면에서도 텍스트 메뉴 유지 + 햄버거도 보이게 */
-@media (max-width:900px){
-  /* 햄버거는 보이게 */
-  #nav .nav-toggle{
-    display:block !important;
-  }
-  /* 링크 메뉴는 계속 펼쳐진 상태(드롭다운 안 타고 가로로 유지) */
-  #nav .links{
-    position: static !important;
-    display: flex !important;
-    flex-direction: row !important;
-    align-items: center !important;
-    gap: 16px !important;
-    flex-wrap: wrap !important;
-
-    max-height: none !important;
-    overflow: visible !important;
-    opacity: 1 !important;
-    visibility: visible !important;
-    box-shadow: none !important;
-    border: 0 !important;
-  }
-  /* 글자 크기 줄어드는 것 방지 */
-  #nav .links li a{
-    font-size: 0.98rem !important;
-    white-space: nowrap !important; /* 필요 없으면 제거 가능 */
-  }
-  /* 연락처 영역은 공간 절약 위해 숨김(원하면 빼도 됨) */
-  #nav .nav-contacts{
-    display: none !important;
-  }
-}
 </style>
 
 <!-- 🔸 기존 서비스 소개 본문 시작 -->
@@ -706,7 +713,6 @@
   </div>
 </div>
 
-  <meta charset="UTF-8">
   <title>서비스 영역 | 투삼로지스</title>
   <style>
     body {
@@ -1211,10 +1217,6 @@ document.addEventListener('DOMContentLoaded', function(){
 
 </body>
 </html>
-
-
-
-
 
 
 
