@@ -3730,14 +3730,6 @@ input, select, textarea {
 			margin-bottom: 0;
 		}
 
-		@media screen and (max-width: 980px) {
-
-			#nav {
-				display: none;
-			}
-
-		}
-
 /* Main */
 
 	#main {
@@ -5224,8 +5216,13 @@ hr.gray-line{
   #nav[data-open="1"] .nav-toggle span:nth-child(2){ opacity:0; }
   #nav[data-open="1"] .nav-toggle span:nth-child(3){ transform: translateY(-9px) rotate(-45deg); }
 }
+/* ====== NAV 강제 보이기(모바일) ====== */
+@media screen and (max-width: 980px) {
+  #nav { display: flex !important; }
+}
 
 </style>
+
 
 
 
