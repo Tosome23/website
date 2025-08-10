@@ -1208,7 +1208,20 @@ document.addEventListener('DOMContentLoaded', function(){
 
 });
 </script>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const navToggle = document.querySelector('.nav-toggle');
+    const nav = document.getElementById('nav');
 
+    if (navToggle && nav) {
+      navToggle.addEventListener('click', function() {
+        const isOpen = nav.getAttribute('data-open') === '1';
+        nav.setAttribute('data-open', isOpen ? '0' : '1');
+        this.setAttribute('aria-expanded', !isOpen);
+      });
+    }
+  });
+</script>
 </body>
 </html>
 
