@@ -88,12 +88,53 @@
 </header>
 
 				<!-- Nav -->
+				<!-- 상단 메뉴 전용 스타일 -->
+<style>
+#nav{ position:sticky; top:0; z-index:2000; display:flex; align-items:center; gap:24px; padding:10px 20px; background:rgba(255,255,255,0.96); backdrop-filter:saturate(180%) blur(10px); -webkit-backdrop-filter:saturate(180%) blur(10px); border-bottom:1px solid #eaeaea; }
+#nav .brand img{ height:42px; display:block; }
+#nav .links{ display:flex !important; align-items:center; gap:26px; margin-left:auto; padding-left:0; list-style:none; white-space:nowrap; }
+#nav .links li a{ text-decoration:none; border:0; color:#222; font-weight:800; font-size:0.98rem; letter-spacing:0; padding:0 4px; }
+#nav .nav-contacts{ display:flex; align-items:center; gap:16px; margin-left:16px; }
+#nav .nc-item{ display:flex; align-items:center; gap:8px; text-decoration:none; color:#222; font-weight:700; }
+#nav .nc-item span:last-child{ font-size:0.92rem; }
+
+/* 햄버거 버튼 */
+.nav-toggle{ display:none; margin-left:auto; width:38px; height:34px; border:0; background:transparent; cursor:pointer; }
+.nav-toggle span{ display:block; height:2px; margin:7px 0; background:#222; transition:transform .25s, opacity .2s; }
+#nav[data-open="1"] .nav-toggle span:nth-child(1){ transform: translateY(9px) rotate(45deg); }
+#nav[data-open="1"] .nav-toggle span:nth-child(2){ opacity:0; }
+#nav[data-open="1"] .nav-toggle span:nth-child(3){ transform: translateY(-9px) rotate(-45deg); }
+
+/* 1100px ↓ */
+@media (max-width:1100px){
+  #nav .links{ gap:18px !important; }
+  #nav .links li a{ font-size:0.94rem !important; }
+  #nav .nav-contacts span:last-child{ display:none !important; }
+}
+
+/* 900px ↓ 드롭다운 */
+@media (max-width:900px){
+  .nav-toggle{ display:block !important; }
+  #nav .nav-contacts{ display:none !important; }
+  #nav .links{
+    position:absolute; left:0; top:100%; width:100%;
+    flex-direction:column !important; align-items:flex-start !important;
+    gap:14px !important; padding:14px 18px 18px; margin-left:0 !important;
+    background:#fff; border-bottom:1px solid #eee;
+    box-shadow:0 10px 22px rgba(0,0,0,.06);
+    max-height:0; overflow:hidden; transition:max-height .28s ease;
+    z-index:3000;
+  }
+  #nav[data-open="1"] .links{ max-height:60vh; }
+}
+</style>
+
 <nav id="nav">
   <a class="brand" href="index.html" aria-label="투삼로지스">
     <img src="images/logo2.png" alt="투삼로지스 로고">
   </a>
   <!-- 추가 -->
-  <button class="nav-toggle" aria-label="메뉴 열기" aria-expanded="false" aria-controls="primary-links">
+   <button class="nav-toggle" aria-label="메뉴 열기" aria-expanded="false" aria-controls="primary-links">
     <span></span><span></span><span></span>
   </button>
    <ul id="primary-links" class="links">
@@ -1081,27 +1122,77 @@ function revealUpOnScroll() {
 window.addEventListener('scroll', revealUpOnScroll);
 window.addEventListener('load', revealUpOnScroll);
 
-  (function(){
-    const btn = document.querySelector('.nav-toggle');
-    const root = document.documentElement; // <html> 요소
-
-    if(!btn) return;
-    btn.addEventListener('click', function(){
-      const opened = root.classList.toggle('nav-open');
-      btn.setAttribute('aria-expanded', opened ? 'true' : 'false');
-    });
-
-    // 링크 클릭 시 자동 닫힘(모바일)
-    document.querySelectorAll('#primary-links a').forEach(a=>{
-      a.addEventListener('click', ()=>{ root.classList.remove('nav-open'); btn.setAttribute('aria-expanded','false'); });
-    });
-  })();
-	
 </script>
+<script>
+document.addEventListener('DOMContentLoaded', function(){
 
+  // 폼 전송
+  const form = document.getElementById('contact-form');
+  const resultDiv = document.getElementById('form-result');
+
+  if (form) {
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      if (!document.getElementById('privacy-check').checked) {
+        alert('개인정보 수집 및 이용에 동의해 주세요.');
+        return;
+      }
+
+      fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      }).then(response => {
+        if (response.ok) {
+          resultDiv.innerHTML = '메일 문의가 완료되었습니다.<br>빠른 시일 내에 답변드리겠습니다 😊';
+          resultDiv.style.display = 'block';
+          form.reset();
+          form.style.display = 'none';
+        } else {
+          resultDiv.textContent = '전송 중 오류가 발생했습니다. 다시 시도해 주세요.';
+          resultDiv.style.display = 'block';
+        }
+      }).catch(() => {
+        resultDiv.textContent = '일시적 오류가 발생했습니다.';
+        resultDiv.style.display = 'block';
+      });
+    });
+  }
+
+  // reveal-up 애니메이션
+  function revealUpOnScroll() {
+    document.querySelectorAll('.reveal-up').forEach(card => {
+      const rect = card.getBoundingClientRect();
+      if (rect.top < window.innerHeight - 60) card.classList.add('visible');
+    });
+  }
+  window.addEventListener('scroll', revealUpOnScroll);
+  revealUpOnScroll();
+
+  // NAV 토글
+  const nav = document.getElementById('nav');
+  const btn = nav ? nav.querySelector('.nav-toggle') : null;
+  if (nav && btn) {
+    btn.addEventListener('click', function(){
+      const opened = nav.getAttribute('data-open') === '1' ? '0' : '1';
+      nav.setAttribute('data-open', opened);
+      btn.setAttribute('aria-expanded', opened === '1' ? 'true' : 'false');
+    });
+    nav.querySelectorAll('#primary-links a').forEach(a=>{
+      a.addEventListener('click', ()=>{
+        nav.setAttribute('data-open','0');
+        btn.setAttribute('aria-expanded','false');
+      });
+    });
+  }
+
+});
+</script>
 
 </body>
 </html>
+
 
 
 
