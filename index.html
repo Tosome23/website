@@ -88,11 +88,15 @@
 </header>
 
 				<!-- Nav -->
-		<nav id="nav">
+<nav id="nav">
   <a class="brand" href="index.html" aria-label="투삼로지스">
     <img src="images/logo2.png" alt="투삼로지스 로고">
   </a>
-  <ul class="links">
+  <!-- 추가 -->
+  <button class="nav-toggle" aria-label="메뉴 열기" aria-expanded="false" aria-controls="primary-links">
+    <span></span><span></span><span></span>
+  </button>
+   <ul id="primary-links" class="links">
     <li class="active"><a href="index.html">서비스 소개</a></li>
     <li><a href="dangerous.html">위험물 운송</a></li>
     <li><a href="/blog/">블로그</a></li>
@@ -1098,6 +1102,7 @@ window.addEventListener('load', revealUpOnScroll);
 
 </body>
 </html>
+
 
 
 
