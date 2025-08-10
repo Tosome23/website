@@ -5013,8 +5013,61 @@ hr.gray-line{
 /* 혹시 테마가 <hr>에도 상단 테두리를 또 주면 차단 */
 #main > hr.gray-line{ border-bottom:0 !important; }
 
+/* ===== 상단 고정 네비 ===== */
+#nav{
+  position: fixed !important;
+  top: 0; left: 0; right: 0;
+  height: 64px; line-height: 64px;
+  z-index: 10050;
+  margin: 0 !important;
+  padding: 0 20px !important;
+  width: 100% !important; max-width: none !important;
+
+  display: flex !important;
+  align-items: center; gap: 24px;
+
+  background: rgba(255,255,255,0.96) !important;
+  backdrop-filter: saturate(180%) blur(10px);
+  -webkit-backdrop-filter: saturate(180%) blur(10px);
+  border-bottom: 1px solid #eaeaea;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.05);
+}
+
+/* 로고(브랜드) */
+#nav .brand{ display:flex; align-items:center; border:0 !important; }
+#nav .brand img{ height: 42px; display:block; }
+
+/* 메뉴 */
+#nav .links{
+  display:flex !important; gap: 26px;
+  margin-left: auto; padding-left: 0;
+}
+#nav .links li a{
+  border:0 !important;
+  color:#222 !important;
+  font-weight:800; font-size:0.98rem; letter-spacing:0;
+  padding: 0 4px;
+}
+#nav .links li a:hover{ color:#1976d2 !important; }
+#nav .links li a.active{ color:#1976d2 !important; }
+
+/* 템플릿이 980px 이하에서 네비를 숨기는 규칙 무력화 */
+@media (max-width: 980px){
+  #nav{ display:flex !important; height:56px; line-height:56px; padding:0 14px !important; }
+  #nav .brand img{ height:34px; }
+  #nav .links{ gap:16px; overflow-x:auto; white-space:nowrap; }
+  #nav .links li a{ font-size:.95rem; }
+}
+
+/* 햄버거/패널 토글은 사용 안 함 */
+#navPanelToggle{ display:none !important; }
+#navPanel{ display:none !important; }
+
+/* 고정바 때문에 가려지지 않게 전체 상단 여백 보정 */
+body{ padding-top: 72px; }   /* 필요하면 64~80px 사이로 조절 */
 
 </style>
+
 
 
 
