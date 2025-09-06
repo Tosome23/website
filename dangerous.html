@@ -776,7 +776,12 @@
 </div>
 </div>
 <div class="case-image">
-<picture><source srcset="images/processed_image-800.webp" type="image/webp"/><picture><source sizes="(max-width:768px) 100vw, 1280px" srcset="images/processed_image-800.webp 800w, images/processed_image-1280.webp 1280w" type="image/webp"/><img alt="위험물 포장 이미지" decoding="async" height="600" loading="lazy" src="images/processed_image.jpg" width="800"/></picture></picture>
+<picture>
+  <source type="image/webp" srcset="/images/processed_image-800.webp 800w, /images/processed_image-1280.webp 1280w"
+          sizes="(max-width:768px) 100vw, 1280px">
+  <img src="/images/processed_image.jpg" alt="위험물 포장 이미지"
+       width="800" height="600" loading="lazy" decoding="async">
+</picture>
 </div>
 </div>
 <!-- ❓ 자주 묻는 질문 (FAQ) -->
