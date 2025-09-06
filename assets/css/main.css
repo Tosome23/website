@@ -5276,6 +5276,15 @@ hr.gray-line{
     }
 }
 </style>
+/* 이미지 기본: 비율 깨짐 방지 */
+img { max-width: 100%; height: auto; }
+
+/* 헤더/네비 로고는 PNG 고정 + 비율 유지 */
+#header .logo img,
+#nav .brand img { height: 60px; width: auto; object-fit: contain; }
+
+/* 원형 썸네일은 그대로 원형 유지 */
+.service-img-round { width: 140px; height: 140px; object-fit: cover; border-radius: 50%; }
 
 
 
