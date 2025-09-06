@@ -5287,6 +5287,12 @@ img { max-width: 100%; height: auto; }
 .service-img-round { width: 140px; height: 140px; object-fit: cover; border-radius: 50%; }
 
 
+/* 하단 회사정보 로고/아이콘 */
+.company-logo { text-align: center; }
+.footer-logo { height: 60px; width: auto !important; object-fit: contain; display: inline-block; }
+
+.footer-icons { display: inline-flex; gap: 12px; align-items: center; }
+.footer-icon { height: 60px; width: auto !important; object-fit: contain; display: block; }
 
 
 
