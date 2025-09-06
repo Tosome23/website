@@ -995,8 +995,9 @@
 <!-- 박스 시작 -->
 <div style="flex: 1; max-width: 420px; background: #fff; padding: 24px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.06); box-sizing: border-box; min-height: 560px; display: flex; flex-direction: column;">
 <!-- 로고 -->
-<div style="text-align: center;">
-<picture><source srcset="images/logo2-800.webp" type="image/webp"/><picture><source sizes="(max-width:768px) 100vw, 1280px" srcset="images/logo2-800.webp 800w, images/logo2-1280.webp 1280w" type="image/webp"/><img alt="투삼로지스 로고" decoding="async" height="600" loading="lazy" src="images/logo2.png" style="height:60px;" width="800"/></picture></picture>
+<div class="company-logo">
+  <img src="images/logo2.png" alt="투삼로지스 로고"
+       width="1280" height="300" class="footer-logo">
 </div>
 <!-- 정보 텍스트 -->
 <div style="font-size:1.08rem; color:#212931; line-height:1.9; margin-top:20px; margin-bottom:24px; padding-left:8px; text-align: left;">
@@ -1007,14 +1008,13 @@
 <div><b>주소:</b> 인천 계양구 당미 3길, 31, 401</div>
 </div>
 <!-- 아이콘: 가로 정렬, 가운데 정렬 -->
-<div style="margin-bottom:12px; text-align: center;">
-<div style="display: inline-flex; gap: 12px; align-items: center;">
-<a href="http://pf.kakao.com/_wUvBn/chat" style="display:inline-block; outline: none; text-decoration: none; -webkit-tap-highlight-color: transparent;" target="_blank">
-<picture><source srcset="images/kakao-800.webp" type="image/webp"/><picture><source sizes="(max-width:768px) 100vw, 1280px" srcset="images/kakao-800.webp 800w, images/kakao-1280.webp 1280w" type="image/webp"/><img alt="투삼로지스 이미지" decoding="async" height="600" loading="lazy" src="images/kakao.png" style="height:60px; transition: transform 0.25s ease;" width="800"/></picture></picture>
-</a>
-<a href="https://blog.naver.com/two3logis" style="display:inline-block; outline: none; text-decoration: none; -webkit-tap-highlight-color: transparent;" target="_blank">
-<picture><source srcset="images/blog-800.webp" type="image/webp"/><picture><source sizes="(max-width:768px) 100vw, 1280px" srcset="images/blog-800.webp 800w, images/blog-1280.webp 1280w" type="image/webp"/><img alt="투삼로지스 이미지" decoding="async" height="600" loading="lazy" src="images/blog.png" style="height:60px; transition: transform 0.25s ease;" width="800"/></picture></picture>
-</a>
+<div class="footer-icons">
+  <a href="http://pf.kakao.com/_wUvBn/chat" target="_blank" aria-label="카카오톡 상담">
+    <img src="images/kakao.png" alt="카카오톡 상담" class="footer-icon">
+  </a>
+  <a href="https://blog.naver.com/two3logis" target="_blank" aria-label="네이버 블로그">
+    <img src="images/blog.png" alt="네이버 블로그" class="footer-icon">
+  </a>
 </div>
 </div>
 <!-- 하단 고정 -->
