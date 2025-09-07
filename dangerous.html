@@ -7,7 +7,7 @@
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  gtag('js', new Date());ㄿ
 
   gtag('config', 'G-TV1GFFHDQ1');
 </script>
@@ -127,6 +127,8 @@
 </nav>
 <!-- Main -->
 <div id="main" role="main">
+<div class="fade-in" id="wrapper">
+<!-- 채팅 말풍선 팝업 -->
 <div id="chat-popup" style="
   position: fixed;
   bottom: 140px;
@@ -148,7 +150,7 @@
 ">
 <div style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
 <div style="font-size: 14.5px; color: #111; margin-right: 12px;">
-      궁금한 건 채팅으로 문의하세요<br/>메일:23logis@naver.com
+      궁금한 건 채팅으로 문의하세요
     </div>
 <span onclick="document.getElementById('chat-popup').style.display='none'" style="
       font-size: 14px;
@@ -198,8 +200,8 @@
 <style>
 .kakao-float-btn {
   position: fixed;
-  bottom: 50px;
-  right: 60px;
+  bottom: 60px;
+  right: 50px;
   z-index: 9999;
   display: flex;
   align-items: center;
@@ -230,9 +232,7 @@
   .kakao-float-btn { right: 12px; bottom: 16px; }
   .kakao-img { height: 44px; }
 }
-
-
-
+</style>
 <style>
   #privacy-check {
     width: 18px !important;
@@ -247,6 +247,41 @@
     font-family: 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif !important;
     font-size: 0.9rem !important;
   }
+</style>
+<style id="show-both-menu-and-burger">
+/* 작은 화면에서도 텍스트 메뉴 유지 + 햄버거도 보이게 */
+@media (max-width:900px){
+  /* 햄버거는 보이게 */
+  #nav .nav-toggle{
+    display:block !important;
+  }
+  /* 링크 메뉴는 계속 펼쳐진 상태(드롭다운 안 타고 가로로 유지) */
+  #nav .links{
+    position: static !important;
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    gap: 16px !important;
+    flex-wrap: wrap !important;
+
+    max-height: none !important;
+    overflow: visible !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    box-shadow: none !important;
+    border: 0 !important;
+  }
+  /* 글자 크기 줄어드는 것 방지 */
+  #nav .links li a{
+    font-size: 0.98rem !important;
+    white-space: nowrap !important; /* 필요 없으면 제거 가능 */
+  }
+  /* 연락처 영역은 공간 절약 위해 숨김(원하면 빼도 됨) */
+  #nav .nav-contacts{
+    display: none !important;
+  }
+}
+
 </style>
 <!-- 🔸 서비스소개 -->
 <div class="service-intro">
