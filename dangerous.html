@@ -265,30 +265,20 @@
 </div>
 <hr class="gray-line"/>
 <style>
-  .compare-card-wrap {
-  max-width: 1100px;
-  margin: 40px auto;
-  padding: 0 20px;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 28px;
-  justify-content: space-between; /* 좌우로 배치 */
+/* 비교표: 데스크톱 2열 고정 */
+.compare-card-wrap{ justify-content:space-between; }
+.compare-card-wrap .compare-card{ flex:0 0 calc(50% - 14px); min-width:300px; }
+
+/* 모바일에서만 1열 */
+@media (max-width:720px){
+  .compare-card-wrap{ flex-direction:column; }
+  .compare-card-wrap .compare-card{ flex:1 1 100%; min-width:100%; }
 }
 
-.compare-card {
-  flex: 0 0 calc(50% - 14px);
-  min-width: 300px;
-  background: #fff;
-  border-radius: 20px;
-  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.03);
-  padding: 32px 28px;
-  transition: all 0.3s ease;
-}
+/* 다른 섹션의 .compare-card 규칙과 충돌 방지(범위 한정) */
+.section-box .compare-card,
+.case-box .compare-card{ flex:1; }
 
-@media (max-width: 960px) {
-  .compare-card {
-    flex: 1 1 100%;
-    min-width: 100%;
   }
 }
   .compare-card:hover {
