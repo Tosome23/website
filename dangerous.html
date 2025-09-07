@@ -276,7 +276,8 @@
   }
 
   .compare-card {
-    flex: 1 1 460px;
+  flex: 1 1 48%;   /* 가로폭 48% */
+  min-width: 300px; /* 최소폭 300px */
     background: #fff;
     border-radius: 20px;
     box-shadow: 0 8px 18px rgba(0, 0, 0, 0.03);
@@ -323,21 +324,26 @@
     color: #0076d6;
   }
 
-  @media (max-width: 720px) {
-    .compare-card-wrap {
-      flex-direction: column;
-    }
-
-    .compare-item {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-
-    .compare-value {
-      text-align: left;
-      margin-top: 6px;
-    }
+@media (max-width: 960px) {
+  .compare-card {
+    flex: 1 1 100%;
+    min-width: 100%;
   }
+}
+
+@media (max-width: 720px) {
+  .compare-card-wrap {
+    flex-direction: column;
+  }
+  .compare-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .compare-value {
+    text-align: left;
+    margin-top: 6px;
+  }
+}
 </style>
 <!-- ✅ 비교 테이블 영역 -->
 <div class="compare-card-wrap">
