@@ -5295,7 +5295,19 @@ img { max-width: 100%; height: auto; }
 .footer-icon { height: 60px; width: auto !important; object-fit: contain; display: block; }
 
 
+/* 비교 카드: 데스크탑 2열, 모바일 1열 강제 */
+.compare-card-wrap{display:flex;flex-wrap:wrap;gap:28px;justify-content:center;max-width:1100px;margin:40px auto;padding:0 20px;}
+.compare-card{flex:1 1 460px !important; min-width:460px !important; background:#fff;border-radius:20px;box-shadow:0 8px 18px rgba(0,0,0,.03);padding:32px 28px;}
+@media (max-width: 959px){ .compare-card{min-width:100% !important;} }
 
+/* 핵심 강점 카드 이미지 비율 고정 */
+.tosome-service-card img{
+  width:100%; aspect-ratio:16/9; height:auto; object-fit:cover;
+  border-radius:12px; display:block;
+}
+.tosome-service-card img{
+  width:100%; aspect-ratio:1/1; object-fit:cover; border-radius:12px; display:block;
+}
 
 
 
