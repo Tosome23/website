@@ -266,18 +266,18 @@
 <hr class="gray-line"/>
 <style>
   .compare-card-wrap {
-    max-width: 1100px;
-    margin: 40px auto;
-    padding: 0 20px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 28px;
-    justify-content: center;
-  }
+ max-width: 1100px;
+  margin: 40px auto;
+  padding: 0 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 28px;
+  justify-content: space-between; /* ← center 대신 space-between */
+}
 
-  .compare-card {
-  flex: 1 1 48%;   /* 가로폭 48% */
-  min-width: 300px; /* 최소폭 300px */
+.compare-card {
+  flex: 0 0 calc(50% - 14px); /* gap 반영해서 정확히 2열 */
+  min-width: 300px;
     background: #fff;
     border-radius: 20px;
     box-shadow: 0 8px 18px rgba(0, 0, 0, 0.03);
