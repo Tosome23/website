@@ -30,14 +30,15 @@
     .service-title { font-size:18px; font-weight:700; margin-bottom:8px; color:#222; }
     .service-text { font-size:15px; color:#555; line-height:1.6; }
 
-    /* 비교 카드 */
+    /* 비교 카드 (데스크탑 2열 보장, 모바일 1열) */
     .compare-card-wrap { max-width:1100px; margin:40px auto; padding:0 20px; display:flex; flex-wrap:wrap; gap:28px; justify-content:center; }
-    .compare-card { flex:1 1 460px; background:#fff; border-radius:20px; box-shadow:0 8px 18px rgba(0,0,0,.03); padding:32px 28px; transition:transform .2s, box-shadow .2s; }
+    .compare-card { flex:1 1 460px; min-width:460px; background:#fff; border-radius:20px; box-shadow:0 8px 18px rgba(0,0,0,.03); padding:32px 28px; transition:transform .2s, box-shadow .2s; }
     .compare-card:hover { transform:translateY(-4px); box-shadow:0 14px 32px rgba(0,118,214,.12); }
     .compare-card-title { font-size:1.25rem; font-weight:800; color:#0d2d6e; margin-bottom:18px; }
     .compare-item { display:flex; justify-content:space-between; margin-bottom:14px; font-size:.98rem; color:#333; }
     .compare-label { font-weight:600; color:#555; width:120px; flex-shrink:0; }
     .compare-value strong { color:#0076d6; }
+    @media (max-width: 959px){ .compare-card{ min-width:100%; } }
 
     /* 포인트 카드 섹션 */
     .tosome-service-section { display:flex; gap:36px; justify-content:center; align-items:stretch; margin:54px 0 30px; flex-wrap:wrap; }
@@ -146,17 +147,17 @@
     <div class="main-title"><b style="color:#0076d6;">1g</b>도 어디든 최상의 경로로</div>
     <div class="service-cards">
       <div class="service-card">
-        <div class="img-wrapper"><img src="images/dg1.png" alt="1.서류대행" class="service-img-round" loading="lazy" decoding="async"></div>
+        <div class="img-wrapper"><img src="images/dg1.png" alt="1.서류대행" class="service-img-round" width="180" height="180" loading="lazy" decoding="async"></div>
         <div class="service-title" style="color:#0076d6;">1.서류대행</div>
         <div class="service-text">화주신고서(DGD)·패킹리스트·인보이스 서류 대행</div>
       </div>
       <div class="service-card">
-        <div class="img-wrapper"><img src="images/dg2.png" alt="2.위험물 포장" class="service-img-round" loading="lazy" decoding="async"></div>
+        <div class="img-wrapper"><img src="images/dg2.png" alt="2.위험물 포장" class="service-img-round" width="180" height="180" loading="lazy" decoding="async"></div>
         <div class="service-title" style="color:#0076d6;">2.위험물 포장</div>
         <div class="service-text">UN 용기·라벨링 규정 준수, 필요 시 포장 보강</div>
       </div>
       <div class="service-card">
-        <div class="img-wrapper"><img src="images/dg3.png" alt="3.번개출고" class="service-img-round" loading="lazy" decoding="async"></div>
+        <div class="img-wrapper"><img src="images/dg3.png" alt="3.번개출고" class="service-img-round" width="180" height="180" loading="lazy" decoding="async"></div>
         <div class="service-title" style="color:#0076d6;">3.번개출고</div>
         <div class="service-text">당일 입고 · 당일 출고 · 당일 선적</div>
       </div>
