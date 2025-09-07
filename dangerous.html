@@ -113,21 +113,94 @@
       </div>
 <p><a class="button icon solid solo fa-arrow-down scrolly arrow-btn-custom" href="#header">Continue</a></p>
 </div>
-	<!-- Header (index와 동일) -->
+<!-- Header -->
 <header id="header">
-  <a href="index.html" class="logo" aria-label="투삼로지스">
-    <img src="images/logo2.png" alt="투삼로지스 로고" style="height:60px;width:auto;">
-  </a>
+<a class="logo" href="index.html">
+<img alt="투삼로지스 로고" class="footer-logo" height="300" src="images/logo2.png" style="height:60px;width:auto;" width="1280"/>
+</a>
 </header>
+<!-- Nav -->
+<!-- 상단 메뉴 전용 스타일 -->
+<style>
+#nav{ position:sticky; top:0; z-index:2000; display:flex; align-items:center; gap:24px; padding:10px 20px; background:rgba(255,255,255,0.96); backdrop-filter:saturate(180%) blur(10px); -webkit-backdrop-filter:saturate(180%) blur(10px); border-bottom:1px solid #eaeaea; }
+#nav .brand img{ height:42px; display:block; }
+#nav .links{ display:flex !important; align-items:center; gap:26px; margin-left:auto; padding-left:0; list-style:none; white-space:nowrap; }
+#nav .links li a{ text-decoration:none; border:0; color:#222; font-weight:800; font-size:0.98rem; letter-spacing:0; padding:0 4px; }
+#nav .nav-contacts{ display:flex; align-items:center; gap:16px; margin-left:16px; }
+#nav .nc-item{ display:flex; align-items:center; gap:8px; text-decoration:none; color:#222; font-weight:700; }
+#nav .nc-item span:last-child{ font-size:0.92rem; }
 
-<!-- Nav (index와 동일) -->
+/* 햄버거 버튼 */
+.nav-toggle{ display:none; margin-left:auto; width:38px; height:34px; border:0; background:transparent; cursor:pointer; }
+.nav-toggle span{ display:block; height:2px; margin:7px 0; background:#222; transition:transform .25s, opacity .2s; }
+#nav[data-open="1"] .nav-toggle span:nth-child(1){ transform: translateY(9px) rotate(45deg); }
+#nav[data-open="1"] .nav-toggle span:nth-child(2){ opacity:0; }
+#nav[data-open="1"] .nav-toggle span:nth-child(3){ transform: translateY(-9px) rotate(-45deg); }
+
+/* 1100px ↓ */
+@media (max-width:1100px){
+  #nav .links{ gap:18px !important; }
+  #nav .links li a{ font-size:0.94rem !important; }
+  #nav .nav-contacts span:last-child{ display:none !important; }
+}
+
+/* 900px ↓ 드롭다운 */
+@media (max-width:900px){
+  .nav-toggle{ display:block !important; }
+  #nav .nav-contacts{ display:none !important; }
+  #nav .links{
+    position:absolute; left:0; top:100%; width:100%;
+    flex-direction:column !important; align-items:flex-start !important;
+    gap:14px !important; padding:14px 18px 18px; margin-left:0 !important;
+    background:#fff; border-bottom:1px solid #eee;
+    box-shadow:0 10px 22px rgba(0,0,0,.06);
+    max-height:0; overflow:hidden; transition:max-height .28s ease;
+    z-index:3000;
+  }
+  #nav[data-open="1"] .links{ max-height:60vh; }
+}
+</style>
 <nav id="nav">
-  <ul class="links">
-    <li><a href="/">국제 특송</a></li>
-    <li class="active"><a href="/dangerous.html">위험물 운송</a></li>
-  </ul>
+<a aria-label="투삼로지스" class="brand" href="index.html">
+<img alt="투삼로지스 로고" class="footer-logo" src="images/logo2.png"/>
+</a>
+<!-- 추가 -->
+<button aria-controls="primary-links" aria-expanded="false" aria-label="메뉴 열기" class="nav-toggle">
+<span></span><span></span><span></span>
+</button>
+<ul class="links" id="primary-links">
+<li class="active"><a href="index.html">서비스 소개</a></li>
+<li><a href="dangerous.html">위험물 운송</a></li>
+</ul>
+<div class="nav-contacts">
+<a aria-label="전화" class="nc-item" href="tel:050713994075">
+<span aria-hidden="true" class="nc-icon">
+<!-- phone (Feather) -->
+<svg fill="none" height="22" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="22" xmlns="http://www.w3.org/2000/svg">
+<path d="M22 16.92v3a2 2 0 0 1-2.18 2
+                 19.79 19.79 0 0 1-8.63-3.07
+                 19.5 19.5 0 0 1-6-6
+                 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3
+                 a2 2 0 0 1 2 1.72c.12.9.31 1.77.57 2.61
+                 a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.47-1.14
+                 a2 2 0 0 1 2.11-.45c.84.26 1.71.45 2.61.57
+                 A2 2 0 0 1 22 16.92z"></path>
+</svg>
+</span>
+<span>0507-1399-4075</span>
+</a>
+<a aria-label="이메일" class="nc-item" href="mailto:23logis@naver.com">
+<span aria-hidden="true" class="nc-icon">
+<!-- mail (Feather) -->
+<svg fill="none" height="22" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="22" xmlns="http://www.w3.org/2000/svg">
+<rect height="14" rx="2" ry="2" width="18" x="3" y="5"></rect>
+<polyline points="3,7 12,13 21,7"></polyline>
+</svg>
+</span>
+<span>23logis@naver.com</span>
+</a>
+</div>
 </nav>
-
 	<!-- Main -->
 <div id="main" role="main">
 <div class="fade-in" id="wrapper">
