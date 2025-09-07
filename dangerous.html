@@ -332,141 +332,63 @@
     margin-top: 6px;
   }
 }
-
+	<!-- ✅ 좌우 2열 비교표(데스크탑), 모바일 1열 -->
 <style>
-  /* 비교 테이블 레이아웃 */
-  .compare-card-wrap {
-    max-width: 1100px;
-    margin: 40px auto;
-    padding: 0 20px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 28px;
-    justify-content: center;
+  /* 고립된 네임스페이스로 기존 CSS 충돌 방지 */
+  #compare-new{ 
+    display:flex !important; 
+    flex-wrap:wrap !important; 
+    gap:28px !important; 
+    justify-content:center !important; 
+    align-items:stretch !important;
+    max-width:1100px; 
+    margin:40px auto; 
+    padding:0 20px;
   }
-  .compare-card {
-    flex: 1 1 48%;
-    min-width: 460px;               /* 데스크탑에서 2열 유지 */
-    background: #fff;
-    border: 1px solid #e6eff5;
-    border-radius: 20px;
-    box-shadow: 0 8px 18px rgba(0,0,0,.03);
-    padding: 32px 28px;
-    transition: transform .2s, box-shadow .2s;
+  #compare-new .card{
+    flex:1 1 460px !important;   /* 데스크탑에서 2열 */
+    min-width:460px !important;
+    background:#fff; border-radius:20px; 
+    box-shadow:0 8px 18px rgba(0,0,0,.03);
+    padding:32px 28px;
   }
-  .compare-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 14px 32px rgba(0,118,214,.12);
+  #compare-new .title{ 
+    font-size:1.25rem; font-weight:800; color:#0d2d6e; 
+    margin-bottom:18px; 
   }
-  .compare-card-title {
-    font-size: 1.25rem;
-    font-weight: 800;
-    color: #0d2d6e;
-    margin-bottom: 18px;
-    border: 0;
-    padding-bottom: 0;
+  #compare-new .row{ 
+    display:flex; justify-content:space-between; 
+    margin-bottom:14px; font-size:.98rem; color:#333; 
   }
-  .compare-item {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 14px;
-    font-size: .98rem;
-    color: #333;
-    border: 0;
-    box-shadow: none;
-  }
-  .compare-label {
-    font-weight: 600;
-    color: #555;
-    width: 120px;
-    flex-shrink: 0;
-  }
-  .compare-value { text-align: right; font-weight: 600; }
-  .compare-value strong { color: #0076d6; }
-  .compare-footnote {
-    width: 100%;
-    text-align: right;
-    color: #b0b0b0;
-    font-size: 1.01rem;
-    margin: 6px 0 18px;
-    padding: 0 20px;
-    box-sizing: border-box;
-  }
+  #compare-new .label{ font-weight:600; color:#555; width:120px; flex-shrink:0; }
+  #compare-new .val strong{ color:#0076d6; }
 
-  /* 모바일에서 1열 전환 */
-  @media (max-width: 960px){
-    .compare-card { flex: 1 1 100%; min-width: 100%; }
-  }
-  @media (max-width: 720px){
-    .compare-item {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-    .compare-value { text-align: left; margin-top: 6px; }
+  /* 모바일은 1열 */
+  @media (max-width:959px){
+    #compare-new .card{ min-width:100% !important; flex-basis:100% !important; }
   }
 </style>
 
-<section class="compare-card-wrap" id="compare">
-  <!-- 기존 포워딩 -->
-  <article class="compare-card" aria-label="기존 포워딩">
-    <h3 class="compare-card-title">기존 포워딩</h3>
+<section id="compare-new" aria-label="비교표">
+  <div class="card">
+    <div class="title">기존 포워딩</div>
+    <div class="row"><div class="label">예상 비용</div><div class="val">100만 원 이상</div></div>
+    <div class="row"><div class="label">서비스 지원</div><div class="val">포장보강, 서류작성 대행X</div></div>
+    <div class="row"><div class="label">소요 시간</div><div class="val">4~8일</div></div>
+    <div class="row"><div class="label">최소 조건</div><div class="val">5kg 이상 제한</div></div>
+    <div class="row"><div class="label">진행 과정</div><div class="val">선사·항공사 확인, 다단계 입고</div></div>
+  </div>
 
-    <div class="compare-item">
-      <div class="compare-label">예상 비용</div>
-      <div class="compare-value">100만 원 이상</div>
-    </div>
-
-    <div class="compare-item">
-      <div class="compare-label">서비스 지원</div>
-      <div class="compare-value">포장보강, 서류작성 대행X</div>
-    </div>
-
-    <div class="compare-item">
-      <div class="compare-label">소요 시간</div>
-      <div class="compare-value">4~8일</div>
-    </div>
-
-    <div class="compare-item">
-      <div class="compare-label">최소 조건</div>
-      <div class="compare-value">5kg 이상 제한</div>
-    </div>
-
-    <div class="compare-item">
-      <div class="compare-label">진행 과정</div>
-      <div class="compare-value">선사·항공사 확인, 다단계 입고</div>
-    </div>
-  </article>
-
-  <!-- 투삼로지스 -->
-  <article class="compare-card" aria-label="투삼로지스">
-    <h3 class="compare-card-title">투삼로지스</h3>
-
-    <div class="compare-item">
-      <div class="compare-label">예상 비용</div>
-      <div class="compare-value"><strong>50만 원</strong></div>
-    </div>
-
-    <div class="compare-item">
-      <div class="compare-label">서비스 지원</div>
-      <div class="compare-value"><strong>포장보강, 서류작성 대행O</strong></div>
-    </div>
-
-    <div class="compare-item">
-      <div class="compare-label">소요 시간</div>
-      <div class="compare-value"><strong>2~3일 도착 가능</strong></div>
-    </div>
-
-    <div class="compare-item">
-      <div class="compare-label">최소 조건</div>
-      <div class="compare-value"><strong>1g도 가능</strong></div>
-    </div>
-
-    <div class="compare-item">
-      <div class="compare-label">진행 과정</div>
-      <div class="compare-value"><strong>접수 → 포장 → 당일 선적</strong></div>
-    </div>
-  </article>
+  <div class="card">
+    <div class="title">투삼로지스</div>
+    <div class="row"><div class="label">예상 비용</div><div class="val"><strong>50만 원</strong></div></div>
+    <div class="row"><div class="label">서비스 지원</div><div class="val"><strong>포장보강, 서류작성 대행O</strong></div></div>
+    <div class="row"><div class="label">소요 시간</div><div class="val"><strong>2~3일 도착 가능</strong></div></div>
+    <div class="row"><div class="label">최소 조건</div><div class="val"><strong>1g도 가능</strong></div></div>
+    <div class="row"><div class="label">진행 과정</div><div class="val"><strong>접수 → 포장 → 당일 선적</strong></div></div>
+  </div>
 </section>
+
 <div class="compare-footnote">*위험물 1kg 발송 기준 (국가별 운임 상이)</div>
 </div>
 <div class="tosome-service-area">
