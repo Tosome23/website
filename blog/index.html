@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-TV1GFFHDQ1"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-TV1GFFHDQ1');</script>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>물류 블로그 — 국제특송·위험물·포워딩 정보 | 투삼로지스</title>
+<meta name="description" content="리튬배터리 해외배송, DHL vs FedEx 비교, LCL vs FCL 차이 등 실용적인 국제물류 정보를 매주 업데이트합니다."/>
+<meta name="keywords" content="국제특송 블로그,위험물 운송 정보,해상포워딩 가이드,리튬배터리 해외배송,DHL FedEx UPS 비교"/>
+<meta property="og:title" content="투삼로지스 물류 블로그"/>
+<meta property="og:description" content="국제특송·위험물·포워딩 실용 정보 모음"/>
+<meta property="og:url" content="https://tosomelogis.kr/blog/"/>
+<link rel="icon" href="../images/favicon.png"/>
+<link rel="canonical" href="https://tosomelogis.kr/blog/"/>
+<link rel="stylesheet" href="../style.css"/>
+<style>
+
+/* ── 블로그 전용 레이아웃 ── */
+.blog-layout {
+  display: grid;
+  grid-template-columns: 1fr 292px;
+  gap: 52px;
+  align-items: start;
+}
+
+/* ── 검색창 ── */
+.search-wrap { position: relative; margin-bottom: 24px; }
+.search-input {
+  width: 100%; padding: 13px 48px 13px 18px;
+  border: 1.5px solid var(--line-d); border-radius: var(--r2);
+  font-size: .9rem; font-family: var(--f-kr);
+  color: var(--ink); background: var(--w);
+  outline: none; transition: border-color var(--t);
+}
+.search-input:focus { border-color: var(--b); }
+.search-input::placeholder { color: var(--mid); }
+.search-ico {
+  position: absolute; right: 16px; top: 50%;
+  transform: translateY(-50%); color: var(--mid); pointer-events: none;
+}
+
+/* ── 카테고리 필터 ── */
+.cat-row { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 26px; }
+.cat-btn {
+  padding: 7px 16px; border-radius: 100px;
+  font-family: var(--f-mono); font-size: .68rem;
+  letter-spacing: .06em; text-transform: uppercase;
+  border: 1.5px solid var(--line-d);
+  color: var(--mid); background: var(--w);
+  cursor: pointer; transition: all var(--t) var(--ease);
+}
+.cat-btn:hover { border-color: var(--b); color: var(--b); }
+.cat-btn.on { background: var(--b); color: #fff; border-color: var(--b); }
+.cat-n {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 17px; height: 17px; border-radius: 50%;
+  font-size: .6rem; font-weight: 700; margin-left: 4px;
+  background: rgba(255,255,255,.25);
+}
+.cat-btn:not(.on) .cat-n { background: var(--w2); color: var(--mid); }
+
+/* ── 결과 바 ── */
+.results-bar {
+  display: flex; align-items: center; justify-content: space-between;
+  margin-bottom: 18px; flex-wrap: wrap; gap: 10px;
+}
+.results-count { font-family: var(--f-mono); font-size: .74rem; color: var(--mid); }
+.results-count strong { color: var(--ink); font-weight: 700; }
+.sort-sel {
+  font-family: var(--f-mono); font-size: .72rem; color: var(--mid);
+  border: 1px solid var(--line-d); border-radius: 7px;
+  padding: 6px 12px; background: var(--w);
+  cursor: pointer; outline: none; transition: border-color var(--t);
+}
+.sort-sel:focus { border-color: var(--b); }
+
+/* ── 추천글 (Featured) ── */
+.featured {
+  display: grid; grid-template-columns: 1fr 1fr;
+  border-radius: var(--r2); overflow: hidden;
+  border: 1px solid var(--line-d); margin-bottom: 26px;
+  text-decoration: none; color: var(--ink);
+  background: var(--w);
+  transition: all var(--t) var(--ease);
+}
+.featured:hover { box-shadow: 0 14px 44px rgba(13,42,74,.1); transform: translateY(-3px); border-color: transparent; }
+.ft-img { position: relative; overflow: hidden; }
+.ft-img img { width: 100%; height: auto; aspect-ratio: 16/9; object-fit: cover; transition: transform .5s var(--ease); }
+.featured:hover .ft-img img { transform: scale(1.04); }
+.ft-pin {
+  position: absolute; top: 14px; left: 14px;
+  background: var(--b); color: #fff;
+  font-family: var(--f-mono); font-size: .62rem;
+  letter-spacing: .1em; text-transform: uppercase;
+  padding: 4px 12px; border-radius: 100px;
+}
+.ft-body { padding: 28px; display: flex; flex-direction: column; justify-content: center; }
+.ft-cat { font-family: var(--f-mono); font-size: .65rem; letter-spacing: .1em; text-transform: uppercase; color: var(--b); font-weight: 500; margin-bottom: 10px; }
+.ft-title { font-size: 1.12rem; font-weight: 900; color: var(--ink); line-height: 1.4; letter-spacing: -.03em; margin-bottom: 12px; }
+.ft-desc { font-size: .83rem; color: var(--mid); line-height: 1.65; flex: 1; }
+.ft-meta { display: flex; align-items: center; margin-top: 18px; }
+.ft-date { font-family: var(--f-mono); font-size: .72rem; color: var(--mid); }
+.ft-arrow { display: inline-flex; align-items: center; gap: 5px; font-family: var(--f-mono); font-size: .74rem; font-weight: 500; color: var(--b); margin-left: auto; transition: gap var(--t); }
+.featured:hover .ft-arrow { gap: 9px; }
+
+/* ── 포스트 그리드 ── */
+.post-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+
+/* ── bc-card 재활용 (style.css) + 추가 ── */
+.bc-more { color: var(--b); }
+
+/* ── 빈 결과 ── */
+.no-post { display: none; text-align: center; padding: 60px 20px; color: var(--mid); }
+.no-post-ico { font-size: 2.5rem; margin-bottom: 12px; }
+
+/* ── 페이지네이션 ── */
+.pagination { display: flex; align-items: center; justify-content: center; gap: 6px; margin-top: 32px; }
+.pg-btn {
+  width: 38px; height: 38px; border-radius: var(--r);
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--f-mono); font-size: .8rem; font-weight: 500;
+  border: 1.5px solid var(--line-d); color: var(--mid);
+  background: var(--w); cursor: pointer;
+  transition: all var(--t) var(--ease);
+}
+.pg-btn:hover { border-color: var(--b); color: var(--b); }
+.pg-btn.on { background: var(--b); border-color: var(--b); color: #fff; font-weight: 700; }
+.pg-btn:disabled { opacity: .35; cursor: default; }
+
+/* ── 사이드바 ── */
+.sidebar { position: sticky; top: 78px; display: flex; flex-direction: column; gap: 18px; }
+
+.sb-card { background: var(--w2); border: 1px solid var(--line-d); border-radius: var(--r2); overflow: hidden; }
+.sb-head {
+  padding: 13px 17px; border-bottom: 1px solid var(--line-d);
+  font-family: var(--f-mono); font-size: .63rem;
+  letter-spacing: .15em; text-transform: uppercase;
+  color: var(--mid); background: var(--w);
+}
+
+/* 카테고리 사이드바 */
+.sb-cat-item {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 11px 17px; border-bottom: 1px solid var(--line-d);
+  font-size: .84rem; color: var(--mid);
+  cursor: pointer; transition: all var(--t);
+  text-decoration: none;
+}
+.sb-cat-item:last-child { border: none; }
+.sb-cat-item:hover, .sb-cat-item.on { color: var(--b); background: var(--b3); }
+.sb-cat-item.on { font-weight: 700; }
+.sb-badge { font-family: var(--f-mono); font-size: .66rem; background: var(--w); border: 1px solid var(--line-d); color: var(--mid); padding: 2px 8px; border-radius: 100px; }
+.sb-cat-item.on .sb-badge { background: var(--b); border-color: var(--b); color: #fff; }
+
+/* 인기글 사이드바 */
+.sb-pop-item {
+  display: flex; gap: 12px; align-items: flex-start;
+  padding: 12px 17px; border-bottom: 1px solid var(--line-d);
+  text-decoration: none; color: var(--ink);
+  transition: background var(--t);
+}
+.sb-pop-item:last-child { border: none; }
+.sb-pop-item:hover { background: var(--b3); }
+.sb-pop-n { font-family: var(--f-dis); font-size: 1.35rem; line-height: 1; color: var(--b); opacity: .28; flex-shrink: 0; width: 22px; }
+.sb-pop-title { font-size: .81rem; font-weight: 600; color: var(--ink); line-height: 1.45; }
+.sb-pop-cat { font-family: var(--f-mono); font-size: .63rem; color: var(--mid); margin-top: 3px; }
+
+/* 태그 클라우드 */
+.sb-tags { padding: 14px 17px; display: flex; flex-wrap: wrap; gap: 6px; }
+.sb-tag {
+  padding: 5px 12px; border-radius: 100px;
+  font-family: var(--f-mono); font-size: .66rem;
+  border: 1px solid var(--line-d); color: var(--mid);
+  background: var(--w); cursor: pointer;
+  transition: all var(--t) var(--ease);
+}
+.sb-tag:hover { background: var(--b); border-color: var(--b); color: #fff; }
+
+/* 상담 CTA 사이드 */
+.sb-cta-box { background: var(--c); border-radius: var(--r2); padding: 22px 18px; text-align: center; }
+.sb-cta-title { font-size: .92rem; font-weight: 800; color: var(--w); line-height: 1.4; margin-bottom: 7px; }
+.sb-cta-sub { font-size: .77rem; color: rgba(255,255,255,.38); line-height: 1.6; margin-bottom: 16px; }
+
+/* ── 반응형 ── */
+@media(max-width: 1024px) {
+  .blog-layout { grid-template-columns: 1fr; }
+  .sidebar { position: static; }
+  .featured { grid-template-columns: 1fr; }
+  .ft-img img { aspect-ratio: 16/9; }
+}
+@media(max-width: 640px) {
+  .post-grid { grid-template-columns: 1fr; }
+}
+.kk-tip {
+  position: absolute; bottom: calc(100% + 10px); right: 0;
+  background: var(--c); color: var(--w);
+  border-radius: 10px 10px 2px 10px;
+  padding: 8px 14px; white-space: nowrap;
+  font-size: .75rem; font-weight: 600;
+  box-shadow: 0 4px 18px rgba(0,0,0,.18);
+  animation: tipin .4s var(--ease) both;
+}
+@keyframes tipin { from { opacity:0; transform:translateY(6px); } to { opacity:1; transform:none; } }
+</style>
+</head>
+<body>
+<a class="skip" href="#main">본문 바로가기</a>
+
+<!-- NAV -->
+<header id="nav">
+  <div class="nav-wrap">
+    <a href="../index.html" class="nav-logo"><img src="../images/logo2.png" alt="투삼로지스"/></a>
+    <nav aria-label="주 메뉴"><ul class="nav-links">
+      <li><a href="../index.html">홈</a></li>
+      <li><a href="../express.html">국제특송</a></li>
+      <li><a href="../dangerous.html">위험물 운송</a></li>
+      <li><a href="../forwarding.html">해상·항공 포워딩</a></li>
+      <li><a href="index.html">블로그</a></li>
+    </ul></nav>
+    <a href="http://pf.kakao.com/_wUvBn/chat" target="_blank" rel="noopener" class="nav-cta">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3C6.48 3 2 6.77 2 11.4c0 2.93 1.87 5.51 4.7 7.02L5.5 22l4.3-2.6c.72.1 1.46.16 2.2.16 5.52 0 10-3.77 10-8.4S17.52 3 12 3z"/></svg>
+      카카오 상담
+    </a>
+    <button class="nav-burger" id="burger" aria-label="메뉴"><span></span><span></span><span></span></button>
+  </div>
+  <nav class="nav-drawer" id="drawer">
+    <a href="../index.html">홈</a>
+    <a href="../express.html">국제특송</a>
+    <a href="../dangerous.html">위험물 운송</a>
+    <a href="../forwarding.html">해상·항공 포워딩</a>
+    <a href="index.html">블로그</a>
+    <a href="http://pf.kakao.com/_wUvBn/chat" target="_blank" rel="noopener" class="nav-drawer-btn">카카오톡 무료 상담</a>
+  </nav>
+</header>
+
+<main id="main">
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="hero-mesh"></div>
+  <div class="hero-grid"></div>
+  <div class="wrap">
+    <div class="page-hero-body">
+      <nav class="bc"><a href="../index.html">홈</a><span class="bc-sep">›</span><span>블로그</span></nav>
+      <div class="lbl lbl-inv">Logistics Blog</div>
+      <h1 class="h2 h2-inv" style="font-size:clamp(2.2rem,5vw,3.6rem);margin-top:8px;">물류, 제대로 알고<br/><em>보내세요.</em></h1>
+      <div class="rule" style="margin:20px 0; background:var(--y);"></div>
+      <p class="lead lead-inv" style="max-width:500px;">리튬배터리 해외발송, DHL vs FedEx 비교, LCL vs FCL 선택 기준 등<br/>실전에서 바로 쓸 수 있는 물류 정보를 매주 업데이트합니다.</p>
+      <div style="display:flex;gap:32px;margin-top:32px;flex-wrap:wrap;">
+        <div>
+          <div style="font-family:var(--f-dis);font-size:2.2rem;color:var(--w);letter-spacing:.03em;">11</div>
+          <div style="font-family:var(--f-mono);font-size:.63rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.3);margin-top:4px;">Total Posts</div>
+        </div>
+        <div>
+          <div style="font-family:var(--f-dis);font-size:2.2rem;color:var(--y);letter-spacing:.03em;">4</div>
+          <div style="font-family:var(--f-mono);font-size:.63rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.3);margin-top:4px;">Categories</div>
+        </div>
+        <div>
+          <div style="font-family:var(--f-dis);font-size:2.2rem;color:var(--w);letter-spacing:.03em;">Weekly</div>
+          <div style="font-family:var(--f-mono);font-size:.63rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.3);margin-top:4px;">Updated</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 메인 아카이브 -->
+<section class="sec" style="background:var(--w2);">
+  <div class="wrap">
+    <div class="blog-layout">
+
+      <!-- ═══ 포스트 목록 ═══ -->
+      <div>
+
+        <!-- 검색 -->
+        <div class="search-wrap rev">
+          <input type="text" class="search-input" id="searchInput" placeholder="키워드 검색 (예: 리튬배터리, DHL, LCL…)" aria-label="포스트 검색"/>
+          <span class="search-ico">
+            <svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          </span>
+        </div>
+
+        <!-- 카테고리 필터 -->
+        <div class="cat-row rev d1">
+          <button class="cat-btn on" data-cat="all">전체 <span class="cat-n">3</span></button>
+          <button class="cat-btn" data-cat="위험물 운송">위험물 운송 <span class="cat-n">1</span></button>
+          <button class="cat-btn" data-cat="해상포워딩">해상포워딩 <span class="cat-n">2</span></button>
+        </div>
+
+        <!-- 결과 바 -->
+        <div class="results-bar rev d2">
+          <span class="results-count"><strong id="shownCount">3</strong>개 포스트</span>
+          <select class="sort-sel" id="sortSel" aria-label="정렬">
+            <option value="newest">최신순</option>
+            <option value="oldest">오래된 순</option>
+            <option value="title">제목순</option>
+          </select>
+        </div>
+
+
+        <!-- 포스트 그리드 -->
+        <div class="post-grid" id="postGrid">
+
+          <a href="post-001.html" class="bc-card" data-cat="위험물 운송" data-date="2025-01-15" data-title="리튬배터리 해외배송 왜 거절당할까 합법적으로 보내는 완전 가이드">
+            <div class="bc-thumb"><img src="../images/post-001.webp" alt="리튬배터리 해외배송" loading="lazy"/><span class="bc-cat">위험물 운송</span></div>
+            <div class="bc-body"><div class="bc-date">2025-01-15</div><div class="bc-title">리튬배터리 해외배송, 왜 거절당할까? — 합법적으로 보내는 완전 가이드</div><div class="bc-desc">DHL·FedEx·UPS가 수거를 거절하는 이유, UN3480/UN3481 구분, IATA 기준 포장 방법까지.</div><span class="bc-more">읽기 →</span></div>
+          </a>
+
+                    <a href="post-003.html" class="bc-card" data-cat="해상포워딩" data-date="2026-05-10" data-title="LCL vs FCL 차이점 완벽 정리 어떤 걸 선택해야 할까">
+            <div class="bc-thumb"><img src="../images/post-003.webp" alt="LCL vs FCL" loading="lazy"/><span class="bc-cat">해상포워딩</span></div>
+            <div class="bc-body"><div class="bc-date">2026-05-10</div><div class="bc-title">LCL vs FCL 차이점 완벽 정리 — 어떤 걸 선택해야 할까?</div><div class="bc-desc">소량·대량 화물 운송 방식의 차이와 비용 구조. CBM 기준 손익분기점과 선택 기준 정리.</div><span class="bc-more">읽기 →</span></div>
+          </a>
+
+          <a href="post-002.html" class="bc-card" data-cat="해상포워딩" data-date="2026-05-05" data-title="심천 LCL 해상운송 후기 중국 1.8CBM 인천 수입 실전 사례">
+            <div class="bc-thumb"><img src="../images/post-002.webp" alt="심천 LCL 해상운송" loading="lazy"/><span class="bc-cat">해상포워딩</span></div>
+            <div class="bc-body"><div class="bc-date">2026-05-05</div><div class="bc-title">심천 LCL 해상운송 후기 — 중국 1.8CBM 인천 수입 실전 사례</div><div class="bc-desc">알리바바 구매 전자장비를 심천에서 인천까지 5.5일 완료. 통관·원산지·비용 전 과정 공개.</div><span class="bc-more">읽기 →</span></div>
+          </a>
+
+        </div><!-- /postGrid -->
+
+        <!-- 빈 결과 -->
+        <div class="no-post" id="noPost">
+          <div class="no-post-ico">🔍</div>
+          <p>검색 결과가 없습니다.<br/>다른 키워드로 다시 검색해보세요.</p>
+        </div>
+
+        <!-- 페이지네이션 -->
+        <div class="pagination" id="pagination">
+          <button class="pg-btn" id="prevBtn" aria-label="이전">
+            <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+          </button>
+          <button class="pg-btn on" data-page="1">1</button>
+          <button class="pg-btn" data-page="2">2</button>
+          <button class="pg-btn" id="nextBtn" aria-label="다음">
+            <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+          </button>
+        </div>
+
+      </div><!-- /left -->
+
+      <!-- ═══ 사이드바 ═══ -->
+      <aside class="sidebar rev d2">
+
+        <!-- 카테고리 -->
+        <div class="sb-card">
+          <div class="sb-head">카테고리</div>
+          <a class="sb-cat-item on" data-cat="all" href="#" onclick="return false;">전체 <span class="sb-badge">3</span></a>
+          <a class="sb-cat-item" data-cat="위험물 운송" href="#" onclick="return false;">🔋 위험물 운송 <span class="sb-badge">1</span></a>
+          <a class="sb-cat-item" data-cat="해상포워딩" href="#" onclick="return false;">🚢 해상포워딩 <span class="sb-badge">2</span></a>
+        </div>
+
+        <!-- 태그 클라우드 -->
+        <div class="sb-card">
+          <div class="sb-head">태그</div>
+          <div class="sb-tags">
+            <span class="sb-tag" data-kw="리튬배터리">#리튬배터리</span>
+            <span class="sb-tag" data-kw="DHL">#DHL</span>
+            <span class="sb-tag" data-kw="FedEx">#FedEx</span>
+            <span class="sb-tag" data-kw="UPS">#UPS</span>
+            <span class="sb-tag" data-kw="LCL">#LCL</span>
+            <span class="sb-tag" data-kw="FCL">#FCL</span>
+            <span class="sb-tag" data-kw="통관">#통관</span>
+            <span class="sb-tag" data-kw="위험물">#위험물</span>
+            <span class="sb-tag" data-kw="IATA">#IATA</span>
+            <span class="sb-tag" data-kw="포워딩">#포워딩</span>
+            <span class="sb-tag" data-kw="미국">#미국배송</span>
+            <span class="sb-tag" data-kw="일본">#일본배송</span>
+          </div>
+        </div>
+
+        <!-- 상담 CTA -->
+        <div class="sb-cta-box">
+          <div class="sb-cta-title">궁금한 게 있으면<br/>바로 물어보세요.</div>
+          <div class="sb-cta-sub">글을 읽다가 궁금한 점은<br/>카카오톡으로 즉시 답변드립니다.</div>
+          <a href="http://pf.kakao.com/_wUvBn/chat" target="_blank" rel="noopener" class="btn btn-kk" style="width:100%;justify-content:center;font-size:.84rem;">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3C6.48 3 2 6.77 2 11.4c0 2.93 1.87 5.51 4.7 7.02L5.5 22l4.3-2.6c.72.1 1.46.16 2.2.16 5.52 0 10-3.77 10-8.4S17.52 3 12 3z"/></svg>
+            무료 상담하기
+          </a>
+        </div>
+
+      </aside>
+
+    </div>
+  </div>
+</section>
+
+<!-- CTA 밴드 -->
+<div class="cta-band">
+  <div class="wrap">
+    <div class="cta-row">
+      <div>
+        <div class="cta-copy-title">글을 읽으셨다면<br/><em>지금 바로 견적을 받아보세요.</em></div>
+        <div class="cta-copy-sub">이론보다 실제 견적이 더 중요합니다. 무료 상담으로 시작하세요.</div>
+      </div>
+      <div class="cta-btns">
+        <a href="http://pf.kakao.com/_wUvBn/chat" target="_blank" rel="noopener" class="btn btn-kk">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3C6.48 3 2 6.77 2 11.4c0 2.93 1.87 5.51 4.7 7.02L5.5 22l4.3-2.6c.72.1 1.46.16 2.2.16 5.52 0 10-3.77 10-8.4S17.52 3 12 3z"/></svg>
+          카카오톡 무료 상담
+        </a>
+        <div class="cta-copy-sub" style="text-align:center;">또는 <a href="tel:050713994075">0507-1399-4075</a></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="ft-top">
+      <div class="ft-brand">
+        <span class="ft-logo-text">투삼로지스</span>
+        <div class="ft-brand-sub">국제특송 · 위험물 운송 · 해상·항공 포워딩 전문<br/>사업자등록번호: 350-18-02252<br/>인천 계양구 당미 3길 31, 401</div>
+      </div>
+      <div>
+        <div class="ft-col-title">Services</div>
+        <div class="ft-links">
+          <a href="../express.html">국제특송</a>
+          <a href="../dangerous.html">배터리·위험물 운송</a>
+          <a href="../forwarding.html">해상·항공 포워딩</a>
+          <a href="index.html">물류 블로그</a>
+        </div>
+      </div>
+      <div>
+        <div class="ft-col-title">Contact</div>
+        <div class="ft-links">
+          <a href="tel:050713994075">0507-1399-4075</a>
+          <a href="mailto:23logis@naver.com">23logis@naver.com</a>
+          <a href="http://pf.kakao.com/_wUvBn/chat" target="_blank" rel="noopener">카카오톡 상담</a>
+          <a href="https://blog.naver.com/two3logis" target="_blank" rel="noopener">네이버 블로그</a>
+        </div>
+      </div>
+    </div>
+    <div class="ft-bottom">
+      <span>© 2025 Tosome Logis · 투삼로지스. All rights reserved.</span>
+      <span>Business No. 350-18-02252</span>
+    </div>
+  </div>
+</footer>
+
+<!-- 카카오 플로팅 -->
+<div class="kk-float">
+  <div class="kk-tip" id="kkTip">💬 지금 바로 상담 가능해요!</div>
+  <a href="http://pf.kakao.com/_wUvBn/chat" target="_blank" rel="noopener" aria-label="카카오톡 상담">
+    <svg width="30" height="30" viewBox="0 0 36 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <ellipse cx="18" cy="14.5" rx="17" ry="13.5" fill="#3A1D1D"/>
+      <path d="M8 26.5C7.2 29 5.5 31.5 4 33C6.5 31 10 28.5 11.5 27Z" fill="#3A1D1D"/>
+      <circle cx="11" cy="14.5" r="2.2" fill="#FFE500"/>
+      <circle cx="18" cy="14.5" r="2.2" fill="#FFE500"/>
+      <circle cx="25" cy="14.5" r="2.2" fill="#FFE500"/>
+    </svg>
+  </a>
+</div>
+
+<script src="../shared.js"></script>
+<script>
+/* ── 블로그 인터랙션 ─────────────────── */
+const PER = 6;
+let page = 1, cat = 'all', q = '';
+
+const cards = Array.from(document.querySelectorAll('#postGrid .bc-card'));
+
+function getVisible() {
+  return cards.filter(c => {
+    const catOk = cat === 'all' || c.dataset.cat === cat;
+    const t = (c.dataset.title || '').toLowerCase();
+    const d = c.querySelector('.bc-desc')?.textContent.toLowerCase() || '';
+    const qOk = !q || t.includes(q) || d.includes(q) || (c.dataset.cat||'').toLowerCase().includes(q);
+    return catOk && qOk;
+  });
+}
+
+function render() {
+  const vis = getVisible();
+  const total = vis.length;
+  const start = (page - 1) * PER;
+
+  cards.forEach(c => { c.style.display = 'none'; c.classList.remove('in'); });
+  vis.slice(start, start + PER).forEach((c, i) => {
+    c.style.display = '';
+    setTimeout(() => c.classList.add('in'), i * 55);
+  });
+
+  document.getElementById('shownCount').textContent = total;
+
+
+  document.getElementById('noPost').style.display = total === 0 ? 'block' : 'none';
+
+  renderPagination(total);
+}
+
+function renderPagination(total) {
+  const totalPg = Math.ceil(total / PER);
+  const pg = document.getElementById('pagination');
+  pg.style.display = totalPg <= 1 ? 'none' : 'flex';
+
+  document.querySelectorAll('#pagination [data-page]').forEach(b => b.remove());
+  const prev = document.getElementById('prevBtn');
+  const next = document.getElementById('nextBtn');
+
+  for (let i = 1; i <= Math.min(totalPg, 5); i++) {
+    const b = document.createElement('button');
+    b.className = 'pg-btn' + (i === page ? ' on' : '');
+    b.dataset.page = i;
+    b.textContent = i;
+    b.onclick = () => { page = i; render(); window.scrollTo({ top: 0, behavior: 'smooth' }); };
+    next.before(b);
+  }
+  prev.disabled = page === 1;
+  next.disabled = page >= totalPg;
+}
+
+function setCategory(c) {
+  cat = c; page = 1;
+  document.querySelectorAll('.cat-btn').forEach(b => b.classList.toggle('on', b.dataset.cat === c));
+  document.querySelectorAll('.sb-cat-item').forEach(b => b.classList.toggle('on', b.dataset.cat === c));
+  render();
+}
+
+// 필터 버튼
+document.querySelectorAll('.cat-btn').forEach(b => b.onclick = () => setCategory(b.dataset.cat));
+document.querySelectorAll('.sb-cat-item').forEach(b => b.onclick = e => {
+  e.preventDefault();
+  setCategory(b.dataset.cat);
+  window.scrollTo({ top: document.getElementById('postGrid').offsetTop - 100, behavior: 'smooth' });
+});
+
+// 검색
+let timer;
+document.getElementById('searchInput').addEventListener('input', e => {
+  clearTimeout(timer);
+  timer = setTimeout(() => { q = e.target.value.trim().toLowerCase(); page = 1; render(); }, 280);
+});
+
+// 정렬
+document.getElementById('sortSel').addEventListener('change', e => {
+  const v = e.target.value;
+  const grid = document.getElementById('postGrid');
+  [...cards].sort((a, b) => {
+    if (v === 'newest') return new Date(b.dataset.date) - new Date(a.dataset.date);
+    if (v === 'oldest') return new Date(a.dataset.date) - new Date(b.dataset.date);
+    return (a.dataset.title || '').localeCompare(b.dataset.title || '', 'ko');
+  }).forEach(c => grid.appendChild(c));
+  render();
+});
+
+// 태그
+document.querySelectorAll('.sb-tag').forEach(t => t.onclick = () => {
+  q = t.dataset.kw.toLowerCase();
+  document.getElementById('searchInput').value = t.dataset.kw;
+  cat = 'all'; page = 1;
+  setCategory('all');
+  window.scrollTo({ top: document.getElementById('searchInput').offsetTop - 80, behavior: 'smooth' });
+  render();
+});
+
+// 페이지네이션 이전/다음
+document.getElementById('prevBtn').onclick = () => { if (page > 1) { page--; render(); window.scrollTo({ top: 0, behavior: 'smooth' }); } };
+document.getElementById('nextBtn').onclick = () => { page++; render(); window.scrollTo({ top: 0, behavior: 'smooth' }); };
+
+// 초기화
+render();
+</script>
+</body>
+</html>
