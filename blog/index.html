@@ -508,7 +508,7 @@
 <script>
 /* ── 블로그 인터랙션 ─────────────────── */
 const PER = 6;
-let page = 1, cat = 'all', q = '';
+let currentPage = 1, cat = 'all', q = '';
 
 const cards = Array.from(document.querySelectorAll('#postGrid .bc-card'));
 
@@ -525,7 +525,7 @@ function getVisible() {
 function render() {
   const vis = getVisible();
   const total = vis.length;
-  const start = (page - 1) * PER;
+  const start = (currentPage - 1) * PER;
 
   cards.forEach(c => { c.style.display = 'none'; c.classList.remove('in'); });
   vis.slice(start, start + PER).forEach((c, i) => {
@@ -552,18 +552,18 @@ function renderPagination(total) {
 
   for (let i = 1; i <= Math.min(totalPg, 5); i++) {
     const b = document.createElement('button');
-    b.className = 'pg-btn' + (i === page ? ' on' : '');
+    b.className = 'pg-btn' + (i === currentPage ? ' on' : '');
     b.dataset.page = i;
     b.textContent = i;
-    b.onclick = () => { page = i; render(); window.scrollTo({ top: 0, behavior: 'smooth' }); };
+    b.onclick = () => { currentPage = i; render(); window.scrollTo({ top: 0, behavior: 'smooth' }); };
     next.before(b);
   }
-  prev.disabled = page === 1;
-  next.disabled = page >= totalPg;
+  prev.disabled = currentPage === 1;
+  next.disabled = currentPage >= totalPg;
 }
 
 function setCategory(c) {
-  cat = c; page = 1;
+  cat = c; currentPage = 1;
   document.querySelectorAll('.cat-btn').forEach(b => b.classList.toggle('on', b.dataset.cat === c));
   document.querySelectorAll('.sb-cat-item').forEach(b => b.classList.toggle('on', b.dataset.cat === c));
   render();
@@ -581,7 +581,7 @@ document.querySelectorAll('.sb-cat-item').forEach(b => b.onclick = e => {
 let timer;
 document.getElementById('searchInput').addEventListener('input', e => {
   clearTimeout(timer);
-  timer = setTimeout(() => { q = e.target.value.trim().toLowerCase(); page = 1; render(); }, 280);
+  timer = setTimeout(() => { q = e.target.value.trim().toLowerCase(); currentPage = 1; render(); }, 280);
 });
 
 // 정렬
@@ -600,15 +600,15 @@ document.getElementById('sortSel').addEventListener('change', e => {
 document.querySelectorAll('.sb-tag').forEach(t => t.onclick = () => {
   q = t.dataset.kw.toLowerCase();
   document.getElementById('searchInput').value = t.dataset.kw;
-  cat = 'all'; page = 1;
+  cat = 'all'; currentPage = 1;
   setCategory('all');
   window.scrollTo({ top: document.getElementById('searchInput').offsetTop - 80, behavior: 'smooth' });
   render();
 });
 
 // 페이지네이션 이전/다음
-document.getElementById('prevBtn').onclick = () => { if (page > 1) { page--; render(); window.scrollTo({ top: 0, behavior: 'smooth' }); } };
-document.getElementById('nextBtn').onclick = () => { page++; render(); window.scrollTo({ top: 0, behavior: 'smooth' }); };
+document.getElementById('prevBtn').onclick = () => { if (currentPage > 1) { currentPage--; render(); window.scrollTo({ top: 0, behavior: 'smooth' }); } };
+document.getElementById('nextBtn').onclick = () => { currentPage++; render(); window.scrollTo({ top: 0, behavior: 'smooth' }); };
 
 // 초기화
 render();
