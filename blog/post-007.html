@@ -88,6 +88,39 @@
   letter-spacing: 0;
 }
 .post-faq dd:last-child { margin-bottom: 0; }
+
+/* 사이드바 */
+.post-sidebar { position: sticky; top: 78px; display: flex; flex-direction: column; gap: 16px; }
+.sb-box { background: var(--w2); border: 1px solid var(--line-d); border-radius: var(--r2); padding: 20px; }
+.sb-dark { background: var(--c); border-color: transparent; }
+.sb-title {
+  font-family: var(--f-mono); font-size: .66rem; font-weight: 500;
+  letter-spacing: .14em; text-transform: uppercase;
+  color: var(--mid); margin-bottom: 12px;
+}
+.sb-dark .sb-title { color: rgba(255,255,255,.28); }
+.toc { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+.toc a {
+  font-size: .82rem; color: var(--mid);
+  transition: color var(--t); text-decoration: none;
+  display: flex; align-items: center; gap: 6px;
+}
+.toc a::before { content: ''; width: 4px; height: 4px; border-radius: 50%; background: var(--line-d); flex-shrink: 0; }
+.toc a:hover { color: var(--b); }
+.toc a:hover::before { background: var(--b); }
+.rel-list { display: flex; flex-direction: column; gap: 10px; }
+.rel-item {
+  display: flex; gap: 10px; align-items: center;
+  text-decoration: none; color: var(--ink);
+  font-size: .82rem; font-weight: 600;
+  transition: color var(--t);
+}
+.rel-item:hover { color: var(--b); }
+.rel-item::before { content: '→'; color: var(--b); font-weight: 700; flex-shrink: 0; }
+@media(max-width: 1024px) {
+  .post-sidebar { position: static; }
+}
+
 </style>
 </head>
 <body>
@@ -161,20 +194,50 @@
   <dd>품목별로 다릅니다. 일반적으로 0~8% 수준이지만, 일부 품목은 높은 세율이 적용됩니다. FTA 원산지증명서 적용 시 대부분 0~5%로 낮아집니다. HS코드를 알려주시면 세율을 미리 확인해드립니다.</dd>
 </dl>
       </article>
-      <aside class="post-sidebar">
-        <div class="sidebar-box">
+            <aside class="post-sidebar">
+
+        <!-- 목차 -->
+        <div class="sb-box">
           <div class="sb-title">목차</div>
-          <ul class="toc"><li><a href="#intro">통관이 어렵게 느껴지는 이유</a></li><li><a href="#terms">핵심 용어 정리</a></li><li><a href="#process">5단계 절차</a></li><li><a href="#fta">FTA 관세 줄이기</a></li><li><a href="#tosome">투삼로지스 통관 처리</a></li><li><a href="#faq">자주 묻는 질문</a></li></ul>
+          <ul class="toc">
+            <li><a href="#intro">통관이 어렵게 느껴지는 이유</a></li>
+            <li><a href="#terms">핵심 용어 정리</a></li>
+            <li><a href="#process">5단계 절차</a></li>
+            <li><a href="#fta">FTA 관세 줄이기</a></li>
+            <li><a href="#tosome">투삼로지스 통관 처리</a></li>
+            <li><a href="#faq">자주 묻는 질문</a></li>
+          </ul>
         </div>
-        <div class="sidebar-box" style="background:var(--c);border-color:transparent;">
-          <div class="sb-title" style="color:rgba(255,255,255,.28);">통관 대행 문의</div>
-          <p style="font-size:.82rem;color:rgba(255,255,255,.4);line-height:1.65;margin-bottom:16px;">HS코드 사전 확인 + FTA 적용 검토 + 서류 대행까지 원스톱으로 제공합니다.</p>
-          <a href="http://pf.kakao.com/_wUvBn/chat" target="_blank" rel="noopener" class="btn btn-kk" style="width:100%;justify-content:center;font-size:.82rem;"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3C6.48 3 2 6.77 2 11.4c0 2.93 1.87 5.51 4.7 7.02L5.5 22l4.3-2.6c.72.1 1.46.16 2.2.16 5.52 0 10-3.77 10-8.4S17.52 3 12 3z"/></svg>카카오톡 상담</a>
+
+        <!-- 상담 CTA -->
+        <div class="sb-box sb-dark">
+          <div class="sb-title">통관 대행 문의</div>
+          <p style="font-size:.82rem;color:rgba(255,255,255,.42);line-height:1.65;margin-bottom:16px;">HS코드 사전 확인 + FTA 적용 검토 + 서류 대행까지 원스톱으로 제공합니다.</p>
+          <a href="http://pf.kakao.com/_wUvBn/chat" target="_blank" rel="noopener" class="btn btn-kk" style="width:100%;justify-content:center;font-size:.82rem;">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3C6.48 3 2 6.77 2 11.4c0 2.93 1.87 5.51 4.7 7.02L5.5 22l4.3-2.6c.72.1 1.46.16 2.2.16 5.52 0 10-3.77 10-8.4S17.52 3 12 3z"/></svg>
+            카카오톡 상담
+          </a>
         </div>
-        <div class="sidebar-box">
+
+        <!-- 관련 서비스 -->
+        <div class="sb-box">
           <div class="sb-title">관련 서비스</div>
-          <div style="display:flex;flex-direction:column;gap:8px;"><a href="../forwarding.html" style="font-size:.82rem;color:var(--mid);display:flex;align-items:center;gap:6px;transition:color var(--t);" onmouseover="this.style.color='var(--y)'" onmouseout="this.style.color='var(--mid)'">→ 해상·항공 포워딩 서비스</a><a href="post-004.html" style="font-size:.82rem;color:var(--mid);display:flex;align-items:center;gap:6px;transition:color var(--t);" onmouseover="this.style.color='var(--y)'" onmouseout="this.style.color='var(--mid)'">→ 포워딩 업체 추천 기준</a><a href="post-009.html" style="font-size:.82rem;color:var(--mid);display:flex;align-items:center;gap:6px;transition:color var(--t);" onmouseover="this.style.color='var(--y)'" onmouseout="this.style.color='var(--mid)'">→ 광저우 LCL 수입 비용</a></div>
+          <div class="rel-list">
+            <a href="../forwarding.html" class="rel-item">해상·항공 포워딩 서비스</a>
+            <a href="../express.html" class="rel-item">국제특송 서비스</a>
+          </div>
         </div>
+
+        <!-- 연락처 -->
+        <div class="sb-box" style="background:var(--w2);">
+          <div class="sb-title">연락처</div>
+          <div style="display:flex;flex-direction:column;gap:8px;">
+            <a href="tel:050713994075" style="font-size:.83rem;color:var(--b);font-weight:700;">📞 0507-1399-4075</a>
+            <a href="mailto:23logis@naver.com" style="font-size:.82rem;color:var(--mid);">✉️ 23logis@naver.com</a>
+            <p style="font-size:.76rem;color:var(--mid);margin:4px 0 0;">평일 09:00 – 18:00</p>
+          </div>
+        </div>
+
       </aside>
     </div>
   </div>
