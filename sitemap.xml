@@ -22,7 +22,7 @@
   </url>
   <url>
     <loc>https://tosomelogis.kr/blog/index.html</loc>
-    <lastmod>2026-05-16</lastmod>
+    <lastmod>2026-05-30</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
@@ -38,6 +38,31 @@
   <url>
     <loc>https://tosomelogis.kr/blog/post-003.html</loc>
     <lastmod>2026-05-10</lastmod>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://tosomelogis.kr/blog/post-004.html</loc>
+    <lastmod>2026-05-14</lastmod>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://tosomelogis.kr/blog/post-005.html</loc>
+    <lastmod>2026-05-16</lastmod>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://tosomelogis.kr/blog/post-006.html</loc>
+    <lastmod>2026-05-19</lastmod>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://tosomelogis.kr/blog/post-007.html</loc>
+    <lastmod>2026-05-22</lastmod>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://tosomelogis.kr/blog/post-008.html</loc>
+    <lastmod>2026-05-23</lastmod>
     <priority>0.70</priority>
   </url>
 </urlset>

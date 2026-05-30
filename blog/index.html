@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
 <title>물류 블로그 — 국제특송·위험물·포워딩 정보 | 투삼로지스</title>
 <meta name="description" content="리튬배터리 해외배송, DHL vs FedEx 비교, LCL vs FCL 차이 등 실용적인 국제물류 정보를 매주 업데이트합니다."/>
-<meta name="keywords" content="국제특송 블로그,위험물 운송 정보,해상포워딩 가이드,리튬배터리 해외배송,DHL FedEx UPS 비교"/>
+<meta name="keywords" content="국제특송 블로그,위험물 운송 정보,포워딩 가이드,리튬배터리 해외배송,DHL FedEx UPS 비교"/>
 <meta property="og:title" content="투삼로지스 물류 블로그"/>
 <meta property="og:description" content="국제특송·위험물·포워딩 실용 정보 모음"/>
 <meta property="og:url" content="https://tosomelogis.kr/blog/"/>
@@ -202,6 +202,10 @@
   animation: tipin .4s var(--ease) both;
 }
 @keyframes tipin { from { opacity:0; transform:translateY(6px); } to { opacity:1; transform:none; } }
+
+
+#postGrid .bc-card { display: flex; flex-direction: column; }
+#postGrid .bc-card[style*="display: none"] { display: none !important; }
 </style>
 </head>
 <body>
@@ -249,7 +253,7 @@
       <p class="lead lead-inv" style="max-width:500px;">리튬배터리 해외발송, DHL vs FedEx 비교, LCL vs FCL 선택 기준 등<br/>실전에서 바로 쓸 수 있는 물류 정보를 매주 업데이트합니다.</p>
       <div style="display:flex;gap:32px;margin-top:32px;flex-wrap:wrap;">
         <div>
-          <div style="font-family:var(--f-dis);font-size:2.2rem;color:var(--w);letter-spacing:.03em;">11</div>
+          <div style="font-family:var(--f-dis);font-size:2.2rem;color:var(--w);letter-spacing:.03em;">8</div>
           <div style="font-family:var(--f-mono);font-size:.63rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.3);margin-top:4px;">Total Posts</div>
         </div>
         <div>
@@ -282,15 +286,16 @@
         </div>
 
         <!-- 카테고리 필터 -->
-        <div class="cat-row rev d1">
-          <button class="cat-btn on" data-cat="all">전체 <span class="cat-n">3</span></button>
-          <button class="cat-btn" data-cat="위험물 운송">위험물 운송 <span class="cat-n">1</span></button>
-          <button class="cat-btn" data-cat="해상포워딩">해상포워딩 <span class="cat-n">2</span></button>
+        <div class="cat-row">
+          <button class="cat-btn on" data-cat="all">전체 <span class="cat-n">8</span></button>
+          <button class="cat-btn" data-cat="위험물 운송">위험물 운송 <span class="cat-n">3</span></button>
+          <button class="cat-btn" data-cat="포워딩">포워딩 <span class="cat-n">4</span></button>
+          <button class="cat-btn" data-cat="국제특송">국제특송 <span class="cat-n">1</span></button>
         </div>
 
         <!-- 결과 바 -->
-        <div class="results-bar rev d2">
-          <span class="results-count"><strong id="shownCount">3</strong>개 포스트</span>
+        <div class="results-bar">
+          <span class="results-count"><strong id="shownCount">8</strong>개 포스트</span>
           <select class="sort-sel" id="sortSel" aria-label="정렬">
             <option value="newest">최신순</option>
             <option value="oldest">오래된 순</option>
@@ -307,14 +312,40 @@
             <div class="bc-body"><div class="bc-date">2025-01-15</div><div class="bc-title">리튬배터리 해외배송, 왜 거절당할까? — 합법적으로 보내는 완전 가이드</div><div class="bc-desc">DHL·FedEx·UPS가 수거를 거절하는 이유, UN3480/UN3481 구분, IATA 기준 포장 방법까지.</div><span class="bc-more">읽기 →</span></div>
           </a>
 
-                    <a href="post-003.html" class="bc-card" data-cat="해상포워딩" data-date="2026-05-10" data-title="LCL vs FCL 차이점 완벽 정리 어떤 걸 선택해야 할까">
-            <div class="bc-thumb"><img src="../images/post-003.webp" alt="LCL vs FCL" loading="lazy"/><span class="bc-cat">해상포워딩</span></div>
+                    <a href="post-003.html" class="bc-card" data-cat="포워딩" data-date="2026-05-10" data-title="LCL vs FCL 차이점 완벽 정리 어떤 걸 선택해야 할까">
+            <div class="bc-thumb"><img src="../images/post-003.webp" alt="LCL vs FCL" loading="lazy"/><span class="bc-cat">포워딩</span></div>
             <div class="bc-body"><div class="bc-date">2026-05-10</div><div class="bc-title">LCL vs FCL 차이점 완벽 정리 — 어떤 걸 선택해야 할까?</div><div class="bc-desc">소량·대량 화물 운송 방식의 차이와 비용 구조. CBM 기준 손익분기점과 선택 기준 정리.</div><span class="bc-more">읽기 →</span></div>
           </a>
 
-          <a href="post-002.html" class="bc-card" data-cat="해상포워딩" data-date="2026-05-05" data-title="심천 LCL 해상운송 후기 중국 1.8CBM 인천 수입 실전 사례">
-            <div class="bc-thumb"><img src="../images/post-002.webp" alt="심천 LCL 해상운송" loading="lazy"/><span class="bc-cat">해상포워딩</span></div>
+          <a href="post-002.html" class="bc-card" data-cat="포워딩" data-date="2026-05-05" data-title="심천 LCL 해상운송 후기 중국 1.8CBM 인천 수입 실전 사례">
+            <div class="bc-thumb"><img src="../images/post-002.webp" alt="심천 LCL 해상운송" loading="lazy"/><span class="bc-cat">포워딩</span></div>
             <div class="bc-body"><div class="bc-date">2026-05-05</div><div class="bc-title">심천 LCL 해상운송 후기 — 중국 1.8CBM 인천 수입 실전 사례</div><div class="bc-desc">알리바바 구매 전자장비를 심천에서 인천까지 5.5일 완료. 통관·원산지·비용 전 과정 공개.</div><span class="bc-more">읽기 →</span></div>
+          </a>
+
+        
+          <a href="post-004.html" class="bc-card" data-cat="포워딩" data-date="2026-05-14" data-title="포워딩 업체 추천 글 대부분은 그 업체가 직접 쓴 글 실무자가 알려주는 진짜 선택 기준 5가지">
+            <div class="bc-thumb"><img src="../images/post-004.webp" alt="중국 포워딩 업체 추천" loading="lazy"/><span class="bc-cat">포워딩</span></div>
+            <div class="bc-body"><div class="bc-date">2026-05-14</div><div class="bc-title">포워딩 업체 추천 글 대부분은 그 업체가 직접 쓴 글입니다</div><div class="bc-desc">실무자가 알려주는 중국 포워딩 업체 진짜 선택 기준 5가지. 현지 창고, 견적 오차율, LCL 실적으로 구분하는 방법.</div><span class="bc-more">읽기 →</span></div>
+          </a>
+
+          <a href="post-005.html" class="bc-card" data-cat="위험물 운송" data-date="2026-05-16" data-title="리튬배터리 항공운송 완전 가이드 UN3480 vs UN3481 Wh 계산법 PAX CAO 차이">
+            <div class="bc-thumb"><img src="../images/post-005.webp" alt="리튬배터리 항공운송" loading="lazy"/><span class="bc-cat">위험물 운송</span></div>
+            <div class="bc-body"><div class="bc-date">2026-05-16</div><div class="bc-title">리튬배터리 항공운송 완전 가이드 — UN3480 vs UN3481, Wh 계산법, PAX·CAO 차이</div><div class="bc-desc">항공사마다 기준이 다른 리튬배터리. UN 번호 구분, Wh 계산법, 여객기·화물기 탑재 기준을 실무 기준으로 정리.</div><span class="bc-more">읽기 →</span></div>
+          </a>
+
+          <a href="post-006.html" class="bc-card" data-cat="국제특송" data-date="2026-05-19" data-title="DHL vs FedEx vs UPS vs EMS 비교 2026년 실제 운임 구간별 추천">
+            <div class="bc-thumb"><img src="../images/post-006.webp" alt="DHL FedEx UPS EMS 비교" loading="lazy"/><span class="bc-cat">국제특송</span></div>
+            <div class="bc-body"><div class="bc-date">2026-05-19</div><div class="bc-title">DHL vs FedEx vs UPS vs EMS — 2026년 실제 운임 비교와 구간별 추천</div><div class="bc-desc">특송 4사 기본 특성과 구간별 추천. 대행업체 통하면 최대 80% 할인. 부피무게 계산법 포함.</div><span class="bc-more">읽기 →</span></div>
+          </a>
+
+          <a href="post-007.html" class="bc-card" data-cat="포워딩" data-date="2026-05-22" data-title="중국 수입 통관 절차 처음부터 끝까지 초보자 완전 가이드">
+            <div class="bc-thumb"><img src="../images/post-007.webp" alt="중국 수입 통관 절차" loading="lazy"/><span class="bc-cat">포워딩</span></div>
+            <div class="bc-body"><div class="bc-date">2026-05-22</div><div class="bc-title">중국 수입 통관 절차, 처음부터 끝까지 완전 정리</div><div class="bc-desc">HS코드, B/L, FTA 원산지증명서까지. 수입 통관 5단계와 관세 줄이는 방법.</div><span class="bc-more">읽기 →</span></div>
+          </a>
+
+          <a href="post-008.html" class="bc-card" data-cat="위험물 운송" data-date="2026-05-23" data-title="위험물 항공 수출 완전 가이드 2026년 IATA DGR 기준 총정리">
+            <div class="bc-thumb"><img src="../images/post-008.webp" alt="위험물 항공 수출" loading="lazy"/><span class="bc-cat">위험물 운송</span></div>
+            <div class="bc-body"><div class="bc-date">2026-05-23</div><div class="bc-title">위험물 항공 수출 완전 가이드 — 2026년 IATA DGR 기준 총정리</div><div class="bc-desc">위험물 Class 1~9 분류, 수출 절차 5단계, 2026년 IATA DGR 개정사항. 투삼로지스 처리 실적 포함.</div><span class="bc-more">읽기 →</span></div>
           </a>
 
         </div><!-- /postGrid -->
@@ -340,14 +371,15 @@
       </div><!-- /left -->
 
       <!-- ═══ 사이드바 ═══ -->
-      <aside class="sidebar rev d2">
+      <aside class="sidebar">
 
         <!-- 카테고리 -->
         <div class="sb-card">
           <div class="sb-head">카테고리</div>
-          <a class="sb-cat-item on" data-cat="all" href="#" onclick="return false;">전체 <span class="sb-badge">3</span></a>
-          <a class="sb-cat-item" data-cat="위험물 운송" href="#" onclick="return false;">🔋 위험물 운송 <span class="sb-badge">1</span></a>
-          <a class="sb-cat-item" data-cat="해상포워딩" href="#" onclick="return false;">🚢 해상포워딩 <span class="sb-badge">2</span></a>
+          <a class="sb-cat-item on" data-cat="all" href="#" onclick="return false;">전체 <span class="sb-badge">8</span></a>
+          <a class="sb-cat-item" data-cat="위험물 운송" href="#" onclick="return false;">🔋 위험물 운송 <span class="sb-badge">3</span></a>
+          <a class="sb-cat-item" data-cat="포워딩" href="#" onclick="return false;">🚢 포워딩 <span class="sb-badge">4</span></a>
+          <a class="sb-cat-item" data-cat="국제특송" href="#" onclick="return false;">✈️ 국제특송 <span class="sb-badge">1</span></a>
         </div>
 
         <!-- 태그 클라우드 -->
@@ -455,6 +487,26 @@
 </div>
 
 <script src="../shared.js"></script>
+<script>
+/* shared.js fallback for local testing */
+(function(){
+  var burger = document.getElementById('burger');
+  var drawer = document.getElementById('drawer');
+  if(burger && drawer){
+    burger.addEventListener('click', function(){
+      drawer.classList.toggle('open');
+    });
+  }
+  /* nav scroll */
+  var nav = document.getElementById('nav');
+  if(nav){
+    window.addEventListener('scroll', function(){
+      nav.classList.toggle('scrolled', window.scrollY > 10);
+    });
+  }
+})();
+</script>
+
 <script>
 /* ── 블로그 인터랙션 ─────────────────── */
 const PER = 6;
