@@ -796,7 +796,7 @@ function renderPagination(total) {
     b.className = 'pg-btn' + (i === currentPage ? ' on' : '');
     b.dataset.page = i;
     b.textContent = i;
-    b.onclick = () => { currentPage = i; render(); window.scrollTo({ top: 0, behavior: 'smooth' }); };
+    b.onclick = () => { currentPage = i; render(); window.scrollTo({ top: document.getElementById('postGrid').offsetTop - 100, behavior: 'smooth' }); };
     next.before(b);
   }
   prev.disabled = currentPage === 1;
@@ -848,8 +848,8 @@ document.querySelectorAll('.sb-tag').forEach(t => t.onclick = () => {
 });
 
 // 페이지네이션 이전/다음
-document.getElementById('prevBtn').onclick = () => { if (currentPage > 1) { currentPage--; render(); window.scrollTo({ top: 0, behavior: 'smooth' }); } };
-document.getElementById('nextBtn').onclick = () => { currentPage++; render(); window.scrollTo({ top: 0, behavior: 'smooth' }); };
+document.getElementById('prevBtn').onclick = () => { if (currentPage > 1) { currentPage--; render(); window.scrollTo({ top: document.getElementById('postGrid').offsetTop - 100, behavior: 'smooth' }); } };
+document.getElementById('nextBtn').onclick = () => { currentPage++; render(); window.scrollTo({ top: document.getElementById('postGrid').offsetTop - 100, behavior: 'smooth' }); };
 
 // 초기화
 render();
