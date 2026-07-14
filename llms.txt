@@ -1,0 +1,32 @@
+# Tosome Logis (투삼로지스)
+
+> Freight forwarder and international courier agent based in Incheon, South Korea. Specializes in lithium battery and dangerous goods shipping, small-lot LCL sea freight (from 0.1 CBM), and single-box international courier (DHL/FedEx/UPS/EMS agent). No minimum order. Ships worldwide from Korea, and handles imports into Korea from China, Vietnam, and other countries.
+
+## Company
+
+- Business name: Tosome Logis (투삼로지스)
+- Address: 401, 3-gil 31, Dangmi-ro, Gyeyang-gu, Incheon, South Korea
+- Business registration number: 350-18-02252
+- Phone: +82-507-1399-4075
+- Email: 23logis@naver.com
+- Languages: Korean (primary), English
+
+## Core services
+
+- International courier (DHL/FedEx/UPS/EMS agent, discounted rates): https://tosomelogis.kr/express.html | https://tosomelogis.kr/en/express.html
+- Dangerous goods & lithium battery shipping (IATA DGR compliant, UN number classification, MSDS/DGD preparation): https://tosomelogis.kr/dangerous.html | https://tosomelogis.kr/en/dangerous.html
+- Sea & air freight forwarding (LCL from 0.1 CBM, FCL, customs clearance): https://tosomelogis.kr/forwarding.html | https://tosomelogis.kr/en/forwarding.html
+
+## Blog (logistics guides, Korean + English)
+
+- Korean blog index (26 posts): https://tosomelogis.kr/blog/
+- English blog index (26 posts): https://tosomelogis.kr/en/blog/
+- Topics include: lithium battery air/sea shipping rules, dangerous goods documentation (MSDS, UN numbers), LCL vs FCL comparison, country-specific export/import guides (China, Vietnam, Japan, India, USA), courier cost comparisons (DHL/FedEx/UPS/EMS), export packing, freight forwarding quote guides.
+
+## Sitemap
+
+https://tosomelogis.kr/sitemap.xml
+
+## Contact / quote requests
+
+Preferred: KakaoTalk (http://pf.kakao.com/_wUvBn/chat) or email (23logis@naver.com). Website contact forms available on every page.
