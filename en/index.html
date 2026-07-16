@@ -972,7 +972,7 @@ document.getElementById('cf').addEventListener('submit', function(e) {
   const m = document.getElementById('cf-msg');
   fetch(this.action, { method:'POST', body:new FormData(this), headers:{'Accept':'application/json'} })
     .then(r => {
-      if (r.ok) { m.textContent = '✓ Your inquiry has been received. We\'ll get back to you shortly.'; m.style.display='block'; this.style.display='none'; }
+      if (r.ok) { gtag('event', 'form_submit', { form_id: 'cf' }); m.textContent = '✓ Your inquiry has been received. We\'ll get back to you shortly.'; m.style.display='block'; this.style.display='none'; }
       else       { m.textContent = 'There was an error sending your message. Please contact us via KakaoTalk.'; m.style.display='block'; }
     }).catch(() => { m.textContent = 'A temporary error occurred. Please contact us via KakaoTalk.'; m.style.display='block'; });
 });

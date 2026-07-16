@@ -973,7 +973,7 @@ document.getElementById('cf').addEventListener('submit', function(e) {
   const m = document.getElementById('cf-msg');
   fetch(this.action, { method:'POST', body:new FormData(this), headers:{'Accept':'application/json'} })
     .then(r => {
-      if (r.ok) { m.textContent = '✓ 문의가 접수됐습니다. 빠르게 답변드리겠습니다.'; m.style.display='block'; this.style.display='none'; }
+      if (r.ok) { gtag('event', 'form_submit', { form_id: 'cf' }); m.textContent = '✓ 문의가 접수됐습니다. 빠르게 답변드리겠습니다.'; m.style.display='block'; this.style.display='none'; }
       else       { m.textContent = '전송 오류입니다. 카카오톡으로 문의해주세요.'; m.style.display='block'; }
     }).catch(() => { m.textContent = '일시적 오류입니다. 카카오톡으로 문의해주세요.'; m.style.display='block'; });
 });

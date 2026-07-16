@@ -47,3 +47,14 @@ document.querySelectorAll('.faq-q').forEach(btn => {
 // ── KAKAO TIP ────────────────────────────
 const tip = document.getElementById('kkTip');
 if (tip) setTimeout(() => { tip.style.opacity = '0'; tip.style.transition = 'opacity .4s'; setTimeout(() => tip.remove(), 400); }, 5000);
+
+// ── GA4: 카카오채널 클릭 추적 ────────────
+document.addEventListener('click', function (e) {
+  const a = e.target.closest('a[href*="pf.kakao.com"]');
+  if (a && typeof gtag === 'function') {
+    gtag('event', 'kakao_channel_click', {
+      link_url: a.href,
+      page_location: location.href
+    });
+  }
+});
