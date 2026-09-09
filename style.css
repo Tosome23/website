@@ -100,6 +100,32 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .nav-links a:hover  { color: var(--b); background: var(--b3); }
 .nav-links a.active { color: var(--b); font-weight: 700; }
 
+/* ── NAV DROPDOWN (호버 서브메뉴) ── */
+.nav-links li.has-dd { position: relative; }
+.nav-dd {
+  position: absolute; top: 100%; left: -8px;
+  background: var(--w); border: 1px solid var(--line-d); border-radius: var(--r2);
+  box-shadow: 0 18px 44px rgba(13,42,74,.16);
+  padding: 8px; min-width: 190px;
+  opacity: 0; visibility: hidden; pointer-events: none;
+  transition: opacity .18s var(--ease), visibility .18s;
+  z-index: 20;
+}
+.nav-links li.has-dd:hover .nav-dd {
+  opacity: 1; visibility: visible; pointer-events: auto;
+}
+.nav-dd a {
+  display: block; padding: 9px 14px; border-radius: 7px;
+  font-size: .82rem; font-weight: 600; color: var(--ink);
+  white-space: nowrap; transition: all var(--t);
+}
+.nav-dd a:hover { color: var(--b); background: var(--b3); }
+.nav-dd-tag {
+  display: block; font-family: var(--f-mono); font-size: .6rem;
+  letter-spacing: .08em; text-transform: uppercase; color: var(--mid);
+  padding: 6px 14px 2px;
+}
+
 .nav-cta {
   margin-left: 16px; flex-shrink: 0;
   display: inline-flex; align-items: center; gap: 7px;
@@ -406,6 +432,32 @@ footer {
   transition: gap var(--t);
 }
 .bc-card:hover .bc-more { gap: 9px; }
+
+/* ── COMPARE / MODE CARDS (비교 2열 카드, 모드/구간 정보 카드 — forwarding.html, routes/*.html 공용) ── */
+.compare-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:44px;}
+.cmp-card{border-radius:var(--r2);border:1px solid var(--line-d);padding:32px;background:var(--w);transition:all var(--t) var(--ease);}
+.cmp-card:hover{box-shadow:0 18px 52px rgba(13,42,74,.1);transform:translateY(-4px);border-color:transparent;}
+.cmp-card.featured{background:var(--c);border-color:var(--y);box-shadow:0 0 0 1px var(--y);}
+.cmp-badge{display:inline-flex;align-items:center;gap:6px;font-family:var(--f-mono);font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;color:var(--y);background:var(--y-dim);border:1px solid rgba(245,200,66,.22);padding:4px 12px;border-radius:100px;margin-bottom:16px;}
+.cmp-title{font-size:1.5rem;font-weight:900;color:var(--c);letter-spacing:-.03em;margin-bottom:8px;}
+.cmp-card.featured .cmp-title{color:var(--w);}
+.cmp-sub{font-size:.82rem;color:var(--mid);line-height:1.6;margin-bottom:18px;}
+.cmp-card.featured .cmp-sub{color:rgba(255,255,255,.45);}
+.cmp-list{display:flex;flex-direction:column;gap:9px;}
+.cmp-item{display:flex;align-items:center;gap:10px;font-size:.83rem;color:var(--mid);}
+.cmp-card.featured .cmp-item{color:rgba(255,255,255,.5);}
+.cmp-dot{width:6px;height:6px;border-radius:50%;background:var(--y);flex-shrink:0;}
+.mode-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:44px;}
+.mode-card{border-radius:var(--r2);border:1px solid var(--line-d);padding:28px;background:var(--w);transition:all var(--t) var(--ease);}
+.mode-card:hover{box-shadow:0 18px 52px rgba(13,42,74,.1);transform:translateY(-4px);border-color:transparent;}
+.mode-icon{font-size:2rem;margin-bottom:14px;}
+.mode-name{font-size:1rem;font-weight:900;color:var(--c);letter-spacing:-.02em;margin-bottom:8px;}
+.mode-desc{font-size:.82rem;color:var(--mid);line-height:1.65;margin-bottom:16px;}
+.mode-specs{display:flex;flex-direction:column;gap:8px;}
+.mode-spec{display:flex;justify-content:space-between;align-items:center;padding:9px 12px;background:var(--w2);border-radius:8px;border:1px solid var(--line-d);}
+.mode-spec-k{font-family:var(--f-mono);font-size:.68rem;letter-spacing:.06em;text-transform:uppercase;color:var(--mid);}
+.mode-spec-v{font-size:.82rem;font-weight:700;color:var(--c);}
+@media(max-width:768px){.compare-grid,.mode-grid{grid-template-columns:1fr;}}
 
 /* ── POST ───────────────────────────────── */
 .post-wrap { display: grid; grid-template-columns: 1fr 280px; gap: 60px; align-items: start; }

@@ -21,6 +21,56 @@
     <priority>0.90</priority>
   </url>
   <url>
+    <loc>https://tosomelogis.kr/guides/index.html</loc>
+    <lastmod>2026-09-09</lastmod>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://tosomelogis.kr/guides/australia-tariff.html</loc>
+    <lastmod>2026-08-31</lastmod>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://tosomelogis.kr/guides/canada-tariff.html</loc>
+    <lastmod>2026-08-31</lastmod>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://tosomelogis.kr/guides/china-tariff.html</loc>
+    <lastmod>2026-08-31</lastmod>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://tosomelogis.kr/guides/germany-tariff.html</loc>
+    <lastmod>2026-08-31</lastmod>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://tosomelogis.kr/guides/japan-tariff.html</loc>
+    <lastmod>2026-08-31</lastmod>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://tosomelogis.kr/guides/spain-tariff.html</loc>
+    <lastmod>2026-08-31</lastmod>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://tosomelogis.kr/guides/uk-tariff.html</loc>
+    <lastmod>2026-08-31</lastmod>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://tosomelogis.kr/guides/usa-tariff.html</loc>
+    <lastmod>2026-08-31</lastmod>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://tosomelogis.kr/guides/vietnam-tariff.html</loc>
+    <lastmod>2026-08-31</lastmod>
+    <priority>0.70</priority>
+  </url>
+  <url>
     <loc>https://tosomelogis.kr/blog/index.html</loc>
     <lastmod>2026-08-29</lastmod>
     <priority>0.80</priority>
@@ -209,6 +259,56 @@
     <loc>https://tosomelogis.kr/en/forwarding.html</loc>
     <lastmod>2026-07-12</lastmod>
     <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://tosomelogis.kr/en/guides/index.html</loc>
+    <lastmod>2026-09-09</lastmod>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://tosomelogis.kr/en/guides/australia-tariff.html</loc>
+    <lastmod>2026-08-31</lastmod>
+    <priority>0.65</priority>
+  </url>
+  <url>
+    <loc>https://tosomelogis.kr/en/guides/canada-tariff.html</loc>
+    <lastmod>2026-08-31</lastmod>
+    <priority>0.65</priority>
+  </url>
+  <url>
+    <loc>https://tosomelogis.kr/en/guides/china-tariff.html</loc>
+    <lastmod>2026-08-31</lastmod>
+    <priority>0.65</priority>
+  </url>
+  <url>
+    <loc>https://tosomelogis.kr/en/guides/germany-tariff.html</loc>
+    <lastmod>2026-08-31</lastmod>
+    <priority>0.65</priority>
+  </url>
+  <url>
+    <loc>https://tosomelogis.kr/en/guides/japan-tariff.html</loc>
+    <lastmod>2026-08-31</lastmod>
+    <priority>0.65</priority>
+  </url>
+  <url>
+    <loc>https://tosomelogis.kr/en/guides/spain-tariff.html</loc>
+    <lastmod>2026-08-31</lastmod>
+    <priority>0.65</priority>
+  </url>
+  <url>
+    <loc>https://tosomelogis.kr/en/guides/uk-tariff.html</loc>
+    <lastmod>2026-08-31</lastmod>
+    <priority>0.65</priority>
+  </url>
+  <url>
+    <loc>https://tosomelogis.kr/en/guides/usa-tariff.html</loc>
+    <lastmod>2026-08-31</lastmod>
+    <priority>0.65</priority>
+  </url>
+  <url>
+    <loc>https://tosomelogis.kr/en/guides/vietnam-tariff.html</loc>
+    <lastmod>2026-08-31</lastmod>
+    <priority>0.65</priority>
   </url>
   <url>
     <loc>https://tosomelogis.kr/en/blog/</loc>

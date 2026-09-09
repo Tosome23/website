@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-TV1GFFHDQ1"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-TV1GFFHDQ1');</script>
+<meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>국가별 관세가이드 — 특송 수입관세·통관 완전정리 | 투삼로지스</title>
+<meta name="description" content="미국·중국·일본·베트남·독일·캐나다·호주·스페인·영국, 한국에서 특송으로 보낼 때 현지에서 부과되는 관세·부가세 기준을 국가별로 정리했습니다. 2026년 최신 규정 반영."/>
+<link rel="icon" href="../images/favicon.png"/>
+<link rel="canonical" href="https://tosomelogis.kr/guides/"/>
+<link rel="alternate" hreflang="ko" href="https://tosomelogis.kr/guides/"/>
+<link rel="alternate" hreflang="en" href="https://tosomelogis.kr/en/guides/"/>
+<link rel="alternate" hreflang="x-default" href="https://tosomelogis.kr/guides/"/>
+<meta property="og:title" content="국가별 관세가이드 | 투삼로지스"/>
+<meta property="og:description" content="미국·중국·일본·베트남·독일·캐나다·호주·스페인·영국 특송 수입관세 기준을 국가별로 확인하세요."/>
+<meta property="og:url" content="https://tosomelogis.kr/guides/"/>
+<meta property="og:type" content="website"/>
+<meta property="og:image" content="https://tosomelogis.kr/images/express.webp"/>
+<meta name="keywords" content="국가별관세,해외관세,특송관세,미국관세,중국관세,일본관세,베트남관세,독일관세,캐나다관세,호주관세,스페인관세,영국관세,투삼로지스"/>
+
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "홈", "item": "https://tosomelogis.kr/" },
+    { "@type": "ListItem", "position": 2, "name": "국가별 관세가이드", "item": "https://tosomelogis.kr/guides/" }
+  ]
+}</script>
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "url": "https://tosomelogis.kr/guides/usa-tariff.html", "name": "미국 관세가이드" },
+    { "@type": "ListItem", "position": 2, "url": "https://tosomelogis.kr/guides/china-tariff.html", "name": "중국 관세가이드" },
+    { "@type": "ListItem", "position": 3, "url": "https://tosomelogis.kr/guides/japan-tariff.html", "name": "일본 관세가이드" },
+    { "@type": "ListItem", "position": 4, "url": "https://tosomelogis.kr/guides/vietnam-tariff.html", "name": "베트남 관세가이드" },
+    { "@type": "ListItem", "position": 5, "url": "https://tosomelogis.kr/guides/germany-tariff.html", "name": "독일(EU) 관세가이드" },
+    { "@type": "ListItem", "position": 6, "url": "https://tosomelogis.kr/guides/canada-tariff.html", "name": "캐나다 관세가이드" },
+    { "@type": "ListItem", "position": 7, "url": "https://tosomelogis.kr/guides/australia-tariff.html", "name": "호주 관세가이드" },
+    { "@type": "ListItem", "position": 8, "url": "https://tosomelogis.kr/guides/spain-tariff.html", "name": "스페인(EU) 관세가이드" },
+    { "@type": "ListItem", "position": 9, "url": "https://tosomelogis.kr/guides/uk-tariff.html", "name": "영국 관세가이드" }
+  ]
+}</script>
+
+<link rel="stylesheet" href="../style.css"/>
+<style>
+.cat-row { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 26px; }
+.cat-btn {
+  padding: 7px 16px; border-radius: 100px;
+  font-family: var(--f-mono); font-size: .68rem;
+  letter-spacing: .06em; text-transform: uppercase;
+  border: 1.5px solid var(--line-d);
+  color: var(--mid); background: var(--w);
+  cursor: pointer; transition: all var(--t) var(--ease);
+}
+.cat-btn:hover { border-color: var(--b); color: var(--b); }
+.cat-btn.on { background: var(--b); color: #fff; border-color: var(--b); }
+.cat-n {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 17px; height: 17px; border-radius: 50%;
+  font-size: .6rem; font-weight: 700; margin-left: 4px;
+  background: rgba(255,255,255,.25);
+}
+.cat-btn:not(.on) .cat-n { background: var(--w2); color: var(--mid); }
+
+.results-bar { display: flex; align-items: center; justify-content: space-between; margin-bottom: 18px; flex-wrap: wrap; gap: 10px; }
+.results-count { font-family: var(--f-mono); font-size: .74rem; color: var(--mid); }
+.results-count strong { color: var(--ink); font-weight: 700; }
+
+.route-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 18px; }
+.route-grid .bc-card { display: flex; flex-direction: column; }
+.route-grid .bc-card[style*="display: none"] { display: none !important; }
+.route-grid .bc-flag { font-size: 1.5rem; margin-bottom: 10px; }
+@media (max-width: 900px) { .route-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 640px) { .route-grid { grid-template-columns: 1fr; } }
+
+.no-route { display: none; text-align: center; padding: 60px 20px; color: var(--mid); }
+.no-route-ico { font-size: 2.5rem; margin-bottom: 12px; }
+
+.guide-note { background: var(--b3); border: 1px solid rgba(26,110,186,.15); border-radius: var(--r2); padding: 22px 26px; margin-bottom: 36px; font-size: .86rem; color: var(--c2); line-height: 1.75; }
+.guide-note strong { color: var(--b); }
+
+.flag-ic{width:30px;height:20px;border-radius:3px;box-shadow:0 0 0 1px rgba(13,42,74,.1);display:block;flex-shrink:0}
+.bc-flag{display:flex;margin-bottom:10px}
+.service-row-ic .flag-ic{width:20px;height:13.3px;box-shadow:0 0 0 1px rgba(255,255,255,.15)}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">본문 바로가기</a>
+
+<!-- NAV -->
+<header id="nav">
+  <div class="nav-wrap">
+    <a href="../index.html" class="nav-logo"><img src="../images/logo2.png" alt="투삼로지스"/></a>
+    <nav aria-label="주 메뉴"><ul class="nav-links">
+      <li><a href="../index.html">홈</a></li>
+      <li class="has-dd"><a href="../express.html">국제특송</a><div class="nav-dd"><a href="../express.html">서비스 소개</a><a href="../guides/index.html">국가별 관세가이드</a></div></li>
+      <li><a href="../dangerous.html">위험물 운송</a></li>
+      <li><a href="../forwarding.html">해상·항공 포워딩</a></li>
+      <li><a href="../blog/index.html">블로그</a></li>    </ul></nav>
+    <a href="http://pf.kakao.com/_wUvBn/chat" target="_blank" rel="noopener" class="nav-cta">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3C6.48 3 2 6.77 2 11.4c0 2.93 1.87 5.51 4.7 7.02L5.5 22l4.3-2.6c.72.1 1.46.16 2.2.16 5.52 0 10-3.77 10-8.4S17.52 3 12 3z"/></svg>
+      카카오 상담
+    </a>
+    <a href="../en/guides/index.html" class="nav-lang" style="display:inline-flex;align-items:center;padding:6px 10px;border-radius:7px;font-size:.8rem;font-weight:600;color:var(--mid);border:1px solid var(--line-d);white-space:nowrap;margin-left:10px;transition:all .2s;" onmouseover="this.style.borderColor='var(--b)';this.style.color='var(--b)'" onmouseout="this.style.borderColor='var(--line-d)';this.style.color='var(--mid)'"><img src="../images/flag-us.png" alt="US" width="16" height="16" style="display:inline-block;vertical-align:-3px;margin-right:5px;border-radius:3px;" aria-hidden="true"/>EN</a>
+    <button class="nav-burger" id="burger" aria-label="메뉴"><span></span><span></span><span></span></button>
+  </div>
+  <nav class="nav-drawer" id="drawer">
+    <a href="../index.html">홈</a>
+    <a href="../express.html">국제특송</a>
+    <a href="../dangerous.html">위험물 운송</a>
+    <a href="../forwarding.html">해상·항공 포워딩</a>
+    <a href="../blog/index.html">블로그</a>
+    <a href="../en/guides/index.html"><img src="../images/flag-us.png" alt="US" width="16" height="16" style="display:inline-block;vertical-align:-3px;margin-right:5px;border-radius:3px;" aria-hidden="true"/>English (EN)</a>
+    <a href="http://pf.kakao.com/_wUvBn/chat" target="_blank" rel="noopener" class="nav-drawer-btn">카카오톡 무료 상담</a>
+  </nav>
+</header>
+
+<main id="main">
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="hero-mesh"></div>
+  <div class="hero-grid"></div>
+  <div class="wrap">
+    <div class="page-hero-body">
+      <nav class="bc"><a href="../index.html">홈</a><span class="bc-sep">›</span><a href="../express.html">국제특송</a><span class="bc-sep">›</span><span>국가별 관세가이드</span></nav>
+      <div class="lbl lbl-inv">Country Tariff Guides</div>
+      <h1 class="h2 h2-inv" style="font-size:clamp(2.2rem,5vw,3.6rem);margin-top:8px;">국가별 관세,<br/><em>보내기 전에 확인하세요.</em></h1>
+      <div class="rule" style="margin:20px 0; background:var(--y);"></div>
+      <p class="lead lead-inv" style="max-width:560px;">한국에서 특송으로 보낼 때 <strong style="color:var(--w)">현지에서 부과되는</strong> 관세·부가세 기준을 국가별로 정리했습니다. 소액면세 폐지·정액관세 신설 등 2026년 최신 규정을 반영합니다.</p>
+      <div style="display:flex;gap:32px;margin-top:32px;flex-wrap:wrap;">
+        <div>
+          <div style="font-family:var(--f-dis);font-size:2.2rem;color:var(--w);letter-spacing:.03em;">9</div>
+          <div style="font-family:var(--f-mono);font-size:.63rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.3);margin-top:4px;">Total Guides</div>
+        </div>
+        <div>
+          <div style="font-family:var(--f-dis);font-size:2.2rem;color:var(--y);letter-spacing:.03em;">4</div>
+          <div style="font-family:var(--f-mono);font-size:.63rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.3);margin-top:4px;">Regions</div>
+        </div>
+        <div>
+          <div style="font-family:var(--f-dis);font-size:2.2rem;color:var(--w);letter-spacing:.03em;">2026.08</div>
+          <div style="font-family:var(--f-mono);font-size:.63rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.3);margin-top:4px;">Updated</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 가이드 목록 -->
+<section class="sec" style="background:var(--w2);">
+  <div class="wrap">
+
+    <div class="guide-note">
+      💡 <strong>이 가이드는 한국에서 해당 국가로 특송을 보낼 때, 그 나라 세관이 수취인에게 부과하는 관세·부가세 기준</strong>을 다룹니다. 한국으로 물건을 들여올 때 적용되는 국내 수입관세와는 다른 내용이니 참고해 주세요.
+    </div>
+
+    <div class="cat-row">
+      <button class="cat-btn on" data-cat="all">전체 <span class="cat-n">9</span></button>
+      <button class="cat-btn" data-cat="asia">아시아 <span class="cat-n">3</span></button>
+      <button class="cat-btn" data-cat="namerica">북미 <span class="cat-n">2</span></button>
+      <button class="cat-btn" data-cat="europe">유럽 <span class="cat-n">3</span></button>
+      <button class="cat-btn" data-cat="oceania">오세아니아 <span class="cat-n">1</span></button>
+    </div>
+
+    <div class="results-bar">
+      <span class="results-count"><strong id="shownCount">9</strong>개 국가</span>
+    </div>
+
+    <div class="route-grid" id="routeGrid">
+
+      <a href="usa-tariff.html" class="bc-card" data-cat="namerica">
+        <div class="bc-body">
+          <div class="bc-flag"><svg class="flag-ic" viewBox="0 0 30 20" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true"><rect width="30" height="20" fill="#B22234"/><g fill="#fff"><rect y="1.54" width="30" height="1.54"/><rect y="4.62" width="30" height="1.54"/><rect y="7.69" width="30" height="1.54"/><rect y="10.77" width="30" height="1.54"/><rect y="13.85" width="30" height="1.54"/><rect y="16.92" width="30" height="1.54"/></g><rect width="12" height="10.77" fill="#3C3B6E"/></svg></div>
+          <div class="bc-cat-inline">01 · 북미</div>
+          <div class="bc-title">미국 관세가이드</div>
+          <div class="bc-desc">소액면세($800) 폐지 · 한국산 관세 15%</div>
+          <span class="bc-more">자세히 보기 →</span>
+        </div>
+      </a>
+
+      <a href="china-tariff.html" class="bc-card" data-cat="asia">
+        <div class="bc-body">
+          <div class="bc-flag"><svg class="flag-ic" viewBox="0 0 30 20" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true"><rect width="30" height="20" fill="#DE2910"/><polygon points="6,3 7.2,6.6 11,6.6 7.9,8.8 9.1,12.4 6,10.2 2.9,12.4 4.1,8.8 1,6.6 4.8,6.6" fill="#FFDE00"/><circle cx="12.5" cy="2.2" r="0.7" fill="#FFDE00"/><circle cx="14" cy="4.3" r="0.7" fill="#FFDE00"/><circle cx="14" cy="7" r="0.7" fill="#FFDE00"/><circle cx="12.5" cy="9" r="0.7" fill="#FFDE00"/></svg></div>
+          <div class="bc-cat-inline">02 · 아시아</div>
+          <div class="bc-title">중국 관세가이드</div>
+          <div class="bc-desc">CBEC 단건 5,000위안 · 연 26,000위안 한도</div>
+          <span class="bc-more">자세히 보기 →</span>
+        </div>
+      </a>
+
+      <a href="japan-tariff.html" class="bc-card" data-cat="asia">
+        <div class="bc-body">
+          <div class="bc-flag"><svg class="flag-ic" viewBox="0 0 30 20" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true"><rect width="30" height="20" fill="#fff"/><circle cx="15" cy="10" r="6" fill="#BC002D"/></svg></div>
+          <div class="bc-cat-inline">03 · 아시아</div>
+          <div class="bc-title">일본 관세가이드</div>
+          <div class="bc-desc">과세가격 1만엔 이하 면제 · 가죽·편직의류 예외</div>
+          <span class="bc-more">자세히 보기 →</span>
+        </div>
+      </a>
+
+      <a href="vietnam-tariff.html" class="bc-card" data-cat="asia">
+        <div class="bc-body">
+          <div class="bc-flag"><svg class="flag-ic" viewBox="0 0 30 20" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true"><rect width="30" height="20" fill="#DA251D"/><polygon points="15,4 16.76,9.53 22.57,9.53 17.9,12.94 19.66,18.47 15,15.06 10.34,18.47 12.1,12.94 7.43,9.53 13.24,9.53" fill="#FFCD00"/></svg></div>
+          <div class="bc-cat-inline">04 · 아시아</div>
+          <div class="bc-title">베트남 관세가이드</div>
+          <div class="bc-desc">관세 면제 100만동 유지 · 부가세는 전액 과세</div>
+          <span class="bc-more">자세히 보기 →</span>
+        </div>
+      </a>
+
+      <a href="germany-tariff.html" class="bc-card" data-cat="europe">
+        <div class="bc-body">
+          <div class="bc-flag"><svg class="flag-ic" viewBox="0 0 30 20" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true"><rect width="30" height="6.67" fill="#000"/><rect y="6.67" width="30" height="6.67" fill="#DD0000"/><rect y="13.33" width="30" height="6.67" fill="#FFCE00"/></svg></div>
+          <div class="bc-cat-inline">05 · 유럽</div>
+          <div class="bc-title">독일(EU) 관세가이드</div>
+          <div class="bc-desc">2026.7 시행 · 품목당 3유로 정액관세 신설</div>
+          <span class="bc-more">자세히 보기 →</span>
+        </div>
+      </a>
+
+      <a href="canada-tariff.html" class="bc-card" data-cat="namerica">
+        <div class="bc-body">
+          <div class="bc-flag"><svg class="flag-ic" viewBox="0 0 30 20" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true"><rect width="30" height="20" fill="#fff"/><rect width="7.5" height="20" fill="#FF0000"/><rect x="22.5" width="7.5" height="20" fill="#FF0000"/><path d="M15 4.5l0.9 2.2 2.3-0.9-0.8 2.3 2.3 0.7-2.1 1.2 0.9 2.2-2.3-0.6-0.2 2.4-1-2.2-1 2.2-0.2-2.4-2.3 0.6 0.9-2.2-2.1-1.2 2.3-0.7-0.8-2.3 2.3 0.9z" fill="#FF0000"/></svg></div>
+          <div class="bc-cat-inline">06 · 북미</div>
+          <div class="bc-title">캐나다 관세가이드</div>
+          <div class="bc-desc">한국발은 CAD $20 기준 · CUSMA $150은 미·멕 전용</div>
+          <span class="bc-more">자세히 보기 →</span>
+        </div>
+      </a>
+
+      <a href="australia-tariff.html" class="bc-card" data-cat="oceania">
+        <div class="bc-body">
+          <div class="bc-flag"><svg class="flag-ic" viewBox="0 0 30 20" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true"><rect width="30" height="20" fill="#00247D"/><rect width="15" height="10" fill="#00247D"/><path d="M0,0 L15,10 M15,0 L0,10" stroke="#fff" stroke-width="2"/><path d="M0,0 L15,10 M15,0 L0,10" stroke="#CF142B" stroke-width="1"/><path d="M7.5,0 V10 M0,5 H15" stroke="#fff" stroke-width="3"/><path d="M7.5,0 V10 M0,5 H15" stroke="#CF142B" stroke-width="1.8"/><circle cx="7.5" cy="15.5" r="1.7" fill="#fff"/><circle cx="22" cy="6" r="1" fill="#fff"/><circle cx="25.5" cy="10" r="1.3" fill="#fff"/><circle cx="21" cy="13.5" r="1" fill="#fff"/><circle cx="25" cy="16" r="0.8" fill="#fff"/><circle cx="19" cy="9.5" r="0.7" fill="#fff"/></svg></div>
+          <div class="bc-cat-inline">07 · 오세아니아</div>
+          <div class="bc-title">호주 관세가이드</div>
+          <div class="bc-desc">관세는 면제, GST 10%는 금액과 무관하게 부과</div>
+          <span class="bc-more">자세히 보기 →</span>
+        </div>
+      </a>
+
+      <a href="spain-tariff.html" class="bc-card" data-cat="europe">
+        <div class="bc-body">
+          <div class="bc-flag"><svg class="flag-ic" viewBox="0 0 30 20" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true"><rect width="30" height="20" fill="#AA151B"/><rect y="5" width="30" height="10" fill="#F1BF00"/></svg></div>
+          <div class="bc-cat-inline">08 · 유럽</div>
+          <div class="bc-title">스페인(EU) 관세가이드</div>
+          <div class="bc-desc">품목당 3유로 정액관세 · IOSS 등록 여부로 수수료 갈림</div>
+          <span class="bc-more">자세히 보기 →</span>
+        </div>
+      </a>
+
+      <a href="uk-tariff.html" class="bc-card" data-cat="europe">
+        <div class="bc-body">
+          <div class="bc-flag"><svg class="flag-ic" viewBox="0 0 30 20" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true"><rect width="30" height="20" fill="#00247D"/><path d="M0,0 L30,20 M30,0 L0,20" stroke="#fff" stroke-width="4"/><path d="M0,0 L30,20 M30,0 L0,20" stroke="#CF142B" stroke-width="2"/><path d="M15,0 V20 M0,10 H30" stroke="#fff" stroke-width="6"/><path d="M15,0 V20 M0,10 H30" stroke="#CF142B" stroke-width="3.6"/></svg></div>
+          <div class="bc-cat-inline">09 · 유럽</div>
+          <div class="bc-title">영국 관세가이드</div>
+          <div class="bc-desc">£135 이하는 관세 면제, 부가세 20%는 대부분 부과</div>
+          <span class="bc-more">자세히 보기 →</span>
+        </div>
+      </a>
+
+    </div>
+
+    <div class="no-route" id="noRoute">
+      <div class="no-route-ico">🔍</div>
+      <div>해당 조건의 국가가 없습니다.</div>
+    </div>
+
+  </div>
+</section>
+
+<!-- CTA -->
+<div class="cta-band">
+  <div class="wrap"><div class="cta-row">
+    <div><div class="cta-copy-title">찾는 국가가 목록에<br/><em>없으신가요?</em></div><div class="cta-copy-sub">목적지와 화물 정보만 알려주시면 관세·통관 조건을 바로 확인해 드립니다.</div></div>
+    <div class="cta-btns"><a href="http://pf.kakao.com/_wUvBn/chat" target="_blank" rel="noopener" class="btn btn-kk"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3C6.48 3 2 6.77 2 11.4c0 2.93 1.87 5.51 4.7 7.02L5.5 22l4.3-2.6c.72.1 1.46.16 2.2.16 5.52 0 10-3.77 10-8.4S17.52 3 12 3z"/></svg>카카오톡으로 문의하기</a><div class="cta-copy-sub" style="text-align:center;">또는 <a href="tel:050713994075">0507-1399-4075</a></div></div>
+  </div></div>
+</div>
+
+</main>
+
+<footer><div class="wrap"><div class="ft-top"><div class="ft-brand"><span class="ft-logo-text">투삼로지스</span><div class="ft-brand-sub">국제특송 · 위험물 운송 · 해상·항공 포워딩 전문<br/>사업자등록번호: 350-18-02252</div></div><div><div class="ft-col-title">Services</div><div class="ft-links"><a href="../express.html">국제특송</a><a href="../dangerous.html">위험물 운송</a><a href="../forwarding.html">해상·항공 포워딩</a><a href="../blog/index.html">블로그</a></div></div><div><div class="ft-col-title">Contact</div><div class="ft-links"><a href="tel:050713994075">0507-1399-4075</a><a href="mailto:23logis@naver.com">23logis@naver.com</a></div></div></div><div class="ft-bottom"><span>© 2025 Tosome Logis · 투삼로지스</span><span>Business No. 350-18-02252</span></div></div></footer>
+
+<div class="kk-float">
+  <div class="kk-tip" id="kkTip">💬 관세 문의하기</div>
+  <a href="http://pf.kakao.com/_wUvBn/chat" target="_blank" rel="noopener" aria-label="카카오톡 상담">
+    <svg width="30" height="30" viewBox="0 0 36 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <ellipse cx="18" cy="14.5" rx="17" ry="13.5" fill="#3A1D1D"/>
+      <path d="M8 26.5C7.2 29 5.5 31.5 4 33C6.5 31 10 28.5 11.5 27Z" fill="#3A1D1D"/>
+      <circle cx="11" cy="14.5" r="2.2" fill="#FFE500"/>
+      <circle cx="18" cy="14.5" r="2.2" fill="#FFE500"/>
+      <circle cx="25" cy="14.5" r="2.2" fill="#FFE500"/>
+    </svg>
+  </a>
+</div>
+
+<script src="../shared.js"></script>
+<script>
+(function () {
+  var btns = document.querySelectorAll('.cat-btn');
+  var cards = Array.from(document.querySelectorAll('#routeGrid .bc-card'));
+  var shownCount = document.getElementById('shownCount');
+  var noRoute = document.getElementById('noRoute');
+
+  function setCategory(cat) {
+    btns.forEach(function (b) { b.classList.toggle('on', b.dataset.cat === cat); });
+    var visible = 0;
+    cards.forEach(function (card) {
+      var cats = (card.dataset.cat || '').split(' ');
+      var match = cat === 'all' || cats.indexOf(cat) !== -1;
+      card.style.display = match ? '' : 'none';
+      if (match) visible++;
+    });
+    shownCount.textContent = visible;
+    noRoute.style.display = visible === 0 ? 'block' : 'none';
+  }
+
+  btns.forEach(function (b) { b.onclick = function () { setCategory(b.dataset.cat); }; });
+})();
+</script>
+
+</body>
+</html>

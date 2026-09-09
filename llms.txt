@@ -17,10 +17,24 @@
 - Dangerous goods & lithium battery shipping (IATA DGR compliant, UN number classification, MSDS/DGD preparation): https://tosomelogis.kr/dangerous.html | https://tosomelogis.kr/en/dangerous.html
 - Sea & air freight forwarding (LCL from 0.1 CBM, FCL, customs clearance): https://tosomelogis.kr/forwarding.html | https://tosomelogis.kr/en/forwarding.html
 
+## Customs & import duty guides by country
+
+- Guide hub (all countries): https://tosomelogis.kr/guides/ | https://tosomelogis.kr/en/guides/
+- Australia customs duty guide for courier shipments (GST 10%, no minimum threshold): https://tosomelogis.kr/guides/australia-tariff.html
+- Canada customs duty guide (CAD 20 de minimis threshold for shipments from Korea): https://tosomelogis.kr/guides/canada-tariff.html
+- China customs duty guide (CBEC cross-border e-commerce thresholds and tax calculation): https://tosomelogis.kr/guides/china-tariff.html
+- Germany / EU customs duty guide (flat EUR 3 customs handling fee per item): https://tosomelogis.kr/guides/germany-tariff.html
+- Japan customs duty guide (JPY 10,000 taxable value threshold): https://tosomelogis.kr/guides/japan-tariff.html
+- Spain customs duty guide (flat EUR 3 customs handling fee per item): https://tosomelogis.kr/guides/spain-tariff.html
+- UK customs duty guide (GBP 135 duty-free threshold, scheduled to end October 2028): https://tosomelogis.kr/guides/uk-tariff.html
+- USA customs duty guide (de minimis exemption ended; 15% tariff on Korea-origin goods): https://tosomelogis.kr/guides/usa-tariff.html
+- Vietnam customs duty guide (VAT exemption ended; customs duty assessed separately): https://tosomelogis.kr/guides/vietnam-tariff.html
+- All guides are updated for 2026 rules and available in Korean and English (add /en/ to any URL above for the English version).
+
 ## Blog (logistics guides, Korean + English)
 
-- Korean blog index (26 posts): https://tosomelogis.kr/blog/
-- English blog index (26 posts): https://tosomelogis.kr/en/blog/
+- Korean blog index (33 posts): https://tosomelogis.kr/blog/
+- English blog index (33 posts): https://tosomelogis.kr/en/blog/
 - Topics include: lithium battery air/sea shipping rules, dangerous goods documentation (MSDS, UN numbers), LCL vs FCL comparison, country-specific export/import guides (China, Vietnam, Japan, India, USA), courier cost comparisons (DHL/FedEx/UPS/EMS), export packing, freight forwarding quote guides.
 
 ## Sitemap
