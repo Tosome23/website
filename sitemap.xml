@@ -21,7 +21,7 @@
     <priority>0.90</priority>
   </url>
   <url>
-    <loc>https://tosomelogis.kr/guides/index.html</loc>
+    <loc>https://tosomelogis.kr/guides/</loc>
     <lastmod>2026-09-09</lastmod>
     <priority>0.75</priority>
   </url>
@@ -71,7 +71,7 @@
     <priority>0.70</priority>
   </url>
   <url>
-    <loc>https://tosomelogis.kr/blog/index.html</loc>
+    <loc>https://tosomelogis.kr/blog/</loc>
     <lastmod>2026-08-29</lastmod>
     <priority>0.80</priority>
   </url>
@@ -261,7 +261,7 @@
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://tosomelogis.kr/en/guides/index.html</loc>
+    <loc>https://tosomelogis.kr/en/guides/</loc>
     <lastmod>2026-09-09</lastmod>
     <priority>0.70</priority>
   </url>

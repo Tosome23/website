@@ -8,7 +8,7 @@
 - Address: 401, 3-gil 31, Dangmi-ro, Gyeyang-gu, Incheon, South Korea
 - Business registration number: 350-18-02252
 - Phone: +82-507-1399-4075
-- Email: 23logis@naver.com
+- Email: info@tosomelogis.kr
 - Languages: Korean (primary), English
 
 ## Core services
@@ -43,4 +43,4 @@ https://tosomelogis.kr/sitemap.xml
 
 ## Contact / quote requests
 
-Preferred: KakaoTalk (http://pf.kakao.com/_wUvBn/chat) or email (23logis@naver.com). Website contact forms available on every page.
+Preferred: KakaoTalk (http://pf.kakao.com/_wUvBn/chat) or email (info@tosomelogis.kr). Website contact forms available on every page.
